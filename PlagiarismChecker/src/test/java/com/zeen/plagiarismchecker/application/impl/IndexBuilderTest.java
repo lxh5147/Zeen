@@ -40,5 +40,12 @@ public class IndexBuilderTest {
 				"--capability", String.valueOf(10000) };
 		IndexBuilder indexBuilder = IndexBuilder.getIndexBuilderWithArgs(args);
 		Assert.assertNotNull(indexBuilder);
+		Assert.assertEquals(10000, indexBuilder.capability);
+		Assert.assertEquals("ArticleRepositoryImpl{folders=[ref1, ref2]}",
+				indexBuilder.articleRepository.toString());
+		Assert.assertEquals(
+				"[FingerprintRepositoryInfo{contentAnalizer=com.zeen.plagiarismchecker.impl.SimpleContentAnalizer@7b1d7fff, indexFile=SimpleContentAnalizerWithSimpleTokenizer}, FingerprintRepositoryInfo{contentAnalizer=com.zeen.plagiarismchecker.impl.BagOfWordsContentAnalizer@299a06ac, indexFile=BagOfWordsContentAnalizerWithOpenNLPTokenizer}]",
+				indexBuilder.fingerprintRepositoryInfoList.toString());
+
 	}
 }

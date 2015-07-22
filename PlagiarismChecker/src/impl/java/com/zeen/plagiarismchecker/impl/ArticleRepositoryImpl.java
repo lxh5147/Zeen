@@ -137,7 +137,31 @@ public class ArticleRepositoryImpl implements ArticleRepository,
 	}
 
 	// suppose id is the file name, distributed under several folders
-	private final Iterable<Path> folders;
+	final Iterable<Path> folders;
+
+	@Override
+	public String toString() {
+		return MoreObjects.toStringHelper(this.getClass())
+				.add("folders", this.folders).toString();
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(this.folders);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final ArticleRepositoryImpl other = (ArticleRepositoryImpl) obj;
+
+		return Objects.equal(this.folders, other.folders);
+	}
 
 	static class ParagraphImpl implements Paragraph {
 
