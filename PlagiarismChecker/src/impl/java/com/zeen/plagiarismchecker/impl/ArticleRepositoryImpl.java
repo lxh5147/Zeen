@@ -101,6 +101,7 @@ public class ArticleRepositoryImpl implements ArticleRepository,
 			while ((paragraphContent = reader.readLine()) != null) {
 				paragraphes.add(new ParagraphImpl(articleId, paragraphId,
 						paragraphContent));
+				++paragraphId;
 			}
 			return new ArticleImpl().withId(articleId)
 					.withParagraphes(paragraphes).build();

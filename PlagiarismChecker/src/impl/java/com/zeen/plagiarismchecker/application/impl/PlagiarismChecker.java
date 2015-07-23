@@ -3,10 +3,12 @@ package com.zeen.plagiarismchecker.application.impl;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.IntStream;
 
@@ -118,18 +120,37 @@ public class PlagiarismChecker {
         List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList = Lists
                 .newArrayListWithCapacity(contentAnalizerNames.size());
 
-        contentAnalizerNames.forEach(name -> {
-            // existing index will be overwritten
-                fingerprintRepositoryInfoList
-                        .add(new FingerprintRepositoryInfo(ContentAnalizers
-                                .valueOf(name).getContentAnalizer(), indexPath
-                                .resolve(name).toFile()));
-            });
+        contentAnalizerNames
+                .forEach(name -> {
+                    // index file must exist
+                    File indexFile = indexPath.resolve(name).toFile();
+                    checkArgument(
+                            indexFile.exists() && !indexFile.isDirectory(),
+                            "indexFile");
+                    fingerprintRepositoryInfoList
+                            .add(new FingerprintRepositoryInfo(ContentAnalizers
+                                    .valueOf(name).getContentAnalizer(),
+                                    indexFile));
+                });
 
         if (!indexPath.toFile().exists()) {
             indexPath.toFile().mkdirs();
         }
 
         return new PlagiarismChecker(fingerprintRepositoryInfoList);
+    }
+
+    public static void main(final String[] args) throws ParseException,
+            IOException {
+        PlagiarismChecker plagiarismChecker = getPlagiarismCheckerWithArgs(args);
+        try (Scanner scan = new Scanner(System.in)) {
+            while (scan.hasNextLine()) {
+                String line = scan.nextLine();
+                if (line.equals("")) {
+                    break;
+                }
+                System.out.println(plagiarismChecker.check(line));
+            }
+        }
     }
 }
