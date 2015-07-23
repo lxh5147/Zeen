@@ -7,72 +7,78 @@ version = 1.0
 repositories { mavenCentral() }
 
 sourceSets.all { set ->
-	def jarTask = task("${set.name}Jar", type: Jar) {
-		baseName = baseName + "-$set.name"
-		from set.output
-	}
+    def jarTask = task("${set.name}Jar", type: Jar) {
+        baseName = baseName + "-$set.name"
+        from set.output
+    }
 
-	artifacts { archives jarTask }
+    artifacts { archives jarTask }
 }
 
 sourceSets {
-	api
-	impl
+    api
+    impl
 }
 
 dependencies {
-	implCompile sourceSets.api.output
+    implCompile sourceSets.api.output
 
-	implCompile group: 'com.google.guava', name: 'guava', version: '18.0'
-	//implCompile group: 'edu.stanford.nlp', name: 'stanford-parser', version: '2.0.2'
-	//implCompile group: 'org.apache.lucene', name: 'lucene-wordnet', version: '3.3.0'
-	implCompile group: 'org.apache.opennlp', name: 'opennlp-tools', version: '1.6.0'
-	implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-tokenize-models', version: '1.5'
-	implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-sent-models', version: '1.5'
-	implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-postag-models', version: '1.5'
-	//implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-chunk-models', version: '1.5'
-	//implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-parse-models', version: '1.5'
-	//implCompile 'commons-cli:commons-cli:1.3'
+    implCompile group: 'com.google.guava', name: 'guava', version: '18.0'
+    //implCompile group: 'edu.stanford.nlp', name: 'stanford-parser', version: '2.0.2'
+    //implCompile group: 'org.apache.lucene', name: 'lucene-wordnet', version: '3.3.0'
+    implCompile group: 'org.apache.opennlp', name: 'opennlp-tools', version: '1.6.0'
+    implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-tokenize-models', version: '1.5'
+    implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-sent-models', version: '1.5'
+    implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-postag-models', version: '1.5'
+    //implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-chunk-models', version: '1.5'
+    //implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-parse-models', version: '1.5'
+    //implCompile 'commons-cli:commons-cli:1.3'
 
-	testCompile 'junit:junit:4.9'
-	testCompile 'org.mockito:mockito-all:1.10.19'
-	testCompile group: 'com.google.guava', name: 'guava', version: '18.0'
-	testCompile group: 'org.apache.opennlp', name: 'opennlp-tools', version: '1.6.0'
-	testCompile 'commons-cli:commons-cli:1.3'
-	testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-tokenize-models', version: '1.5'
-	testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-sent-models', version: '1.5'
-	testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-postag-models', version: '1.5'
+    implCompile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.7'
+    implCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.7'
+    implCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.7'
+    implCompile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.7'
+    implCompile group: 'org.eclipse.jetty.aggregate', name: 'jetty-all', version: '9.3.0.M1'
 
-	testCompile sourceSets.api.output
-	testCompile sourceSets.impl.output
+    testCompile 'junit:junit:4.9'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+    testCompile group: 'com.google.guava', name: 'guava', version: '18.0'
+    testCompile group: 'org.apache.opennlp', name: 'opennlp-tools', version: '1.6.0'
+    testCompile 'commons-cli:commons-cli:1.3'
+    testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-tokenize-models', version: '1.5'
+    testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-sent-models', version: '1.5'
+    testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-postag-models', version: '1.5'
 
-	runtime configurations.apiRuntime
-	runtime configurations.implRuntime
+    testCompile sourceSets.api.output
+    testCompile sourceSets.impl.output
+
+    runtime configurations.apiRuntime
+    runtime configurations.implRuntime
 }
 
 jar {
-	from sourceSets.api.output
-	from sourceSets.impl.output
+    from sourceSets.api.output
+    from sourceSets.impl.output
 }
 
 uploadArchives {
-	repositories {
-		mavenDeployer {
-			repository(url: uri("${buildDir}/repo"))
+    repositories {
+        mavenDeployer {
+            repository(url: uri("${buildDir}/repo"))
 
-			addFilter("main") { artifact, file -> artifact.name == project.name }
-			["api", "impl"].each { type ->
-				addFilter(type) { artifact, file -> artifact.name.endsWith("-$type") }
+            addFilter("main") { artifact, file -> artifact.name == project.name }
+            ["api", "impl"].each { type ->
+                addFilter(type) { artifact, file -> artifact.name.endsWith("-$type") }
 
-				// We now have to map our configurations to the correct maven scope for each pom
-				["compile", "runtime"].each { scope ->
-					configuration = configurations[type + scope.capitalize()]
-					["main", type].each { pomName ->
-						pom(pomName).scopeMappings.addMapping 1, configuration, scope
-					}
-				}
-			}
+                // We now have to map our configurations to the correct maven scope for each pom
+                ["compile", "runtime"].each { scope ->
+                    configuration = configurations[type + scope.capitalize()]
+                    ["main", type].each { pomName ->
+                        pom(pomName).scopeMappings.addMapping 1, configuration, scope
+                    }
+                }
+            }
 
-		}
-	}
+        }
+    }
 }

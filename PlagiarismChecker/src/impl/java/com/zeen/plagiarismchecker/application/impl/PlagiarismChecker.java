@@ -32,9 +32,11 @@ public class PlagiarismChecker {
     final List<FingerprintRepository> fingerprintRepositories;
     final List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList;
 
-    private PlagiarismChecker(
+    public  PlagiarismChecker(
             List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList)
             throws IOException {
+        checkNotNull(fingerprintRepositoryInfoList,"fingerprintRepositoryInfoList");
+        
         this.fingerprintRepositoryInfoList = Lists
                 .newArrayList(fingerprintRepositoryInfoList);
         this.fingerprintRepositories = Lists
@@ -42,6 +44,7 @@ public class PlagiarismChecker {
         this.loadIndexes();
     }
 
+     
     private void loadIndexes() throws IOException {
         for (int i = 0; i < this.fingerprintRepositoryInfoList.size(); ++i) {
             this.fingerprintRepositories.add(FingerprintRepositoryImpl
@@ -86,7 +89,7 @@ public class PlagiarismChecker {
         });
         return mergedResults;
     }
-
+    
     static PlagiarismChecker getPlagiarismCheckerWithArgs(String[] args)
             throws ParseException, IOException {
         // build CLI
@@ -114,8 +117,8 @@ public class PlagiarismChecker {
         List<String> contentAnalizerNames = Lists.newArrayList(Splitter.on(',')
                 .split(line.getOptionValue("contentAnalizers")));
         Path indexPath = Paths.get(line.getOptionValue("indexPath"));
-        checkArgument(!indexPath.toFile().exists()
-                || indexPath.toFile().isDirectory(), "indexPath");
+        checkArgument(indexPath.toFile().exists() && indexPath.toFile().isDirectory(),"indexPath");
+        
 
         List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList = Lists
                 .newArrayListWithCapacity(contentAnalizerNames.size());

@@ -6,11 +6,11 @@ import java.io.File;
 
 import com.zeen.plagiarismchecker.ContentAnalizer;
 
-class FingerprintRepositoryInfo {
+public class FingerprintRepositoryInfo {
     final ContentAnalizer contentAnalizer;
     final File indexFile;
 
-    FingerprintRepositoryInfo(final ContentAnalizer contentAnalizer,
+    public FingerprintRepositoryInfo(final ContentAnalizer contentAnalizer,
             final File indexFile) {
         checkNotNull(contentAnalizer, "contentAnalizer");
         checkNotNull(indexFile, "indexFile");
