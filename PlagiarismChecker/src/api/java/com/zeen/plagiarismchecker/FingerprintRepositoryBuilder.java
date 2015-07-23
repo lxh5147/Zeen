@@ -2,7 +2,7 @@ package com.zeen.plagiarismchecker;
 
 public interface FingerprintRepositoryBuilder {
 
-		void start(ContentAnalizer analizer, int capability);
+		void start(ContentAnalyzer analyzer, int capability);
 
 		void add(Paragraph paragraph);
 

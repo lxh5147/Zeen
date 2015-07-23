@@ -4,17 +4,17 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.File;
 
-import com.zeen.plagiarismchecker.ContentAnalizer;
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 
 public class FingerprintRepositoryInfo {
-    final ContentAnalizer contentAnalizer;
+    final ContentAnalyzer contentAnalyzer;
     final File indexFile;
 
-    public FingerprintRepositoryInfo(final ContentAnalizer contentAnalizer,
+    public FingerprintRepositoryInfo(final ContentAnalyzer contentAnalizer,
             final File indexFile) {
         checkNotNull(contentAnalizer, "contentAnalizer");
         checkNotNull(indexFile, "indexFile");
-        this.contentAnalizer = contentAnalizer;
+        this.contentAnalyzer = contentAnalizer;
         this.indexFile = indexFile;
     }
 }

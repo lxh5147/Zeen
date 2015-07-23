@@ -7,14 +7,14 @@ import org.junit.Test;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.zeen.plagiarismchecker.ContentAnalizer;
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 import com.zeen.plagiarismchecker.FingerprintRepository;
 
 public class FingerprintRepositoryBuilderImplTest {
     @Test
     public void newFingerprintRepositoryBuilderImplTest() {
         FingerprintRepositoryBuilderImpl builder = new FingerprintRepositoryBuilderImpl();
-        Assert.assertNull(builder.analizer);
+        Assert.assertNull(builder.analyzer);
         Assert.assertNull(builder.values);
         Assert.assertNull(builder.articleEntries);
         Assert.assertNull(builder.paragraphEntries);
@@ -24,7 +24,7 @@ public class FingerprintRepositoryBuilderImplTest {
     @Test
     public void buildTest() {
         FingerprintRepositoryBuilderImpl builder = new FingerprintRepositoryBuilderImpl();
-        ContentAnalizer analizer = new SimpleContentAnalizer(
+        ContentAnalyzer analizer = new SimpleContentAnalyzer(
                 new SimpleTokenizer());
         int capability = 1024;
         builder.start(analizer, capability);

@@ -19,11 +19,10 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.Article;
 import com.zeen.plagiarismchecker.ArticleRepository;
-
 import com.zeen.plagiarismchecker.FingerprintRepositoryBuilder;
 import com.zeen.plagiarismchecker.Paragraph;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
-import com.zeen.plagiarismchecker.impl.ContentAnalizers;
+import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 import com.zeen.plagiarismchecker.impl.FingerprintRepositoryBuilderImpl;
 
 public class IndexBuilder {
@@ -51,7 +50,7 @@ public class IndexBuilder {
         // it is faster but requires much more memory
         for (int i = 0; i < fingerprintRepositoryBuilderList.size(); ++i) {
             fingerprintRepositoryBuilderList.get(i).start(
-                    this.fingerprintRepositoryInfoList.get(i).contentAnalizer,
+                    this.fingerprintRepositoryInfoList.get(i).contentAnalyzer,
                     this.capability);
         }
 
@@ -93,8 +92,8 @@ public class IndexBuilder {
                                 .argName("names")
                                 .hasArg()
                                 .required()
-                                .longOpt("contentAnalizers")
-                                .desc("content analizer names, separated by comma")
+				.longOpt("contentAnalyzers")
+				.desc("content analyzer names, separated by comma")
                                 .build())
                 .addOption(
                         Option.builder("i")
@@ -117,7 +116,7 @@ public class IndexBuilder {
         List<String> articleRepositoryFolders = Lists.newArrayList(Splitter.on(
                 ',').split(line.getOptionValue("articleRepositoryFolders")));
         List<String> contentAnalizerNames = Lists.newArrayList(Splitter.on(',')
-                .split(line.getOptionValue("contentAnalizers")));
+		.split(line.getOptionValue("contentAnalyzers")));
         Path indexPath = Paths.get(line.getOptionValue("indexPath"));
         checkArgument(!indexPath.toFile().exists()
                 || indexPath.toFile().isDirectory(), "indexPath");
@@ -136,8 +135,8 @@ public class IndexBuilder {
         contentAnalizerNames.forEach(name -> {
             // existing index will be overwritten
                 fingerprintRepositoryInfoList
-                        .add(new FingerprintRepositoryInfo(ContentAnalizers
-                                .valueOf(name).getContentAnalizer(), indexPath
+                        .add(new FingerprintRepositoryInfo(ContentAnalyzerType
+                                .valueOf(name).getContentAnalyzer(), indexPath
                                 .resolve(name).toFile()));
             });
 

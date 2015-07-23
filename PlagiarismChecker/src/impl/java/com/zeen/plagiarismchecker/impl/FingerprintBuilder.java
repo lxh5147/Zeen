@@ -4,7 +4,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.nio.charset.Charset;
 
-import com.zeen.plagiarismchecker.ContentAnalizer;
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 
  public class FingerprintBuilder {
 
@@ -17,7 +17,7 @@ import com.zeen.plagiarismchecker.ContentAnalizer;
 		return fingerprint64(content.getBytes(this.charset));
 	}
 
-	public long getFingerprint(String content, ContentAnalizer analizer,
+	public long getFingerprint(String content, ContentAnalyzer analizer,
 			StringBuilder stringBuffer) {
 		checkNotNull(content, "content");
 		checkNotNull(analizer, "analizer");

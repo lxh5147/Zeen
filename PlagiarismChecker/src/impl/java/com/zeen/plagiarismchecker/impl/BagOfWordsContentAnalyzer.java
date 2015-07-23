@@ -8,19 +8,19 @@ import java.util.TreeMap;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.zeen.plagiarismchecker.ContentAnalizer;
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 
-public class BagOfWordsContentAnalizer implements ContentAnalizer {
+public class BagOfWordsContentAnalyzer implements ContentAnalyzer {
 
-	public BagOfWordsContentAnalizer(ContentAnalizer contentAnalizer) {
-		this.contentAnalizer = checkNotNull(contentAnalizer, "contentAnalizer");
+    public BagOfWordsContentAnalyzer(ContentAnalyzer contentAnalyzer) {
+	this.contentAnalyzer = checkNotNull(contentAnalyzer, "contentAnalyzer");
 	}
 
-	private final ContentAnalizer contentAnalizer;
+	private final ContentAnalyzer contentAnalyzer;
 
 	@Override
 	public Iterable<? extends CharSequence> getCheckPoints(String content) {
-		Iterable<? extends CharSequence> originalCheckPoints = this.contentAnalizer
+		Iterable<? extends CharSequence> originalCheckPoints = this.contentAnalyzer
 				.getCheckPoints(content);
 		assert (originalCheckPoints != null);
 		TreeMap<String, Integer> bagOfWords = Maps.newTreeMap();

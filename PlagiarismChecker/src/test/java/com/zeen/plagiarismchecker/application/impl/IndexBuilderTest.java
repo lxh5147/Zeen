@@ -18,9 +18,8 @@ import com.zeen.plagiarismchecker.Article;
 import com.zeen.plagiarismchecker.FingerprintRepository;
 import com.zeen.plagiarismchecker.Paragraph;
 import com.zeen.plagiarismchecker.ParagraphEntry;
-import com.zeen.plagiarismchecker.application.impl.IndexBuilder;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryTestUtil;
-import com.zeen.plagiarismchecker.impl.ContentAnalizers;
+import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 import com.zeen.plagiarismchecker.impl.FingerprintRepositoryBuilderImpl;
 import com.zeen.plagiarismchecker.impl.FingerprintRepositoryImpl;
 
@@ -39,13 +38,13 @@ public class IndexBuilderTest {
     @Test
     public void getIndexBuilderTest() throws ParseException, IOException {
         String indexRoot = "index";
-        List<ContentAnalizers> contentAnalizersList = Lists.newArrayList(
-                ContentAnalizers.SimpleContentAnalizerWithSimpleTokenizer,
-                ContentAnalizers.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
+        List<ContentAnalyzerType> contentAnalizersList = Lists.newArrayList(
+                ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
 
         String[] args = { "--articleRepositoryFolders",
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
-                "--contentAnalizers",
+		"--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
                 indexRoot, "--capability", String.valueOf(10000) };
         IndexBuilder indexBuilder = IndexBuilder.getIndexBuilderWithArgs(args);
@@ -58,8 +57,8 @@ public class IndexBuilderTest {
 
         for (int i = 0; i < contentAnalizersList.size(); ++i) {
             Assert.assertEquals(
-                    contentAnalizersList.get(i).getContentAnalizer(),
-                    indexBuilder.fingerprintRepositoryInfoList.get(i).contentAnalizer);
+                    contentAnalizersList.get(i).getContentAnalyzer(),
+                    indexBuilder.fingerprintRepositoryInfoList.get(i).contentAnalyzer);
             Assert.assertEquals(
                     Paths.get(indexRoot)
                             .resolve(contentAnalizersList.get(i).name())
@@ -69,10 +68,10 @@ public class IndexBuilderTest {
     }
 
     static void deleteIndex(String indexRoot,
-            List<ContentAnalizers> contentAnalizersList) {
+            List<ContentAnalyzerType> contentAnalizersList) {
         // delete two index files,this also ensure only two indexes are
         // generated
-        for (ContentAnalizers contentAnalizers : contentAnalizersList) {
+        for (ContentAnalyzerType contentAnalizers : contentAnalizersList) {
             Paths.get(indexRoot).resolve(contentAnalizers.name()).toFile()
                     .delete();
         }
@@ -80,11 +79,11 @@ public class IndexBuilderTest {
     }
 
     static void setupIndex(String indexRoot,
-            List<ContentAnalizers> contentAnalizersList) throws IOException,
+            List<ContentAnalyzerType> contentAnalizersList) throws IOException,
             ParseException {
         String[] args = { "--articleRepositoryFolders",
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
-                "--contentAnalizers",
+		"--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
                 indexRoot, "--capability", String.valueOf(10000) };
         IndexBuilder.getIndexBuilderWithArgs(args).build();
@@ -93,12 +92,12 @@ public class IndexBuilderTest {
     @Test
     public void buildTest() throws ParseException, IOException {
         String indexRoot = "index";
-        List<ContentAnalizers> contentAnalizersList = Lists.newArrayList(
-                ContentAnalizers.SimpleContentAnalizerWithSimpleTokenizer,
-                ContentAnalizers.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
+        List<ContentAnalyzerType> contentAnalizersList = Lists.newArrayList(
+                ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
         String[] args = { "--articleRepositoryFolders",
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
-                "--contentAnalizers",
+		"--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
                 indexRoot, "--capability", String.valueOf(10000) };
         IndexBuilder indexBuilder = IndexBuilder.getIndexBuilderWithArgs(args);
@@ -107,9 +106,9 @@ public class IndexBuilderTest {
         StringBuilder stringBuffer = new StringBuilder();
 
         // verify that we have two finger repositories
-        for (ContentAnalizers contentAnalizers : Lists.newArrayList(
-                ContentAnalizers.SimpleContentAnalizerWithSimpleTokenizer,
-                ContentAnalizers.BagOfWordsContentAnalizerWithOpenNLPTokenizer)) {
+        for (ContentAnalyzerType contentAnalizers : Lists.newArrayList(
+                ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer)) {
             FingerprintRepository fingerprintRepository = FingerprintRepositoryImpl
                     .load(Paths.get(indexRoot).resolve(contentAnalizers.name())
                             .toFile());
@@ -121,7 +120,7 @@ public class IndexBuilderTest {
                                             .newFingerprint(FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER.getFingerprint(
                                                     paragraph.getContent(),
                                                     contentAnalizers
-                                                            .getContentAnalizer(),
+                                                            .getContentAnalyzer(),
                                                     stringBuffer))));
                     Assert.assertEquals(1, paragraphEntries.size());
                     Assert.assertEquals(article.getId(), paragraphEntries

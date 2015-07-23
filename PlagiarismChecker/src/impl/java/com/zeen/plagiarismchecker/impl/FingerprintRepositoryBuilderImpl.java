@@ -1,9 +1,10 @@
 package com.zeen.plagiarismchecker.impl;
 
-import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
-import com.zeen.plagiarismchecker.ContentAnalizer;
+
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 import com.zeen.plagiarismchecker.FingerprintRepository;
 import com.zeen.plagiarismchecker.FingerprintRepositoryBuilder;
 import com.zeen.plagiarismchecker.Paragraph;
@@ -15,14 +16,14 @@ public class FingerprintRepositoryBuilderImpl implements
 	int[] articleEntries;
 	int[] paragraphEntries;
 	int size;
-	ContentAnalizer analizer;
+	ContentAnalyzer analyzer;
 	StringBuilder stringBuffer;
 
 	@Override
-	public void start(ContentAnalizer analizer, int capability) {
-		checkNotNull(analizer, "analizer");
+	public void start(ContentAnalyzer analyzer, int capability) {
+	checkNotNull(analyzer, "analyzer");
 		checkArgument(capability > 0, "capability");
-		this.analizer = analizer;
+		this.analyzer = analyzer;
 		this.size = 0;
 		this.stringBuffer = new StringBuilder();
 		this.values = new long[capability];
@@ -33,12 +34,12 @@ public class FingerprintRepositoryBuilderImpl implements
 	@Override
 	public void add(Paragraph paragraph) {
 		checkNotNull(paragraph, "paragraph");
-		checkState(this.analizer != null, "analizer");
+	checkState(this.analyzer != null, "analyzer");
 		checkState(this.size < this.values.length, "size");
 		String content = paragraph.getContent();
 
 		this.values[this.size] = FINGERPRINT_BUILDER.getFingerprint(content,
-				this.analizer, this.stringBuffer);
+				this.analyzer, this.stringBuffer);
 		this.articleEntries[this.size] = paragraph.getArticleId();
 		this.paragraphEntries[this.size] = paragraph.getId();
 		++this.size;
@@ -51,7 +52,7 @@ public class FingerprintRepositoryBuilderImpl implements
 				this.values, this.articleEntries, this.paragraphEntries,
 				index, this.size);
 
-		this.analizer = null;
+		this.analyzer = null;
 		this.values = null;
 		this.articleEntries = null;
 		this.paragraphEntries = null;

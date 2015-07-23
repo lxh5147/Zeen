@@ -2,11 +2,11 @@ package com.zeen.plagiarismchecker.impl;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-import com.zeen.plagiarismchecker.ContentAnalizer;
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 
-public class SimpleContentAnalizer implements ContentAnalizer {
+public class SimpleContentAnalyzer implements ContentAnalyzer {
 
-	public SimpleContentAnalizer(Tokenizer tokenizer) {
+	public SimpleContentAnalyzer(Tokenizer tokenizer) {
 		this.tokenizer = checkNotNull(tokenizer, "tokenizer");
 	}
 

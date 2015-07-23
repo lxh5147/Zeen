@@ -5,12 +5,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
-import com.zeen.plagiarismchecker.ContentAnalizer;
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 
-public class ShallowContentAnalizerTest {
+public class ShallowContentAnalyzerTest {
 	@Test
 	public void getCheckPointsTest() {
-		ContentAnalizer contentAnalizer = new ShallowContentAnalizer( new SimpleTokenizer());
+		ContentAnalyzer contentAnalizer = new ShallowContentAnalyzer( new SimpleTokenizer());
 		//lower case and stop words removal
 		Assert.assertEquals(Lists.newArrayList("s"), Lists
 				.newArrayList(contentAnalizer.getCheckPoints("This'S me.")));

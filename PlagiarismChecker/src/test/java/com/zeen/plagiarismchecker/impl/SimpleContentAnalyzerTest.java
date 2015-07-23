@@ -6,12 +6,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
-import com.zeen.plagiarismchecker.ContentAnalizer;
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 
-public class SimpleContentAnalizerTest {
+public class SimpleContentAnalyzerTest {
 	@Test
 	public void getCheckPointsTest() {
-		ContentAnalizer contentAnalizer = new SimpleContentAnalizer(new SimpleTokenizer());
+		ContentAnalyzer contentAnalizer = new SimpleContentAnalyzer(new SimpleTokenizer());
 		//keep case
 		Assert.assertEquals(Lists.newArrayList("This", "s", "me"), Lists
 				.newArrayList(contentAnalizer.getCheckPoints("This's me.")));

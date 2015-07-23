@@ -5,14 +5,14 @@ import org.junit.Test;
 
 
 import com.google.common.collect.Lists;
-import com.zeen.plagiarismchecker.ContentAnalizer;
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 
-public class BagOfWordsContentAnalizerTest {
+public class BagOfWordsContentAnalyzerTest {
 
 	@Test
 	public void getCheckPointsTest() {
-		ContentAnalizer contentAnalizer = new BagOfWordsContentAnalizer(
-				new ShallowContentAnalizer(new SimpleTokenizer()));
+		ContentAnalyzer contentAnalizer = new BagOfWordsContentAnalyzer(
+				new ShallowContentAnalyzer(new SimpleTokenizer()));
 		// lower case and stop words removal
 		Assert.assertEquals(
 				Lists.newArrayList("day:2", "great:2", "one:1", "today:1",

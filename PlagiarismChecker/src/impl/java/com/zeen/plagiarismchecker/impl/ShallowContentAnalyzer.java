@@ -9,11 +9,11 @@ import opennlp.tools.stemmer.snowball.SnowballStemmer;
 import opennlp.tools.stemmer.snowball.SnowballStemmer.ALGORITHM;
 
 import com.google.common.collect.Lists;
-import com.zeen.plagiarismchecker.ContentAnalizer;
+import com.zeen.plagiarismchecker.ContentAnalyzer;
 
-public class ShallowContentAnalizer implements ContentAnalizer {
+public class ShallowContentAnalyzer implements ContentAnalyzer {
 
-	public ShallowContentAnalizer(Tokenizer tokenizer) {
+	public ShallowContentAnalyzer(Tokenizer tokenizer) {
 		this.tokenizer = checkNotNull(tokenizer, "tokenizer");
 	}
 
