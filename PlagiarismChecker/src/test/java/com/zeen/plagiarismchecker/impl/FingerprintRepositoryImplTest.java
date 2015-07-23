@@ -12,7 +12,7 @@ public class FingerprintRepositoryImplTest {
 	@Test
 	public void withSortedValueTest() {
 		Assert.assertEquals(
-				Sets.newHashSet(new FingerprintRepositoryImpl.ParagraphEntryImpl(
+				Sets.newHashSet( FingerprintRepositoryImpl.newParagraphEntry(
 						1, 5)),
 				Sets.newHashSet(new FingerprintRepositoryImpl(new long[] { 1,
 						2, 3 }, new int[] { 2, 1, 3 }, new int[] { 4, 5, 6 },
@@ -22,9 +22,9 @@ public class FingerprintRepositoryImplTest {
 
 		Assert.assertEquals(
 				Sets.newHashSet(
-						new FingerprintRepositoryImpl.ParagraphEntryImpl(1, 5),
-						new FingerprintRepositoryImpl.ParagraphEntryImpl(4, 7),
-						new FingerprintRepositoryImpl.ParagraphEntryImpl(7, 8)),
+				        FingerprintRepositoryImpl.newParagraphEntry(1, 5),
+				        FingerprintRepositoryImpl.newParagraphEntry(4, 7),
+				        FingerprintRepositoryImpl.newParagraphEntry(7, 8)),
 				Sets.newHashSet(new FingerprintRepositoryImpl(new long[] { 1,
 						2, 2, 2, 3 }, new int[] { 2, 1, 4, 7, 3 }, new int[] {
 						4, 5, 7, 8, 6 }, null, 5)
@@ -35,7 +35,7 @@ public class FingerprintRepositoryImplTest {
 	@Test
 	public void withSortedIndexTest() {
 		Assert.assertEquals(
-				Sets.newHashSet(new FingerprintRepositoryImpl.ParagraphEntryImpl(
+				Sets.newHashSet(FingerprintRepositoryImpl.newParagraphEntry(
 						3, 6)),
 				Sets.newHashSet(new FingerprintRepositoryImpl(new long[] { 3,
 						1, 2 }, new int[] { 2, 1, 3 }, new int[] { 4, 5, 6 },
@@ -45,9 +45,9 @@ public class FingerprintRepositoryImplTest {
 
 		Assert.assertEquals(
 				Sets.newHashSet(
-						new FingerprintRepositoryImpl.ParagraphEntryImpl(1, 5),
-						new FingerprintRepositoryImpl.ParagraphEntryImpl(7, 8),
-						new FingerprintRepositoryImpl.ParagraphEntryImpl(3, 6)),
+				        FingerprintRepositoryImpl.newParagraphEntry(1, 5),
+				        FingerprintRepositoryImpl.newParagraphEntry(7, 8),
+				        FingerprintRepositoryImpl.newParagraphEntry(3, 6)),
 				Sets.newHashSet(new FingerprintRepositoryImpl(new long[] { 3,
 						2, 1, 2, 2 }, new int[] { 2, 1, 4, 7, 3 }, new int[] {
 						4, 5, 7, 8, 6 }, new int[] { 2, 1, 3, 4, 0 }, 5)

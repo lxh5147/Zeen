@@ -162,7 +162,7 @@ public class ArticleRepositoryImpl implements ArticleRepository,
 
 		return Objects.equal(this.folders, other.folders);
 	}
-
+	
 	static class ParagraphImpl implements Paragraph {
 
 		private final int articleId;

@@ -60,7 +60,7 @@ public class FingerprintRepositoryBuilderImpl implements
 		return fingerprintRepository;
 	}
 
-	private static final FingerprintBuilder FINGERPRINT_BUILDER = new FingerprintBuilder();
+	public static final FingerprintBuilder FINGERPRINT_BUILDER = new FingerprintBuilder();
 
 	/**
 	 * Updated JDK class to support index based sort for memory efficiency

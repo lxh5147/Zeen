@@ -6,9 +6,9 @@ import java.nio.charset.Charset;
 
 import com.zeen.plagiarismchecker.ContentAnalizer;
 
-public class FingerprintBuilder {
+ public class FingerprintBuilder {
 
-	public FingerprintBuilder() {
+	FingerprintBuilder() {
 		this.charset = Charset.forName("UTF-8");
 	}
 

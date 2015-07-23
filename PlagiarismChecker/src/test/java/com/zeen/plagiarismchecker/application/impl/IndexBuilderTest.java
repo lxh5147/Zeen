@@ -21,7 +21,7 @@ import com.zeen.plagiarismchecker.ParagraphEntry;
 import com.zeen.plagiarismchecker.application.impl.IndexBuilder;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryTestUtil;
 import com.zeen.plagiarismchecker.impl.ContentAnalizers;
-import com.zeen.plagiarismchecker.impl.FingerprintBuilder;
+import com.zeen.plagiarismchecker.impl.FingerprintRepositoryBuilderImpl;
 import com.zeen.plagiarismchecker.impl.FingerprintRepositoryImpl;
 
 public class IndexBuilderTest {
@@ -82,7 +82,7 @@ public class IndexBuilderTest {
 		IndexBuilder indexBuilder = IndexBuilder.getIndexBuilderWithArgs(args);
 		indexBuilder.build();
 		StringBuilder stringBuffer = new StringBuilder();
-		FingerprintBuilder fingerprintBuilder = new FingerprintBuilder();
+
 		// verify that we have two finger repositories
 		for (ContentAnalizers contentAnalizers : Lists.newArrayList(
 				ContentAnalizers.SimpleContentAnalizerWithSimpleTokenizer,
@@ -94,7 +94,7 @@ public class IndexBuilderTest {
 				for (Paragraph paragraph : article.getParagraphes()) {
 					List<ParagraphEntry> paragraphEntries = Lists
 							.newArrayList(fingerprintRepository
-									.getFingerprintEntries(FingerprintRepositoryImpl.newFingerprint(fingerprintBuilder.getFingerprint(
+									.getFingerprintEntries(FingerprintRepositoryImpl.newFingerprint(FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER.getFingerprint(
 											paragraph.getContent(),
 											contentAnalizers
 													.getContentAnalizer(),
