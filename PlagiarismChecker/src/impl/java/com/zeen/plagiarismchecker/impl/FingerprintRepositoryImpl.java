@@ -176,7 +176,10 @@ public class FingerprintRepositoryImpl implements FingerprintRepository {
 			return value;
 		}
 	}
-
+	
+	public static Fingerprint newFingerprint(long value){
+		return new FingerprintImpl(value);
+	}
 	static class ParagraphEntryImpl implements ParagraphEntry,
 			Comparable<ParagraphEntry> {
 		private final int articleId;

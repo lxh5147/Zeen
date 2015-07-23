@@ -15,8 +15,6 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import com.google.common.base.MoreObjects;
-import com.google.common.base.Objects;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.Article;
@@ -38,33 +36,7 @@ public class IndexBuilder {
 				final File indexFile) {
 			this.contentAnalizer = contentAnalizer;
 			this.indexFile = indexFile;
-		}
-
-		@Override
-		public String toString() {
-			return MoreObjects.toStringHelper(this.getClass())
-					.add("contentAnalizer", this.contentAnalizer)
-					.add("indexFile", this.indexFile).toString();
-		}
-
-		@Override
-		public int hashCode() {
-			return Objects.hashCode(this.contentAnalizer, this.indexFile);
-		}
-
-		@Override
-		public boolean equals(Object obj) {
-			if (obj == null) {
-				return false;
-			}
-			if (getClass() != obj.getClass()) {
-				return false;
-			}
-			final FingerprintRepositoryInfo other = (FingerprintRepositoryInfo) obj;
-
-			return Objects.equal(this.contentAnalizer, other.contentAnalizer)
-					&& Objects.equal(this.indexFile, other.indexFile);
-		}
+		}		
 	}
 
 	final ArticleRepository articleRepository;
