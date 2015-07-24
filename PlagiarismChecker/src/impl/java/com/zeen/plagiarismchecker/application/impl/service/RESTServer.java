@@ -3,6 +3,7 @@ package com.zeen.plagiarismchecker.application.impl.service;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -10,12 +11,17 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.stream.IntStream;
+
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+
+
+import jersey.repackaged.com.google.common.collect.Sets;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -27,6 +33,9 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -193,7 +202,7 @@ public class RESTServer {
             Map<ParagraphEntry, List<ContentAnalyzerType>> paragraphToContentAnalizersMap = Maps
                     .newHashMap();
 
-            Map<Integer, List<ParagraphEntry>> articleToParagraphesMap = Maps
+            Map<Integer, Set<ParagraphEntry>> articleToParagraphesMap = Maps
                     .newHashMap();
             checkResults
                     .forEach(pair -> {
@@ -202,11 +211,10 @@ public class RESTServer {
                                         paragraphEntry -> {
                                             Integer articleId = paragraphEntry
                                                     .getArticleId();
-                                            List<ParagraphEntry> paragraphEntryList = articleToParagraphesMap
+                                            Set<ParagraphEntry> paragraphEntryList = articleToParagraphesMap
                                                     .get(articleId);
                                             if (paragraphEntryList == null) {
-                                                paragraphEntryList = Lists
-                                                        .newArrayList();
+                                                paragraphEntryList = Sets.newLinkedHashSet();                                                
                                                 articleToParagraphesMap.put(
                                                         articleId,
                                                         paragraphEntryList);
@@ -265,6 +273,41 @@ public class RESTServer {
             this.paragraphId = paragraphId;
             this.paragraphContent = paragraphContent;
             this.hittedContentAnalizerTypes = hittedContentAnalizerTypes;
+        }
+
+        @Override
+        public String toString() {
+            return MoreObjects
+                    .toStringHelper(this.getClass())
+                    .add("articleId", this.articleId)
+                    .add("paragraphId", this.paragraphId)
+                    .add("paragraphContent", this.paragraphContent)
+                    .add("hittedContentAnalizerTypes",
+                            this.hittedContentAnalizerTypes).toString();
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hashCode(this.articleId, this.paragraphId,
+                    this.paragraphContent, this.hittedContentAnalizerTypes);
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null) {
+                return false;
+            }
+            if (getClass() != obj.getClass()) {
+                return false;
+            }
+            final Result other = (Result) obj;
+            return Objects.equal(this.getArticleId(), other.getArticleId())
+                    && Objects.equal(this.getParagraphId(),
+                            other.getParagraphId())
+                    && Objects.equal(this.getParagraphContent(),
+                            other.getParagraphContent())
+                    && Objects.equal(this.getHittedContentAnalizerTypes(),
+                            other.getHittedContentAnalizerTypes());
         }
 
         public int getArticleId() {

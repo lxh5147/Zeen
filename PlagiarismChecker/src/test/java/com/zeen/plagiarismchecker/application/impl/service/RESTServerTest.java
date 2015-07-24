@@ -16,6 +16,7 @@ import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.application.impl.FingerprintRepositoryInfo;
 import com.zeen.plagiarismchecker.application.impl.IndexBuilderTest;
 import com.zeen.plagiarismchecker.application.impl.PlagiarismChecker;
+import com.zeen.plagiarismchecker.application.impl.service.RESTServer.PlagiarismCheckeService;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryTestUtil;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
@@ -62,6 +63,36 @@ public class RESTServerTest {
         Assert.assertEquals(
                 new PlagiarismChecker(fingerprintRepositoryInfoList),
                 RESTServer.Context.CHECKERS.get(0));
+        IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
+    }
+
+    @Test
+    public void plagiarismCheckeServiceCheckTest() throws IOException,
+            ParseException {
+        String indexRoot = "index";
+        List<ContentAnalyzerType> contentAnalizersList = Lists
+                .newArrayList(
+                        ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
+        IndexBuilderTest.setupIndex(indexRoot, contentAnalizersList);
+
+        String[] args = { "--articleRepositoryFolders",
+                Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
+                "--contentAnalyzers",
+                Joiner.on(',').join(contentAnalizersList), "--indexPaths",
+                indexRoot };
+        RESTServer.setupContext(args);
+        PlagiarismCheckeService plagiarismCheckeService = new PlagiarismCheckeService();
+        for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
+            for (int j = 0; j < ArticleRepositoryTestUtil.ARTICLES[i].length; ++j) {
+                Assert.assertEquals(
+                        Lists.newArrayList(new RESTServer.Result(i, j,
+                                ArticleRepositoryTestUtil.ARTICLES[i][j],
+                                contentAnalizersList)),
+                        Lists.newArrayList(plagiarismCheckeService
+                                .check(ArticleRepositoryTestUtil.ARTICLES[i][j])));
+            }
+        }
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
     }
 }
