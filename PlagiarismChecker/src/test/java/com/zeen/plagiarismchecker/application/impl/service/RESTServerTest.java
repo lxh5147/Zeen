@@ -13,6 +13,7 @@ import org.junit.Test;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
+import com.zeen.plagiarismchecker.application.impl.FingerprintRepositoryInfo;
 import com.zeen.plagiarismchecker.application.impl.IndexBuilderTest;
 import com.zeen.plagiarismchecker.application.impl.PlagiarismChecker;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
@@ -52,9 +53,15 @@ public class RESTServerTest {
                             return Paths.get(folder);
                         }).iterator())), RESTServer.Context.ARTICLE_REPOSITORY);
         Assert.assertEquals(1, RESTServer.Context.CHECKERS.size());
-        PlagiarismChecker plagiarismChecker = RESTServer.Context.CHECKERS
-                .get(0);
-        Assert.assertNotNull(plagiarismChecker);
+        List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList = Lists
+                .newArrayList();
+        contentAnalizersList.forEach(item -> {
+            fingerprintRepositoryInfoList.add(new FingerprintRepositoryInfo(
+                    item, Paths.get(indexRoot).resolve(item.name()).toFile()));
+        });
+        Assert.assertEquals(
+                new PlagiarismChecker(fingerprintRepositoryInfoList),
+                RESTServer.Context.CHECKERS.get(0));
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
     }
 }

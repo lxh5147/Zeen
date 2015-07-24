@@ -40,23 +40,15 @@ public class PlagiarismCheckerTest {
         String[] args = { "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
                 indexRoot };
-        PlagiarismChecker plagiarismChecker = PlagiarismChecker
-                .getPlagiarismCheckerWithArgs(args);
-        Assert.assertNotNull(plagiarismChecker);
-
-        Assert.assertEquals(2,
-                plagiarismChecker.fingerprintRepositoryInfoList.size());
-
-        for (int i = 0; i < contentAnalizersList.size(); ++i) {
-            Assert.assertEquals(
-                    contentAnalizersList.get(i),
-                    plagiarismChecker.fingerprintRepositoryInfoList.get(i).getContentAnalyzerType());
-            Assert.assertEquals(
-                    Paths.get(indexRoot)
-                            .resolve(contentAnalizersList.get(i).name())
-                            .toFile(),
-                    plagiarismChecker.fingerprintRepositoryInfoList.get(i).getIndexFile());
-        }
+        List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList = Lists
+                .newArrayList();
+        contentAnalizersList.forEach(item -> {
+            fingerprintRepositoryInfoList.add(new FingerprintRepositoryInfo(
+                    item, Paths.get(indexRoot).resolve(item.name()).toFile()));
+        });
+        Assert.assertEquals(
+                new PlagiarismChecker(fingerprintRepositoryInfoList),
+                PlagiarismChecker.getPlagiarismCheckerWithArgs(args));
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
     }
 

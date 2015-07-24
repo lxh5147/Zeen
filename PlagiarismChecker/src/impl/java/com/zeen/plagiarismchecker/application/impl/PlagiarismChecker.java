@@ -20,6 +20,8 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.FingerprintRepository;
@@ -31,6 +33,32 @@ import com.zeen.plagiarismchecker.impl.FingerprintRepositoryImpl;
 public class PlagiarismChecker {
     final List<FingerprintRepository> fingerprintRepositories;
     final List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList;
+
+    @Override
+    public String toString() {
+        return MoreObjects
+                .toStringHelper(this.getClass())
+                .add("fingerprintRepositoryInfoList",
+                        this.fingerprintRepositoryInfoList).toString();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(this.fingerprintRepositoryInfoList);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final PlagiarismChecker other = (PlagiarismChecker) obj;
+        return Objects.equal(this.fingerprintRepositoryInfoList,
+                other.fingerprintRepositoryInfoList);
+    }
 
     public PlagiarismChecker(
             List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList)
@@ -48,7 +76,8 @@ public class PlagiarismChecker {
     private void loadIndexes() throws IOException {
         for (int i = 0; i < this.fingerprintRepositoryInfoList.size(); ++i) {
             this.fingerprintRepositories.add(FingerprintRepositoryImpl
-                    .load(this.fingerprintRepositoryInfoList.get(i).getIndexFile()));
+                    .load(this.fingerprintRepositoryInfoList.get(i)
+                            .getIndexFile()));
         }
     }
 
@@ -71,7 +100,8 @@ public class PlagiarismChecker {
                                     i,
                                     new AbstractMap.SimpleEntry<>(
                                             this.fingerprintRepositoryInfoList
-                                                    .get(i).getContentAnalyzerType(),
+                                                    .get(i)
+                                                    .getContentAnalyzerType(),
                                             this.fingerprintRepositories
                                                     .get(i)
                                                     .getFingerprintEntries(
@@ -80,7 +110,8 @@ public class PlagiarismChecker {
                                                                             .getFingerprint(
                                                                                     paragraph,
                                                                                     this.fingerprintRepositoryInfoList
-                                                                                            .get(i).getContentAnalyzerType()
+                                                                                            .get(i)
+                                                                                            .getContentAnalyzerType()
                                                                                             .getContentAnalyzer(),
                                                                                     new StringBuilder())))));
                         });
