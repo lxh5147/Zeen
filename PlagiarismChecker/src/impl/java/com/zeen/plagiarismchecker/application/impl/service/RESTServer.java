@@ -32,7 +32,6 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.zeen.plagiarismchecker.Article;
 import com.zeen.plagiarismchecker.ArticleRepository;
-import com.zeen.plagiarismchecker.ContentAnalyzer;
 import com.zeen.plagiarismchecker.Paragraph;
 import com.zeen.plagiarismchecker.ParagraphEntry;
 import com.zeen.plagiarismchecker.application.impl.FingerprintRepositoryInfo;
@@ -138,8 +137,7 @@ public class RESTServer {
                                 "indexFile");
                         fingerprintRepositoryInfoList
                                 .add(new FingerprintRepositoryInfo(
-                                        ContentAnalyzerType.valueOf(name)
-                                                .getContentAnalyzer(),
+                                        ContentAnalyzerType.valueOf(name),
                                         indexFile));
 
                     });
@@ -171,7 +169,7 @@ public class RESTServer {
         public Iterable<Result> check(
                 @QueryParam("paragraph") String paragraphContent) {
             checkNotNull(paragraphContent, "paragraphContent");
-            List<Iterable<Entry<ContentAnalyzer, Iterable<ParagraphEntry>>>> checkResultsList = Lists
+            List<Iterable<Entry<ContentAnalyzerType, Iterable<ParagraphEntry>>>> checkResultsList = Lists
                     .newArrayList();
             for (int i = 0; i < Context.CHECKERS.size(); ++i) {
                 checkResultsList.add(null);
@@ -184,7 +182,7 @@ public class RESTServer {
                                 checkResultsList.set(i, Context.CHECKERS.get(i)
                                         .check(paragraphContent));
                             });
-            List<Entry<ContentAnalyzer, Iterable<ParagraphEntry>>> checkResults = Lists
+            List<Entry<ContentAnalyzerType, Iterable<ParagraphEntry>>> checkResults = Lists
                     .newArrayList();
             checkResultsList.forEach(item -> {
                 item.forEach(entry -> {
@@ -224,9 +222,7 @@ public class RESTServer {
                                                         .put(paragraphEntry,
                                                                 contentAnalizers);
                                             }
-                                            contentAnalizers.add(ContentAnalyzerType
-                                                    .getContentAnalyzerType(pair
-                                                            .getKey()));
+                                            contentAnalizers.add(pair.getKey());
                                         });
                     });
 

@@ -22,7 +22,6 @@ import org.apache.commons.cli.ParseException;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
-import com.zeen.plagiarismchecker.ContentAnalyzer;
 import com.zeen.plagiarismchecker.FingerprintRepository;
 import com.zeen.plagiarismchecker.ParagraphEntry;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
@@ -49,15 +48,15 @@ public class PlagiarismChecker {
     private void loadIndexes() throws IOException {
         for (int i = 0; i < this.fingerprintRepositoryInfoList.size(); ++i) {
             this.fingerprintRepositories.add(FingerprintRepositoryImpl
-                    .load(this.fingerprintRepositoryInfoList.get(i).indexFile));
+                    .load(this.fingerprintRepositoryInfoList.get(i).getIndexFile()));
         }
     }
 
-    public Iterable<Entry<ContentAnalyzer, Iterable<ParagraphEntry>>> check(
+    public Iterable<Entry<ContentAnalyzerType, Iterable<ParagraphEntry>>> check(
             String paragraph) {
         checkNotNull(paragraph, "paragraph");
 
-        List<Entry<ContentAnalyzer, Iterable<ParagraphEntry>>> results = Lists
+        List<Entry<ContentAnalyzerType, Iterable<ParagraphEntry>>> results = Lists
                 .newArrayListWithCapacity(this.fingerprintRepositories.size());
         for (int i = 0; i < this.fingerprintRepositories.size(); ++i) {
             results.add(null);
@@ -72,7 +71,7 @@ public class PlagiarismChecker {
                                     i,
                                     new AbstractMap.SimpleEntry<>(
                                             this.fingerprintRepositoryInfoList
-                                                    .get(i).contentAnalyzer,
+                                                    .get(i).getContentAnalyzerType(),
                                             this.fingerprintRepositories
                                                     .get(i)
                                                     .getFingerprintEntries(
@@ -81,7 +80,8 @@ public class PlagiarismChecker {
                                                                             .getFingerprint(
                                                                                     paragraph,
                                                                                     this.fingerprintRepositoryInfoList
-                                                                                            .get(i).contentAnalyzer,
+                                                                                            .get(i).getContentAnalyzerType()
+                                                                                            .getContentAnalyzer(),
                                                                                     new StringBuilder())))));
                         });
         return results;
@@ -120,18 +120,15 @@ public class PlagiarismChecker {
         List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList = Lists
                 .newArrayListWithCapacity(contentAnalizerNames.size());
 
-        contentAnalizerNames
-                .forEach(name -> {
-                    // index file must exist
-                    File indexFile = indexPath.resolve(name).toFile();
-                    checkArgument(
-                            indexFile.exists() && !indexFile.isDirectory(),
-                            "indexFile");
-                    fingerprintRepositoryInfoList
-                            .add(new FingerprintRepositoryInfo(
-                                    ContentAnalyzerType.valueOf(name)
-                                            .getContentAnalyzer(), indexFile));
-                });
+        contentAnalizerNames.forEach(name -> {
+            // index file must exist
+                File indexFile = indexPath.resolve(name).toFile();
+                checkArgument(indexFile.exists() && !indexFile.isDirectory(),
+                        "indexFile");
+                fingerprintRepositoryInfoList
+                        .add(new FingerprintRepositoryInfo(ContentAnalyzerType
+                                .valueOf(name), indexFile));
+            });
 
         if (!indexPath.toFile().exists()) {
             indexPath.toFile().mkdirs();

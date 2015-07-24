@@ -49,9 +49,10 @@ public class IndexBuilder {
         // read article repository once, and build all index at the same time;
         // it is faster but requires much more memory
         for (int i = 0; i < fingerprintRepositoryBuilderList.size(); ++i) {
-            fingerprintRepositoryBuilderList.get(i).start(
-                    this.fingerprintRepositoryInfoList.get(i).contentAnalyzer,
-                    this.capability);
+            fingerprintRepositoryBuilderList
+                    .get(i)
+                    .start(this.fingerprintRepositoryInfoList.get(i).getContentAnalyzerType()
+                            .getContentAnalyzer(), this.capability);
         }
 
         for (Article article : this.articleRepository.getArticles()) {
@@ -64,7 +65,7 @@ public class IndexBuilder {
         }
         for (int i = 0; i < fingerprintRepositoryBuilderList.size(); ++i) {
             fingerprintRepositoryBuilderList.get(i).build()
-                    .save(this.fingerprintRepositoryInfoList.get(i).indexFile);
+                    .save(this.fingerprintRepositoryInfoList.get(i).getIndexFile());
         }
     }
 
@@ -136,8 +137,8 @@ public class IndexBuilder {
             // existing index will be overwritten
                 fingerprintRepositoryInfoList
                         .add(new FingerprintRepositoryInfo(ContentAnalyzerType
-                                .valueOf(name).getContentAnalyzer(), indexPath
-                                .resolve(name).toFile()));
+                                .valueOf(name), indexPath.resolve(name)
+                                .toFile()));
             });
 
         if (!indexPath.toFile().exists()) {

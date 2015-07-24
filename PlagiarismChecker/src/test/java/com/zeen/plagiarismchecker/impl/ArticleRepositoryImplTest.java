@@ -26,9 +26,11 @@ public class ArticleRepositoryImplTest {
     }
 
     @Test
-    public void readReferencesTest() {
+    public void readReferencesTest() {        
         ArticleRepositoryImpl referenceRepository = new ArticleRepositoryImpl(
-                Lists.newArrayList(Paths.get("ref1"), Paths.get("ref2")));
+                Lists.newArrayList(Lists.newArrayList(ArticleRepositoryTestUtil.FOLDERS).stream().map( folder ->{
+                    return Paths.get(folder); 
+                }).iterator()));
         // load every reference into memory
         List<Article> references = Lists.newArrayList(referenceRepository
                 .getArticles());
@@ -50,7 +52,9 @@ public class ArticleRepositoryImplTest {
     @Test
     public void getReferenceTest() {
         ArticleRepositoryImpl referenceRepository = new ArticleRepositoryImpl(
-                Lists.newArrayList(Paths.get("ref1"), Paths.get("ref2")));
+                Lists.newArrayList(Lists.newArrayList(ArticleRepositoryTestUtil.FOLDERS).stream().map( folder ->{
+                    return Paths.get(folder); 
+                }).iterator()));
         for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
             Article reference = referenceRepository.getArticle(i);
             Assert.assertEquals(i, reference.getId());

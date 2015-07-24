@@ -58,13 +58,13 @@ public class IndexBuilderTest {
 
         for (int i = 0; i < contentAnalizersList.size(); ++i) {
             Assert.assertEquals(
-                    contentAnalizersList.get(i).getContentAnalyzer(),
-                    indexBuilder.fingerprintRepositoryInfoList.get(i).contentAnalyzer);
+                    contentAnalizersList.get(i),
+                    indexBuilder.fingerprintRepositoryInfoList.get(i).getContentAnalyzerType());
             Assert.assertEquals(
                     Paths.get(indexRoot)
                             .resolve(contentAnalizersList.get(i).name())
                             .toFile(),
-                    indexBuilder.fingerprintRepositoryInfoList.get(i).indexFile);
+                    indexBuilder.fingerprintRepositoryInfoList.get(i).getIndexFile());
         }
     }
 

@@ -49,13 +49,13 @@ public class PlagiarismCheckerTest {
 
         for (int i = 0; i < contentAnalizersList.size(); ++i) {
             Assert.assertEquals(
-                    contentAnalizersList.get(i).getContentAnalyzer(),
-                    plagiarismChecker.fingerprintRepositoryInfoList.get(i).contentAnalyzer);
+                    contentAnalizersList.get(i),
+                    plagiarismChecker.fingerprintRepositoryInfoList.get(i).getContentAnalyzerType());
             Assert.assertEquals(
                     Paths.get(indexRoot)
                             .resolve(contentAnalizersList.get(i).name())
                             .toFile(),
-                    plagiarismChecker.fingerprintRepositoryInfoList.get(i).indexFile);
+                    plagiarismChecker.fingerprintRepositoryInfoList.get(i).getIndexFile());
         }
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
     }
@@ -84,7 +84,7 @@ public class PlagiarismCheckerTest {
 
                 for (int k = 0; k < contentAnalizersList.size(); ++k) {
                     Assert.assertEquals(
-                            contentAnalizersList.get(k).getContentAnalyzer(),
+                            contentAnalizersList.get(k),
                             Lists.newArrayList(
                                     plagiarismChecker
                                             .check(ArticleRepositoryTestUtil.ARTICLES[i][j]))
