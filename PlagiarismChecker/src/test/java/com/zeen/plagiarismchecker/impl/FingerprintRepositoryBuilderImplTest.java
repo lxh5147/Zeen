@@ -48,11 +48,10 @@ public class FingerprintRepositoryBuilderImplTest {
             Assert.assertEquals(
                     Sets.newHashSet(FingerprintRepositoryImpl
                             .newParagraphEntry(referenceId, paragraphId)),
-                    Sets.newHashSet(fingerprintRepository
-                            .getFingerprintEntries(FingerprintRepositoryImpl.newFingerprint(
-                                    FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER
-                                            .getFingerprint(content, analizer,
-                                                    stringBuffer)))));
+                    Sets.newHashSet(fingerprintRepository.getFingerprintEntries(FingerprintRepositoryImpl
+                            .newFingerprint(FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER
+                                    .getFingerprint(content, analizer,
+                                            stringBuffer)))));
             paragraphId++;
         }
     }

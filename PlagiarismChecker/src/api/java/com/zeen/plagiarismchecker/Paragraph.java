@@ -1,9 +1,9 @@
 package com.zeen.plagiarismchecker;
 
 public interface Paragraph {
-	String getContent();
+    String getContent();
 
-	int getId();
+    int getId();
 
-	int getArticleId();
+    int getArticleId();
 }

@@ -2,9 +2,9 @@ package com.zeen.plagiarismchecker;
 
 public interface FingerprintRepositoryBuilder {
 
-		void start(ContentAnalyzer analyzer, int capability);
+    void start(ContentAnalyzer analyzer, int capability);
 
-		void add(Paragraph paragraph);
+    void add(Paragraph paragraph);
 
-		FingerprintRepository build();	
+    FingerprintRepository build();
 }

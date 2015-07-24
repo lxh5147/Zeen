@@ -13,30 +13,30 @@ import com.zeen.plagiarismchecker.ContentAnalyzer;
 public class BagOfWordsContentAnalyzer implements ContentAnalyzer {
 
     public BagOfWordsContentAnalyzer(ContentAnalyzer contentAnalyzer) {
-	this.contentAnalyzer = checkNotNull(contentAnalyzer, "contentAnalyzer");
-	}
+        this.contentAnalyzer = checkNotNull(contentAnalyzer, "contentAnalyzer");
+    }
 
-	private final ContentAnalyzer contentAnalyzer;
+    private final ContentAnalyzer contentAnalyzer;
 
-	@Override
-	public Iterable<? extends CharSequence> getCheckPoints(String content) {
-		Iterable<? extends CharSequence> originalCheckPoints = this.contentAnalyzer
-				.getCheckPoints(content);
-		assert (originalCheckPoints != null);
-		TreeMap<String, Integer> bagOfWords = Maps.newTreeMap();
-		originalCheckPoints.forEach(checkPoint -> {
-			Integer count = bagOfWords.get(checkPoint);
-			count = count != null ? count + 1 : Integer.valueOf(1);
-			bagOfWords.put(new StringBuilder().append(checkPoint).toString(),
-					count);
-		});
-		List<CharSequence> checkPoints = Lists.newArrayList();
-		bagOfWords.entrySet().forEach(
-				entry -> {
-					checkPoints.add(Joiner.on(":").join(entry.getKey(),
-							entry.getValue()));
-				});
-		return checkPoints;
-	}
+    @Override
+    public Iterable<? extends CharSequence> getCheckPoints(String content) {
+        Iterable<? extends CharSequence> originalCheckPoints = this.contentAnalyzer
+                .getCheckPoints(content);
+        assert (originalCheckPoints != null);
+        TreeMap<String, Integer> bagOfWords = Maps.newTreeMap();
+        originalCheckPoints.forEach(checkPoint -> {
+            Integer count = bagOfWords.get(checkPoint);
+            count = count != null ? count + 1 : Integer.valueOf(1);
+            bagOfWords.put(new StringBuilder().append(checkPoint).toString(),
+                    count);
+        });
+        List<CharSequence> checkPoints = Lists.newArrayList();
+        bagOfWords.entrySet().forEach(
+                entry -> {
+                    checkPoints.add(Joiner.on(":").join(entry.getKey(),
+                            entry.getValue()));
+                });
+        return checkPoints;
+    }
 
 }

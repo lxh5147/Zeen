@@ -11,13 +11,13 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 public class OpenNLPTokenizerTest {
-	@Test
-	public void tokenizationTest() throws InvalidFormatException, IOException {
-		Tokenizer tokenizer = new OpenNLPTokenizer();
-		List<CharSequence> tokens = Lists.newArrayList(tokenizer
-				.split("Hi. How are you? This is Mike."));
-		List<CharSequence> expected = Lists.newArrayList("Hi", ".", "How",
-				"are", "you", "?", "This", "is", "Mike", ".");
-		Assert.assertEquals(expected, tokens);
-	}
+    @Test
+    public void tokenizationTest() throws InvalidFormatException, IOException {
+        Tokenizer tokenizer = new OpenNLPTokenizer();
+        List<CharSequence> tokens = Lists.newArrayList(tokenizer
+                .split("Hi. How are you? This is Mike."));
+        List<CharSequence> expected = Lists.newArrayList("Hi", ".", "How",
+                "are", "you", "?", "This", "is", "Mike", ".");
+        Assert.assertEquals(expected, tokens);
+    }
 }

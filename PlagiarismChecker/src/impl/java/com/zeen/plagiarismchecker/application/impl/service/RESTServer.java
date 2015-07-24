@@ -68,8 +68,7 @@ public class RESTServer {
         }
     }
 
-    private static void setupContext(String[] args) throws ParseException,
-            IOException {
+    static void setupContext(String[] args) throws ParseException, IOException {
         // refer to https://commons.apache.org/proper/commons-cli/usage.html to
         // build CLI
         // -r --articleRepositoryFolders path1,path2,...pathn
@@ -157,7 +156,7 @@ public class RESTServer {
         Context.CHECKERS = checkers;
     }
 
-    private static class Context {
+    static class Context {
         // support multiple checkers, each checker has its own index root, to
         // support incremental index
         static List<PlagiarismChecker> CHECKERS;

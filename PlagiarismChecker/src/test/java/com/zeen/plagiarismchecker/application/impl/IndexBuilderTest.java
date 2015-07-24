@@ -38,13 +38,14 @@ public class IndexBuilderTest {
     @Test
     public void getIndexBuilderTest() throws ParseException, IOException {
         String indexRoot = "index";
-        List<ContentAnalyzerType> contentAnalizersList = Lists.newArrayList(
-                ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
-                ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
+        List<ContentAnalyzerType> contentAnalizersList = Lists
+                .newArrayList(
+                        ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
 
         String[] args = { "--articleRepositoryFolders",
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
-		"--contentAnalyzers",
+                "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
                 indexRoot, "--capability", String.valueOf(10000) };
         IndexBuilder indexBuilder = IndexBuilder.getIndexBuilderWithArgs(args);
@@ -67,7 +68,7 @@ public class IndexBuilderTest {
         }
     }
 
-    static void deleteIndex(String indexRoot,
+    public static void deleteIndex(String indexRoot,
             List<ContentAnalyzerType> contentAnalizersList) {
         // delete two index files,this also ensure only two indexes are
         // generated
@@ -78,12 +79,12 @@ public class IndexBuilderTest {
         new File(indexRoot).delete();
     }
 
-    static void setupIndex(String indexRoot,
+    public static void setupIndex(String indexRoot,
             List<ContentAnalyzerType> contentAnalizersList) throws IOException,
             ParseException {
         String[] args = { "--articleRepositoryFolders",
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
-		"--contentAnalyzers",
+                "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
                 indexRoot, "--capability", String.valueOf(10000) };
         IndexBuilder.getIndexBuilderWithArgs(args).build();
@@ -92,12 +93,13 @@ public class IndexBuilderTest {
     @Test
     public void buildTest() throws ParseException, IOException {
         String indexRoot = "index";
-        List<ContentAnalyzerType> contentAnalizersList = Lists.newArrayList(
-                ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
-                ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
+        List<ContentAnalyzerType> contentAnalizersList = Lists
+                .newArrayList(
+                        ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
         String[] args = { "--articleRepositoryFolders",
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
-		"--contentAnalyzers",
+                "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
                 indexRoot, "--capability", String.valueOf(10000) };
         IndexBuilder indexBuilder = IndexBuilder.getIndexBuilderWithArgs(args);
@@ -106,9 +108,10 @@ public class IndexBuilderTest {
         StringBuilder stringBuffer = new StringBuilder();
 
         // verify that we have two finger repositories
-        for (ContentAnalyzerType contentAnalizers : Lists.newArrayList(
-                ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
-                ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer)) {
+        for (ContentAnalyzerType contentAnalizers : Lists
+                .newArrayList(
+                        ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer)) {
             FingerprintRepository fingerprintRepository = FingerprintRepositoryImpl
                     .load(Paths.get(indexRoot).resolve(contentAnalizers.name())
                             .toFile());

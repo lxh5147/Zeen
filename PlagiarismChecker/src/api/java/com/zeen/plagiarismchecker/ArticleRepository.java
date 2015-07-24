@@ -1,7 +1,7 @@
 package com.zeen.plagiarismchecker;
 
 public interface ArticleRepository {
-	Iterable<Article> getArticles();
+    Iterable<Article> getArticles();
 
-	Article getArticle(int id);
+    Article getArticle(int id);
 }

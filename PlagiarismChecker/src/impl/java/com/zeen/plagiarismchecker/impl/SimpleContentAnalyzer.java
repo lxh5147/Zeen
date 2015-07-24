@@ -6,15 +6,15 @@ import com.zeen.plagiarismchecker.ContentAnalyzer;
 
 public class SimpleContentAnalyzer implements ContentAnalyzer {
 
-	public SimpleContentAnalyzer(Tokenizer tokenizer) {
-		this.tokenizer = checkNotNull(tokenizer, "tokenizer");
-	}
+    public SimpleContentAnalyzer(Tokenizer tokenizer) {
+        this.tokenizer = checkNotNull(tokenizer, "tokenizer");
+    }
 
-	@Override
-	public Iterable<? extends CharSequence> getCheckPoints(String content) {
-		checkNotNull("content", "content");
-		return this.tokenizer.split(content);
-	}
+    @Override
+    public Iterable<? extends CharSequence> getCheckPoints(String content) {
+        checkNotNull("content", "content");
+        return this.tokenizer.split(content);
+    }
 
-	private final Tokenizer tokenizer;
+    private final Tokenizer tokenizer;
 }

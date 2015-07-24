@@ -92,8 +92,8 @@ public class IndexBuilder {
                                 .argName("names")
                                 .hasArg()
                                 .required()
-				.longOpt("contentAnalyzers")
-				.desc("content analyzer names, separated by comma")
+                                .longOpt("contentAnalyzers")
+                                .desc("content analyzer names, separated by comma")
                                 .build())
                 .addOption(
                         Option.builder("i")
@@ -116,7 +116,7 @@ public class IndexBuilder {
         List<String> articleRepositoryFolders = Lists.newArrayList(Splitter.on(
                 ',').split(line.getOptionValue("articleRepositoryFolders")));
         List<String> contentAnalizerNames = Lists.newArrayList(Splitter.on(',')
-		.split(line.getOptionValue("contentAnalyzers")));
+                .split(line.getOptionValue("contentAnalyzers")));
         Path indexPath = Paths.get(line.getOptionValue("indexPath"));
         checkArgument(!indexPath.toFile().exists()
                 || indexPath.toFile().isDirectory(), "indexPath");

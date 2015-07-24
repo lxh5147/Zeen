@@ -1,29 +1,29 @@
 package com.zeen.plagiarismchecker;
 
 public interface Article {
-	int getId();
+    int getId();
 
-	String getDOI();
+    String getDOI();
 
-	String getTitle();
+    String getTitle();
 
-	String getAuthor();
+    String getAuthor();
 
-	String getAbstraction();
+    String getAbstraction();
 
-	Iterable<Paragraph> getParagraphes();
+    Iterable<Paragraph> getParagraphes();
 
-	interface Builder {
-		Article build();
+    interface Builder {
+        Article build();
 
-		Builder withId(int id);
+        Builder withId(int id);
 
-		Builder withDOI(String doi);
+        Builder withDOI(String doi);
 
-		Builder withTitle(String title);
+        Builder withTitle(String title);
 
-		Builder withAbstract(String abstraction);
+        Builder withAbstract(String abstraction);
 
-		Builder withParagraphes(Iterable<Paragraph> paragraphes);
-	}
+        Builder withParagraphes(Iterable<Paragraph> paragraphes);
+    }
 }

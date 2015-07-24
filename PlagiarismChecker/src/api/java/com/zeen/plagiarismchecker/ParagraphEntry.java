@@ -1,7 +1,7 @@
 package com.zeen.plagiarismchecker;
 
 public interface ParagraphEntry {
-	int getArticleId();
+    int getArticleId();
 
-	int getParagraphId();
+    int getParagraphId();
 }
