@@ -16,7 +16,7 @@ import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.application.impl.FingerprintRepositoryInfo;
 import com.zeen.plagiarismchecker.application.impl.IndexBuilderTest;
 import com.zeen.plagiarismchecker.application.impl.PlagiarismChecker;
-import com.zeen.plagiarismchecker.application.impl.service.RESTServer.PlagiarismCheckeService;
+
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryTestUtil;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
@@ -46,14 +46,14 @@ public class RESTServerTest {
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPaths",
                 indexRoot };
-        RESTServer.setupContext(args);
+        PlagiarismCheckeService.setupContext(args);
         Assert.assertEquals(
                 new ArticleRepositoryImpl(Lists.newArrayList(Lists
                         .newArrayList(ArticleRepositoryTestUtil.FOLDERS)
                         .stream().map(folder -> {
                             return Paths.get(folder);
-                        }).iterator())), RESTServer.Context.ARTICLE_REPOSITORY);
-        Assert.assertEquals(1, RESTServer.Context.CHECKERS.size());
+                        }).iterator())), PlagiarismCheckeService.Context.ARTICLE_REPOSITORY);
+        Assert.assertEquals(1, PlagiarismCheckeService.Context.CHECKERS.size());
         List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList = Lists
                 .newArrayList();
         contentAnalizersList.forEach(item -> {
@@ -62,7 +62,7 @@ public class RESTServerTest {
         });
         Assert.assertEquals(
                 new PlagiarismChecker(fingerprintRepositoryInfoList),
-                RESTServer.Context.CHECKERS.get(0));
+                PlagiarismCheckeService.Context.CHECKERS.get(0));
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
     }
 
@@ -81,12 +81,12 @@ public class RESTServerTest {
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPaths",
                 indexRoot };
-        RESTServer.setupContext(args);
+        PlagiarismCheckeService.setupContext(args);
         PlagiarismCheckeService plagiarismCheckeService = new PlagiarismCheckeService();
         for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
             for (int j = 0; j < ArticleRepositoryTestUtil.ARTICLES[i].length; ++j) {
                 Assert.assertEquals(
-                        Lists.newArrayList(new RESTServer.Result(i, j,
+                        Lists.newArrayList(new PlagiarismCheckeService.Result(i, j,
                                 ArticleRepositoryTestUtil.ARTICLES[i][j],
                                 contentAnalizersList)),
                         Lists.newArrayList(plagiarismCheckeService

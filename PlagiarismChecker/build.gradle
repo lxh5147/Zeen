@@ -39,7 +39,8 @@ dependencies {
     implCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.7'
     implCompile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.7'
     implCompile group: 'org.eclipse.jetty.aggregate', name: 'jetty-all', version: '9.3.0.M1'
-
+    //implRuntime 'com.sun.jersey:jersey-json:1.19'
+    
     testCompile 'junit:junit:4.9'
     testCompile 'org.mockito:mockito-all:1.10.19'
     testCompile group: 'com.google.guava', name: 'guava', version: '18.0'
@@ -54,7 +55,8 @@ dependencies {
     testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-tokenize-models', version: '1.5'
     testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-sent-models', version: '1.5'
     testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-postag-models', version: '1.5'
-
+    //testRuntime 'com.sun.jersey:jersey-json:1.19'
+    
     testCompile sourceSets.api.output
     testCompile sourceSets.impl.output
 
