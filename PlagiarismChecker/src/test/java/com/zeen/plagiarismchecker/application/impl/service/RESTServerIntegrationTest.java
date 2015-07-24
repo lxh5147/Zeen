@@ -6,13 +6,15 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import junit.framework.Assert;
+
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.api.ContentResponse;
 import org.eclipse.jetty.http.HttpMethod;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.eclipse.jetty.client.api.Request;
+
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.application.impl.IndexBuilderTest;
@@ -33,7 +35,7 @@ public class RESTServerIntegrationTest {
     @Test
     public void checkWithRESTClientTest() throws Exception {
         String indexRoot = "index";
-        List<ContentAnalyzerType> contentAnalizersList = Lists
+        final List<ContentAnalyzerType> contentAnalizersList = Lists
                 .newArrayList(
                         ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
                         ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
@@ -46,49 +48,75 @@ public class RESTServerIntegrationTest {
                 indexRoot };
         PlagiarismCheckeService.setupContext(args);
         ExecutorService executor = Executors.newFixedThreadPool(2);
-        
+
         Runnable server = () -> {
-            try {               
+            try {
                 RESTServer.main(args);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         };
         executor.execute(server);
-        while(!RESTServer.started){
+        while (!RESTServer.started) {
             Thread.sleep(0);
         }
+        final boolean[][] done = new boolean[ArticleRepositoryTestUtil.ARTICLES.length][];
+        for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
+            done[i] = new boolean[ArticleRepositoryTestUtil.ARTICLES[i].length];
+            for (int j = 0; j < ArticleRepositoryTestUtil.ARTICLES[i].length; ++j) {
+                done[i][j] = false;
+            }
+        }
         // now we have several clients
-       int i=0;
-       int j=0;
-        //for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
-        //    for (int j = 0; j < ArticleRepositoryTestUtil.ARTICLES[i].length; ++j) {
+        for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
+            for (int j = 0; j < ArticleRepositoryTestUtil.ARTICLES[i].length; ++j) {
                 final String paragraphContent = ArticleRepositoryTestUtil.ARTICLES[i][j];
+                final int articleId = i;
+                final int paragraphId = j;
                 Runnable client = () -> {
                     // send request to server to check
-                    //
                     try {
                         HttpClient httpClient = new HttpClient();
                         httpClient.start();
-                        Request request = httpClient
+                        ContentResponse response = httpClient
                                 .newRequest("localhost", 8080)
                                 .method(HttpMethod.GET).path("/check")
                                 .timeout(5, TimeUnit.SECONDS)
-                                .param("paragraph", paragraphContent);
-                        ContentResponse response = request.send();
-                        // TODO: further verification here
-                        System.out.println(response.getContentAsString());
+                                .param("paragraph", paragraphContent).send();
+
+                        Assert.assertEquals(
+                                String.format(
+                                        "[Result{articleId=%d, paragraphId=%d, paragraphContent=%s, hittedContentAnalizerTypes=%s}]",
+                                        articleId, paragraphId,
+                                        paragraphContent, contentAnalizersList),
+                                response.getContentAsString());
+                        httpClient.stop();
+                        done[articleId][paragraphId] = true;
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
 
                 };
                 executor.execute(client);
-            //}
-        //}
+            }
+        }
 
         executor.shutdown();
-        executor.awaitTermination(50000, TimeUnit.MILLISECONDS);
+        while (!allDone(done)) {
+            Thread.sleep(0);
+        }
+        executor.awaitTermination(0, TimeUnit.MICROSECONDS);
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
+    }
+
+    private boolean allDone(boolean[][] done) {
+        for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
+            for (int j = 0; j < ArticleRepositoryTestUtil.ARTICLES[i].length; ++j) {
+                if (!done[i][j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

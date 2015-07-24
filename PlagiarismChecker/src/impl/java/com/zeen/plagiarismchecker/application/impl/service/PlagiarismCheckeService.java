@@ -26,10 +26,10 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
 import com.google.common.collect.Sets;
-
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.base.Splitter;
+import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.zeen.plagiarismchecker.Article;
@@ -38,17 +38,23 @@ import com.zeen.plagiarismchecker.Paragraph;
 import com.zeen.plagiarismchecker.ParagraphEntry;
 import com.zeen.plagiarismchecker.application.impl.FingerprintRepositoryInfo;
 import com.zeen.plagiarismchecker.application.impl.PlagiarismChecker;
-
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 
 @javax.ws.rs.Path("/")
 public class PlagiarismCheckeService {
+    // TODO: enable JSON
     @GET
     @javax.ws.rs.Path("check")
-    @Produces(MediaType.APPLICATION_ATOM_XML)
-    public Iterable<Result> check(
-            @QueryParam("paragraph") String paragraphContent) {
+    @Produces(MediaType.TEXT_PLAIN)
+    public String Check(@QueryParam("paragraph") String paragraphContent) {
+        if (Strings.isNullOrEmpty(paragraphContent)) {
+            return "";
+        }
+        return doCheck(paragraphContent).toString();
+    }
+
+    Iterable<Result> doCheck(@QueryParam("paragraph") String paragraphContent) {
         checkNotNull(paragraphContent, "paragraphContent");
         List<Iterable<Entry<ContentAnalyzerType, Iterable<ParagraphEntry>>>> checkResultsList = Lists
                 .newArrayList();
@@ -130,6 +136,7 @@ public class PlagiarismCheckeService {
                 });
         return results;
     }
+
     static void setupContext(String[] args) throws ParseException, IOException {
         // refer to https://commons.apache.org/proper/commons-cli/usage.html to
         // build CLI
@@ -223,8 +230,6 @@ public class PlagiarismCheckeService {
         static List<PlagiarismChecker> CHECKERS;
         static ArticleRepository ARTICLE_REPOSITORY;
     }
-
-    
 
     static class Result {
         private final int articleId;

@@ -90,7 +90,7 @@ public class RESTServerTest {
                                 ArticleRepositoryTestUtil.ARTICLES[i][j],
                                 contentAnalizersList)),
                         Lists.newArrayList(plagiarismCheckeService
-                                .check(ArticleRepositoryTestUtil.ARTICLES[i][j])));
+                                .doCheck(ArticleRepositoryTestUtil.ARTICLES[i][j])));
             }
         }
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);

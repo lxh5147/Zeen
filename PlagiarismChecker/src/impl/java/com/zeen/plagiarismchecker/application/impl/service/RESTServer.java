@@ -21,8 +21,10 @@ public class RESTServer {
         ServletHolder jerseyServlet = context.addServlet(
                 org.glassfish.jersey.servlet.ServletContainer.class, "/*");
         jerseyServlet.setInitOrder(0);
-
-        //jerseyServlet.setInitParameter("com.sun.jersey.api.json.POJOMappingFeature", "true");
+        
+        jerseyServlet.setInitParameter("com.sun.jersey.config.property.resourceConfigClass", "com.sun.jersey.api.core.PackagesResourceConfig");
+        
+        jerseyServlet.setInitParameter("com.sun.jersey.api.json.POJOMappingFeature", "true");
         // Tells the Jersey Servlet which REST service/class to load.
         
         jerseyServlet.setInitParameter(
