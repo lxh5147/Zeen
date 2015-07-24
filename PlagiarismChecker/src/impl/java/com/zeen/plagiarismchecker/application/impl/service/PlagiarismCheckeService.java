@@ -9,8 +9,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.stream.IntStream;
 
 import javax.ws.rs.GET;
@@ -25,13 +25,12 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import com.google.common.collect.Sets;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.base.Splitter;
-import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
 import com.zeen.plagiarismchecker.Article;
 import com.zeen.plagiarismchecker.ArticleRepository;
 import com.zeen.plagiarismchecker.Paragraph;
@@ -43,18 +42,99 @@ import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 
 @javax.ws.rs.Path("/")
 public class PlagiarismCheckeService {
-    // TODO: enable JSON
-    @GET
-    @javax.ws.rs.Path("check")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String Check(@QueryParam("paragraph") String paragraphContent) {
-        if (Strings.isNullOrEmpty(paragraphContent)) {
-            return "";
+
+    public static class Result {
+        private int articleId;
+        private int paragraphId;
+        private String paragraphContent;
+        private Iterable<ContentAnalyzerType> hittedContentAnalizerTypes;
+
+        // to make it a bean
+        public Result() {
         }
-        return doCheck(paragraphContent).toString();
+
+        Result(int articleId, int paragraphId, String paragraphContent,
+                Iterable<ContentAnalyzerType> hittedContentAnalizerTypes) {
+            this.articleId = articleId;
+            this.paragraphId = paragraphId;
+            this.paragraphContent = paragraphContent;
+            this.hittedContentAnalizerTypes = hittedContentAnalizerTypes;
+        }
+
+        @Override
+        public String toString() {
+            return MoreObjects
+                    .toStringHelper(this.getClass())
+                    .add("articleId", this.articleId)
+                    .add("paragraphId", this.paragraphId)
+                    .add("paragraphContent", this.paragraphContent)
+                    .add("hittedContentAnalizerTypes",
+                            this.hittedContentAnalizerTypes).toString();
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hashCode(this.articleId, this.paragraphId,
+                    this.paragraphContent, this.hittedContentAnalizerTypes);
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null) {
+                return false;
+            }
+            if (getClass() != obj.getClass()) {
+                return false;
+            }
+            final Result other = (Result) obj;
+            return Objects.equal(this.getArticleId(), other.getArticleId())
+                    && Objects.equal(this.getParagraphId(),
+                            other.getParagraphId())
+                    && Objects.equal(this.getParagraphContent(),
+                            other.getParagraphContent())
+                    && Objects.equal(this.getHittedContentAnalizerTypes(),
+                            other.getHittedContentAnalizerTypes());
+        }
+
+        public int getArticleId() {
+            return this.articleId;
+        }
+
+        public int getParagraphId() {
+            return this.paragraphId;
+        }
+
+        public String getParagraphContent() {
+            return this.paragraphContent;
+        }
+
+        public Iterable<ContentAnalyzerType> getHittedContentAnalizerTypes() {
+            return this.hittedContentAnalizerTypes;
+        }
+
+        public void setArticleId(int articleId) {
+            this.articleId = articleId;
+        }
+
+        public void setParagraphId(int paragraphId) {
+            this.paragraphId = paragraphId;
+        }
+
+        public void setParagraphContent(String paragraphContent) {
+            this.paragraphContent = paragraphContent;
+        }
+
+        public void setHittedContentAnalizerTypes(
+                Iterable<ContentAnalyzerType> hittedContentAnalizerTypes) {
+            this.hittedContentAnalizerTypes = hittedContentAnalizerTypes;
+        }
     }
 
-    Iterable<Result> doCheck(@QueryParam("paragraph") String paragraphContent) {
+    @GET
+    @javax.ws.rs.Path("check")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Iterable<Result> check(
+            @QueryParam("paragraph") String paragraphContent) {
         checkNotNull(paragraphContent, "paragraphContent");
         List<Iterable<Entry<ContentAnalyzerType, Iterable<ParagraphEntry>>>> checkResultsList = Lists
                 .newArrayList();
@@ -231,69 +311,4 @@ public class PlagiarismCheckeService {
         static ArticleRepository ARTICLE_REPOSITORY;
     }
 
-    static class Result {
-        private final int articleId;
-        private final int paragraphId;
-        private final String paragraphContent;
-        private final Iterable<ContentAnalyzerType> hittedContentAnalizerTypes;
-
-        Result(int articleId, int paragraphId, String paragraphContent,
-                Iterable<ContentAnalyzerType> hittedContentAnalizerTypes) {
-            this.articleId = articleId;
-            this.paragraphId = paragraphId;
-            this.paragraphContent = paragraphContent;
-            this.hittedContentAnalizerTypes = hittedContentAnalizerTypes;
-        }
-
-        @Override
-        public String toString() {
-            return MoreObjects
-                    .toStringHelper(this.getClass())
-                    .add("articleId", this.articleId)
-                    .add("paragraphId", this.paragraphId)
-                    .add("paragraphContent", this.paragraphContent)
-                    .add("hittedContentAnalizerTypes",
-                            this.hittedContentAnalizerTypes).toString();
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hashCode(this.articleId, this.paragraphId,
-                    this.paragraphContent, this.hittedContentAnalizerTypes);
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if (obj == null) {
-                return false;
-            }
-            if (getClass() != obj.getClass()) {
-                return false;
-            }
-            final Result other = (Result) obj;
-            return Objects.equal(this.getArticleId(), other.getArticleId())
-                    && Objects.equal(this.getParagraphId(),
-                            other.getParagraphId())
-                    && Objects.equal(this.getParagraphContent(),
-                            other.getParagraphContent())
-                    && Objects.equal(this.getHittedContentAnalizerTypes(),
-                            other.getHittedContentAnalizerTypes());
-        }
-
-        public int getArticleId() {
-            return this.articleId;
-        }
-
-        public int getParagraphId() {
-            return this.paragraphId;
-        }
-
-        public String getParagraphContent() {
-            return this.paragraphContent;
-        }
-
-        public Iterable<ContentAnalyzerType> getHittedContentAnalizerTypes() {
-            return this.hittedContentAnalizerTypes;
-        }
-    }
 }

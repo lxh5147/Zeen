@@ -30,6 +30,7 @@ dependencies {
     implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-tokenize-models', version: '1.5'
     implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-sent-models', version: '1.5'
     implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-postag-models', version: '1.5'
+    implRuntime group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.7'    
     //implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-chunk-models', version: '1.5'
     //implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-parse-models', version: '1.5'
     //implCompile 'commons-cli:commons-cli:1.3'
@@ -37,9 +38,8 @@ dependencies {
     implCompile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.7'
     implCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.7'
     implCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.7'
-    //implCompile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.7'
     implCompile group: 'org.eclipse.jetty.aggregate', name: 'jetty-all', version: '9.3.0.M1'
-    //implRuntime 'com.sun.jersey:jersey-json:1.19'
+
     
     testCompile 'junit:junit:4.9'
     testCompile 'org.mockito:mockito-all:1.10.19'
@@ -49,14 +49,14 @@ dependencies {
     testCompile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.7'
     testCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.7'
     testCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.7'
-    //testCompile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.7'
+    
     testCompile group: 'org.eclipse.jetty.aggregate', name: 'jetty-all', version: '9.3.0.M1'
 
     testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-tokenize-models', version: '1.5'
     testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-sent-models', version: '1.5'
     testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-postag-models', version: '1.5'
-    //testRuntime 'com.sun.jersey:jersey-json:1.19'
-    
+    testRuntime group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.7'
+
     testCompile sourceSets.api.output
     testCompile sourceSets.impl.output
 

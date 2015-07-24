@@ -86,9 +86,11 @@ public class RESTServerIntegrationTest {
 
                         Assert.assertEquals(
                                 String.format(
-                                        "[Result{articleId=%d, paragraphId=%d, paragraphContent=%s, hittedContentAnalizerTypes=%s}]",
-                                        articleId, paragraphId,
-                                        paragraphContent, contentAnalizersList),
+                                        "[{\"articleId\":%d,\"hittedContentAnalizerTypes\":\"%s\",\"paragraphContent\":\"%s\",\"paragraphId\":%d}]",
+                                        articleId,
+                                        Joiner.on(' ').join(
+                                                contentAnalizersList),
+                                        paragraphContent, paragraphId),
                                 response.getContentAsString());
                         httpClient.stop();
                         done[articleId][paragraphId] = true;
