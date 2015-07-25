@@ -57,8 +57,8 @@ public class FingerprintRepositoryBuilderImpl implements
     }
 
     @Override
-    public void add(Iterable<Paragraph> paragraphs, int parallelism) {
-        checkNotNull(paragraphs, "paragraphs");
+    public void add(List<Paragraph> paragraphList, int parallelism) {
+        checkNotNull(paragraphList, "paragraphList");
         checkArgument(parallelism >= 1, "parallelism");
         checkState(this.analyzer != null, "analyzer");
 
@@ -70,6 +70,10 @@ public class FingerprintRepositoryBuilderImpl implements
             articleEntryiesList.add(null);
             paragraphEntriesList.add(null);
         }
+
+        final int batchSize = (paragraphList.size() + parallelism - 1)
+                / parallelism;
+
         IntStream
                 .range(0, parallelism)
                 .parallel()
@@ -82,7 +86,12 @@ public class FingerprintRepositoryBuilderImpl implements
                                     .newArrayList();
                             List<Integer> curParagraphEntries = Lists
                                     .newArrayList();
-                            paragraphs.forEach(paragraph -> {
+                            int to = (i + 1) * batchSize;
+                            if (to >= paragraphList.size()) {
+                                to = paragraphList.size();
+                            }
+                            for (int j = i * batchSize; j < to; ++j) {
+                                Paragraph paragraph = paragraphList.get(j);
                                 String content = paragraph.getContent();
                                 List<Iterable<CharSequence>> checkPointsList = Lists
                                         .newArrayList(this.analyzer
@@ -90,13 +99,13 @@ public class FingerprintRepositoryBuilderImpl implements
                                 FINGERPRINT_BUILDER.buildFingerprints(
                                         checkPointsList, curStringBuilder,
                                         curFingerprintBuffer);
-                                for (int j = 0; j < checkPointsList.size(); ++j) {
-                                    curValues.add(curFingerprintBuffer[j]);
+                                for (int k = 0; k < checkPointsList.size(); ++k) {
+                                    curValues.add(curFingerprintBuffer[k]);
                                     curArticleEntries.add(paragraph
                                             .getArticleId());
                                     curParagraphEntries.add(paragraph.getId());
                                 }
-                            });
+                            }
                             valuesList.set(i, curValues);
                             articleEntryiesList.set(i, curArticleEntries);
                             paragraphEntriesList.set(i, curParagraphEntries);

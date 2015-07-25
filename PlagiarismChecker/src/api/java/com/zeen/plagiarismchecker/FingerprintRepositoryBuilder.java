@@ -1,5 +1,6 @@
 package com.zeen.plagiarismchecker;
 
+import java.util.List;
 
 public interface FingerprintRepositoryBuilder {
 
@@ -7,7 +8,7 @@ public interface FingerprintRepositoryBuilder {
 
     void add(Paragraph paragraph);
 
-    void add(Iterable<Paragraph> paragraphs, int parallelism);
+    void add(List<Paragraph> paragraphList, int parallelism);
 
     FingerprintRepository build();
 }
