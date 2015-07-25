@@ -5,6 +5,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
 import jersey.repackaged.com.google.common.collect.Lists;
 
@@ -52,6 +53,73 @@ public class FingerprintRepositoryBuilderImpl implements
             this.articleEntries[this.size] = paragraph.getArticleId();
             this.paragraphEntries[this.size] = paragraph.getId();
             ++this.size;
+        }
+    }
+
+    @Override
+    public void add(Iterable<Paragraph> paragraphs, int parallelism) {
+        checkNotNull(paragraphs, "paragraphs");
+        checkArgument(parallelism >= 1, "parallelism");
+        checkState(this.analyzer != null, "analyzer");
+
+        final List<List<Long>> valuesList = Lists.newArrayList();
+        final List<List<Integer>> articleEntryiesList = Lists.newArrayList();
+        final List<List<Integer>> paragraphEntriesList = Lists.newArrayList();
+        for (int i = 0; i < parallelism; ++i) {
+            valuesList.add(null);
+            articleEntryiesList.add(null);
+            paragraphEntriesList.add(null);
+        }
+        IntStream
+                .range(0, parallelism)
+                .parallel()
+                .forEach(
+                        i -> {
+                            long[] curFingerprintBuffer = new long[ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER];
+                            StringBuilder curStringBuilder = new StringBuilder();
+                            List<Long> curValues = Lists.newArrayList();
+                            List<Integer> curArticleEntries = Lists
+                                    .newArrayList();
+                            List<Integer> curParagraphEntries = Lists
+                                    .newArrayList();
+                            paragraphs.forEach(paragraph -> {
+                                String content = paragraph.getContent();
+                                List<Iterable<CharSequence>> checkPointsList = Lists
+                                        .newArrayList(this.analyzer
+                                                .analyze(content));
+                                FINGERPRINT_BUILDER.buildFingerprints(
+                                        checkPointsList, curStringBuilder,
+                                        curFingerprintBuffer);
+                                for (int j = 0; j < checkPointsList.size(); ++j) {
+                                    curValues.add(curFingerprintBuffer[j]);
+                                    curArticleEntries.add(paragraph
+                                            .getArticleId());
+                                    curParagraphEntries.add(paragraph.getId());
+                                }
+                            });
+                            valuesList.set(i, curValues);
+                            articleEntryiesList.set(i, curArticleEntries);
+                            paragraphEntriesList.set(i, curParagraphEntries);
+                        });
+
+        // now check the size
+        int total = 0;
+        for (int i = 0; i < parallelism; ++i) {
+            total += valuesList.get(i).size();
+        }
+        checkState(this.size + total < this.values.length, "size");
+
+        // now merge
+        for (int i = 0; i < parallelism; ++i) {
+            List<Long> curValues = valuesList.get(i);
+            List<Integer> curArticleEntries = articleEntryiesList.get(i);
+            List<Integer> curParagraphEntries = paragraphEntriesList.get(i);
+            for (int j = 0; j < curValues.size(); ++j) {
+                this.values[this.size] = curValues.get(j);
+                this.articleEntries[this.size] = curArticleEntries.get(j);
+                this.paragraphEntries[this.size] = curParagraphEntries.get(j);
+                ++this.size;
+            }
         }
     }
 
