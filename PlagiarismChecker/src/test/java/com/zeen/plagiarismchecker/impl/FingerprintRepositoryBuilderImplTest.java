@@ -77,14 +77,14 @@ public class FingerprintRepositoryBuilderImplTest {
                         "it is still not clear if and how deep learning can help to detect repeated text. In this work, we design a mapping from a paragraph to a paragraph vector, which is used to detect copy&past text.");
         int paragraphId = 0;
         int referenceId = 0;
-        List<Paragraph> paragraphes = Lists.newArrayList();
+        List<Paragraph> paragraphs = Lists.newArrayList();
 
         for (String content : paragraphContentList) {
-            paragraphes.add(new ArticleRepositoryImpl.ParagraphImpl(referenceId,
+            paragraphs.add(new ArticleRepositoryImpl.ParagraphImpl(referenceId,
                     paragraphId++, content));
         }
 
-        builder.add(paragraphes, 2);
+        builder.add(paragraphs, 2);
 
         FingerprintRepository fingerprintRepository = builder.build();
         Assert.assertNotNull(fingerprintRepository);

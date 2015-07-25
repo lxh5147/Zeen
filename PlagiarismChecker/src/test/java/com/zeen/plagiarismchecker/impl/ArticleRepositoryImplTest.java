@@ -39,13 +39,13 @@ public class ArticleRepositoryImplTest {
         for (int i = 0; i < references.size(); ++i) {
             Article reference = references.get(i);
             Assert.assertEquals(i, reference.getId());
-            List<String> paragraphes = Lists.newArrayList();
-            reference.getParagraphes().forEach(paragraph -> {
-                paragraphes.add(paragraph.getContent());
+            List<String> paragraphs = Lists.newArrayList();
+            reference.getParagraphs().forEach(paragraph -> {
+                paragraphs.add(paragraph.getContent());
             });
             Assert.assertEquals(
                     Lists.newArrayList(ArticleRepositoryTestUtil.ARTICLES[i]),
-                    paragraphes);
+                    paragraphs);
         }
     }
 
@@ -58,13 +58,13 @@ public class ArticleRepositoryImplTest {
         for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
             Article reference = referenceRepository.getArticle(i);
             Assert.assertEquals(i, reference.getId());
-            List<String> paragraphes = Lists.newArrayList();
-            reference.getParagraphes().forEach(paragraph -> {
-                paragraphes.add(paragraph.getContent());
+            List<String> paragraphs = Lists.newArrayList();
+            reference.getParagraphs().forEach(paragraph -> {
+                paragraphs.add(paragraph.getContent());
             });
             Assert.assertEquals(
                     Lists.newArrayList(ArticleRepositoryTestUtil.ARTICLES[i]),
-                    paragraphes);
+                    paragraphs);
         }
     }
 

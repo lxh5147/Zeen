@@ -11,7 +11,7 @@ public interface Article {
 
     String getAbstraction();
 
-    Iterable<Paragraph> getParagraphes();
+    Iterable<Paragraph> getParagraphs();
 
     interface Builder {
         Article build();
@@ -24,6 +24,6 @@ public interface Article {
 
         Builder withAbstract(String abstraction);
 
-        Builder withParagraphes(Iterable<Paragraph> paragraphes);
+        Builder withParagraphs(Iterable<Paragraph> paragraphs);
     }
 }

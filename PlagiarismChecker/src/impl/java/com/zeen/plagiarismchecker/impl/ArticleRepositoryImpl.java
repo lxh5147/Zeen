@@ -1,12 +1,12 @@
 package com.zeen.plagiarismchecker.impl;
 
-import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -18,24 +18,24 @@ import java.util.zip.GZIPInputStream;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.collect.Lists;
-import com.zeen.plagiarismchecker.Paragraph;
 import com.zeen.plagiarismchecker.Article;
 import com.zeen.plagiarismchecker.ArticleRepository;
+import com.zeen.plagiarismchecker.Paragraph;
 
 public class ArticleRepositoryImpl implements ArticleRepository,
         Iterable<Article> {
 
     class ArticleIterator implements Iterator<Article> {
         private Iterator<Path> folderIterator;
-        private Iterator<Path> pathes;
+        private Iterator<Path> paths;
 
         ArticleIterator() {
             this.folderIterator = folders.iterator();
             if (this.folderIterator.hasNext()) {
                 Path folder = this.folderIterator.next();
-                this.pathes = this.getFiles(folder);
+                this.paths = this.getFiles(folder);
             } else {
-                this.pathes = null;
+                this.paths = null;
             }
         }
 
@@ -63,25 +63,25 @@ public class ArticleRepositoryImpl implements ArticleRepository,
 
         @Override
         public boolean hasNext() {
-            if (this.pathes == null) {
+            if (this.paths == null) {
                 return false;
             }
-            if (this.pathes.hasNext()) {
+            if (this.paths.hasNext()) {
                 return true;
             }
             if (!this.folderIterator.hasNext()) {
                 return false;
             }
             Path folder = this.folderIterator.next();
-            this.pathes = this.getFiles(folder);
+            this.paths = this.getFiles(folder);
             return this.hasNext();
         }
 
         @Override
         public Article next() {
-            assert (this.pathes != null && this.pathes.hasNext());
+            assert (this.paths != null && this.paths.hasNext());
             try {
-                return readArticle(this.pathes.next().toFile());
+                return readArticle(this.paths.next().toFile());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -97,14 +97,14 @@ public class ArticleRepositoryImpl implements ArticleRepository,
                 new GZIPInputStream(new FileInputStream(file)), "UTF-8"))) {
             String paragraphContent = null;
             int paragraphId = 0;
-            List<Paragraph> paragraphes = Lists.newArrayList();
+            List<Paragraph> paragraphs = Lists.newArrayList();
             while ((paragraphContent = reader.readLine()) != null) {
-                paragraphes.add(new ParagraphImpl(articleId, paragraphId,
+                paragraphs.add(new ParagraphImpl(articleId, paragraphId,
                         paragraphContent));
                 ++paragraphId;
             }
             return new ArticleImpl().withId(articleId)
-                    .withParagraphes(paragraphes).build();
+                    .withParagraphs(paragraphs).build();
         }
     }
 
@@ -224,7 +224,7 @@ public class ArticleRepositoryImpl implements ArticleRepository,
         private String title;
         private String author;
         private String abstraction;
-        private Iterable<Paragraph> paragraphes;
+        private Iterable<Paragraph> paragraphs;
 
         @Override
         public int getId() {
@@ -252,20 +252,20 @@ public class ArticleRepositoryImpl implements ArticleRepository,
         }
 
         @Override
-        public Iterable<Paragraph> getParagraphes() {
-            return this.paragraphes;
+        public Iterable<Paragraph> getParagraphs() {
+            return this.paragraphs;
         }
 
         @Override
         public String toString() {
             return MoreObjects.toStringHelper(this.getClass())
-                    .add("id", this.id).add("paragraphes", this.paragraphes)
+                    .add("id", this.id).add("paragraphs", this.paragraphs)
                     .toString();
         }
 
         @Override
         public int hashCode() {
-            return Objects.hashCode(this.id, this.paragraphes);
+            return Objects.hashCode(this.id, this.paragraphs);
         }
 
         @Override
@@ -278,8 +278,8 @@ public class ArticleRepositoryImpl implements ArticleRepository,
             }
             final ArticleImpl other = (ArticleImpl) obj;
             return Objects.equal(this.getId(), other.getId())
-                    && Objects.equal(this.getParagraphes(),
-                            other.getParagraphes());
+                    && Objects.equal(this.getParagraphs(),
+                            other.getParagraphs());
         }
 
         @Override
@@ -313,8 +313,8 @@ public class ArticleRepositoryImpl implements ArticleRepository,
         }
 
         @Override
-        public Builder withParagraphes(Iterable<Paragraph> paragraphes) {
-            this.paragraphes = checkNotNull(paragraphes, "paragraphes");
+        public Builder withParagraphs(Iterable<Paragraph> paragraphs) {
+            this.paragraphs = checkNotNull(paragraphs, "paragraphs");
             return this;
         }
     }

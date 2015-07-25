@@ -125,7 +125,7 @@ public class IndexBuilderTest {
                     .load(Paths.get(indexRoot).resolve(contentAnalizers.name())
                             .toFile());
             for (Article article : indexBuilder.articleRepository.getArticles()) {
-                for (Paragraph paragraph : article.getParagraphes()) {
+                for (Paragraph paragraph : article.getParagraphs()) {
 
                     FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER
                             .buildFingerprints(Lists

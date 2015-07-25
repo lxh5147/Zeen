@@ -61,7 +61,7 @@ public class IndexBuilder {
         List<Paragraph> paragraphList = Lists.newArrayList();
 
         for (Article article : this.articleRepository.getArticles()) {
-            for (Paragraph paragraph : article.getParagraphes()) {
+            for (Paragraph paragraph : article.getParagraphs()) {
                 paragraphList.add(paragraph);
             }
             if (paragraphList.size() >= this.batchSize) {
@@ -105,11 +105,11 @@ public class IndexBuilder {
         Options options = new Options();
         options.addOption(
                 Option.builder("r")
-                        .argName("pathes")
+                        .argName("paths")
                         .hasArg()
                         .required()
                         .longOpt("articleRepositoryFolders")
-                        .desc("pathes of article repository, separated by comma")
+                        .desc("paths of article repository, separated by comma")
                         .build())
                 .addOption(
                         Option.builder("a")
@@ -133,7 +133,7 @@ public class IndexBuilder {
                                 .hasArg()
                                 .required()
                                 .longOpt("capability")
-                                .desc("the total number of paragraphes that can be supported")
+                                .desc("the total number of paragraphs that can be supported")
                                 .build())
                 .addOption(
                         Option.builder("b")

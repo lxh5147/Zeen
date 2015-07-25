@@ -160,7 +160,7 @@ public class PlagiarismCheckeService {
         Map<ParagraphEntry, List<ContentAnalyzerType>> paragraphToContentAnalizersMap = Maps
                 .newHashMap();
 
-        Map<Integer, Set<ParagraphEntry>> articleToParagraphesMap = Maps
+        Map<Integer, Set<ParagraphEntry>> articleToParagraphsMap = Maps
                 .newHashMap();
         checkResults
                 .forEach(pair -> {
@@ -169,12 +169,12 @@ public class PlagiarismCheckeService {
                                     paragraphEntry -> {
                                         Integer articleId = paragraphEntry
                                                 .getArticleId();
-                                        Set<ParagraphEntry> paragraphEntryList = articleToParagraphesMap
+                                        Set<ParagraphEntry> paragraphEntryList = articleToParagraphsMap
                                                 .get(articleId);
                                         if (paragraphEntryList == null) {
                                             paragraphEntryList = Sets
                                                     .newLinkedHashSet();
-                                            articleToParagraphesMap.put(
+                                            articleToParagraphsMap.put(
                                                     articleId,
                                                     paragraphEntryList);
                                         }
@@ -194,17 +194,17 @@ public class PlagiarismCheckeService {
 
         List<Result> results = Lists.newArrayList();
 
-        articleToParagraphesMap.entrySet().forEach(
+        articleToParagraphsMap.entrySet().forEach(
                 item -> {
                     Article article = Context.ARTICLE_REPOSITORY
                             .getArticle(item.getKey());
                     assert article != null;
-                    List<Paragraph> paragraphes = Lists.newArrayList(article
-                            .getParagraphes());
-                    assert paragraphes != null;
+                    List<Paragraph> paragraphs = Lists.newArrayList(article
+                            .getParagraphs());
+                    assert paragraphs != null;
                     item.getValue().forEach(
                             paragraphEntry -> {
-                                Paragraph paragraph = paragraphes
+                                Paragraph paragraph = paragraphs
                                         .get(paragraphEntry.getParagraphId());
                                 assert paragraph != null;
                                 results.add(new Result(article.getId(),
@@ -228,11 +228,11 @@ public class PlagiarismCheckeService {
         Options options = new Options();
         options.addOption(
                 Option.builder("r")
-                        .argName("pathes")
+                        .argName("paths")
                         .hasArg()
                         .required()
                         .longOpt("articleRepositoryFolders")
-                        .desc("pathes of article repository, separated by comma")
+                        .desc("paths of article repository, separated by comma")
                         .build())
                 .addOption(
                         Option.builder("a")

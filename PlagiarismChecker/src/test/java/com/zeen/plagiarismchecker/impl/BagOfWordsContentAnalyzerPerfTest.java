@@ -10,7 +10,7 @@ public class BagOfWordsContentAnalyzerPerfTest {
     private static final String PARAGRAPH = "Today is one of great days. Tomorrow is also great DAY. we should be more caleful for per testing. we can generate multiple check point lists for one paragraph. what really matters are the number of fingerprints.";
 
     @Test
-    public void analyzeManyParagraphesWithSimpleTokenizerTest() {
+    public void analyzeManyParagraphsWithSimpleTokenizerTest() {
         ContentAnalyzer contentAnalizer = new BagOfWordsContentAnalyzer(
                 new ShallowContentAnalyzer(new SimpleTokenizer()));
         // fine, since there is no cache
@@ -20,7 +20,7 @@ public class BagOfWordsContentAnalyzerPerfTest {
     }
 
     @Test
-    public void analyzeManyParagraphesWithOpenNLPTokenizerTest() {
+    public void analyzeManyParagraphsWithOpenNLPTokenizerTest() {
         ContentAnalyzer contentAnalizer = new BagOfWordsContentAnalyzer(
                 new ShallowContentAnalyzer(new OpenNLPTokenizer()));
         // fine, since there is no cache
