@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.stream.Stream;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -55,16 +54,13 @@ public class IndexBuilder {
                             .getContentAnalyzerType().getContentAnalyzer(),
                     this.capability);
         }
-
-        Stream<FingerprintRepositoryBuilder> fingerprintRepositoryBuilderStream = fingerprintRepositoryBuilderList
-                .parallelStream();
         for (Article article : this.articleRepository.getArticles()) {
-            for (Paragraph paragraph : article.getParagraphes()) {
-                fingerprintRepositoryBuilderStream
-                        .forEach(fingerprintRepositoryBuilder -> {
+            fingerprintRepositoryBuilderList.parallelStream().forEach(
+                    fingerprintRepositoryBuilder -> {
+                        for (Paragraph paragraph : article.getParagraphes()) {
                             fingerprintRepositoryBuilder.add(paragraph);
-                        });
-            }
+                        }
+                    });
         }
         for (int i = 0; i < fingerprintRepositoryBuilderList.size(); ++i) {
             fingerprintRepositoryBuilderList
