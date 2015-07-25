@@ -19,9 +19,9 @@ public class BagOfWordsContentAnalyzer implements ContentAnalyzer {
     private final ContentAnalyzer contentAnalyzer;
 
     @Override
-    public Iterable<? extends CharSequence> getCheckPoints(String content) {
+    public Iterable<? extends CharSequence> analyze(String content) {
         Iterable<? extends CharSequence> originalCheckPoints = this.contentAnalyzer
-                .getCheckPoints(content);
+                .analyze(content);
         assert (originalCheckPoints != null);
         TreeMap<String, Integer> bagOfWords = Maps.newTreeMap();
         originalCheckPoints.forEach(checkPoint -> {

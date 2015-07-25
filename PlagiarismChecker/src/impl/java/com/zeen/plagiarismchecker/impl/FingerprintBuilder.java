@@ -23,7 +23,7 @@ public class FingerprintBuilder {
         checkNotNull(analizer, "analizer");
         checkNotNull(stringBuffer, "stringBuffer");
         stringBuffer.setLength(0);
-        for (CharSequence checkPoint : analizer.getCheckPoints(content)) {
+        for (CharSequence checkPoint : analizer.analyze(content)) {
             stringBuffer.append(checkPoint);
         }
         return getFingerprint(stringBuffer.toString());

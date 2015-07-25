@@ -20,7 +20,7 @@ public class ShallowContentAnalyzer implements ContentAnalyzer {
     private final Tokenizer tokenizer;
 
     @Override
-    public Iterable<? extends CharSequence> getCheckPoints(String content) {
+    public Iterable<? extends CharSequence> analyze(String content) {
         // lower case and then tokenization
         Iterable<? extends CharSequence> originalCheckPoints = this.tokenizer
                 .split(content.toLowerCase());

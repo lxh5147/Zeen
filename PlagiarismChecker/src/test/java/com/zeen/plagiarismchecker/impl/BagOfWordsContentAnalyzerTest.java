@@ -17,7 +17,7 @@ public class BagOfWordsContentAnalyzerTest {
                 Lists.newArrayList("day:2", "great:2", "one:1", "today:1",
                         "tomorrow:1"),
                 Lists.newArrayList(contentAnalizer
-                        .getCheckPoints("Today is one of great days. Tomorrow is also great DAY.")));
+                        .analyze("Today is one of great days. Tomorrow is also great DAY.")));
     }
 
 }

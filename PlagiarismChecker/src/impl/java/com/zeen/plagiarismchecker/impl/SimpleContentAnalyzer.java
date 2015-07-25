@@ -11,7 +11,7 @@ public class SimpleContentAnalyzer implements ContentAnalyzer {
     }
 
     @Override
-    public Iterable<? extends CharSequence> getCheckPoints(String content) {
+    public Iterable<? extends CharSequence> analyze(String content) {
         checkNotNull("content", "content");
         return this.tokenizer.split(content);
     }

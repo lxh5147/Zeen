@@ -13,12 +13,12 @@ public class ShallowContentAnalyzerTest {
                 new SimpleTokenizer());
         // lower case and stop words removal
         Assert.assertEquals(Lists.newArrayList("s"), Lists
-                .newArrayList(contentAnalizer.getCheckPoints("This'S me.")));
+                .newArrayList(contentAnalizer.analyze("This'S me.")));
         // numbers
         Assert.assertEquals(Lists.newArrayList("number", "123"), Lists
-                .newArrayList(contentAnalizer.getCheckPoints("number 123?")));
+                .newArrayList(contentAnalizer.analyze("number 123?")));
         // stemming
         Assert.assertEquals(Lists.newArrayList("good", "test"), Lists
-                .newArrayList(contentAnalizer.getCheckPoints("good tests!")));
+                .newArrayList(contentAnalizer.analyze("good tests!")));
     }
 }
