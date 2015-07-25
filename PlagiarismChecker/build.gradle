@@ -1,8 +1,11 @@
 apply plugin: "java"
 apply plugin: "maven"
+apply plugin: "application"
 
 group = "com.zeen.plagiarismchecker"
 version = 1.0
+
+mainClassName = 'com.zeen.plagiarismchecker.application.impl.service.RESTServer'
 
 repositories { mavenCentral() }
 
