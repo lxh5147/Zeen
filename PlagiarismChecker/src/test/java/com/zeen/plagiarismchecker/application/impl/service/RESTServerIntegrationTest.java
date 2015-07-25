@@ -83,13 +83,11 @@ public class RESTServerIntegrationTest {
                                 .method(HttpMethod.GET).path("/check")
                                 .timeout(5, TimeUnit.SECONDS)
                                 .param("paragraph", paragraphContent).send();
-
                         Assert.assertEquals(
                                 String.format(
-                                        "[{\"articleId\":%d,\"hittedContentAnalizerTypes\":\"%s\",\"paragraphContent\":\"%s\",\"paragraphId\":%d}]",
-                                        articleId,
-                                        Joiner.on(' ').join(
-                                                contentAnalizersList),
+                                        "[{\"articleId\":%d,\"hittedContentAnalizerTypes\":[\"%s\",\"%s\"],\"paragraphContent\":\"%s\",\"paragraphId\":%d}]",
+                                        articleId, contentAnalizersList.get(0),
+                                        contentAnalizersList.get(1),
                                         paragraphContent, paragraphId),
                                 response.getContentAsString());
                         httpClient.stop();
@@ -97,7 +95,6 @@ public class RESTServerIntegrationTest {
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
-
                 };
                 executor.execute(client);
             }

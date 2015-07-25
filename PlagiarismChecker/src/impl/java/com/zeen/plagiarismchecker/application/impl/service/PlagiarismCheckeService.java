@@ -47,14 +47,14 @@ public class PlagiarismCheckeService {
         private int articleId;
         private int paragraphId;
         private String paragraphContent;
-        private Iterable<ContentAnalyzerType> hittedContentAnalizerTypes;
+        private List<ContentAnalyzerType> hittedContentAnalizerTypes;
 
         // to make it a bean
         public Result() {
         }
 
         Result(int articleId, int paragraphId, String paragraphContent,
-                Iterable<ContentAnalyzerType> hittedContentAnalizerTypes) {
+                List<ContentAnalyzerType> hittedContentAnalizerTypes) {
             this.articleId = articleId;
             this.paragraphId = paragraphId;
             this.paragraphContent = paragraphContent;
@@ -108,7 +108,7 @@ public class PlagiarismCheckeService {
             return this.paragraphContent;
         }
 
-        public Iterable<ContentAnalyzerType> getHittedContentAnalizerTypes() {
+        public List<ContentAnalyzerType> getHittedContentAnalizerTypes() {
             return this.hittedContentAnalizerTypes;
         }
 
@@ -125,7 +125,7 @@ public class PlagiarismCheckeService {
         }
 
         public void setHittedContentAnalizerTypes(
-                Iterable<ContentAnalyzerType> hittedContentAnalizerTypes) {
+                List<ContentAnalyzerType> hittedContentAnalizerTypes) {
             this.hittedContentAnalizerTypes = hittedContentAnalizerTypes;
         }
     }
