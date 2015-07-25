@@ -57,14 +57,15 @@ public class IndexBuilderTest {
                 indexBuilder.fingerprintRepositoryInfoList.size());
 
         for (int i = 0; i < contentAnalizersList.size(); ++i) {
-            Assert.assertEquals(
-                    contentAnalizersList.get(i),
-                    indexBuilder.fingerprintRepositoryInfoList.get(i).getContentAnalyzerType());
+            Assert.assertEquals(contentAnalizersList.get(i),
+                    indexBuilder.fingerprintRepositoryInfoList.get(i)
+                            .getContentAnalyzerType());
             Assert.assertEquals(
                     Paths.get(indexRoot)
                             .resolve(contentAnalizersList.get(i).name())
                             .toFile(),
-                    indexBuilder.fingerprintRepositoryInfoList.get(i).getIndexFile());
+                    indexBuilder.fingerprintRepositoryInfoList.get(i)
+                            .getIndexFile());
         }
     }
 
@@ -105,7 +106,8 @@ public class IndexBuilderTest {
         IndexBuilder indexBuilder = IndexBuilder.getIndexBuilderWithArgs(args);
         indexBuilder.build();
 
-        StringBuilder stringBuffer = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
+        long[] fingerprintBuffer = new long[1];
 
         // verify that we have two finger repositories
         for (ContentAnalyzerType contentAnalizers : Lists
@@ -117,14 +119,18 @@ public class IndexBuilderTest {
                             .toFile());
             for (Article article : indexBuilder.articleRepository.getArticles()) {
                 for (Paragraph paragraph : article.getParagraphes()) {
+
+                    FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER
+                            .buildFingerprints(Lists
+                                    .newArrayList(contentAnalizers
+                                            .getContentAnalyzer().analyze(
+                                                    paragraph.getContent())),
+                                    stringBuilder, fingerprintBuffer);
+
                     List<ParagraphEntry> paragraphEntries = Lists
                             .newArrayList(fingerprintRepository
                                     .getFingerprintEntries(FingerprintRepositoryImpl
-                                            .newFingerprint(FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER.getFingerprint(
-                                                    paragraph.getContent(),
-                                                    contentAnalizers
-                                                            .getContentAnalyzer(),
-                                                    stringBuffer))));
+                                            .newFingerprint(fingerprintBuffer[0])));
                     Assert.assertEquals(1, paragraphEntries.size());
                     Assert.assertEquals(article.getId(), paragraphEntries
                             .get(0).getArticleId());

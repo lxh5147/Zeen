@@ -4,6 +4,10 @@ import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 
+import java.util.List;
+
+import jersey.repackaged.com.google.common.collect.Lists;
+
 import com.zeen.plagiarismchecker.ContentAnalyzer;
 import com.zeen.plagiarismchecker.FingerprintRepository;
 import com.zeen.plagiarismchecker.FingerprintRepositoryBuilder;
@@ -17,7 +21,8 @@ public class FingerprintRepositoryBuilderImpl implements
     int[] paragraphEntries;
     int size;
     ContentAnalyzer analyzer;
-    StringBuilder stringBuffer;
+    StringBuilder stringBuilder;
+    long[] fingerprintBuffer;
 
     @Override
     public void start(ContentAnalyzer analyzer, int capability) {
@@ -25,10 +30,11 @@ public class FingerprintRepositoryBuilderImpl implements
         checkArgument(capability > 0, "capability");
         this.analyzer = analyzer;
         this.size = 0;
-        this.stringBuffer = new StringBuilder();
+        this.stringBuilder = new StringBuilder();
         this.values = new long[capability];
         this.articleEntries = new int[capability];
         this.paragraphEntries = new int[capability];
+        this.fingerprintBuffer = new long[ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER];
     }
 
     @Override
@@ -37,12 +43,16 @@ public class FingerprintRepositoryBuilderImpl implements
         checkState(this.analyzer != null, "analyzer");
         checkState(this.size < this.values.length, "size");
         String content = paragraph.getContent();
-
-        this.values[this.size] = FINGERPRINT_BUILDER.getFingerprint(content,
-                this.analyzer, this.stringBuffer);
-        this.articleEntries[this.size] = paragraph.getArticleId();
-        this.paragraphEntries[this.size] = paragraph.getId();
-        ++this.size;
+        List<Iterable<CharSequence>> checkPointsList = Lists
+                .newArrayList(this.analyzer.analyze(content));
+        FINGERPRINT_BUILDER.buildFingerprints(checkPointsList,
+                this.stringBuilder, this.fingerprintBuffer);
+        for (int i = 0; i < checkPointsList.size(); ++i) {
+            this.values[this.size] = this.fingerprintBuffer[i];
+            this.articleEntries[this.size] = paragraph.getArticleId();
+            this.paragraphEntries[this.size] = paragraph.getId();
+            ++this.size;
+        }
     }
 
     @Override
@@ -57,7 +67,8 @@ public class FingerprintRepositoryBuilderImpl implements
         this.articleEntries = null;
         this.paragraphEntries = null;
         this.size = 0;
-        this.stringBuffer = null;
+        this.stringBuilder = null;
+        this.fingerprintBuffer = null;
         return fingerprintRepository;
     }
 

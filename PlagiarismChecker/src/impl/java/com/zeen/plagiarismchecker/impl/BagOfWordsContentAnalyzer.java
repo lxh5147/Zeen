@@ -19,24 +19,29 @@ public class BagOfWordsContentAnalyzer implements ContentAnalyzer {
     private final ContentAnalyzer contentAnalyzer;
 
     @Override
-    public Iterable<CharSequence> analyze(String content) {
-        Iterable<? extends CharSequence> originalCheckPoints = this.contentAnalyzer
-                .analyze(content);
-        assert (originalCheckPoints != null);
-        TreeMap<String, Integer> bagOfWords = Maps.newTreeMap();
-        originalCheckPoints.forEach(checkPoint -> {
-            Integer count = bagOfWords.get(checkPoint);
-            count = count != null ? count + 1 : Integer.valueOf(1);
-            bagOfWords.put(new StringBuilder().append(checkPoint).toString(),
-                    count);
-        });
-        List<CharSequence> checkPoints = Lists.newArrayList();
-        bagOfWords.entrySet().forEach(
-                entry -> {
-                    checkPoints.add(Joiner.on(":").join(entry.getKey(),
-                            entry.getValue()));
-                });
-        return checkPoints;
+    public Iterable<Iterable<CharSequence>> analyze(String content) {
+        checkNotNull("content", "content");
+        List<Iterable<CharSequence>> checkPointsList = Lists.newArrayList();
+        for (Iterable<CharSequence> originalCheckPoints : this.contentAnalyzer
+                .analyze(content)) {
+
+            assert (originalCheckPoints != null);
+            TreeMap<String, Integer> bagOfWords = Maps.newTreeMap();
+            originalCheckPoints.forEach(checkPoint -> {
+                Integer count = bagOfWords.get(checkPoint);
+                count = count != null ? count + 1 : Integer.valueOf(1);
+                bagOfWords.put(new StringBuilder().append(checkPoint)
+                        .toString(), count);
+            });
+            List<CharSequence> checkPoints = Lists.newArrayList();
+            bagOfWords.entrySet().forEach(
+                    entry -> {
+                        checkPoints.add(Joiner.on(":").join(entry.getKey(),
+                                entry.getValue()));
+                    });
+            checkPointsList.add(checkPoints);
+        }
+        return checkPointsList;
     }
 
 }

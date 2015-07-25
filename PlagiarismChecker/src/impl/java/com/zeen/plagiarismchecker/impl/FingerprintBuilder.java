@@ -1,10 +1,10 @@
 package com.zeen.plagiarismchecker.impl;
 
+import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.nio.charset.Charset;
-
-import com.zeen.plagiarismchecker.ContentAnalyzer;
+import java.util.List;
 
 public class FingerprintBuilder {
 
@@ -17,17 +17,22 @@ public class FingerprintBuilder {
         return fingerprint64(content.getBytes(this.charset));
     }
 
-    public long getFingerprint(String content, ContentAnalyzer analizer,
-            StringBuilder stringBuffer) {
-        checkNotNull(content, "content");
-        checkNotNull(analizer, "analizer");
-        checkNotNull(stringBuffer, "stringBuffer");
-        stringBuffer.setLength(0);
-        for (CharSequence checkPoint : analizer.analyze(content)) {
-            stringBuffer.append(checkPoint);
+    public void buildFingerprints(List<Iterable<CharSequence>> checkPointsList,
+            StringBuilder stringBuilder, long[] fingerprints) {
+        checkNotNull(checkPointsList, "checkPointsList");
+        checkNotNull(stringBuilder, "stringBuilder");
+        checkNotNull(fingerprints, "fingerprints");
+        checkArgument(fingerprints.length >= checkPointsList.size(),
+                "fingerprints");
+        for (int i = 0; i < checkPointsList.size(); ++i) {
+            stringBuilder.setLength(0);
+            for (CharSequence checkPoint : checkPointsList.get(i)) {
+                stringBuilder.append(checkPoint);
+            }
+            fingerprints[i] = getFingerprint(checkPointsList.toString());
         }
-        return getFingerprint(stringBuffer.toString());
     }
+
 
     private final Charset charset;
 

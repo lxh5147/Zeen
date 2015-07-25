@@ -20,7 +20,7 @@ public class ShallowContentAnalyzer implements ContentAnalyzer {
     private final Tokenizer tokenizer;
 
     @Override
-    public Iterable<CharSequence> analyze(String content) {
+    public Iterable<Iterable<CharSequence>> analyze(String content) {
         // lower case and then tokenization
         Iterable<? extends CharSequence> originalCheckPoints = this.tokenizer
                 .split(content.toLowerCase());
@@ -39,7 +39,9 @@ public class ShallowContentAnalyzer implements ContentAnalyzer {
                 }
                 checkPoints.add(stemmedCheckPoint);
             });
-        return checkPoints;
+        List<Iterable<CharSequence>> checkPointsList = Lists.newArrayList();
+        checkPointsList.add(checkPoints);
+        return checkPointsList;
     }
 
     // Stemmer is not thread safe

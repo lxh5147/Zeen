@@ -43,15 +43,21 @@ public class FingerprintRepositoryBuilderImplTest {
         FingerprintRepository fingerprintRepository = builder.build();
         Assert.assertNotNull(fingerprintRepository);
         paragraphId = 0;
-        StringBuilder stringBuffer = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
+        long[] fingerprintBuffer = new long[1];
+
         for (String content : paragraphes) {
+            FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER
+                    .buildFingerprints(
+                            Lists.newArrayList(analizer.analyze(content)),
+                            stringBuilder, fingerprintBuffer);
             Assert.assertEquals(
-                    Sets.newHashSet(FingerprintRepositoryImpl
-                            .newParagraphEntry(referenceId, paragraphId)),
-                    Sets.newHashSet(fingerprintRepository.getFingerprintEntries(FingerprintRepositoryImpl
-                            .newFingerprint(FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER
-                                    .getFingerprint(content, analizer,
-                                            stringBuffer)))));
+
+            Sets.newHashSet(FingerprintRepositoryImpl.newParagraphEntry(
+                    referenceId, paragraphId)), Sets
+                    .newHashSet(fingerprintRepository
+                            .getFingerprintEntries(FingerprintRepositoryImpl
+                                    .newFingerprint(fingerprintBuffer[0]))));
             paragraphId++;
         }
     }

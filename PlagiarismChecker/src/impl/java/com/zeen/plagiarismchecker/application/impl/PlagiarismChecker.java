@@ -96,24 +96,37 @@ public class PlagiarismChecker {
                 .parallel()
                 .forEach(
                         i -> {
-                            results.set(
-                                    i,
-                                    new AbstractMap.SimpleEntry<>(
-                                            this.fingerprintRepositoryInfoList
-                                                    .get(i)
-                                                    .getContentAnalyzerType(),
-                                            this.fingerprintRepositories
-                                                    .get(i)
-                                                    .getFingerprintEntries(
-                                                            FingerprintRepositoryImpl
-                                                                    .newFingerprint(FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER
-                                                                            .getFingerprint(
-                                                                                    paragraph,
-                                                                                    this.fingerprintRepositoryInfoList
-                                                                                            .get(i)
-                                                                                            .getContentAnalyzerType()
-                                                                                            .getContentAnalyzer(),
-                                                                                    new StringBuilder())))));
+                            List<Iterable<CharSequence>> checkPointsList = Lists
+                                    .newArrayList(this.fingerprintRepositoryInfoList
+                                            .get(i).getContentAnalyzerType()
+                                            .getContentAnalyzer()
+                                            .analyze(paragraph));
+
+                            long[] fingerprintBuffer = new long[checkPointsList
+                                    .size()];
+                            FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER
+                                    .buildFingerprints(checkPointsList,
+                                            new StringBuilder(),
+                                            fingerprintBuffer);
+                            List<ParagraphEntry> paragraphEntries = Lists
+                                    .newArrayList();
+                            for (int j = 0; j < fingerprintBuffer.length; ++j) {
+
+                                this.fingerprintRepositories
+                                        .get(i)
+                                        .getFingerprintEntries(
+                                                FingerprintRepositoryImpl
+                                                        .newFingerprint(fingerprintBuffer[j]))
+                                        .forEach(
+                                                paragraphEntry -> {
+                                                    paragraphEntries
+                                                            .add(paragraphEntry);
+                                                });
+                            }
+                            results.set(i, new AbstractMap.SimpleEntry<>(
+                                    this.fingerprintRepositoryInfoList.get(i)
+                                            .getContentAnalyzerType(),
+                                    paragraphEntries));
                         });
         return results;
     }
