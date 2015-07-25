@@ -29,6 +29,8 @@ public class IndexBuilder {
     final ArticleRepository articleRepository;
     final List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList;
     final int capability;
+    final int parallelism = 2;
+    final int batchIndexSize = 3;
 
     private IndexBuilder(ArticleRepository articleRepository,
             List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList,
@@ -54,13 +56,28 @@ public class IndexBuilder {
                             .getContentAnalyzerType().getContentAnalyzer(),
                     this.capability);
         }
+        List<Paragraph> paragraphList = Lists.newArrayList();
+
         for (Article article : this.articleRepository.getArticles()) {
+            for (Paragraph paragraph : article.getParagraphes()) {
+                paragraphList.add(paragraph);
+            }
+            if (paragraphList.size() >= this.batchIndexSize) {
+                fingerprintRepositoryBuilderList.parallelStream().forEach(
+                        fingerprintRepositoryBuilder -> {
+                            fingerprintRepositoryBuilder.add(paragraphList,
+                                    this.parallelism);
+                        });
+                paragraphList.clear();
+            }
+        }
+        if (paragraphList.size() > 0) {
             fingerprintRepositoryBuilderList.parallelStream().forEach(
                     fingerprintRepositoryBuilder -> {
-                        for (Paragraph paragraph : article.getParagraphes()) {
-                            fingerprintRepositoryBuilder.add(paragraph);
-                        }
+                        fingerprintRepositoryBuilder.add(paragraphList,
+                                this.parallelism);
                     });
+            paragraphList.clear();
         }
         for (int i = 0; i < fingerprintRepositoryBuilderList.size(); ++i) {
             fingerprintRepositoryBuilderList
