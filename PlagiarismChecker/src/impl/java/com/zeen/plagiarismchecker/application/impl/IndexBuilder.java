@@ -29,15 +29,17 @@ public class IndexBuilder {
     final ArticleRepository articleRepository;
     final List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList;
     final int capability;
-    final int parallelism = 2;
-    final int batchIndexSize = 3;
+    final int parallelism;
+    final int batchSize;
 
     private IndexBuilder(ArticleRepository articleRepository,
             List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList,
-            int capability) {
+            int capability, int batchSize, int parallelism) {
         this.articleRepository = articleRepository;
         this.fingerprintRepositoryInfoList = fingerprintRepositoryInfoList;
         this.capability = capability;
+        this.parallelism = parallelism;
+        this.batchSize = batchSize;
     }
 
     public void build() throws IOException {
@@ -62,7 +64,7 @@ public class IndexBuilder {
             for (Paragraph paragraph : article.getParagraphes()) {
                 paragraphList.add(paragraph);
             }
-            if (paragraphList.size() >= this.batchIndexSize) {
+            if (paragraphList.size() >= this.batchSize) {
                 fingerprintRepositoryBuilderList.parallelStream().forEach(
                         fingerprintRepositoryBuilder -> {
                             fingerprintRepositoryBuilder.add(paragraphList,
@@ -96,6 +98,8 @@ public class IndexBuilder {
         // -a --contentAnalizers name1,name2,...namen
         // -i --indexPath path
         // -c --capability
+        // -b --batchSize 10000
+        // -p --parallelism 4
 
         CommandLineParser parser = new DefaultParser();
         Options options = new Options();
@@ -130,6 +134,22 @@ public class IndexBuilder {
                                 .required()
                                 .longOpt("capability")
                                 .desc("the total number of paragraphes that can be supported")
+                                .build())
+                .addOption(
+                        Option.builder("b")
+                                .argName("int")
+                                .hasArg()
+                                .required()
+                                .longOpt("batchSize")
+                                .desc("the number of paragrahs added to index builder for batch indexing")
+                                .build())
+                .addOption(
+                        Option.builder("p")
+                                .argName("int")
+                                .hasArg()
+                                .required()
+                                .longOpt("parallelism")
+                                .desc("the number of workers used by an index builder to index a batch of paragraphs")
                                 .build());
 
         CommandLine line = parser.parse(options, args);
@@ -165,10 +185,16 @@ public class IndexBuilder {
         }
 
         int capability = Integer.valueOf(line.getOptionValue("capability"));
+        checkArgument(capability > 0, "capability");
+        int batchSize = Integer.valueOf(line.getOptionValue("batchSize"));
+        checkArgument(batchSize > 0, "batchSize");
+        int parallelism = Integer.valueOf(line.getOptionValue("parallelism"));
+        checkArgument(parallelism > 0, "parallelism");
 
         ArticleRepository articleRepository = new ArticleRepositoryImpl(folders);
         return new IndexBuilder(articleRepository,
-                fingerprintRepositoryInfoList, capability);
+                fingerprintRepositoryInfoList, capability, batchSize,
+                parallelism);
     }
 
     public static void main(final String[] args) throws ParseException,

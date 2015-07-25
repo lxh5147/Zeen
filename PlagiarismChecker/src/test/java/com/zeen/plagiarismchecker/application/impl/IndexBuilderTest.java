@@ -87,7 +87,9 @@ public class IndexBuilderTest {
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
-                indexRoot, "--capability", String.valueOf(10000) };
+                indexRoot, "--capability", String.valueOf(10000),
+                "--batchSize", String.valueOf(1000), "--parallelism",
+                String.valueOf(4) };
         IndexBuilder.getIndexBuilderWithArgs(args).build();
     }
 
@@ -102,7 +104,9 @@ public class IndexBuilderTest {
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
-                indexRoot, "--capability", String.valueOf(10000) };
+                indexRoot, "--capability", String.valueOf(10000),
+                "--batchSize", String.valueOf(1000), "--parallelism",
+                String.valueOf(4) };
         IndexBuilder indexBuilder = IndexBuilder.getIndexBuilderWithArgs(args);
         indexBuilder.build();
 
