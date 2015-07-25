@@ -19,7 +19,7 @@ public class BagOfWordsContentAnalyzer implements ContentAnalyzer {
     private final ContentAnalyzer contentAnalyzer;
 
     @Override
-    public Iterable<? extends CharSequence> analyze(String content) {
+    public Iterable<CharSequence> analyze(String content) {
         Iterable<? extends CharSequence> originalCheckPoints = this.contentAnalyzer
                 .analyze(content);
         assert (originalCheckPoints != null);
