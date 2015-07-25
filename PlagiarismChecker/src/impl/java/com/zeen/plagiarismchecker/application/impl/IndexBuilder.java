@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -49,23 +50,28 @@ public class IndexBuilder {
         // read article repository once, and build all index at the same time;
         // it is faster but requires much more memory
         for (int i = 0; i < fingerprintRepositoryBuilderList.size(); ++i) {
-            fingerprintRepositoryBuilderList
-                    .get(i)
-                    .start(this.fingerprintRepositoryInfoList.get(i).getContentAnalyzerType()
-                            .getContentAnalyzer(), this.capability);
+            fingerprintRepositoryBuilderList.get(i).start(
+                    this.fingerprintRepositoryInfoList.get(i)
+                            .getContentAnalyzerType().getContentAnalyzer(),
+                    this.capability);
         }
 
+        Stream<FingerprintRepositoryBuilder> fingerprintRepositoryBuilderStream = fingerprintRepositoryBuilderList
+                .parallelStream();
         for (Article article : this.articleRepository.getArticles()) {
             for (Paragraph paragraph : article.getParagraphes()) {
-                fingerprintRepositoryBuilderList
+                fingerprintRepositoryBuilderStream
                         .forEach(fingerprintRepositoryBuilder -> {
                             fingerprintRepositoryBuilder.add(paragraph);
                         });
             }
         }
         for (int i = 0; i < fingerprintRepositoryBuilderList.size(); ++i) {
-            fingerprintRepositoryBuilderList.get(i).build()
-                    .save(this.fingerprintRepositoryInfoList.get(i).getIndexFile());
+            fingerprintRepositoryBuilderList
+                    .get(i)
+                    .build()
+                    .save(this.fingerprintRepositoryInfoList.get(i)
+                            .getIndexFile());
         }
     }
 
