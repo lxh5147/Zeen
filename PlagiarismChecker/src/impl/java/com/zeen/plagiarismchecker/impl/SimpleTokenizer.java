@@ -12,7 +12,7 @@ public class SimpleTokenizer implements Tokenizer {
             .omitEmptyStrings();
 
     @Override
-    public Iterable<? extends CharSequence> split(String content) {
+    public Iterable<? extends CharSequence> split(CharSequence content) {
         checkNotNull(content, "content");
         return SPLITTER.split(content);
     }

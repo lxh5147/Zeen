@@ -5,10 +5,10 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.google.common.collect.Lists;
-
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
+
+import com.google.common.collect.Lists;
 
 public class OpenNLPTokenizer implements Tokenizer {
 
@@ -30,9 +30,10 @@ public class OpenNLPTokenizer implements Tokenizer {
     };
 
     @Override
-    public Iterable<? extends CharSequence> split(String content) {
+    public Iterable<? extends CharSequence> split(CharSequence content) {
         checkNotNull(content, "content");
-        return Lists.newArrayList(_TOKENIZER.get().tokenize(content));
+        return Lists
+                .newArrayList(_TOKENIZER.get().tokenize(content.toString()));
     }
 
 }
