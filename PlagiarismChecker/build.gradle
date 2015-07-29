@@ -73,7 +73,7 @@ task buildIndex (dependsOn: 'classes', type: JavaExec) {
     classpath = sourceSets.impl.runtimeClasspath
   	if ( project.hasProperty("appArgs") ) {
         args Eval.me(appArgs)
-        //gradle run -PappArgs="['arg1', 'args2']"
+        //gradle buildIndex -PappArgs="['--articleRepositoryFolders', 'articles','--contentAnalyzers','SimpleContentAnalizerWithSimpleTokenizer,BagOfWordsContentAnalizerWithOpenNLPTokenizer','--indexPath','indexes','--capability','100000','--batchSize','1000','--parallelism','2']"
     }
 }
 
@@ -82,6 +82,7 @@ task startService (dependsOn: 'classes', type: JavaExec) {
     classpath = sourceSets.impl.runtimeClasspath
   	if ( project.hasProperty("appArgs") ) {
         args Eval.me(appArgs)     
+        //gradle startService -PappArgs="['--articleRepositoryFolders', 'articles','--contentAnalyzers','SimpleContentAnalizerWithSimpleTokenizer,BagOfWordsContentAnalizerWithOpenNLPTokenizer','--indexPaths','indexes']"
     }
 }
 
