@@ -64,11 +64,10 @@ public enum ContentAnalyzerType {
     private static final ContentAnalyzer BAGOFWORDS_CONTENT_ANALIZER_WITH_OPENNLP_TOKENIER = new BagOfWordsContentAnalyzer(
             SHALLOW_CONTENT_ANALIZER_WITH_OPENNLP_TOKENIER);
 
-    private static final int MINIMAL_TOKENS_PER_SEGMENT = 20;
-    private static final int MAXIMAL_TOKENS_PER_SEGMENT = 40;
+    private static final int OPTIMAL_TOKENS_PER_SEGMENT = 16;
 
     private static final ContentAnalyzer SEGMENT_CONTENT_ANALIZER_WITH_SIMPLE_TOKENIZER_AND_SIMPLE_SEGMENT_SPLITTER = new ContentSegmentAnalyzer(
             SIMPLE_TOKENIZER, SIMPLE_SEGMENT_SPLITTER,
-            MINIMAL_TOKENS_PER_SEGMENT, MAXIMAL_TOKENS_PER_SEGMENT);
+            OPTIMAL_TOKENS_PER_SEGMENT, OPTIMAL_TOKENS_PER_SEGMENT);
 
 }
