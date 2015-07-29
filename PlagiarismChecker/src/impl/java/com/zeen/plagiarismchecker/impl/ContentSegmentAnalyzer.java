@@ -3,6 +3,7 @@ package com.zeen.plagiarismchecker.impl;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import java.util.Collections;
 import java.util.List;
 
 import jersey.repackaged.com.google.common.collect.Lists;
@@ -47,7 +48,7 @@ public class ContentSegmentAnalyzer implements ContentAnalyzer {
         }
         List<Iterable<CharSequence>> checkPointsList = Lists.newArrayList();
         for (int i = 0; i < segments.size(); ++i) {
-            List<CharSequence> checkPoints = this.getCheckPoint(
+            List<CharSequence> checkPoints = this.getCheckPoints(
                     segmentTokensList, i);
             if (!checkPoints.isEmpty()) {
                 checkPointsList.add(checkPoints);
@@ -56,9 +57,12 @@ public class ContentSegmentAnalyzer implements ContentAnalyzer {
         return checkPointsList;
     }
 
-    private List<CharSequence> getCheckPoint(
+    List<CharSequence> getCheckPoints(
             List<List<CharSequence>> segmentTokensList, int i) {
         List<CharSequence> segmentTokens = segmentTokensList.get(i);
+        if (segmentTokens.isEmpty()) {
+            return Collections.emptyList();
+        }
         List<CharSequence> checkPoints = Lists
                 .newArrayListWithCapacity(this.maximalAllowedTokensPerSegment);
         for (CharSequence token : segmentTokens) {
@@ -72,7 +76,7 @@ public class ContentSegmentAnalyzer implements ContentAnalyzer {
             segmentTokens = segmentTokensList.get(indexOfSegmentToBorrow);
             for (CharSequence token : segmentTokens) {
                 checkPoints.add(token);
-                if (checkPoints.size() > this.maximalAllowedTokensPerSegment) {
+                if (checkPoints.size() >= this.maximalAllowedTokensPerSegment) {
                     return checkPoints;
                 }
             }
