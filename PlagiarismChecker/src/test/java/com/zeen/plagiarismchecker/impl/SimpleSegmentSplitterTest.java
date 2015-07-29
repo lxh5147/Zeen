@@ -10,6 +10,7 @@ public class SimpleSegmentSplitterTest {
     @Test
     public void splitTest() {
         SimpleSegmentSplitter simpleSegmentSplitter = new SimpleSegmentSplitter();
+        // remove empty segments, and trim leading and ending blanks
         Assert.assertEquals(
                 Lists.newArrayList("is this yours", "yes,that is nice then",
                         "test again"),
