@@ -1,0 +1,1039 @@
+ABSTRACT SINK, SCOTT. Managing for Old-Growth Conditions in Second-Growth Temperate Rainforests of South-Central Chile. (Under the direction of Drs. Doug Frederick and Pablo Donoso.)
+
+The Llancahue watershed east of Valdivia, Chile (pop. 140,000) provides a glimpse of what the native forests in South-Central Chile looked like before land clearing and conversion to exotic tree plantations. Federally protected since 1929, over 500 hectares (ha) of this 1,300 ha watershed is old-growth temperate rainforest. The Faculty of Forest Sciences at the Universidad Austral de Chile acquired management authority over Llancahue from the Chilean government in September 2008. UACH has goals to manage the watershed for forest products, increased water yield, wildlife habitat, and recreational opportunities. In addition to old-growth conservation, they also plan to manage some second-growth stands to promote old-growth conditions.
+
+The purpose of my research in Llancahue was to gain a better understanding of the native forests within its boundaries in order to develop recommendations for restoring old-growth forest conditions in second-growth stands. In 2007 and 2008, I measured 25 0.1 ha plots throughout the watershed covering five forest subtypes delineated by the Faculty of Forest Sciences using aerial photographs and GIS. I gathered data on overstory structure, understory composition, snags, stumps, downed woody debris, and tree growth rates to characterize the differences between old-growth and second-growth forests. I then applied this data to the development of a silvicultural prescription to artificially advance forest succession within second-growth stands.
+
+
+
+Managing for Old-Growth Conditions in Second-Growth Temperate Rainforests of South-Central Chile
+
+by Scott Sink
+
+A dissertation submitted to the Graduate Faculty of North Carolina State University in partial fulfillment of the requirements for the degree of Doctor of Philosophy
+
+Forestry
+
+Raleigh, North Carolina 2009
+
+APPROVED BY:
+
+_______________________________ Dr. Doug Frederick Committee Co-Chair ______________________________ Dr. Pablo Donoso Committee Co-Chair
+
+________________________________ Dr. Susan Moore ______________________________ Dr. William Hoffmann
+
+
+
+BIOGRAPHY
+
+I have been in school for over 20 consecutive years. The only thing I know for sure is that I do not know very much.
+
+ii
+
+
+
+ACKNOWLEDGMENTS
+
+I would like to acknowledge my committee co-chairs, Drs. Doug Frederick and Pablo Donoso, for their assistance with all facets of my research. My other committee members, Drs. Susan Moore and Bill Hoffmann, were also very helpful during my degree program. In addition, Jonathan Barichivich and Tiffany Peters were invaluable field assistants in Chile. I would like to take this opportunity to thank my parents and all of my family for their support throughout my education.
+
+Funding for my project was generously provided by the North Carolina State University College of Natural Resources’ Hofmann Forest Graduate Fellowship and the U.S. Department of Agriculture’s International Science and Education Competitive Grants Program.
+
+iii
+
+
+
+TABLE OF CONTENTS
+
+LIST OF TABLES ................................................................................................................ vii LIST OF FIGURES..............................................................................................................viii Chapter 1. Introduction to native forests of Chile................................................................... 1 Background and history of Chile .......................................................................................... 1 Current status of Chilean native forests................................................................................ 3 Native forests of the Llancahue watershed ........................................................................... 5 Literature cited...................................................................................................................... 7 Chapter 2. Forest stand history of the Llancahue watershed near Valdivia, Chile ................. 9 Introduction........................................................................................................................... 9 Materials and methods ........................................................................................................ 12 Results................................................................................................................................. 16 Second-growth dominated by N. dombeyi ......................................................................16 Second-growth dominated by E. cordifolia .....................................................................17 Second-growth of mixed species .....................................................................................17 Old-growth with emergent N. dombeyi...........................................................................18 Old-growth without emergents ........................................................................................19 Discussion........................................................................................................................... 22 Ground truth.....................................................................................................................22 Age of old-growth stands.................................................................................................23 Disturbance history..........................................................................................................24 Illegal cutting ...................................................................................................................25 Conclusions......................................................................................................................... 25 Literature cited.................................................................................................................... 26
+
+iv
+
+
+
+Chapter 3. Plant community structure of old-growth and second-growth forest stands in the Llancahue watershed near Valdivia, Chile ................................................................. 29 Introduction......................................................................................................................... 29 Materials and methods ........................................................................................................ 30 Results................................................................................................................................. 32 Species richness and diversity indices .............................................................................32 Understory cover..............................................................................................................32 Density and basal area .....................................................................................................33 Crown height....................................................................................................................33 Woody debris...................................................................................................................34 Cluster analysis ................................................................................................................34 Discussion........................................................................................................................... 41 Species richness, diversity indices, and understory cover ...............................................41 Density and basal area .....................................................................................................42 Crown height....................................................................................................................43 Woody debris...................................................................................................................43 Cluster analysis ................................................................................................................44 Conclusions......................................................................................................................... 45 Literature cited.................................................................................................................... 45 Chapter 4. Managing for old-growth conditions in second-growth temperate rainforests of South-Central Chile .................................................................................................... 48 Introduction......................................................................................................................... 48 Materials and methods ........................................................................................................ 49 Results................................................................................................................................. 50 Second-growth dominated by E. cordifolia .....................................................................50 Old-growth without emergents ........................................................................................50 Second-growth dominated by N. dombeyi ......................................................................51 Old-growth with emergent N. dombeyi...........................................................................51
+
+v
+
+
+
+Discussion........................................................................................................................... 58 Management of overstory density....................................................................................58 Management of tree regeneration ....................................................................................60 Management of woody debris..........................................................................................61 Management of understory species..................................................................................61 Conclusions......................................................................................................................... 62 Literature cited.................................................................................................................... 62 APPENDIX............................................................................................................................... 65
+
+vi
+
+
+
+LIST OF TABLES
+
+Table 2.1. Characteristics for 25 plots summarized by five forest community subtypes in the Llancahue watershed. Individual plots are identified by the region of the watershed where they are found based on Figure 2.1. ................................................................. 20 Table 2.2. Importance valuesa for tree species summarized by five forest community subtypes in the Llancahue watershed.......................................................................... 22 Table 3.1. Diversity indices, crown height, downed woody debris, basal area of snags, and number of stumps summarized by five forest community subtypes in the Llancahue watershed. ................................................................................................................... 36 Table A.1. Percent cover for herbaceous species and seedlings (dbh<2.5 cm) summarized by five forest community subtypes in the Llancahue watershed. .................................... 66
+
+vii
+
+
+
+LIST OF FIGURES
+
+Figure 2.1. Map of Llancahue watershed showing the major forest community subtypes.. 12 Figure 2.2. Maps displaying the location of 25 plots and the presence of stumps, fire sign, and wetland species in each.. ...................................................................................... 21 Figure 3.1. Map of the difference between species richness in each plot and the average richness for its community subtype extrapolated using ArcGIS. ............................... 35 Figure 3.2. Percent cover for herbaceous species and seedlings (dbh<2.5 cm) summarized by five forest community subtypes in the Llancahue watershed. ............................... 37 Figure 3.3. Density (with standard error bars) of five forest communities in the Llancahue watershed. ................................................................................................................... 37 Figure 3.4. Basal area (with standard error bars) of five forest communities in the Llancahue watershed................................................................................................... 38 Figure 3.5. Cluster dendrogram computed from presence-absence data for all species per plot with R (v2.8.1). .................................................................................................. 39 Figure 3.6. Cluster dendrogram computed from importance values of overstory trees per plot with R (v2.8.1). ........................................................................................................... 40 Figure 4.1. Diameter distribution of trees in four forest subtypes in the Llancahue watershed ..................................................................................................................................... 52 Figure 4.2. Map of trees (>5 cm DBH) in old growth with emergent Nothofagus dombeyi plot. ............................................................................................................................. 55 Figure 4.3. Map of trees (>5 cm DBH) in a second-growth dominated by Nothofagus dombeyi plot................................................................................................................ 56 Figure 4.4. Map of trees (>5 cm DBH) in a second-growth dominated by Nothofagus dombeyi plot after a proposed thinning....................................................................... 57
+
+viii
+
+
+
+Chapter 1. Introduction to native forests of Chile
+
+BACKGROUND AND HISTORY OF CHILE Chile is a land of extreme diversity, home of the driest desert and the second largest temperate rainforest in the world. It averages 150 km in width while spanning nearly 40° of Latitude, the same expanse as Ketchikan, Alaska to Acapulco, Mexico (Wilcox 1996). Isolated by the Pacific Ocean and the Andes Mountains, there exists a variety of endemic species and unique ecosystems. These include forests of giant alerce (Fitzroya cupressoides), scattered groves of Chilean palms (Jubaea chilensis) in Central Chile, stands of the ancient-looking Araucaria araucana, and many varieties of southern beech trees (Nothofagus spp.). Approximately 15.6-million ha (21%) of the country is forested today (Alvarez 2006), a decrease of nearly 50% from an estimate of 30-million ha prior to Spanish colonization (Wilcox 1996).
+
+Indeed, the history of Chile is one of deforestation. This is especially true in the Central Depression of South-Central Chile (33°S to 41°S Latitude), which lies between the Coast Range and the Andes and is now home to 70% of the country’s population (Donoso 2006). After the country gained independence from Spain in 1818, large numbers of European immigrants came to colonize the region. They cut thousands of hectares for building materials and burned thousands more to clear pastures for cattle (Wilcox 1996). Farms were often abandoned after a few years, but burning continued unchecked into the 1940s. In an effort to battle erosion, afforestation with exotic tree species was widely sponsored by the government between 1950-1997. A total of 1.1-million ha of Pinus radiata and Eucalyptus spp. were planted during that period (Alvarez 2006), 90% of that on lands with 10% or more of soil loss due to poor management in the past. According to Pizarro et al. (2006), plantations have been successful for soil conservation.
+
+Moreover, plantations have helped to create jobs and to make forestry a significant part of the national economy. Plantation timber has satisfied the domestic demands for construction,
+
+1
+
+
+
+furniture, and pulp and is exported worldwide (Clapp 2001). It has not, however, eased the cutting pressure on native forests. Clapp (2001) argues that demand for hardwood chips by Japan led to increases in the exploitation of native forests in the 1990s. In addition, plantations do nothing to stem the illegal cutting of native forests on public lands by impoverished rural residents that supply firewood to the cities (Donoso 2006). In some cases, government subsidies have led to forest conversion from native species to exotics. In addition, new highway construction could increase the risk to native forests (Wilson et al. 2005). There are currently 2.9-million ha of cleared forest suitable for planting, so there is no present need to clear more (Lara and Donoso 2000). In fact, the rapid expansion of plantations has leveled off in the past decade (Alvarez 2006), still native forests in the heavily populated Central Depression remain vulnerable.
+
+Urbanization and forest fragmentation are additional threats to native forests in the SouthCentral Chile. Outside the city of Concepción, wetland areas have been heavily developed since 1975 (Pauchard 2006). In addition, forest fragmentation may negatively impact some native animals. In a study of two carnivorous mammals in an area with a high concentration of plantations, one species did not leave the larger patches of native forest while the other was able to adapt or thrive with more edge habitat (Acosta-Jamett and Simonetti 2004). This points out the importance of connectivity of native forests for certain species in an increasingly fragmented landscape (Echeverría et al. 2006). The biodiversity of the Central Depression is threatened by development and needs better protection, especially since the region has such a high rate of endemism.
+
+Luckily, Chile is very progressive in that national parks, preserves, and other protected areas cover 3.9-million ha (29%) of the native forests in the country (Lara and Donoso 2000). However, the great majority of these hectares are in the largely unpopulated southern portions of the country. Many experts (Rozzi et al. 2000, Echeverría et al. 2006, Wilcox 1996) realize the importance of protecting the remaining areas of old-growth forests near the population centers of the Central Depression. The government has officially protected
+
+2
+
+
+
+species in the past, including alerce and araucaria trees, but have typically lacked the ability to adequately enforce the laws. Regardless, conservation can only go so far in an area as heavily exploited as South-Central Chile, where there is not much virgin old-growth forest remaining to protect. If the government is serious about saving endangered trees, they need to make it a priority to rehabilitate degraded native forests using native species.
+
+CURRENT STATUS OF CHILEAN NATIVE FORESTS Chile needs an alternative to industrial plantations of exotic species and high-grading of already degraded native forests. According to José Alvarez (2006) of Forestal Mininco, there are currently 5.3-million ha of productive native forests in the country. Although all of that area may not be accessible for management, there is potential. Plantations definitely have their place in Chile, but the hectares of contiguous monocultures are extremely susceptible to pathogen outbreaks (Clapp 2001). Diversity of genetics and a variety of species are the simplest ways to insure the forestry sector against such a disaster while protecting native biodiversity.
+
+There currently exist some plantations of the fast-growing native species: roble (Nothofagus obliqua), raulí (Nothofagus alpina), and coihue (Nothofagus dombeyi) (Donoso 2006). The growth rates of native species under management range between 10-20 m3/ha/yr, competitive with plantation grown Pinus radiata which averages 22 m3/ha/yr (Donoso 2006). One advantage of using native species in the temperate rainforests of Chile is that there are valuable shade-tolerant species that can grow in the understory of fast-growing pioneers, including evergreen hardwoods like tepa (Laurelia philippiana), olivillo (Aextoxicon punctatum), laurel (L. sempervirens), and lingue (Persea lingue). In addition, evidence suggests there is mutualism among certain tree species and the native fauna for seed pollination and dispersal (Lara and Donoso 2000). There are great opportunities to grow the roble-raulí-coihue, alerce, and siempreverde forest types that were once common in SouthCentral Chile (Wilcox 1996). What are needed now are nurseries growing native seedlings
+
+3
+
+
+
+and government subsidies for private landowners, similar to those provided during the expansion of exotic plantations (Lara and Donoso 2000, Clapp 2001).
+
+The silvics of native species has been well studied by the “father of forestry” in Chile, Claudio Donoso, and many others. There are currently two quality silviculture textbooks focusing on native Chilean species available in Spanish (Lara and Donoso 2000, Donoso 2006). There has been a considerable interest in research on native ecosystems in Chile by outside sources as well. Thomas Veblen conducted extensive studies on stand dynamics and disturbance regimes in the Andean and coastal forests near Valdivia (Veblen 1985, Veblen et al. 1981). He found that regeneration is based on catastrophic disturbances such as fires and landslides associated with volcanism in the Andes (Veblen 1985), while disturbance is much less frequent and stands can approach a steady state condition in coastal forests (Veblen et al. 1981). Light requirements and succession of native Chilean forests are also well studied, the information simply needs to be applied through silviculture.
+
+Second-growth stands of roble-raulí-coihue have had more silvicultural experiments conducted on them than any other native forest type (Lara and Donoso 2000). They are structurally simple systems that respond well to thinning. These forests currently occupy 1.2-million hectares and are often found on highly-productive sites in South-Central Chile (Lara and Donoso 2000). Proposed rotation ages range between 60 and 75 years, with periodic thinnings of up to 40% of basal area. Regeneration methods typically involve some type of shelterwood cut, often in patches to encourage regeneration of shade intolerant species. Lenga (Nothofagus pumilio) provides a prized decay-resistant wood and is well adapted to the harsh winter conditions of the Andes and Southern Chile (Wilcox 1996). Rotation ages of 120 to 140 years have been projected for this slow-growing species (2-6 m3/ha/yr), using a variable retention system to decrease the risk of blowdown (Lara and Donoso 2000). It may be difficult to sell a landowner on such a long-term strategy, but on public lands in Southern Chile it may be a viable management option.
+
+4
+
+
+
+A much more complicated forest ecosystem is the siempreverde (“evergreen”) forest found in the area around the city of Valdivia. It is difficult to summarize the knowledge of this forest type because it varies greatly depending on the species composition. Coihue is commonly found as a pioneer species, but it can live over 600 years and become part of the old-growth forest (Donoso 2006). Other opportunist species commonly found are ulmo (Eucryphia cordifolia), an evergreen tree with showy white flowers, and tineo (Weinmannia trichosperma), which can reach up to 30 meters in height (Wilcox 1996), as well as shade tolerant olivillo and tepa, which can each reach 30 meters.
+
+Silvicultural systems should imitate the complexity and heterogeneity of native stands to provide habitat for native fauna and other non-timber products (Lara and Donoso 2000, Acosta-Jamett and Simonetti 2004). Exotic plantations have their place in the economy of Chile, but rehabilitating native forests is important on more than an economic level; it is the right thing to do.
+
+NATIVE FORESTS OF THE LLANCAHUE WATERSHED The Llancahue watershed east of Valdivia (pop. 140,000) provides an excellent opportunity for uneven aged management. A portion of this 1,300-hectare area is an old-growth siempreverde forest which is protected by law and may in the future be designated a provincial park. What this old-growth forest provides is a glimpse of what the native forests in the area looked like before land clearing. The diversity of species and stand structure there can provide a target for what to manage the second-growth forest towards over time.
+
+The main priority of the Llancahue watershed is to provide a quality water supply to the city of Valdivia. There are plans to designate it a Provincial Park to provide recreation and opportunities for public education, as well as scientific research (Donoso et al. 2005). Therefore, soil conservation and maintaining forest cover are important objectives. Recreation, improving biodiversity, and demonstrating silviculture are secondary goals that can be met by properly managing this area. Old-growth characteristics to be managed for
+
+5
+
+
+
+include structural complexity, species diversity, and biological decadence (Jenkins et al. 2004). There is also an opportunity to try to rehabilitate 150 acres that have converted to bamboo (Chusquea spp.), a native understory species in the region, through enrichment planting and possibly controlled burning.
+
+Siempreverde forest species present in Llancahue include coihue (Nothofagus dombeyi), a canopy dominant species in old-growth forests (Donoso 2006). In addition, shade tolerant evergreen trees like tepa (Laurelia philippiana) and olivillo (Aextoxicon punctatum) are often found as co-dominant species. Emergent coihue, ulmo (Eucryphia cordifolia), and tineo (Weinmannia trichosperma) may also be present, as their mortality will later provide important canopy gaps (Veblen et al. 1981). If some of these species are absent from the second-growth forest, it may be deemed necessary to plant them and control competing vegetation until they become established. Other techniques for promoting a faster move towards old-growth conditions include pruning of low branches to allow more light to penetrate to the understory, girdling of live trees to create snags, and the distribution of slash on the forest floor as course woody debris (Jenkins et al. 2004).
+
+The purpose of the research presented in this doctoral dissertation was to provide land managers of Llancahue a summary of past disturbances, current conditions, and future forest management recommendations. In Chapter 2, I used data collected from 25 0.1-hectare plots throughout the watershed to reconstruct a stand history of Llancahue. In Chapter 3, I compared overstory structure, understory composition, and coarse woody debris measurements between old-growth and second-growth forests. Finally, in Chapter 4, I applied the data to the development of a silvicultural prescription to artificially advance forest succession within second-growth stands. I believe the analysis presented here offers a good start to sustainable forest management of the Llancahue watershed to meet multiple-use objectives.
+
+6
+
+
+
+LITERATURE CITED Acosta-Jamett, G. and J.A. Simonetti. 2004. Habitat use by Oncifelis guigna and Pseudalopex culpaeus in a fragmented forest landscape in central Chile. Biodiversity and Conservation 13(6): 1135–1151. Alvarez, J. 2006. A perspective of the Chilean forestry sector. Presentation at North Carolina State University, 20 November 2006. Clapp, R.A. 2001. Tree farming and forest conservation in Chile: Do replacement forests Leave any originals behind? Society and Natural Resources 14: 341–356. Donoso, C. 2006. Especies arbóreas de los bosques templados de Chile y Argentina. Autoecología. Marisa Cúneo Ediciones, Valdivia, Chile. Donoso, P. 2006. Native forests in Chile: Silviculture, management, and expectations. Presentation at North Carolina State University, 8 November 2006. Donoso, P., C. Frene and A. Lara. 2005. Propuesta Técnica. Plan de desarrollo integral para el predio Llancahue, Valdivia, X Región de Los Lagos. 8 p. Echeverría, C.D. Coomes, J. Salas, J.M. Rey-Benayas, A. Lara, and A. Newton. 2006. Rapid deforestation and fragmentation of Chilean Temperate Forests. Biological Conservation 130(4): 481-494. Jenkins, D.H., D.A. Devlin, N.C. Johnson, and S.P. Orndorff. 2004. System design and management for restoring Penn’s Woods. Forestry 102(3): 30-36. Lara, A., and C. Donoso. 2000. Silviculture of native forests in Chile: state of the art and future prospects. Sust. Mgt. of Indigenous Forest, Lincoln University 17-22 January 2000. Pauchard, A., M. Aguayo, E. Pe?a, and R. Urrutia. 2005. Multiple effects of urbanization on the biodiversity of developing countries: The case of a fast-growing metropolitan area (Concepcion, Chile). Biological Conservation 127: 272-281 Pizarro, R., S. Araya, C. Jordán, C. Farías, J.P. Flores, and P.B. Bro. 2006. The effects of changes in vegetative cover on river flows in the Purapel river basin of central Chile. Hydrology 327, 249– 257. Rozzi R., J. Silander, J.J. Armesto, P. Feinsigner, and F. Massardo. 2000. Three levels of integrating ecology with the conservation of South American temperate forests: the initiative of the Institute of Ecological Research Chiloé, Chile. Biodiversity and Conservation 9: 1199–1217.
+
+7
+
+
+
+Veblen, T.T., C. Donoso, F. Schlegel, and B. Escobar. 1981. Forest dynamics in SouthCentral Chile. Biogeography 8: 211-247. Veblen, T.T. 1985. Stand dynamics in Chilean Nothofagus forests, Chapter 3 in The ecology of natural disturbance and patch dynamics. Pickett, S.T.A. (ed.). Academic Press: pp.35-51. Wilson, K., A. Newton, C. Echeverría, C. Weston, and M. Burgman. 2005. A vulnerability analysis of the temperate forests of south central Chile. Biological Conservation 122: 9-21. Wilcox, K. 1996. Chile’s native forests: A conservation legacy. Northwest Wild Books: Bellingham.
+
+8
+
+
+
+Chapter 2. Forest stand history of the Llancahue watershed near Valdivia, Chile
+
+INTRODUCTION The city of Valdivia, Chile was first established by Spanish Conquistadors in 1552, but the area was not extensively settled by Europeans until the mid-1800s. Before Europeans, South-Central Chile was inhabited by Mapuche indigenous people, but even when Charles Darwin (1839) visited the city in 1835 he noted, “There is not much cleared land near Valdivia.” The arrival of European, especially German, immigrants during the mid-1800s sped the clearing of forests for agriculture and pastureland (Wilcox 1996). During the second half of the twentieth century, the forest plantation industry spread, leading to the conversion of many former fields and native forests to plantations of exotic Pinus radiata and Eucalyptus spp. trees (Rozzi et al. 2001). Over 2-million hectares (ha), which equals 13.3% of the nation’s forests, are currently in plantations (Espinosa and Acu?a 2007).
+
+Conservation efforts in Chilean native forests have been extensive, with 3.8-million ha protected in National Parks, Preserves, and Monuments and another 4.8-million ha in forest types with banned logging or on protected slopes >45%, which together represent 55.8% of the nation’s forested area (Espinosa and Acu?a 2007). However, the majority of these protected forests are in the Andes or in the sparsely populated southern portion of the country. Due to tree plantation and agricultural activities, few intact native forests remain in the Intermediate Depression which lies between the Coast Range and the Andes of SouthCentral Chile. As a first step to protect native forests, the Chilean Government’s National Commission of the Environment (CONAMA) has identified 40 high-priority sites for conservation in Regions X and XIV (39-43°S). One of these is the Llancahue watershed in the Intermediate Depression east of Valdivia, which contains almost 800 ha of relatively well-preserved old-growth forest, and an additional 325 ha of second-growth native forest.
+
+Llancahue (39o50’20”S, 73o07’18”W) is a periurban watershed, located only 7 km from downtown Valdivia, which makes its protection even more noteworthy. Its waters form a
+
+9
+
+
+
+tributary to the Río Angachilla and the water treatment facility at its terminus is the source of most of the drinking water for the city (Nú?ez et al. 2005). In 1929, the Chilean government purchased 1,300 ha of property in the watershed to protect water quality. In 2008, administration of the land transferred from the Ministerio de Bienes Nacionales to the Faculty of Forest Sciences at the Universidad Austral de Chile. The watershed is bounded by forest plantations that belong to two large companies (Forestal Valdivia and Forestal Tornagaleones), one medium-size entrepeneur (the Fried Family), and some other small- and medium-size landowners.
+
+Illegal cattle grazing and harvesting of trees for firewood are ongoing activities within the boundaries of Llancahue, threatening the remaining old-growth stands with fragmentation and degradation (Echeverría et al. 2007). Prior to government purchase of the property in 1929, portions of the western half of Llancahue that are now forested were either homesteads or fields under wheat cultivation (Donoso, personal communication). Due to past and present uses, a network of skid trails and livestock trails exists throughout the entire watershed with the exception of the southwest corner. Fire was another prominent past disturbance in the watershed based on the presence of fire scars, charcoal in the soil, and stands dominated by even aged Nothofagus dombeyi, one of the native tree species that often invades after fire disturbances (Veblen et al. 1981). The Faculty of Forest Sciences were interested in determining the effects of disturbance on the forests, including the age of second-growth stands, extent of past fires, and intensity of illegal harvesting activities.
+
+In 1991, the Faculty of Forest Sciences created a vegetation map of the watershed based on aerial photography, which denoted five forest subtypes (Figure 2.1) including: 1) 76 hectares of even aged second-growth stands dominated by N. dombeyi, 2) 16 ha of even aged secondgrowth stands dominated by Eucryphia cordifolia, 3) 226 ha of even aged second-growth stands of mixed species 4) 190 ha of old-growth stands with emergent N. dombeyi, and 5) 287 ha of old-growth stands without emergents. Another 280 ha are categorized as a stream buffer, most of which is old-growth forest. There are also extensive areas (206 ha) of
+
+10
+
+
+
+bamboo thickets (Chusquea quila and C. macrostachya) and shrubby vegetation (matorral) within the boundaries of the watershed, but these were not measured as part of this project. Since this map was created nearly two decades ago and it has never been validated or “ground truthed,” the Faculty of Forest Sciences were interested in determining its accuracy.
+
+To meet the needs of the Faculty of Forest Sciences, the objectives of this study were to 1) determine the extent and cause of major disturbances within the forest over the past century, 2) assess the extent of illegal harvesting of trees since government purchase in 1929, and 3) validate or “ground truth” a map of five forest subtypes developed using aerial photographs. This information will be useful to the Faculty of Forest Sciences as they attempt to understand past land use, as well as current conditions, and how that may affect the future potential of the forest to meet their management objectives.
+
+11
+
+
+
+Figure 2.1. Map of Llancahue watershed showing the major forest community subtypes. MATERIALS AND METHODS Llancahue receives 2,100 mm average annual rainfall, 70% of which falls between April and October (Almeyda and Saez 1958, Menzel 1993). The average annual temperature is 12.2°C with an average of 23.3°C in January and 4.6°C in August (Fuenzalida 1971). The soils are characteristic of the Coastal Cordillera of Chile, with old volcanic ash deposits over mica schist bedrock. A previous study conducted by UACH found only two soil types within the watershed boundaries (Donoso, personal communication), therefore in my study no soil
+
+12
+
+
+
+samples were collected. The lower half (50-200 m) of the watershed has steep slopes, but the upper half has a gentle slope (<30%), with an elevation range from 200 to 350 m.
+
+The official classification of the vegetation of Llancahue is the siempreverde forest type (Donoso 1981, Donoso and Donoso 2007), which is considered a part of the Valdivian rainforest (Wilcox 1996). Important tree species include: shade intolerant N. dombeyi, E. cordifolia, and Drimys winteri, as well as shade tolerant Laureliopsis philippiana, Aextoxicon punctatum, and several species of Myrtaceae (Table 2.2). Throughout the watershed there are tree species characteristic of the roble-raulí-coihue forest type, such as Nothofagus obliqua, Laurelia sempervirens, and Persea lingue.
+
+In summer 2007 and 2008, I established 25 0.1-hectare plots in Llancahue, with five plots per community subtype (Figure 2.2). I used ArcView GIS and the map of community subtypes identified in Figure 2.1 to layout a stratified random sample of 50 plot centers across the watershed within each of the five community subtypes. Knowing I had limited time and resources for sampling the 1,300 ha area, I chose five plot centers per community subtype spread as widely as possible across the entire watershed. In addition, I chose to cluster plot centers from different community subtypes so that I could later test if plots were correlated more strongly with location or community subtype. This sampling design led me to choose many second-growth plot centers near the borders of the watershed in order to spread my plots into the eastern and southern portions of Llancahue.
+
+In the field, it became apparent to me after trying to navigate to plot centers established using ArcView GIS with a GPS that the coordinate system of the map (Figure 2.1) did not match my GPS unit. With some assistance, I have surmised that at sometime since 1991 the projection of the map was improperly changed so that now it is shifted about 0.2 km northwest from where it is in reality. However, I only found twice that my GPS waypoint for a plot center did not match the vegetation on the ground, and that was in two small patches of old-growth community subtypes in the northern portion of the watershed. In these two
+
+13
+
+
+
+instances I did not sample at that plot center and instead navigated to an alternative plot center chosen in my stratified random sample. In another two instances I found two oldgrowth plot centers where over 25% of stems were cut, so I relocated my plot center to a point within 50 m that avoided the heavy logging. I also relocated within 50 m four other plot centers to avoid sampling across large trails. Since the map (Figure 2.1) only identified a 16 ha section of second-growth forest dominated by E. cordifolia I chose three plots a posteriori based on an abundance of E. cordifolia in second-growth stands. I realize my plot selection criteria introduced bias into my sampling, but I believe it was justified to achieve a balanced sample of five plots per community subtype for statistical analysis.
+
+At each plot center, I established a 20x50 m plot with the 50 m side oriented with the slope (Whitaker 1960). I recorded elevation, slope direction, and percent slope so that I could later apply a slope correction to my data (Abella et al. 2004). I identified each tree (dbh≥2.5 cm) by species and tallied them within size classes based on diameter at breast height (DBH, 1.37 m), with trees greater than 40 cm measured to the nearest centimeter. Diameter classes were: 2.5-4.9, 5.0-9.9, 10.0-14.9, 15.0-19.9, 20.0-24.9, 25.0-29.9, 30.0-34.9, and 35.0-39.9 cm. I recorded freshly cut stumps (Class 1 and 2, Maser and Trappe 1984) by diameter at stump height (DSH) separately for each species. These data were included in the calculations of live tree density and basal area. In addition, I tallied old stumps (Class 3 to 5) by DSH. I also noted fire scars, charcoal in the soil, or any significant unnatural feature found in or near the plot. Maps presented in Figure 2.2 are based on plots that showed stumps in the two categories explained above, signs of past fire, or the presence of Chusquea macrostachya as a wetland indicator species (Mu?oz 1980, Hoffmann 1982). Due to problems with the projection of the 1991 map explained above, the location of the plots in Figure 2.2 were done by hand instead of using coordinates.
+
+To be consistent with the ecological literature, I used ten cover classes based on the North Carolina Vegetation Survey (Peet et al. 1998, Braun-Blanquet 1964, Daubenmire 1968): 1=trace, 2=0-1%, 3=1-2%, 4=2-5%, 5=5-10%, 6=10-25%, 7=25-50%, 8=50-75%, 9=75-
+
+14
+
+
+
+95%, 10>95%. With the assistance of an expert on siempreverde vegetation, I identified species and estimated percent cover within nine 2x2 m subplots (36 m2 total) for seedlings and saplings (dbh<2.5 cm), shrubs, and understory herbaceous species. Based on tapes running downhill from 0 to 50 m and from 0 to 20 m left to right when facing uphill, these plots were located with their upper left corner at coordinates: 0,10; 10,0; 10,18; 20,10; 30,0; 30,18; 40,10; 48,0; and 48,18 m. Additionally, I recorded species seen within the plot that did not occur within the subplots and applied a cover class estimate based on total plot area.
+
+At each plot, I cored three trees at breast height that were the maximum diameter of the most common tree species present. In second-growth plots dominated by N. dombeyi or E. cordifolia, I cored at least two trees of that species at each plot. In old-growth plots I cored at least one A. punctatum, as well as one N. dombeyi, L. philippiana, or E. cordifolia if present. For accuracy, I took two increment cores from each tree or one core through the entire tree (Stokes and Smiley 1968). If the core was extensively rotten or unreadable, I discarded it and chose another sample tree. In the laboratory, I glued the tree cores to wooden mounts, cut a flat surface with a razor blade and prepared it for reading using finegrained sandpaper. Using a stereoscope, I counted the number of rings to the pith or end of the core for each sample, and if two samples from a single tree did not match I recorded the higher number. When possible, I estimated the number of rings to the pith based on the arc of the growth rings. To ascertain the age of seedling establishment, I referred to a study of old-growth trees in Llancahue completed by Donoso (2002). He determined that it takes an average of 5.8 years for L. philippiana seedlings to reach breast height, 7.0 years for E. cordifolia, 12.5 years for A. punctatum, and 4.0 years for D. winteri. His study did not include L. sempervirens, Nothofagus nitida, nor N. dombeyi, so I added the 5.8 years determined for closely related L. philippiana to the former and 5.0 years for the latter two shade intolerant species.
+
+Following data collection, I corrected all plot data for slope (Abella et al. 2004). I then used the data from live trees and recently cut stumps to calculate density (trees per hectare), basal
+
+15
+
+
+
+area, and importance value (sum of relative density and relative basal area, Aravena et al. 2002). To determine understory percent cover by species per plot, I converted cover classes from the nine subplots to the geometric mean of the range of cover (Wentworth, personal communication). Values presented for the five community subtypes are means of the five plots representative of each community subtype, but species richness is a cumulative total of species present at all five plots.
+
+RESULTS Second-growth dominated by N. dombeyi Plots classified as second-growth dominated by N. dombeyi appeared even aged in structure with at least half of the tree stems represented by N. dombeyi. Plot richness in this subtype ranged from 31 to 40 species (Table 2.1). Average density was 2,166 trees per hectare and average basal area (BA) was 63.3 m2ha-1, with recent cut stumps making up 1.4 m2ha-1 of the BA. Importance values (total 100 per plot) were dominated by N. dombeyi (46.0), with E. cordifolia (7.7) and A. punctatum (7.1) the next highest values (Table 2.2).
+
+All plots had evidence of old cut stumps except for the Central region plot (Table 2.1) and the South-Central and Southeast plot had recent cut stumps. Charcoal was found in the Northwest, South-Central and South plots, and it is likely that the Southeast plot burned as well. The Northwest and Central plots had ages of 65 and 60 years respectively, while the three southern plots ranged in age between 95-100 years. Age was determined from the largest of two N. dombeyi trees cored at breast height, with years to reach breast height added.
+
+Based on the map created by the Faculty of Forest Sciences at the Universidad Austral de Chile (Figure 2.1 and 2.2), four of five plots were placed in the 76 ha classified as secondgrowth dominated by N. dombeyi in Llancahue. The South-Central plot was located in a stand classified as old-growth with emergent N. dombeyi.
+
+16
+
+
+
+Second-growth dominated by E. cordifolia Plots classified as second-growth dominated by E. cordifolia appeared even aged in structure with at least half of the tree stems represented by E. cordifolia. Plot richness of native species in this subtype ranged from 31 to 41 species (Table 2.1). This forest subtype also had the most exotic richness with 8 species found in the Southeast plot and 2 species in the West plot (Appendix). Average density was 5,602 trees per hectare, with a high of 8,220 in the North plot and a low of 3,095 in the Central plot. Average BA was 59.2 m2ha-1, with recent cut stumps making up 0.2 m2ha-1 of the BA. Importance values were dominated by E. cordifolia (40.4), with Gevuina avellana (6.7) and Lomatia hirsuta (5.8) the next highest values (Table 2.2).
+
+Three plots had evidence of old stumps (North, Northeast, and West), but only the Southeast plot had recent stumps (Table 2.1). Charcoal was only found in the West plot, which had an age of 51 years. The North and Northeast plots had an age of 80 and 62 years respectively, the Central plot 62 years, and the Southeast plot 79 years. Age was determined from tree cores of the largest two E. cordifolia in each plot.
+
+Based on the map (Figure 2.1 and 2.2), two of five plots were placed in the 16 ha classified as second-growth dominated by E. cordifolia in northern Llancahue. The other three plots to the south were all in areas classified as second-growth of mixed species.
+
+Second-growth of mixed species Plots classified as second-growth of mixed species appeared even aged in structure but did not have a majority of stems represented by a single species. Plot richness of native species in this subtype ranged from 20, the lowest value for all plots, up to 40 species (Table 2.1). In addition, the Northeast plot had one exotic species present (Appendix). Average density was 3,965 trees per hectare, with a high of 5,758 in the North plot and a low of 2,302 in the South-Central plot. Average BA was 69.0 m2ha-1, with recent cut stumps making up 0.6 m2ha-1 of the BA. These plots showed the highest dissimilarity in the overstory, with the top
+
+17
+
+
+
+importance values in the North plot G. avellana (26.3) and Saxegothaea conspicua (13.3); in the Northeast plot L. philippilana (40.5) and D. winteri (15.0); in the Northwest plot D. winteri (27.5) and N. nitida (15.7); in the East plot D. winteri (53.2) and E. cordifolia (16.0); and in the South-Central plot N. obliqua (24.6) and L. sempervirens (23.3).
+
+All plots had evidence of old stumps except the East plot, but only the South-Central plot had recent stumps (Table 2.1). Charcoal was found in the East plot, which had an age of 51 years, and the North plot, aged 65 years. The Northeast and Northwest plots both had an age of 77 years, and the South-Central plot 55 years. Age was determined from trees cores taken from one of the largest second-growth trees in the plot and not from a remnant old tree.
+
+Based on the map (Figure 2.1 and 2.2), four of five plots were placed in the 226 ha classified as second-growth of mixed species. The South-Central plot was located in an area classified as old-growth with emergent N. dombeyi.
+
+Old-growth with emergent N. dombeyi Plots classified as old-growth with emergent N. dombeyi had to have at least two N. dombeyi trees greater than 70 cm DBH. Plot richness in this subtype ranged from 27 to 32 species (Table 2.1). Average density was 2,100 trees per hectare and average BA was 81.8 m2ha-1, with recent stumps making up 2.9 m2ha-1 of the BA. Importance values were dominated by N. dombeyi (35.1), with L. philippilana (13.5) and A. punctatum (13.5) the next highest values (Table 2.2).
+
+All plots had evidence of old stumps except for the Southeast plot (Table 2.1) and all but the North-Central plot had recent stumps either within or near the plot boundaries. No sign of charcoal was found in these plots, but it is possible that the Southeast plot burned in the past based on nearby fire signs and the density of small diameter N. dombeyi. It was difficult to determine total age of these plots because most trees were rotten in the center. Age was determined from tree cores of the largest N. dombeyi, except in the Southwest plot which was
+
+18
+
+
+
+from a large A. punctatum. It is questionable whether the Central plot meets the minimum criterion of 250 years of age proposed by Veblen (1985) to classify stands in southern Chile as old-growth.
+
+Based on the map (Figure 2.1 and 2.2), four of five plots were placed in the 190 ha classified as old-growth with emergent N. dombeyi. The East plot was located in a stand classified as old-growth without emergents.
+
+Old-growth without emergents Plots classified as old-growth without emergents had to have at least three trees greater than 90 cm DBH, with no presence of N. dombeyi. Plot richness in this subtype ranged from 20, the lowest value for all plots, up to 37 species (Table 2.1). Average density was 1592 trees per hectare, with a high of 2,103 in the North plot and a low of 656 in the South-Central plot. Average basal area (BA) was 115.4 m2ha-1, with recent stumps making up 8.0 m2ha-1 of the BA. Importance values were dominated by E. cordifolia (27.8) and L. philippilana (24.4), with A. punctatum (13.5) the next highest values (Table 2.2).
+
+The Northeast and East plots had evidence of both old and recent stumps, and the Southeast plot also had recent stumps (Table 2.1). Charcoal was not found in any plot. Age was determined from tree cores of the largest A. punctatum or E. cordifolia in each plot. With the exception of the South-Central plot, all plots appear to be near the minimum criterion of 250 years of age proposed by Veblen (1985) to classify stands in southern Chile as old-growth.
+
+Based on the map (Figure 2.1 and 2.2), four of five plots were placed in the 287 ha classified as old growth without emergent trees. The South-Central plot was located in an area classified as matorral as it had few trees and over 90% cover by bamboo.
+
+19
+
+
+
+Table 2.1. Characteristics for 25 plots summarized by five forest community subtypes in the Llancahue watershed. Individual plots are identified by the region of the watershed where they are found based on Figure 2.1. ElevationAspect Slope Richnessa Density BA Cutb Char/ Age Sp.DBHd
+
+(m) 2nd Growth w/ N.dombeyi
+
+Northwest Central South-Central Southeast South 334 292 223 367 180
+
+(o) 13 167 234 94 140
+
+(exotics)(trees/ha)
+
+58 31 40 31 32 34 64 (8) 38 39 32 (2) 31 41 (8) 63 (1) 37 40 (1) 39 33 20 51 32 27 31 30 32 55 36 32 27 20 37 2166 1909 1406 2616 2343 2556 5602 8220 5501 6244 3095 4952 3965 5758 5158 2634 3971 2302 2100 2977 1639 2481 1340 2061 1592 2103 1783 1853 656 1565
+
+(m2/ha)
+
+63.3 53.8 72.3 73.6 60.1 56.5 59.2 69.8 41.6 66.6 70.6 47.3 69.0 77.8 58.0 87.3 77.1 44.7 81.8 75.9 112.6 71.5
+
+1.4
+
+Stumpc (years)
+
+CS CS S CS S S CS
+
+(cm)
+
+2nd Growth w/ E.cordifolia
+
+North Northeast West Central Southeast 2nd Growth Mixed North Northeast Northwest East South-Central 390 420 320 298 354 310 432 307 345 272
+
+Old Growth w/ N.dombeyi
+
+North-Central East Central Southeast Southwest 341 345 320 277 159
+
+325 204 120 1 111 350 161 111 125 60 246 234 122 197 350
+
+Old Growth w/o Emergents
+
+North Northeast East South-Central Southeast 397 380 366 248 280 129 40 51 335 31
+
+(%) 2% 23% 7% 11% 25% 21% 12% 3% 31% 7% 45% 11% 11% 2% 19% 7% 14% 32% 25% 32% 32% 19% 16% 34% 75%
+
+4.3 2.8 0.2
+
+2.3 0.6
+
+2.8 2.9 3.9 *
+
+88.3 10.5
+
+60.6 115.4 91.9 * 8.0
+
+CS S S C S S S S S
+
+133.3 10.1 208.0 26.8 47.5 96.5 2.9 S S
+
+65Nd 20 60Nd 37 100Nd 50 95+Nd 69 97Nd 35 80Ec 27 62Ec 23 51Ec 21 62Ec 40 79Ec 27 65Ec 26 77Lp 38 77Nn 49 51Dw 25 55Ls 30 114+Nd 126 82+Nd 141 127+Nd 76 81+Nd 148 250Ap 62 240Ap 64 234Ap 59 215+Ap 67 145+Ec 98 283Ap 51
+
+a Richness is the number of native species recorded in each 0.1 ha plot, not including exotic species
+
+which are in parentheses (Class 1 and 2) stumps (Class 3-5) were found diameter at breast height (DBH) specified. Species codes are: Nd (Nothofagus dombeyi), Nn (N. nitida), Ec(Eucryphia cordifolia), Lp (Laureliopsis philippiana), Ls (Laurelia sempervirens), Dw (Drimys winteri), and Ap (Aextoxicon punctatum) * Recently cut stumps located nearby but outside of plot boundaries + Unable to estimate distance from final ring to pith
+
+b BA is total basal area for each plot, which includes the value under Cut for recently cut stumps
+
+c “C” under Char/Stump indicates the presence of charcoal within the plot and “S” indicates old
+
+d Age in years is estimated from the maximum age from three trees cored per plot. Species (Sp.) and
+
+20
+
+
+
+Figure 2.2. Maps displaying the location of 25 plots and the presence of stumps, fire sign, and wetland species in each. a) represents plots that had recently cut stumps (Class 1 and 2, Maser and Trappe 1984), b) represents plots that had old stumps (Class 3 to 5), c) represents plots that had charcoal, fire scars, or other fire sign, and d) represents plots with wetland indicator species.
+
+21
+
+
+
+Table 2.2. Importance valuesa for tree species summarized by five forest community subtypes in the Llancahue watershed. 2nd Growth w/ 2nd Growth w/ Old Growth w/ Old Growth w/o
+
+Aextoxicon punctatum Amomyrtus luma Amomyrtus meli Caldcluvia paniculata Dasyphyllum diacanthoides Drimys winteri Embothrium coccineum Eucryphia cordifolia Gevuina avellana Laureliopsis philippiana Laurelia sempervirens Lomatia dentata Lomatia ferruginea Lomatia hirsuta Myrceugenia apiculata Myrceugenia ovata Myrceugenia parvifolia Myrceugenia planipes Nothofagus dombeyi Nothofagus nitida Nothofagus obliqua Persea lingue Podocarpus saligna Raphithamnus spinosus Saxegothaea conspicua Weinmannia trichosperma Other
+
+a
+
+N.dombeyi 7.1 6.9 1.4 0.1 0.1 2.7 0.0 7.7 5.6 5.6 2.3 0.7 0.4 0.3 0.2 0.1 0.1 46.0 E.cordifolia 3.8 1.1 5.6 0.2 4.6 0.5 1.9 40.4 6.7 2.0 4.7 4.2 2.5 5.8 3.1 3.1 0.0 0.4 0.5
+
+N.dombeyi 13.5 2.8 4.8 0.3 3.7 6.3 6.3 13.5 1.9 3.2 1.0
+
+0.8 5.5 2.7 2.0 0.3 1.2 2.4 2.0 2.5 1.3 0.1 0.4
+
+2nd Growth Mixed 4.2 4.1 3.0 3.1 1.3 19.0 0.1 10.8 8.2 14.8 3.8 0.7 1.4 0.7 0.1 1.5 1.4 1.9 2.9 4.5 0.8 0.6 4.3 5.2 0.2 1.3
+
+0.0 0.1 0.3 35.1
+
+Emergents 13.5 1.6 4.5 2.2 0.3 27.8 3.9 24.4 1.0 0.6 1.8 1.6 1.9 0.0 3.2
+
+0.5 4.0 1.2
+
+1.5
+
+1.8 0.1 1.1 6.0 2.1 0.4
+
+Importance values calculated as the average of relative density and relative basal area (each
+
+column totals 100)
+
+DISCUSSION Ground truth Even though there are problems with the projection of the 1991 map created by the Faculty of Forest Sciences, I traveled across most of the Llancahue watershed and was able to “ground truth” the map. Taking into account the projection error, I identified my plots as being representative of the forest subtype classified by the map in 18 of 25 cases. Three of the misidentifications were second-growth dominated by E. cordifolia that were classified as
+
+22
+
+
+
+second-growth of mixed species on the map, which are difficult to distinguish from aerial photographs. In addition, forest growth was an issue since the map was made in 1991 and my sampling took place predominantly in 2008. Considering that some of the stands are now only 50 years old, this was likely a period of great change in stand structure.
+
+The map is particularly accurate in its location of stands of second-growth dominated by N. dombeyi, old-growth without emergents, and matorral. The map is also accurate in its location of second-growth without N. dombeyi, though there are sporadic stands dominated by E. cordifolia throughout the watershed, not only in the far north. I found it difficult to locate the smaller areas classified as old-growth with N. dombeyi, especially in the northern half of Llancahue. The southeast corner of the map is delineated as a large area of oldgrowth with N. dombeyi that in reality is mostly second-growth N. dombeyi with the occasional large emergent N. dombeyi. Overall, it is a very accurate and useful map for navigating Llancahue, but it needs to be rectified to a valid datum if it is to be used for GIS mapping.
+
+Age of old-growth stands There are several stands noted in the Results that likely do not meet Veblen’s (1985) minimum criterion of 250 years of age to classify stands as old-growth, but I am confident that all 10 stands I labeled as old-growth are at least 200 years old. Matching my 283-yearold A. punctatum (62 cm DBH), Donoso’s (2002) oldest tree cored at Llancahue was a 299year-old L. philippiana (60 cm). He estimated that the largest trees in his study across SouthCentral Chile were 500 to 600 years old. Based on my tree core data, I question whether there are any live trees in Llancahue over 400 years old. The largest diameter tree I recorded was a 190 cm N. dombeyi of indeterminate age, but elsewhere I measured to the pith a 95 cm N. dombeyi that was only 152 years old. Many of the largest N. dombeyi cored, including the 190 cm specimen, showed growth rings in the past decade still averaging over 0.50 cm per year.
+
+23
+
+
+
+Disturbance history Using the maximum age of trees within second-growth stands, I found consistency across sites in geographic proximity to each other. Based on data from six plots, trees regenerated 65-80 years ago in the northern section of Llancahue (Table 2.1). In the southeast there is evidence of fire and a cohort of N. dombeyi trees around 100 years old (Figure 2.2). Fire scars were found on stumps and snags throughout central and south-central sections of the watershed, but not within any of the three second-growth plots that established 55-62 years ago. Fire scars were also found in two plots that regenerated 51 years ago: a stand dominated by E. cordifolia along the western border near a large open field and a stand that regenerated with 60% of the trees D. winteri along the eastern border. The latter was probably a small fire as this plot is surrounded by old-growth forest that shows no sign of char.
+
+The similarity in ages across adjacent second-growth stands is strong evidence for large fires and clearcuts in the past century. In the northern corner of the watershed there is no evidence of fire nor stumps, suggesting that this area was probably cleared for agriculture before natural reforestation 65 to 80 years ago when the government purchased the land. The lack of fire may explain the absence of N. dombeyi in this portion of the watershed, since it often establishes after fire (Veblen et al. 1981). Another possible explanation is that there were no N. dombeyi seed trees present in this portion of the watershed. This area also has the highest species richness in the watershed (Table 2.1), which may be linked to the old field history and lack of disturbance.
+
+Along the west side of the main river channel there is charring on stumps, which likely means a fire occurred after a clearcut. Based on the ages of the N. dombeyi that established on the site, it likely burned 65-70 years ago. Further south, there are three plots with trees 55- to 62 years old, suggesting either separate fire occurred or this area was slower to reestablish trees. Between these two areas, there is evidence of a former homestead. This site has ornamental shrub species and nearby a low-branching, open-grown N. dombeyi tree.
+
+24
+
+
+
+This area has large sections of matorral and the two forested plots with the lowest species richness in Llancahue (Table 2.1), perhaps owing to the recent agricultural activity.
+
+In the southeast section of Llancahue, there is a cohort of N. dombeyi around 100 years old and evidence of fire on stumps and snags. Mixed in with these even aged trees, are sporadic large diameter N. dombeyi that survived the fire and helped reseed the area.
+
+Illegal cutting It is disturbing that illegal “high-grading” cuts continue within the old-growth stands of Llancahue. Despite the fact that I avoided the most heavily logged areas in my plot selection (see Methods), only five out of 25 plots had no sign of past or present tree cutting within their boundaries (Table 2.1). The recent cut stumps were nearly all found east of the main river channel (Figure 2.2), the side of the watershed bordering a public road and the property of several small-size landowners. Unfortunately, most of the remaining old-growth forest is on this easily accessible side of Llancahue, which partially explains the results since the loggers prefer large trees. Even the steep, difficult to access plot in the southwest corner of the watershed had a recent cut stump near its boundary. In the 10 old-growth plots there was an average of 39 recent cut stumps per hectare, often representing the largest trees in the plot. It is a top priority of the Faculty of Forest Sciences to stop illegal logging in Llancahue (Donoso et al. 2005), as it should be.
+
+CONCLUSIONS This study was meant to provide a preliminary description of five forest community subtypes and a stand history of the Llancahue watershed for the Faculty of Forest Sciences at the Universidad Austral de Chile. I found their 1991 map of the watershed is still very accurate, but needs to be rectified to a valid datum for future GIS mapping. I was able to reconstruct past land clearing and fire events based on the age of second-growth stands. I also established that illegal cutting has been widespread across the watershed, but recent cutting
+
+25
+
+
+
+has mainly focused on the eastern portion. Above all, I believe this study demonstrates that Llancahue is a treasure worth protecting in the future.
+
+Further inventories of Llancahue are necessary before a management plan can be fully implemented. A full botanical study should be conducted to identify the species of the open fields, matorral, and wetlands. I also recommend a dendrochonological study of the many large stumps dispersed throughout the watershed to reconstruct past growth patterns and the natural disturbance history.
+
+LITERATURE CITED Abella, S., L. Gering, and V. Shelburne. 2004. Slope correction of plot dimension for vegetation sampling in mountainous terrain. Natural Areas Journal 24:358–360. Almeyda, E., and F. Saez. 1958. Recopilación de datos climáticos de Chile y mapas sinópticos respectivos. Santiago, Chile, 1st edición. Ministerio de Agricultura, Chile. Barnes, B.V., D.R. Zak, S.R. Denton, and S.H. Spurr. 1998. Forest Ecology. 4th Edition. Wiley: New York. 792 p. Braun-Blanquet, J. 1964. Pflanzensoziologie. Springer-Verlag: New York. Carmona MR, J.J. Armesto, J.C. Aravena, and C.A. Pérez. 2002. Coarse woody debris biomass in successional and primary temperate forests in Chiloé Island, Chile. Forest Ecology and Management 164: 265–275. Darwin, C.R. 1839. Narrative of the surveying voyages of His Majesty's Ships Adventure and Beagle between the years 1826 and 1836, describing their examination of the southern shores of South America, and the Beagle's circumnavigation of the globe: Journal and remarks. 1832-1836. Henry Colburn: London. Daubenmire, R. 1968. Plant communities: a textbook of synecology. Harper & Row, New York. 300 pp. Donoso, C. 1981. Tipos forestales de los bosques nativos de Chile. Documento de trabajo No 38. Investigación y Desarrollo Forestal (CONAF/PNUD-FAO). Publicación FAO: Chile.
+
+26
+
+
+
+Donoso, P., C. Frene, and A. Lara. 2005. Propuesta Técnica. Plan de desarrollo integral para el predio Llancahue, Valdivia, X Región de Los Lagos. 8 p. Donoso, P. 2002. Structure and growth in coastal evergreen forests as the bases for uneven aged silviculture in Chile. Ph.D. Thesis, State University of New York, College of Environmental Science and Forestry: Syracuse. 256 p. Donoso, P., and C. Donoso. 2007. Chile: Forest species and stand types. In: Cubbage, F. (ed.) 1999. Forests and Forestry in the Americas: An Encyclopedia: <http://64.78.1.15/index.php?title=Chile02> Echeverría, C., A.C. Newton, A. Lara , J.M.R. Benayas, and D.A. Coomes. 2007. Impacts of forest fragmentation on species composition and forest structure in the temperate landscape of southern Chile. Global Ecology and Biogeography 16: 426–439. Espinosa, M and E Acu?a. 2007. Chile: Forest Resources, Forest Types, Forest Retention, Current Issues, and Forest Protection. In: Cubbage, F. (ed.). 2009. Forests and Forestry in the Americas: An Encyclopedia <http://64.78.1.15/index.php?title=Chile01> Fuenzalida H. 1971. Clima: Geografía económica de Chile, Texto refundido. Corporación de Fomento de la Producción: Santiago de Chile: 99-152. Hoffmann, A. 1982. Flora silvestre de Chile, Zona Araucana. Edición 4. Fundación Claudio Gay: Santiago. 258 p. Maser, C., and J.M. Trappe. 1984. The seen and unseen world of the fallen tree. USDA For. Serv. Gen. Tech. Rep. PNW-164. Pacific Northwest For. and Range Exp. Station, Portland, Oregon. 56 p. Menzel T. 1993. Redistribución de las precipitaciones en un bosque Siempreverde en la provincia de Valdivia. Tesis Ingeniería Forestal, Universidad Austral de Chile: Valdivia. 83 p. Mu?oz, M. 1980. Flora del Parque Nacional Puyehue. Editorial Universitaria: Santiago, Chile. 557 p. Nyland, R. 2002. Silviculture: Concepts and Applications. 2nd ed. McGraw-Hill: Boston: p.387. Peet R.K., T.R. Wentworth, and P.S. White. 1998. A flexible, multipurpose method for recording vegetation composition and structure. Castanea 63(3): 262-274.
+
+27
+
+
+
+Rozzi R., J. Silander, J.J. Armesto, P. Feinsigner, and F. Massardo. 2000. Three levels of integrating ecology with the conservation of South American temperate forests: the initiative of the Institute of Ecological Research Chiloé, Chile. Biodiversity and Conservation 9: 1199-1217. Stokes, M.A., and T.L. Smiley. 1968. An introduction to tree ring dating. University of Chicago Press: Chicago. 73 p. Van Wagner, C.E. 1982. Practical aspects of the line intersect method. Petawawa National Forestry Institute Information Report PI-X-12. Canadian Forestry Service, Chalk River, Ontario. 11 p. Veblen, T.T. 1985. Forest development in tree-fall gaps in the temperate rain forests of Chile. National Geographic Research 1: 162-183. Veblen, T.T., C. Donoso, F. Schlegel, and B. Escobar. 1981. Forest dynamics in SouthCentral Chile. J. Biogeography 8: 211-247. Whittaker, R.H. 1960. Vegetation of the Siskiyou Mountains, Oregon and California. Ecological Monographs 30: 279-338. Whittaker, R.H. 1972. Evolution and measurement of species diversity. Taxon 21: 213-251. Wilcox, K. 1996. Chile’s native forests: A conservation legacy. Northwest Wild Books: Bellingham, WA.
+
+28
+
+
+
+Chapter 3. Plant community structure of old-growth and second-growth forest stands in the Llancahue watershed near Valdivia, Chile
+
+INTRODUCTION The forests of Central Chile are identified as one of 25 world biodiversity hotspots due to their concentration of endemic species and rate of habitat loss (Myers et al. 2000). The Valdivian rainforest is classified among the 200 most biologically valuable and endangered ecoregions on the planet (Olson and Dinerstein 1998). In the most heavily populated area of the Valdivian rainforest, Regions X and XIV (39o-43oS), the Chilean government’s National Commission of the Environment (CONAMA) identified 40 priority sites for conservation of biodiversity. One of these sites is the 1,300 hectare (ha) Llancahue watershed east of Valdivia, which contains almost 500 ha of relatively well-preserved old-growth forest, and an additional 325 ha of second-growth native forest (for an in depth description of the study site see Chapter 2).
+
+Due to its location where a Mediterranean climate transitions to a Maritime climate, the vegetation of Llancahue is a unique mixture of the siempreverde and roble-raulí-coihue forest types (Donoso 1981, Donoso and Donoso 2007, Wilcox 1996). Many studies have been conducted in these two forest types, but these have often been in the Andes (Donoso and Lusk 2007, Veblen et al. 1981, Schlegel and Donoso 2008, Pollmann 2002) and further south, especially on Chiloé Island (Armesto and Fuentes 1988, Aravena et al. 2002, Carmona et al. 2002, Rüger et al. 2007). There are few published studies of old-growth forests in the Valdivia area, especially in the Intermediate Depression between the Andes and the Coastal Mountains. It is important to gain a better understanding of the remnant old-growth forests in the Intermediate Depression in order to establish reference conditions for the remaining native forests in this region.
+
+This is the first watershed-wide study of the forests of Llancahue and will provide important information for managers of native forests throughout the region. The objectives of this
+
+29
+
+
+
+study were to 1) assess species diversity and distribution in the Llancahue watershed, 2) enumerate overstory, understory, and woody debris characteristics of five a priori forest subtypes (as described in Chapter 2), and 3) determine if the differences in a priori forest subtypes are statistically significant.
+
+MATERIALS AND METHODS Methods used to measure species richness, understory cover, tree density, basal area, and stand age are as described in Chapter 2. I used the difference between species richness in each plot and the average richness for its community subtype to extrapolate a map of Llancahue using ArcGIS (Figure 3.1). In addition to richness, I calculated the Shannon’s diversity index for the five community subtypes:
+
+H’ = - Σ pi ln pi
+
+where pi is the proportion of species i divided by the total for all species (Barnes et al. 1998). I also calculated Simpson’s diversity index, which is more sensitive to evenness:
+
+D = Σ ni (ni-1) / (N (N-1))
+
+where ni is the value for species i and N is the total for all species in the sample. Simpson’s diversity index values are presented as D-1 so the higher value represents higher diversity. Both diversity indices were calculated separately for percent cover of understory species and importance values of overstory species from each plot.
+
+For ease of analysis, I grouped species by these functional classes: large trees (max dbh>20cm), small trees (max dbh<20cm), shrubs (max dbh<5cm), ferns, vines, epiphytes, bamboos, other herbs, and exotics. I also estimated the total height of trees to the nearest meter by averaging three readings from a vertex hypsometer for four crown classes: Emergent, Upper Main Canopy, Lower Main Canopy, and Intermediate (Veblen et al. 1981).
+
+30
+
+
+
+To calculate downed woody debris (DWD), I used the line intersect method (Van Wagner 1982). After choosing a random azimuth, I ran four perpendicular 10 m line transects from the center of each plot and measured the slope of each line. For every piece of woody debris that crossed the plane, I recorded diameter to the nearest centimeter (for example, a 1 cm piece would be any size from 0.50 to 1.49 cm). Debris <1.50 cm was tallied only 3-5 m from the center point and each piece was multiplied by a factor of five. Debris between 1.50-5.49 cm from 3-8 m and each piece was multiplied by a factor of two. I classified each piece into a decay class (Maser and Trappe 1984) from 1 (sound) to 5 (highly decayed), and if it was tilted I estimated the angle from the ground. I applied correction factors for piece tilt and line slope (Van Wagner 1982) and calculated weight in Megagrams per hectare:
+
+W = (S π2 / 8 L) Σ d2
+
+where S is density in grams per cubic centimeter, L is length of transect in meters, and d is diameter in centimeters. For S, I used densities determined for each decay class from a study of similar forests on Chiloé Island (Carmona et al. 2002).
+
+I ran a completely randomized analysis of variance on plot data for density, basal area, percent cover of the nine plant functional types, basal area of snags, and number of stumps using Statistix 8. I completed cluster analysis using the computer program R version 2.8.1 (Ihaka and Gentleman 1996) with the Vegan package. Specifically, I used the function “vegdist” to create a distance matrix using the Bray-Curtis method (Faith et al. 1987) for presence-absence data for all species in the overstory and understory of each plot. I also used “vegdist” to calculate a Euclidean distance matrix for importance values of overstory species. Both of these index matrices were then input into “hclust” using the complete agglomeration method to create a stepwise, hierarchical cluster dendrogram.
+
+31
+
+
+
+RESULTS Species richness and diversity indices In 25 plots, I identified 87 species of vascular plants including: 15 large trees, 16 small trees, 9 shrubs, 7 ferns, 12 vines, one epiphytic plant (Fabicularis bicolor), 2 bamboos, 17 other native herbs, and 8 exotic species (Appendix). The highest species richness within a 0.1 ha plot was 41 native species and the lowest was 20 (Table 2.1). The above average richness values appear to be isolated in Figure 3.1, as compared to the grouping of the below average values in the south-central portion of the watershed. Second-growth plots averaged 35.3 species per plot, while old-growth averaged 30.4. The difference is predominantly due to mean of two less species of large trees (10.3 to 8.1) and two less species of small trees found per plot (9.1 to 7.4). While a total of 31 tree species exist in the entire watershed, the highest plot richness was 24 trees and the lowest 11 trees.
+
+Diversity indices for overstory species composition show second-growth of mixed species to consistently have the highest values (Table 3.1). This forest subtype is the only one to have Nothofagus obliqua, N. nitida, and Pilgerodendron uvifera trees present, but not all in the same plot. The lowest Shannon’s diversity index value was for old-growth without emergents and the lowest Simpson’s diversity index value was for second-growth dominated by E. cordifolia, since that index is more sensitive to evenness (Barnes et al. 1998). In the understory, second-growth dominated by E. cordifolia had the highest diversity index values and old-growth with N. dombeyi the lowest. Old-growth without emergents had very high standard deviation values, but compares closely with other communities when a plot with 90.5% bamboo cover is removed from consideration.
+
+Understory cover Analysis of variance tests of understory cover for the nine functional types all showed not significant differences, except Epiphyte (F=5.9, p=0.0027), which only represented one species F. bicolor. Percent cover of seedlings of large and small tree species was approximately even across all five community subtypes (Figure 3.2). Shrub cover was
+
+32
+
+
+
+highest in second-growth dominated by E. cordifolia or N. dombeyi. Bamboo cover was at least 13.9% in all forest subtypes but second-growth dominated by E. cordifolia, and highest in old-growth without emergents (41.6%). Exotic species only occurred in three plots (Table 2.1), a second-growth of mixed species plot (0.06%) and two plots of second-growth dominated by E. cordifolia (0.07% and 15.78%). All three plots were located near major trails.
+
+Density and basal area Figure 3.3 clearly demonstrates that second-growth stands average a greater number of trees per hectare than old-growth, especially in second-growth dominated by E. cordifolia where one 0.1 ha plot averaged 8,220 trees per hectare (Table 2.1). Analysis of variance tests show that the differences in density between the five community subtypes are significant (F=10.2, p=0.0001). However, Figure 3.4 displays that old-growth stands have much higher mean basal area, especially old-growth without emergents which averages 115.4 m2ha-1 across the landscape. Even after removing the high and low outliers that cause the large standard error, the average of the other three plots is 107.2 m2ha-1. Analysis of variance tests show that the differences in basal area are not significant (F=2.1, p=0.1185) between the five subtypes, but are significant between old-growth and second-growth plots (F=7.0, p=0.0145).
+
+Crown height The greatest crown heights occurred in stands with emergent Nothofagus trees, including one plot of second-growth of mixed species with N. obliqua (Table 3.1). The tallest tree measured in Llancahue was a 45 m tall N. dombeyi, but stands of old-growth with emergents only averaged 37 m (Table 3.1). In second-growth stands, a 100 year old stand of N. dombeyi had a crown height of 39 m, while one 55 year old stand of second-growth of mixed species had several emergent N. obliqua of 34 m (Table 3.1). The lowest height of upper main canopy occurred in stands of second-growth dominated by E. cordifolia. The mean height of Lower Main Canopy and Intermediate trees were very similar across all community subtypes.
+
+33
+
+
+
+Woody debris Downed woody debris measurements are highest in second-growth of mixed species and oldgrowth with emergent N. dombeyi stands, with second-growth dominated by E. cordifolia by far the lowest (Table 3.1). Data I collected on snags shows that second-growth stands averaged 404.0 snags per hectare under 25 cm in diameter as compared to 87.2 snags per hectare for old-growth; and second-growth stands averaged 25.0 snags per hectare of 25 cm or greater diameter versus 40.9 snags per hectare for old-growth. Analysis of variance tests show a significant difference between the five community subtypes in numbers of small snags (F=5.9, p=0.0026), but not large snags (F=1.5, p=0.2395) nor stumps (F=1.0, p=0.4160). Stands of old-growth without emergents had the highest BA of snags, with second-growth dominated by E. cordifolia by far the lowest (Table 3.1). Old stumps were most common in stands of second-growth dominated by E. cordifolia and second-growth of mixed species. They were least common in stands of second-growth dominated by N. dombeyi and old-growth with emergent N. dombeyi.
+
+Cluster analysis Cluster analysis of presence-absence data shows a grouping of the bottom 14 plots (Figure 3.5) all of which have either the epiphyte F. bicolor or the bamboo C. macrostachya. The most distinct plot is the one listed at the top, which is the only plot with N. obliqua. Cluster analysis of the importance values of overstory trees shows that the most distinct plot is the East plot of old-growth with emergent N. dombeyi that had 81% of stems L. philippiana. The six plots grouped below that all had high importance values for N. dombeyi. Four of five oldgrowth without emergents plots are tightly clustered near the bottom of Figure 3.6. There may be some spatial autocorrelation, as the four most northern plots are also tightly clustered.
+
+34
+
+
+
+Figure 3.1. Map of the difference between species richness in each plot and the average richness for its community subtype extrapolated using ArcGIS.
+
+35
+
+
+
+Table 3.1. Diversity indices, crown height, downed woody debris, basal area of snags, and number of stumps summarized by five forest community subtypes in the Llancahue watershed. 2nd
+
+2nd Growth w/ N.dombeyi
+
+Shannon's D.I. (H') Understory Overstory Simpson's D.I. (1-D) Understory Overstory Crown height (m) Emergent Upper Main Canopy Lower Main Canopy Intermediate
+
+3.116 2.529 0.934 0.892 31 24 16 9
+
+2nd Growth w/ E.cordifolia 3.400 2.475 0.953 0.846 Old Growth w/o Emergents 2.788 2.381 0.882 0.863
+
+Downed woody debris (Mg/ha)
+
++ + + + +
+
+Total Class 1 Class 2 Class 3 Class 4 Class 5
+
+Basal area of snags (m2/ha) Total < 25 cm > 25 cm Old stumps / ha Total < 25 cm > 25 cm
+
+28.8 1.2 2.9 5.0 19.2 0.4 10.0 2.5 7.6 30 14 16
+
+17 11 6 5.2 0.8 2.1 1.2 1.0 0.0 2.0 2.0
+
+100 18 82
+
+Growth Mixed 2.946 2.751 0.907 0.912 * 20 14 8 50.1 1.0 4.9 12.8 22.5 9.0 14.4 2.7 11.7 123 28 95 Old Growth w/ N.dombeyi 2.684 2.498 0.869 0.898 37 25 16 9 53.7 1.4 2.1 5.2 21.3 23.7 12.0 1.4 10.6 16 0 16
+
+29 18 10 22.1 1.4 6.8 9.3 4.6 0.1 19.5 0.3 19.2 84 19 65
+
+* One plot had a 34 m tall emergent canopy of Nothofagus obliqua
+
++ Decay classes based on those developed by Maser and Trappe (1984)
+
+36
+
+
+
+revo
+
+C
+
+yrotsredn
+
+U
+
+100% 90% 80% 70% 60% 50% 40% 30% 20% 10% 0%
+
+Exotics Herbs Epiphyte Bamboo Vines Ferns Shrubs Small Trees Large Trees
+
+2nd Growth w/ N.dombeyi 2nd Growth w/ E.cordifolia 2nd Growth Mixed Old Growth w/ N.dombeyi Old Growth w/o Emergents
+
+Figure 3.2. Percent cover for herbaceous species and seedlings (dbh<2.5 cm) summarized by five forest community subtypes in the Llancahue watershed.
+
+eratceh
+
+rep
+
+seerT
+
+7000 6000 5000 4000 3000 2000 1000 0
+
+2nd Growth w/ N.dombeyi 2nd Growth Mixed 2nd Growth w/ E.cordifolia Old Growth w/ N.dombeyi Old Growth w/o Emergents
+
+Figure 3.3. Density (with standard error bars) of five forest communities in the Llancahue watershed.
+
+37
+
+
+
+)ah/2
+
+m(
+
+aeralasa
+
+B
+
+150.0 125.0 100.0 75.0 50.0 25.0 0.0
+
+2nd Growth w/ N.dombeyi 2nd Growth Mixed 2nd Growth w/ E.cordifolia Old Growth w/ N.dombeyi Old Growth w/o Emergents
+
+Figure 3.4. Basal area (with standard error bars) of five forest communities in the Llancahue watershed.
+
+38
+
+
+
+Figure 3.5. Cluster dendrogram computed from presence-absence data for all species per plot with R (v2.8.1). Plot codes are a one- or two-letter directional modifier to identify what region of the watershed they are located in (i.e. N= North, SC= South-Central).
+
+39
+
+
+
+Figure 3.6. Cluster dendrogram computed from importance values of overstory trees per plot with R (v2.8.1). Plot codes are a one- or two-letter directional modifier to identify what region of the watershed they are located in (i.e. N= North, SC= South-Central).
+
+40
+
+
+
+DISCUSSION Species richness, diversity indices, and understory cover There are likely more than the 87 species identified in my 25 plots, though I probably identified all of the native tree species in the Llancahue watershed. Some of the understory species that Donoso (2002) found in his study of old-growth in Llancahue were not located in my plots and there may be more exotic species than identified. Furthermore, there are likely many species found in the open field, matorral, and wetland areas that were not sampled. It is encouraging that exotic species were only found in three plots, each along major trails, but with future management activities the chance of spread will increase.
+
+In tree species on Chiloé Island, Aravena et al. (2002) calculated Shannon’s diversity index values near 1.5 for mid-successional stands and approximately 2.0 in old-growth. These values are lower than the 2.5-2.8 found in second-growth stands and 2.4-2.5 found in oldgrowth stands in this study. Since they also used 0.1 ha plots, these results can be attributed directly to the lower richness of tree species present in their study (15 total) as compared to Llancahue (31). Tree species in Llancahue include those that are more common in forests to the north (N. obliqua, L. sempervirens, P. lingue) and the south (N. nitida, P. uvifera). The unique assemblage of tree species found in the watershed makes it an important site for conservation.
+
+Since the old-growth stands have not experienced a major disturbance for centuries (Chapter 2), it is not unexpected that they had lower species richness than second-growth stands (Appendix). The second-growth stands are all between ages 50-100 years, so they are likely to have a mix of pioneer species that are in decline being replaced by late-successional species. The diversity indices showed expected results, with the lowest values in stands that were dominated by one overstory or understory species. The understory results were fairly even across community subtypes, though second-growth dominated by E. cordifolia had higher values, likely due to the inclusion of exotic species. The low diversity index values in old-growth without emergents can be traced to one plot with 90.4% cover by the bamboo C.
+
+41
+
+
+
+quila. This plot also contributes heavily to the high percent cover by bamboo in old-growth without emergents stands as compared to other forest subtypes (Figure 3.2).
+
+The Faculty of Forest Sciences at the Universidad Austral de Chile have a plan in place to begin working with the local community to cease harvesting activities in old-growth forests and focus on improvement cutting in second-growth stands (Donoso et al. 2005). They zoned different areas for varying levels of management, with the most intensively managed zones located in the southeast corner of the watershed. This corner also has high species richness (Figure 3.1), so it will be important to monitor the impact of management activities on the plant communities.
+
+Density and basal area There exists a large variability in basal area (BA) of old-growth without emergents (Table 2.1, Figure 3.3), which averages 115.4 m2ha-1. The median value is 96.5 m2ha-1 which is closer to 97.7 m2ha-1 as determined by Donoso (2002) for stands of old-growth without emergents in Llancahue. Regardless, this value is much higher than the 81.8 m2ha-1 found for old-growth with emergent N. dombeyi. I believe that disturbance in the past century in several old-growth with N. dombeyi plots was the reason for this low value.
+
+Typically, old-growth siempreverde forest without emergents will average 100 m2ha-1 (Donoso et al. 1998) and with emergent Nothofagus sp. can reach over 150 m2ha-1 (Donoso 1993). A recent study (Donoso and Lusk 2007) showed that the presence of emergent N. dombeyi had little impact on the growth of shade tolerant L. philippiana and thus had an almost completely additive effect to BA. Their study took place in the Andes where BA averaged 126 m2ha-1 and stand age was estimated at over 500 years. A study in the same area (Schlegel and Donoso 2008) determined a basal area of 109.4 m2ha-1 in a mixed species stand without Nothofagus trees. Old-growth stands in Llancahue have experienced many human-caused disturbances (Chapter 2) and simply because a stand had large, old trees present does not mean it has not experienced recent disturbance. It is possible that over time
+
+42
+
+
+
+stands of old-growth with emergent N. dombeyi will reach a BA comparative to those found in other studies.
+
+Second-growth plots ranged in BA between 41.6-87.3 m2ha-1. Three of the five plots in second-growth of mixed species had old trees greater than 40 cm in diameter that remained after a disturbance event, which probably led to an overestimation of the BA (Figure 3.3). In the plot with 87.3 m2ha-1 BA, large remnant trees added 24.6 m2ha-1 to the total BA. Despite the large variation in density (1,406-8,220 trees per hectare), second-growth forest subtypes exhibit similar BA measurements (Table 2.1). A study of similar aged second-growth forest on Chiloé Island had a density of 3,700 trees per hectare and BA of 49.7 m2ha-1 (Aravena et al. 2002). This BA is lower than averaged at Llancahue, but so are values for old-growth with 71.0 (Aravena et al. 2002), 68.9, and 109.4 m2ha-1 (Carmona et al. 2002) reported in three undisturbed old-growth stands.
+
+Crown height Emergent N. dombeyi trees have been measured up to 55 m in height in the Andes (Veblen 1985). The tallest tree measured in Llancahue was a 45 m tall N. dombeyi in an old-growth plot, but several second-growth stands with Nothofagus trees had large crown heights. A 100 year old stand of N. dombeyi had an emergent crown height of 39 m, while one 55 year old stand of second-growth of mixed species had several emergent N. obliqua trees of 34 m. This similarity in height between second-growth and old-growth stands (Table 3.1) suggests that height growth probably begins to taper off at the stage of development that most secondgrowth stands currently are at, which is around age 75 (Chapter 2). The lowest height of upper main canopy occurred in stands of second-growth dominated by E. cordifolia, which were also the youngest stands.
+
+Woody debris The importance of snags and downed woody debris to seedling establishment and landscape diversity has been well documented (Christie and Armesto 2003, Maser and Trappe 1984).
+
+43
+
+
+
+Downed woody debris measured 53.7 Mg ha-1 for old-growth with emergent N. dombeyi and 22.1 Mg ha-1 for old-growth without emergents. In the Andes, Schlegel and Donoso (2008) found old-growth stands that are Nothofagus-dominated have 64.1 Mg ha-1 of logs versus 53.7 Mg ha-1 in old-growth of mixed species. Old-growth without emergents stands in Llancahue have been heavily cut and cleared (Chapter 2), which may account for the comparatively low number. In second-growth of mixed species stands downed woody debris measured 50.1 Mg ha-1, a comparatively high number likely due to the presence of old trees within several plots of this forest type. Second-growth dominated by E. cordifolia had only 5.2 Mg ha-1 due to the establishment of this forest subtype on previously cleared or burned sites (Chapter 2). On Chiloé Island, a comparable average of 30 Mg ha-1 was found in earlyto mid-successional and 47 Mg ha-1 in old-growth stands respectively (Carmona et al. 2002). The high values of old stumps and low values of large snags in second-growth stands (Table 3.1) are expected results.
+
+Cluster analysis Based on cluster analysis, spatial autocorrelation does not appear to be a major factor in the grouping of plots (Figures 3.5 and 3.6). However, the four most northern plots are tightly clustered based on overstory importance values, despite the fact they represent three different community subtypes. This result may be attributable to the high importance values of Amomyrtus spp. trees and the absence of N. dombeyi in these stands. In other instances, the presence of a unique species, such as F. bicolor and N. obliqua, or a wetland indicator species, such as C. macrostachya (see Chapter 2), seems to have the strongest influence on clustering. When only overstory data is included (Figure 3.6), old-growth plots tend to cluster, second-growth dominated by N. dombeyi or E. cordifolia tend to cluster, and secondgrowth of mixed species are dispersed throughout the dendrogram. These analyses do not provide definitive evidence to support the five a priori forest community subtypes, nor do they discount their validity.
+
+44
+
+
+
+CONCLUSIONS This study provides a valuable preliminary description of the five forest community subtypes in Llancahue. I was able to assess species diversity throughout the watershed and enumerate the overstory, understory, and woody debris characteristics of five a priori forest subtypes. Although cluster analysis did not provide conclusive results regarding the distinctiveness of the a priori forest subtypes, based on my experience I believe they are unique forest subtypes. Further sampling across the watershed may provide stronger evidence to support this argument.
+
+The unique assemblage of tree species found in the watershed makes it an important site for conservation. I would recommend a full botanical study be conducted to identify the species of the open fields, matorral, wetlands, and upper canopy. Future managers in Llanchue need to be diligent in containing the spread of exotic species, stopping illegal logging of oldgrowth forests, and controlling cattle grazing in the watershed.
+
+LITERATURE CITED Armesto, J.J. and E.R. Fuentes 1988. Tree species regeneration in a mid-elevation, temperate rain forest in Isla de Chiloé, Chile. Plant Ecology 74: 151-159. Aravena, J.C., M.R. Carmona, C.A. Pérez, and J.J. Armesto. 2002. Changes in tree species richness, stand structure and soil properties in a successional chronosequence in northern Chiloé Island, Chile. Revista chilena de historia natural 25: 339-360. Carmona, M.R., J.J. Armesto, J.C. Aravena, and C.A. Pérez. 2002. Coarse woody debris biomass in successional and primary temperate forests in Chiloé Island, Chile. Forest Ecology and Management 164: 265–275. Christie, D.A., and J.J. Armesto. 2003. Regeneration Microsites and Tree Species Coexistence in Temperate Rain Forests of Chiloé Island, Chile. Ecology 91(5): 776784. Donoso, C. 1993. Capitulo XII: Antecedentes sobre la dinamica de los bosques de tipo forestal siempreverde. In: Donoso, C. Bosques templados de Chile y Argentina: Variacion, estructura y dinamica. Editorial Universitaria, Santiago, Chile.
+
+45
+
+
+
+Donoso, C., P.J. Donoso, M. Gonzalez, and V. Sandoval. 1999. Capitulo 10: Los bosques siempreverdes. In: Donoso, C. and A. Lara (Eds.). Silvicultura de los bosques nativos de Chile. Editorial Universitaria, Santiago. Donoso, P.J., and C. Donoso. 2007. Chile: Forest species and stand types. In: Cubbage, F. (ed.) 1999. Forests and Forestry in the Americas: An Encyclopedia: <http://64.78.1.15/index.php?title=Chile02> Donoso, P.J., and C.H. Lusk. 2007. Differential effects of emergent Nothofagus dombeyi on growth and basal area of canopy species in an old-growth temperate rainforest. Journal of Vegetation Science 18(5): 675-684. Echeverría, C., A.C. Newton, A. Lara , J.M.R. Benayas, and D.A. Coomes. 2007. Impacts of forest fragmentation on species composition and forest structure in the temperate landscape of southern Chile. Global Ecology and Biogeography 16: 426–439. Faith, D.P., P.R. Minchin, and L. Belbin. 1987. Compositional dissimilarity as a robust measure of ecological distance. Vegetatio 69: 57-68. Hill, M., and H. Gauch. 1980. Detrended correspondence analysis, an improved ordination technique. Vegetatio 42: 47–58. Ihaka, R. and R. Gentleman. 1996. R: A language for data analysis and graphics. Computational and Graphical Statistics 5: 299-314. Maser, C., and J.M. Trappe. 1984. The seen and unseen world of the fallen tree. USDA For. Serv. Gen. Tech. Rep. PNW-164. Pacific Northwest For. and Range Exp. Station, Portland, Oregon. 56 p. Myers, N., R.A. Mittermeier, C.G. Mittermeier, G.A.B. Fonseca, and J. Kent. 2000. Biodiversity hotspots for conservation priorities. Nature 403: 853–858 Nú?ez, D., L. Nahuelhual, and C. Oyarzún. 2005. Forests and water: The value of native temperate forests in supplying water for human consumption. Ecological Economics 58(3): 606-616. Olson, D. M. and E. Dinerstein. 1998. The Global 200: A representation approach to conserving the Earth's most biologically valuable ecoregions. Conservation Biology 12:502–515. Pollmann, W. 2002. Effects of natural disturbance and selective logging on Nothofagus forests in South-Central Chile. Biogeography 29: 955-970.
+
+46
+
+
+
+Rüger, N., A.G. Gutiérrez, W.D. Kissling, J.J. Armesto, and A. Huth. 2007. Ecological impacts of different harvesting scenarios for temperate evergreen rain forest in southern Chile: a simulation experiment. Forest Ecology and Management 252: 5266. Schlegel, B.C. and P.J. Donoso. 2008. Effects of forest type and stand structure on coarse woody debris in old-growth rainforests in the Valdivian Andes, South-Central Chile. Forest Ecology and Management 255: 1906-1914. Veblen, T.T. 1985. Forest development in tree-fall gaps in the temperate rain forests of Chile. National Geographic Research 1: 162-183. Veblen, T.T., C. Donoso, F. Schlegel, and B. Escobar. 1981. Forest dynamics in SouthCentral Chile. J. Biogeography 8: 211-247.
+
+47
+
+
+
+Chapter 4. Managing for old-growth conditions in second-growth temperate rainforests of South-Central Chile
+
+INTRODUCTION The importance of old-growth forests for the preservation of biodiversity, ecosystem services, and aesthetics has been well documented in forests around the world (Lindenmeyer and Franklin 2002, Kimmins 2003). Old-growth forests have been defined in many ways, but they are typically associated with large trees, uneven aged structure, accumulations of woody debris in all sizes and stages of decay, and net annual growth values close to zero (Hunter 1989, Hilbert and Wiensczyk 2007, Bauhus et al. 2009).
+
+Recently, there has been an increased interest in managing second-growth stands to stimulate rapid succession towards old-growth conditions (Bauhus et al. 2009, Jenkins et al. 2004, Keeton 2006, Shear et al. 1996, Moore et al. 1999, Singer and Lorimer 1997, Ashton et al. 2001). Methods often include thinning to decrease density and allow remaining trees growing space, selective fertilizer application to promote growth, enrichment planting of species associated with old-growth, creating snags by girdling or removing treetops, distributing woody debris on the forest floor, and mimicking natural disturbance regimes. Many of the management techniques are theoretical or are not far enough along to yield publishable results, therefore it is difficult to determine which tools work best toward achieving old-growth conditions.
+
+In the Llancahue watershed east of Valdivia, Chile there is an opportunity to not only preserve 500 hectares of old-growth forests, but also to manage portions of second-growth stands for old-growth conditions. In September 2008, management of the 1,300 ha watershed was transferred to the Faculty of Forest Sciences at the Universidad Austral de Chile (UACH). Their management plan sets aside some second-growth forest for the restoration of old-growth forest conditions. To assist the Faculty of Forest Sciences in their efforts, the purpose of this study was to 1) analyze differences between diameter distributions
+
+48
+
+
+
+of trees in second-growth and old-growth stands and 2) develop a set of silvicultural recommendations for managing second-growth stands for old-growth conditions. This information will be directly applicable to management in Llancahue and can provide a framework for restoration to managers of other siempreverde forests in the region.
+
+MATERIALS AND METHODS Materials and methods are described in detail in Chapter 2 and 3. Additionally, as part of my pilot study in 2007, I mapped the location of live trees >5 cm in diameter at breast height (DBH), snags >5 cm DBH, and stump >5 cm in diameter at stump height (DSH) measured in two plots, one second-growth dominated by Nothofagus dombeyi and the other old growth with emergent N. dombeyi. Unlike the 0.10 ha plots described in Chapter 2, these two plots were 0.12 ha arranged in a 30x40 m pattern. I mapped locations to the nearest decimeter using an X-Y coordinate system based on tapes running downhill from 0 to 40 m and from 0 to 30 m right to left when facing uphill. Using the map of the second-growth dominated by N. dombeyi plot, a theoretical thinning treatment was applied to this stand.
+
+I developed histograms of diameter distribution by averaging all five plots in second-growth dominated by N. dombeyi and second-growth dominated by Eucryphia cordifolia. For oldgrowth without emergents I used four plots, excluding the low-density South-Central plot (see Chapter 3). In old-growth with emergent N. dombeyi I averaged the two stands with the highest basal area (East and Southwest), since these plots had the largest trees and least recent disturbance (Chapter 2). Second-growth stands of mixed species were left out of this analysis because the plots were too dissimilar to be compared as a whole (Chapter 3). Most of these plots had tree species that are rare within Llancahue, such as Nothofagus obliqua, N. nitida, and Pilgerodendron uvifera, or distinctive species assemblages, such as stands dominated by Drimys winteri or L. philippiana. These unique stands are likely to be excluded from management in the future, so developing a management plan was considered unnecessary.
+
+49
+
+
+
+RESULTS Second-growth dominated by E. cordifolia Plots classified as second-growth dominated by E. cordifolia appeared even aged in structure with an average stand age of 60 years old (Chapter 2). Approximately 45% the trees >10 cm DBH in these stands were E. cordifolia (826 trees per hectare) with all other species accounting for 968 trees per hectare (Figure 4.1.a). There were 1,168 E. cordifolia per hectare between 2.5-9.9 cm, compared to 2,641 trees per hectare of all other species. Early successional species Lomatia hirsuta, L. dentata, and Embothrium coccineum represent 209 trees >10 cm per hectare and 643 trees between 2.5-9.9 cm per hectare. Seedling stocking was high for A. punctatum, E. cordifolia, Amomyrtus meli, and Raphithamnus spinosus (Appendix). The most common shrub species was Gaultheria mucronata. Downed woody debris totaled 5.2 Mg ha-1, with 2.1 Mg ha-1 in Class 2 (Table 3.1). The basal area (BA) of snags was 2.0 m2ha-1 and all snags were under 25 cm DBH.
+
+Old-growth without emergents Plots classified as old-growth without emergents had to have at least three trees greater than 90 cm DBH, no presence of N. dombeyi, and a minimum stand age of 200 years old (Chapter 2). There were 113 E. cordifolia trees >10 cm per hectare with all other species accounting for 635 trees >10 cm per hectare (Figure 4.1.b). There were only 29 E. cordifolia per hectare between 2.5-9.9 cm, compared to 1,050 trees per hectare of all other species. This was the only forest subtype with large Weinmannia trichosperma and Persea lingue trees (Table 2.2), with an average of 13 and 5 trees >50 cm DBH per hectare respectively. Seedling stocking was high for A. punctatum, L. philippiana, Amomyrtus luma, and Myrceugenia planipes (Appendix). The most common shrub species was G. sphacelata and the bromeliad F. bicolor was present in all five plots. Downed woody debris totaled 22.1 Mg ha-1, with 9.3 Mg ha-1 in Class 3 (Table 3.1). The basal area (BA) of snags was 19.5 m2ha-1, with 19.2 m2ha-1 from snags >25 cm DBH.
+
+50
+
+
+
+Second-growth dominated by N. dombeyi Plots classified as second-growth dominated by N. dombeyi appeared even aged in structure with an average stand age of 84 years old (Chapter 2). Figure 4.3 displays a representative stand of this community subtype. Over half the trees >10 cm DBH in these stands were N. dombeyi (475 trees per hectare) with all other species accounting for 473 trees >10 cm per hectare (Figure 4.1.c). However, there were only 17 N. dombeyi per hectare between 2.5-9.9 cm, compared to 1,202 trees per hectare of all other species. Seedling stocking was high for A. punctatum, D. winteri, L. philippiana, A. luma, and Lomatia dentata (Appendix). The most common shrub species was Greigia sphacelata. Downed woody debris totaled 28.8 Mg ha-1, with 19.2 Mg ha-1 in Class 4 (Table 3.1). The basal area (BA) of snags was 10.0 m2ha-1, with 7.6 m2ha-1 from snags >25 cm DBH.
+
+Old-growth with emergent N. dombeyi Plots classified as old-growth with emergent N. dombeyi had to have at least two N. dombeyi trees greater than 100 cm DBH and a minimum stand age of 200 years old (Chapter 2). Figure 4.2 displays a representative stand of this community subtype, with even spacing of large N. dombeyi and dominance of shade tolerant species. All trees sampled >90 cm DBH were N. dombeyi, though this species only represented 43 trees >10 cm per hectare compared to 315 trees >10 cm per hectare for all other species (Figure 4.1.d). There were no N. dombeyi between 2.5-9.9 cm and only 377 trees per hectare of all species. Seedling stocking was high for A. punctatum, D. winteri, E. cordifolia, A. meli, and A. luma (Appendix). The most common shrub species was G. sphacelata and the bromeliad Fascicularia bicolor was present in all five plots. Downed woody debris totaled 53.7 Mg ha-1, with 21.3 and 23.7 Mg ha-1 in Class 4 and 5 respecively (Table 3.1). The basal area (BA) of snags was 12.0 m2ha-1, with 10.6 m2ha-1 from snags >25 cm DBH.
+
+51
+
+
+
+Figure 4.1. Diameter distribution of trees in four forest subtypes in the Llancahue watershed. Figure a) shows second-growth dominated by Eucryphia cordifolia; data not shown in the 1020 cm diameter class are: 583 Eucryphia cordifolia trees and 786 trees of other species per hectare. Figure b) shows old-growth without emergent trees; c) shows second-growth dominated by Nothofagus dombeyi, and d) old-growth with emergent N. dombeyi.
+
+52
+
+
+
+a)
+
+500
+
+E. cordifolia Other species
+
+400
+
+)ah/seert(
+
+300
+
+ytisne 200
+
+D 100
+
+0
+
+102030405060708090100+
+
+Diameter Class (cm)
+
+b)
+
+500
+
+E. cordifolia Other species
+
+)ah/seert(
+
+400
+
+300
+
+ytisne 200
+
+D 100
+
+0
+
+102030405060708090100+
+
+Diameter Class (cm)
+
+53
+
+
+
+c)
+
+500
+
+N. dombeyi Other species
+
+400
+
+)ah/seert(
+
+300
+
+ytisne 200
+
+D 100
+
+0
+
+102030405060708090100+
+
+Diameter Class (cm)
+
+d)
+
+500
+
+N. dombeyi Other species
+
+400
+
+)ah/seert(
+
+300
+
+ytisne 200
+
+D 100
+
+0
+
+102030405060708090100+
+
+Diameter Class (cm)
+
+54
+
+
+
+30 0
+
+0
+
+20
+
+Aextoxicon punctatum Drimys winteri Amomyrtus luma Eucryphia cordifolia Large Laureliopsis philippiana Nothofagus dombeyi Myrceugenia planipes Weinmannia trichosperma Small Laureliopsis philippiana Snags Stumps
+
+40
+
+Figure 4.2. Map of trees (>5 cm DBH) in old growth with emergent Nothofagus dombeyi plot.
+
+55
+
+
+
+30 0
+
+0
+
+20
+
+Amomyrtus meli Drimys winteri Embothrium coccineum Eucryphia cordifolia Gevuina avellana Laureliopsis philippiana Large Nothofagus dombeyi Small Nothofagus dombeyi Podocarpus sp. Weinmannia trichosperma Snags Stumps
+
+40
+
+Figure 4.3. Map of trees (>5 cm DBH) in a second-growth dominated by Nothofagus dombeyi plot.
+
+56
+
+
+
+30 0
+
+0
+
+20
+
+Amomyrtus meli Drimys winteri Embothrium coccineum Eucryphia cordifolia Gevuina avellana Laureliopsis philippiana Large Nothofagus dombeyi Small Nothofagus dombeyi Podocarpus sp. Weinmannia trichosperma Snags Stumps
+
+40
+
+Figure 4.4. Map of trees (>5 cm DBH) in a second-growth dominated by Nothofagus dombeyi plot after a proposed thinning.
+
+57
+
+
+
+DISCUSSION Management of overstory density Thinning is the first step toward reaching old-growth conditions in the overstory of secondgrowth stands. Thinning can increase the rate of development of larger trees (Lindenmeyer and Franklin 2002, Keeton 2006, Jenkins et al. 2004). In second-growth dominated by N. dombeyi stands it is essential to open up growing space for the largest N. dombeyi so they can more rapidly reach diameters in excess of 150 cm associated with old-growth stands with emergent N. dombeyi in Llancahue (Figure 4.1.d). Since it is difficult to establish N. dombeyi seedlings except following a major disturbance, it is recommended that second-growth stands dominated by E. cordifolia be managed towards conditions associated with old-growth without emergents.
+
+When converting an even aged stand to uneven aged, Nyland (2002) suggests an initial thinning to 50-60% relative density. This would equal about 900 trees >2.5 cm per hectare in second-growth dominated by N. dombeyi and almost 3,000 trees >2.5 cm per hectare in second-growth dominated by E. cordifolia. Thinning should focus on the removal of N. dombeyi in stands dominated by that species, since it is 10 times as common as in old-growth stands with emergent N. dombeyi. In second-growth stands dominated by E. cordifolia, early-successional trees L. hirsuta, L. dentata, and E. coccineum should be completely removed, as should the shrub G. mucronata. Further thinning should focus on E. cordifolia, especially those <10 cm DBH, which are much more prevalent in second-growth than in oldgrowth stands (1,168 compared to 28 trees per hectare).
+
+A theoretical thinning to 50-60% relative density was applied to a second-growth dominated by N. dombeyi plot (Figure 4.3) to demonstrate how this might look in reality. Figure 4.4 displays the results of this thinning treatment. Total density was decreased from 1,225 trees per hectare to 700 (57%) with standing basal area decreased from 52.7 m2ha-1 to 30.9 m2ha-1 (59%). N. dombeyi trees represented 80% of the thinned stems, to create more even spacing
+
+58
+
+
+
+of that species typical of old-growth stands (Figure 4.2) and allow growing space for L. philippiana and W. trichosperma. Four N. dombeyi trees >30 cm DBH were also girdled in this treatment, increasing snag basal area from 0.4 m2ha-1 to 3.7 m2ha-1.
+
+Second-growth stands in Llancahue are even aged in the main canopy, so the canopy needs to be opened to allow the establishment of a new generation of trees. There is good seedling and sapling stocking of shade tolerant species in the understory of second-growth stands (Appendix). It is important to create growing space for this new cohort of trees to form a diverse canopy. Second-growth stands may currently have the classic reverse-J shaped curve associated with uneven aged stands (Figure 4.1), but residual overtopped trees that are released from competition may not respond to canopy gaps by increasing their growth rate. Singer and Lorimer (1997) considered it unlikely that trees older than 85 years in forests of the northeastern United States would have a significant growth response to crown release. Conversely, Wiser et al. (2005) found that in Nothofagus forests in New Zealand trees could show a growth response after long periods of suppression. Regardless, to achieve uneven aged structure it is necessary to create growing space for a cohort of younger trees (Nyland 2002).
+
+Creating small canopy gaps will favor shade tolerant trees typically associated with oldgrowth forest, such as A. punctatum, L. philippiana, A. luma, and A. meli (Rüger et al. 2007). Additional care should be taken to promote the growth of species uncommon within Llancahue, including W. trichosperma and P. lingue. However, based on the low species richness of most old-growth plots (Chapter 3), high tree species diversity may not be an important old-growth characteristic in Llancahue.
+
+After seedling establishment, additional thinning should decrease relative density below 50% (Nyland 2002). The first three thinning treatments, especially in second-growth dominated by N. dombeyi, should produce substantial timber volumes. Simulations of selective logging in siempreverde forests on Chiloé Island calculated a sustainable harvest of 6 m3ha-1year-1 in
+
+59
+
+
+
+uneven aged stands that retained large trees (Rüger et al. 2007). It is very important to minimize damage to residual trees when felling and removing thinned trees. Damage is more common in individual-tree selection thinning than large patch cuts (McClellan and Hennon 2005). It may be necessary to account for some increased mortality in thinned stands, but it may not be a factor if operations are completed carefully or in larger patches. In Nothofagus forests in New Zealand, Wiser et al. (2005) found no evidence to suggest that trees closer to 40-200 m2 patch cuts had a higher mortality rate than trees in intact forests.
+
+Management of tree regeneration Second-growth stands in Llancahue currently have a good stock of seedlings representing a variety of species, with the major exceptions of N. dombeyi and W. trichosperma (Appendix). W. trichosperma regenerates best on exposed mineral soil, similar to N. dombeyi following a fire (Veblen et al. 1981). Elevated substrates can also be important for seedling establishment of N. dombeyi beneath canopy gaps (Pollmann and Veblen 2004). In a forest north of Llancahue near Lake Villarica, Veblen (1985) found no regeneration of a related species, N. obliqua, in canopy gaps between 29-54 m2. So it may be necessary to create large patch cuts or wait for natural disturbances to regenerate these species. This might better mimic disturbance seen in old-growth forests on Chiloé Island, where Armesto and Fuentes (1988) determined that only 14% of canopy gaps were originated by a single tree fall and 75% of gaps were greater than 100 m2.
+
+It will also be essential to manage coppice regeneration after thinning. E. cordifolia, D. diacanthoides, and L. sempervirens all regenerate vegetatively (Veblen et al. 1981). This can be helpful to the establishment of a new cohort of trees, but it may also lead these species to dominate in canopy gaps where they have been cut. Another consideration is the protection of seedlings from herbivory (Nyland 2002, Veblen et al. 1996). This could be a major issue in Llancahue since cattle grazing is widespread (Chapter 2).
+
+60
+
+
+
+Management of woody debris Snags and downed woody debris are important features of old-growth forests (Lindenmeyer and Franklin 2002). Snags are vital to cavity nesting birds, large downed woody debris serves as nurse logs for seedlings, and both provide habitat for invertebrates, fungi, and other life forms (Christie and Armesto 2003). Numbers of snags and downed woody debris are close to old-growth conditions in second-growth stands dominated by N. dombeyi, except in Class 5 woody debris (Table 3.1). However, large snags and downed woody debris in Class 3-5 are almost completely absent in second-growth stands dominated by E. cordifolia. It is recommended to distribute large logs on the forest floor of these stands either from thinning or from another site (Jenkins et al. 2004).
+
+One way to assure a continual recruitment of downed woody debris is to create snags. This can be accomplished by girdling diseased, dying, or poorly formed trees (Keeton 2006) or removing a tree’s live canopy (Jenkins et al. 2004). In the theoretical thinning presented in Figure 4.4, creating four N. dombeyi snags >30 cm DBH in a 0.12 ha area, increased snag basal area from 0.4 m2ha-1 to 3.7 m2ha-1. There will likely be some injury and mortality associated with management activities (McClellan and Hennon 2005), and injured trees may become good candidates for future girdling. During the initial thinning, it may be necessary to leave some logs on the forest floor to decay in the years before created snags begin to fall. It may be necessary to down some snags before any thinning activities to protect worker safety, which also allows managers to choose where a snag falls to minimize damage to live trees.
+
+Management of understory species There does not seem to be a major difference in understory species composition between second-growth and old-growth forest stands, and species presence seems most correlated to soil moisture (Chapter 3). One known exception is the bromeliad F. bicolor, which was present in all old-growth plots and absent from all second-growth plots dominated by N. dombeyi or E. cordifolia. The most effective way to manage for F. bicolor may simply be to
+
+61
+
+
+
+grow large trees and allow it to establish naturally. It may even serve as a useful indicator species for restoration success.
+
+Following thinning in second-growth stands, it will be important for managers to monitor competition with tree seedlings from understory plants, especially native bamboo species Chusquea quila and C. macrostachya (Donoso and Nyland 2005, Veblen et al. 1981). If bamboos establish densely in canopy gaps it may be difficult to regenerate trees until a synchronous flowering and dieback event (González et al. 2002). Labor-intensive cutting, digging, or applying herbicides are alternatives for bamboo control. Management activities may also provide a vector for exotic species establishment in second-growth stands (Lindh and Muir 2004), which should also be monitored.
+
+CONCLUSIONS I believe the restoration of old-growth conditions in second-growth stands in Llancahue is a feasible management option. By carefully thinning stands and managing woody debris, I think old-growth conditions can begin to be achieved much faster than would occur naturally. Following the silvicultural recommendations laid out in this article will require patience and persistence of the future land managers of Llancahue, but they can provide an example for managers of other siempreverde forests in the region to follow.
+
+Further study of forest restoration options in matorral and bamboo-dominated areas is needed in Llancahue. It is also important to monitor the spread of exotic species following management activities and the impact of cattle grazing on seedling establishment.
+
+LITERATURE CITED Armesto, J.J., and E.R. Fuentes 1988. Tree species regeneration in a mid-elevation, temperate rain forest in Isla de Chiloé, Chile. Plant Ecology 74: 151-159. Ashton, M.S., C.V.S. Gunatilleke, B.M.P. Singhakumara, and I.A.U.N. Gunatilleke. 2001. Restoration pathways for rain forest in southwest Sri Lanka: a review of concepts and models. Forest Ecology and Management 154: 409-430.
+
+62
+
+
+
+Bauhus, J., K. Puettmann, and C. Messier. In press. Silviculture for old-growth attributes. Forest Ecology and Management. Christie, D.A., and J.J. Armesto. 2003. Regeneration Microsites and Tree Species Coexistence in Temperate Rain Forests of Chiloé Island, Chile. Ecology 91(5): 776784. Donoso, P.J., and R.D. Nyland. 2005. Seedling density according to structure, dominance and understory cover in old-growth forest stands of the evergreen forest type in the coastal range of Chile. Revista Chilena de Historia Natural 78: 51-63. González, M.E., T.T. Veblen, C. Donoso, and L. Valeria. 2002. Tree regeneration responses in a lowland Nothofagus-dominated forest after bamboo dieback in South-Central Chile. Plant Ecology 161: 59-73. Hilbert, J., and A. Wiensczyk. 2007. Old-growth definitions and management: A literature review. BC Journal of Ecosystems and Management 8(1): 15–31. Hunter, M.L., Jr. 1989. What constitutes an old-growth stand? Forestry 87(8): 33-35. Jenkins, D.H., D.A. Devlin, N.C. Johnson, and S.P. Orndorff. 2004. System design and management for restoring Penn’s Woods. Forestry 102(3): 30-36. Kimmins, J. 2003. Old-growth forest: An ancient and stable sylvan equilibrium, or a relatively transitory ecosystem condition that offers people a visual and emotional feast? Answer–it depends. The Forestry Chronicle 79(3): 429–440. Keeton, W.S. 2006. Managing for late-successional/old-growth characteristics in northern hardwood-conifer forests. Forest Ecology and Management 235: 129–142. Lindenmeyer, D.B., and J.F. Franklin. 2002. Conserving forest biodiversity: A comprehensive multiscaled approach. Island Press: Washington, D.C. Lindh, B.C., and P.S. Muir. 2004. Understory vegetation in young Douglas-fir forests: does thinning help restore old-growth composition? Forest Ecology and Management 192: 285–296. McClellan, M.H., and P.E. Hennon. 2005. Maintaining old-growth features in forests used for wood production in southeast Alaska. In: Peterson, C.E., and D.A. Maguire (Eds.). Balancing Ecosystem Values: Innovative Experiments for Sustainable Forestry. USDA Forest Service, General Technical Report PNW-GTR-635, Portland, OR, pp. 127–133.
+
+63
+
+
+
+Moore, M.M., W.W. Covington, and P.Z. Fulé. 1999. Reference conditions and ecological restoration: a southwestern ponderosa pine perspective. Ecological Applications 9(4): 1266-1277 Nyland, R.D. 2002. Even- to uneven aged: the challenges of conversion. Forest Ecology and Management 72: 291-300. Pollmann, W., and T.T. Veblen. 2004. Nothofagus regeneration dynamics in South-Central Chile: a test of a general model. Ecological Monographs 74(4): 615-634. Rüger, N., A.G. Gutiérrez, W.D. Kissling, J.J. Armesto, and A. Huth. 2007. Ecological impacts of different harvesting scenarios for temperate evergreen rain forest in southern Chile: a simulation experiment. Forest Ecology and Management 252: 5266. Shear, T.H., T.J. Lent, and S. Fraver. 1996. Comparison of restored and mature bottomland hardwood forests of southwestern Kentucky. Restoration Ecology 42(2): 111-123. Singer, M.T., and C.G. Lorimer. 1997. Crown release as a potential old-growth restoration approach in northern hardwoods. Canadian J. Forest Research. 27: 1222-1232. Veblen, T.T., C. Donoso, T. Kitzberger, and A.J. Rebertus. 1996. Chapter 20: Ecology of Southern Chilean and Argentinean Nothofagus Forests. In: Veblen, T.T., R.S. Hill, and J. Read (eds.). The Ecology and Biogeography of Nothofagus Forests. Yale University Press: 293-353. Veblen, T.T., C. Donoso, F. Schlegel, and B. Escobar. 1981. Forest dynamics in SouthCentral Chile. Biogeography 8: 211-247. Veblen, T.T. 1985. Chapter 3: Stand dynamics in Chilean Nothofagus forests. In: Pickett, S.T.A. (ed.). The ecology of natural disturbance and patch dynamics. Academic Press: 35-51. Wiser, S.K., R.B. Allen, U. Benecke, G. Baker, and D. Peltzer. 2005. Tree growth and mortality after small-group harvesting in New Zealand old-growth Nothofagus forests. Canadian J. Forest Research: 2323-2331.
+
+64
+
+
+
+APPENDIX
+
+65
+
+
+
+Table A.1. Percent cover for herbaceous species and seedlings (dbh<2.5 cm) summarized by five forest community subtypes in the Llancahue watershed. 2nd Growth w/ 2nd Growth w/ 2nd Growth Old Growth Old Growth w/o
+
+Mixed w/ N.dombeyi
+
+67.48% 15.00% 4.76% 0.00% 0.61% 0.74% 1.69% 3.71% 1.14% 0.11% 0.03% 0.23% 1.88% 0.10% 15.48% 3.12% 1.20% 0.04% 0.02% 0.45% 2.27% 3.86% 0.04% 0.03% 0.18% 1.54% 1.95% 0.16% 0.46% 0.16% 0.66% 0.01% 0.08% 0.46% 0.00% 0.03%
+
+66.98% 11.34% 3.66% 0.88% 3.83% 0.64% 1.14% 0.10% 0.01% 0.22% 0.86%
+
+Total Large Trees Aextoxicon punctatum Dasyphyllum diacanthoides Drimys winteri Eucryphia cordifolia Gevuina avellana Laureliopsis philippiana Laurelia sempervirens Nothofagus dombeyi Persea lingue Podocarpus nubigena Podocarpus saligna Saxegothaea conspicua Weinmannia trichosperma Small Trees Amomyrtus luma Amomyrtus meli Aristotelia chilensis Azara lanceolata Caldcluvia paniculata Embothrium coccineum Lomatia dentata Lomatia ferruginea Lomatia hirsuta Myrceugenia apiculata Myrceugenia ovata Myrceugenia parvifolia Myrceugenia planipes Pilgerodendron uvifera Raphithamnus spinosus Tepualia stipularis Shrubs Desfontainia spinosa Gaultheria insana Gaultheria mucronata Greigia landbedckii Greigia sphacelata Myoschilos oblonga Ovidia pillo-pillo Solanum valdiviense
+
+N.dombeyi 72.91% 11.69% 3.02% 3.20% 0.41% 0.61% 3.13% 0.32% 0.02% 0.26% 0.41% 0.16% 0.16% 18.14% 5.41% 2.10% 0.04% 0.16% 3.30% 1.00% 0.03% 1.29% 1.91% 0.43% 2.31% 0.16% 11.95% 0.01% 0.11% 0.04% 6.42% 0.01%
+
+E.cordifolia 61.58% 14.01% 4.41% 0.44% 0.23% 3.37% 1.24% 0.52% 0.81% 0.76% 0.16% 0.70% 1.38% 20.21% 2.92% 4.10% 0.13% 0.09% 0.24% 3.87% 0.94% 0.02% 1.36% 1.53% 0.03% 0.43% 4.55% 10.03%
+
+2.97% 0.07% 0.32% 0.07% 0.02% 0.00%
+
+13.82% 4.29% 4.86% 0.00% 0.00% 2.56% 0.78% 0.00% 0.31% 0.00% 0.23% 0.77% 4.52% 0.07% 0.06% 0.26% 3.49%
+
+Emergents 89.63% 13.22% 4.05% 1.54% 0.54% 1.52% 0.86% 3.39% 0.01% 0.46% 0.16% 0.45% 0.23% 11.84% 3.24% 1.90% 0.01% 0.16% 0.23% 1.03% 0.01% 0.07% 0.89% 0.19% 3.30% 0.82% 2.18% 0.00% 0.02% 2.15%
+
+0.01%
+
+66
+
+
+
+Table A.1. continued
+
+2nd Growth w/ 2nd Growth w/
+
+N.dombeyi 8.15% 0.81% 0.16% 0.17%
+
+2nd Growth Old Growth w/ Old Growth w/o
+
+Mixed 11.00% 0.01% 0.56% 0.23% 0.28%
+
+Vines Asteranthera ovata Boquila trifoliolata Campsidium valdivianum Cissus striata Cynanchum pachyphyllum Griselinia racemosa Hydrangea serratifolia Lapageria rosea Luzuriaga polyphylla Luzuriaga radicans Mitraria coccinea Pseudopanax laetevirens Bamboo Chusquea macrostachya Chusquea quila Epiphyte Fascicularia bicolor Forbs Acaena ovalifolia Acrisione denticulata Baccharis racemosa Berberis trigona Corinabutilon vitiffolium Digitalis purpurea Elytropus chilensis Hydrocotyle poeppigi Libertia chilensis Lycopodium paniculatum Nertera granadensis Osmorhiza chilensis Rhamnus diffusus Ribes magellanicum Uncinia brevicaulis Uncinia phleoides Viola rubella
+
+0.36% 3.89% 0.61% 1.25% 0.54% 0.38% 13.98% 1.71% 12.27%
+
+E.cordifolia 9.21% 2.78% 0.03% 0.32% 0.04% 0.03% 0.07% 3.00% 0.47% 0.73% 1.43% 0.31% 1.11% 0.07% 1.04%
+
+4.70%
+
+2.57% 0.03% 0.02% 0.03% 0.58%
+
+0.06% 0.07% 5.66% 2.24% 0.70% 0.99% 0.20% 20.34% 16.54% 3.80% 0.30% 1.13%
+
+N.dombeyi 6.28% 0.26% 0.04% 0.08% 0.45% 0.01% 2.34% 0.73% 2.07% 0.23% 0.05% 20.30% 0.35% 19.95% 3.10% 4.10% Emergents 6.25% 0.41% 0.17% 0.14% 0.04% 0.07% 0.42% 2.75% 0.56% 1.19% 0.47% 0.03% 41.62% 15.82% 25.80% 1.56% 3.66%
+
+0.01%
+
+0.03% 0.02% 0.01%
+
+3.46% 0.02% 0.39% 0.01% 0.11% 0.43% 0.22%
+
+0.11% 0.19% 0.46% 0.77% 0.01% 0.12% 0.15% 0.09% 0.13% 0.06% 0.16% 0.25% 0.01% 0.13% 0.24% 0.16%
+
+0.14% 0.01%
+
+0.03% 0.10%
+
+3.05% 0.25% 0.09%
+
+0.15% 0.40%
+
+2.17% 0.03% 0.72% 0.25% 0.01% 0.34%
+
+67
+
+
+
+Table A.1. continued
+
+2nd Growth w/ N.dombeyi
+
+2nd Growth w/ 2nd Growth
+
+E.cordifolia 3.17% 0.01% 0.04% 0.14% 0.08% 0.70% 0.68% 0.51% 1.01% 1.26% 0.03% 0.03% 0.28%
+
+Old Growth Old Growth w/o
+
+Exotics Cotula scariosa Juncus stipulatus Lotus uliginosus Rubus constrictus Taraxacum officinale Teline monspessulana Ulex europaeus Viola reichei Ferns Blechnum blechnoides Blechnum chilense Blechnum hastatum Blechnum magellanicum Gleichenia quadripartita Lophosoria quadripinnata Megalastrum spectabile
+
+4.30% 1.88% 0.00% 0.18% 0.10% 2.14%
+
+Mixed w/ N.dombeyi 0.01% Emergents
+
+0.01%
+
+0.77% 0.16%
+
+3.55% 0.00% 0.12% 0.00% 3.42% 5.50% 1.48% 0.10% 0.03% 3.88%
+
+7.32% 1.18% 0.00% 0.03%
+
+6.04% 0.07%
+
+68

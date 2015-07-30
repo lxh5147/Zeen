@@ -1,0 +1,2939 @@
+EVALUATION OF TRAITS ASSOCIATED WITH BUCKING BULL 
+PERFORMANCE AND BEHAVIOR 
+ 
+ 
+A Thesis 
+by 
+NATASHA ELIZABETH ROMERO 
+ 
+ 
+Submitted to the Office of Graduate Studies of  
+Texas A&M University  
+in partial fulfillment of the requirements for the degree of  
+ 
+MASTER OF SCIENCE  
+ 
+ 
+December 2008  
+ 
+ 
+Major Subject: Animal Science 
+ 
+ 
+ 
+EVALUATION OF TRAITS ASSOCIATED WITH BUCKING BULL 
+PERFORMANCE AND BEHAVIOR 
+ 
+A Thesis  
+by  
+NATASHA ELIZABETH ROMERO 
+ 
+Submitted to the Office of Graduate Studies of  
+Texas A&M University  
+in partial fulfillment of the requirements for the degree of  
+ 
+ 
+MASTER OF SCIENCE  
+ 
+ 
+Approved by:  
+Co-Chairs of Committee,  Andy D. Herring  
+     Theodore Friend  
+Committee Member,   R. Neil Hooper  
+Head of Department,   Gary R. Acuff 
+ 
+ 
+December 2008 
+ 
+Major Subject: Animal Science 
+ 
+iii 
+ 
+ABSTRACT  
+ 
+Evaluation of Traits Associated with Bucking Bull Performance and Behavior. 
+ (December 2008)  
+Natasha Elizabeth Romero, B.S., Texas A&M University  
+Co-Chairs of Advisory Committee:  Dr. Andy D. Herring  
+       Dr. Theodore Friend 
+ 
+Video and industry data were used to assess the inter-relationships of aggression, 
+delivery, coat color, year of birth, number of outs, buckoff percent and score in rodeo 
+bulls.  An evaluation of laterality based on observations of how the individual animals 
+were loaded into chutes at 11 bull riding events showed 63% left-handed delivery and 
+37% right-handed delivery across all observations (n = 525).  There was a similar 
+distribution for aggressiveness (based on whether or not the bull charged after the rider 
+dismounted) with 64% of bulls being non-aggressive and 36% of bulls being aggressive.   
+ Significant linear relationships existed between score and number of outs and 
+score and buckoff percentage indicating that experience impacted performance.  The 
+correlation between number of outs and buckoff percentage was low to moderate (0.06 
+to 0.30), depending upon the subset of data evaluated.  
+ The r-square value for the analysis of score among all bulls was 0.14; however, 
+the r-square value in the subset of bulls with known sires with more than one son was 
+0.68 when sire was included in the model.  Similar increases in r-square values were 
+observed for 2006 average score, career average score, buckoff percentage, and career 
+iv 
+ 
+buckoff percentage, indicating important genetic influences on these traits and/or their 
+component traits. 
+ Investigations into the relationship between performance and aggression may 
+help bucking stock producers improve the selection criteria they use.  The current trend 
+within the industry is for several breeders to breed ‘hot’ or flighty, nervous cattle to 
+achieve higher performing offspring.  Given that there was no association between 
+aggression and score based on chi-square test, aggression may be removed from the 
+criteria for using certain animals for breeding purposes.  Based on results from this 
+work, if bucking stock breeders want to make genetic changes in these traits, 
+documentation of pedigree information is vital. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+v 
+ 
+ACKNOWLEDGMENTS  
+ 
+I would like to thank the American Bucking Bull Inc. for their support in 
+providing me access to pedigree information from their registry. I would like to thank 
+the Professional Bull Riders for allowing me access to rodeo events for data collection.  
+Special thanks go to Bull Pen magazine that has stood behind me and made their 
+resources available during this project.  I would also like to thank the following ranches 
+for their time and effort in this project: Guidry Land and Cattle Co., B-K Rodeo, Lufkin 
+Ranch and Rodeo, Frontier Rodeo, Wilfong Rodeo, XS Ranch and Double R Rodeo.  
+ I would like to thank the co-chairs of my committee, Dr. Andy Herring and Dr. 
+Ted Friend for their support, guidance and most importantly, for their patience and 
+understanding during my graduate career. I would also like to thank Dr. Hooper for his 
+participation as my committee member.  
+ I would like to acknowledge my mom, Frances Bassett, and my aunt and uncle, 
+Robert and Kim Romero, for all of their love and support during my academic career.   
+ 
+ 
+ 
+ 
+ 
+vi 
+ 
+NOMENCLATURE 
+ 
+DAB Dataset “All Bulls” 
+DBG Dataset “Bull Groups” 
+DS Dataset “Sires” 
+DS1 Dataset “Sires with more than 1 son” 
+ 
+ 
+ 
+vii 
+ 
+TABLE OF CONTENTS  
+ 
+ 
+    Page  
+ 
+ABSTRACT ..............................................................................................................  iii 
+ACKNOWLEDGEMENTS ......................................................................................  iv 
+NOMENCLATURE..................................................................................................  vi 
+TABLE OF CONTENTS ..........................................................................................  vii 
+LIST OF TABLES ....................................................................................................  ix 
+INTRODUCTION.....................................................................................................  1 
+LITERATURE REVIEW..........................................................................................  4 
+Temperament and behavior...........................................................................  4 
+Evolution of bucking behavior......................................................................  5 
+Maternal behavior .........................................................................................  6 
+Coat color and temperament .........................................................................  8 
+Physiology of stress.......................................................................................  10 
+Laterality .......................................................................................................  11 
+Influence of the flank strap............................................................................  14 
+ 
+OBJECTIVES ...........................................................................................................  16 
+MATERIALS AND METHODS ..............................................................................  17  
+Animals .........................................................................................................  17 
+Video collection ............................................................................................  17 
+Rodeo events attended...................................................................................  18 
+Aggression.....................................................................................................  18 
+Coat color ......................................................................................................  19 
+Buckoff..........................................................................................................  19 
+Career buckoff...............................................................................................  19 
+Outs ...............................................................................................................  19 
+Career outs.....................................................................................................  20 
+Laterality .......................................................................................................  20 
+Animal pedigree ............................................................................................  20 
+Animal year of birth ......................................................................................  20 
+viii 
+ 
+ Page 
+ 
+Score..............................................................................................................  21 
+Average score................................................................................................  22 
+Career average score .....................................................................................  22 
+Datasets .........................................................................................................  22 
+Statistical analysis .........................................................................................  22 
+ 
+RESULTS AND DISCUSSION ...............................................................................  25 
+GENERAL CONCLUSIONS AND IMPLICATIONS ............................................  58 
+Aggression.....................................................................................................  58 
+Laterality .......................................................................................................  59 
+Pedigree information .....................................................................................  59 
+ 
+LITERATURE CITED .............................................................................................  62 
+VITA ........................................................................................................................  66 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ix 
+ 
+LIST OF TABLES  
+ 
+                      Page  
+Table 1 Levels of significance (P- values) from analyses of variance  
+for DAB.............................................................................................  27  
+ 
+Table 2 Regression coefficients (and standard errors) across datasets  
+ to evaluate average score and career average score ..........................  28  
+ 
+Table 3  Levels of significance (P- values) from analyses of variance  
+for DSI...............................................................................................  30 
+ 
+Table 4 Levels of significance (P- values) from analyses of variance  
+for DBG.............................................................................................  31 
+ 
+Table 5  Levels of significance (P-values) from analyses of variance  
+for DS ................................................................................................  33 
+ 
+Table 6 Least squares means and standard errors for color across  
+datasets ..............................................................................................  34 
+ 
+Table 7  Least squares means and standard errors for year of birth across  
+ datasets ..............................................................................................  35 
+ 
+Table 8 Least squares means and standard errors for temperament  
+across datasets ...................................................................................  35 
+ 
+Table 9 Least squares means and standard errors for delivery across  
+ datasets ..............................................................................................  36 
+ 
+Table 10 P-values for chi-square test for 2-factor distributions across 
+datasets………………………………………………………………  37 
+ 
+Table 11 Frequency table: aggression x delivery for DAB..............................  39 
+ 
+Table 12 Frequency table: aggression x delivery for DBG..............................  39 
+Table 13 Frequency table: aggression x delivery for DS .................................  40 
+Table 14 Frequency table: aggression x delivery for DS1 ...............................  40 
+Table 15 Frequency table: color x delivery for DAB.......................................  42 
+x 
+ 
+  Page 
+Table 16 Frequency table: color x delivery for DS ..........................................  43 
+Table 17 Frequency table: color x delivery for DBG.......................................  44 
+Table 18 Frequency table: color x delivery for DS1 ........................................  45 
+Table 19 Frequency table: year of birth x delivery for DAB ...........................  46 
+Table 20 Frequency table: year of birth x delivery for DBG ...........................  47 
+Table 21 Frequency table: year of birth x delivery for DS1 ............................  48 
+Table 22 Frequency table: year of birth x delivery for DS ..............................  49 
+Table 23 Frequency table: aggression x color for DAB...................................  50 
+Table 24 Frequency table: aggression x color for DS ......................................  51 
+Table 25 Frequency table: aggression x color for DBG...................................  51 
+Table 26 Frequency table: aggression x color for DS1 ....................................  52 
+Table 27 Frequency table: year of birth x aggression for DAB .......................  53 
+Table 28 Frequency table: year of birth x aggression for DBG .......................  54 
+Table 29 Frequency table: year of birth x aggression for DS ..........................  55 
+Table 30 Frequency table: year of birth x aggression for DS1 ........................  56 
+Table 31 Pearson’s Correlation Coefficients involving buckoff 
+ and number of outs across all datasets ..............................................  57 
+ 
+ 
+ 
+ 
+1 
+ 
+INTRODUCTION 
+ 
+The sport of bull riding has become the fastest growing professional sporting 
+event in the United States (PBR, 2008) and showcases the combined athletic 
+performance of both the bull and the rider.  In addition to expanding to Brazil, Mexico, 
+Canada and Australia, these sporting events are now broadcast in over 84 countries.  The 
+growing popularity of the sport has not only increased the value of the animals involved 
+in this sport, but also the need to accurately identify desired sires and dams.  
+Unfortunately, most of the criteria have been based on observations by producers.  There 
+are many different hypotheses as to what makes a good “bucker,” however these 
+observations have not been subjected to empirical investigation.  
+Genetic technology has allowed the American Bucking Bull Inc., the official 
+registry for rodeo stock, to implement DNA paternity testing.  Unfortunately, the value 
+of this registry is quite limited.  While the paternity test is beneficial in guaranteeing the 
+accuracy of the genetics of the animals, it does little in terms of identifying the 
+performance ability or the breeding values of these animals.  The registry has been 
+useful in tracking pedigrees in a similar way race horse industry tracks pedigrees, with 
+the emphasis on pedigrees being the predominant breeding criteria. 
+Today’s technology allows both beef and dairy cattle breeders to use semen from 
+genetically superior bulls.  Because bulls with higher genetic merit are the most heavily  
+ 
+This thesis follows the style and form of the Journal of Animal Science. 
+2 
+ 
+utilized, breeders receive semen of the greatest Breeding Worth (BW) (Foote, 1999).   
+This semen is selected from bulls that have been bred through selective breeding 
+experiments and their BW is demonstrated through the production ratios achieved by 
+their stock relative to other bulls.  There are no analogous breeding criteria for animal 
+behavioral or performance traits such as bucking; however, the same concept could be 
+utilized to selectively breed for certain behavioral characteristics.  In order to selectively 
+breed cattle for bull riding, an understanding of the factors that influence bucking 
+behavior is required. 
+ Breeding criteria within the rodeo stock industry are based on observations and 
+may not be statistically significant or correlated to performance.  Selection is often based 
+on the performance of the bull and the assumption that breeding the best bulls to the best 
+cows will result in high-performing offspring.  Analyses of data available on the 
+performance of bulls do give some indication of the bull’s merit, which can then be 
+compared to other bulls.  This comparison may not be an indication of the BW of the 
+bull because many breeders have found that breeding the best bulls to the best cows does 
+not always produce good “buckers.”    
+ The lack of empirical investigation into selective breeding or progeny testing in 
+bucking stock provides no reliable data to show what performance traits are heritable 
+and what performance traits result from environmental influences.  It is well established 
+that animal behavior is determined through a highly complex interaction between genetic 
+and environmental factors (Grandin, 1994).  The task then, is to identify how to 
+3 
+ 
+adequately measure the heritability of performance traits and, ultimately, genetic merit in 
+bucking bulls. 
+ The objectives of the study were: 1) determine relationships between 
+temperament and performance, 2) investigate the relationship between coat color and 
+temperament, 3) explore the laterality of bulls during their performance and 4), to 
+identify the genetic influences of the bucking traits. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 
+ 
+LITERATURE REVIEW 
+ 
+Temperament and Behavior  
+ The ability to identify and predict behaviors can have profound effects on the 
+entire production system.  Unfortunately, there is difficulty in assessing or quantifying 
+temperament for statistical analysis (Schmutz et al., 2001).  There are many factors that 
+influence temperament, including genetic background,  environment and the interaction 
+of heredity and environment  (Buchenauer, 1999).  Fortunately, the amount of motor 
+activity and excitability during handling (Schmutz et al., 2001) have been quantified and 
+have proven to be persistent over time (Grandin, 1993).  Also, the level of excitatory or 
+inhibitory reactions, level of motor activity, persistent habits, emotionality, alertness and 
+several other measurements related to temperament have been correlated to heart rate 
+(Schmutz et al., 2001), a measurable physiological response.   
+Some animals are cautious and fearful while others are calm and placid.  Boissy 
+and Bouissou (1995) stated that “fearfulness is a basic psychological characteristic of the 
+individual that predisposes it to perceive and react in a similar manner to a wide range of 
+potentially frightening events.”  Fear is the underlying factor determining human/animal 
+interaction that is referred to as temperament.  
+It has been well documented that temperament has many implications in the beef 
+and dairy cattle industries, including effects on average daily gain (ADG), carcass 
+quality, performance and overall health.  Burrow and Dillon (1997) and Voisinet et al. 
+(1997) have shown cattle with poor temperament are associated with a decreased ADG 
+5 
+ 
+and an increased incidence of dark cutting carcasses.  Fell et al. (1999) examined the 
+relationship between temperament and immune function and concluded that excitable 
+cattle have depressed immune systems compared to calmer cattle. 
+While having excitable cattle has many disadvantages for the beef and dairy 
+industries, it appears to have a positive effect on rodeo cattle.  Bucking bull producers 
+tend to have cows that are considered “hot” or highly excitable.  This is partly based on 
+the theory that the “hotter” the dam, the “hotter” the offspring and the more likely it is 
+the offspring will buck.  Excitability does not necessarily mean an animal will buck.  
+From informal observations and conversations with bucking stock breeders, there are 
+some highly excitable animals produced in these production systems that have no 
+bucking ability.  Also, there have been some calm bulls, such as the bull Promise Land, 
+which appear to be calm and docile even though they are well known bucking bulls.     
+An important aspect of environment is the social environment in which animals 
+are reared.  In this regard, a difference between intensively managed dairy cattle and 
+extensively managed beef cattle may inadvertently affect the temperament analyses 
+between these two types of cattle (Schutz and Pajor, 2001).  Rodeo-bred cattle tend to be 
+raised under management systems much more similar to beef cattle, and this comparison 
+appears to be more applicable to this project.  
+ 
+Evolution of Bucking Behavior 
+The predator-avoidance strategies in domestic animals are similar to wild 
+animals (Coss, 1991) and may be an explanation for the bucking that occurs in rodeo 
+6 
+ 
+bulls.  Although not hypothesized scientifically, the evolutionary cause of bucking may 
+have originated as a predation response.  Russell et al. (2000) described Criollo cattle in 
+the Sierra Madre region of Mexico and noticed their longevity relative to that of other 
+breeds of cattle in that region.  These Criollo cattle are also highly sought after rodeo 
+cattle with an annual demand of 40,000 steers.  The Sierra Madre region is described by 
+Russell et al. (2000) as having limited forage and steep canyons.  Also present in the 
+Sierra Madre region are ocelots (Leopardus pardalis), mountain lions (Puma concolor) 
+and jaguars (Panthera onca) (Grigione et al. 2007).  Mountain lions and other large cats 
+are known for attacks in mountains and canyons (Shaw, 1980).  It is possible that cattle 
+developed a predation response by “bucking” in order to dislodge predators off of their 
+backs.  Horses can also show similar bucking behaviors which may be the same type of 
+predation response that evolved in feral horse populations.   
+ 
+Maternal Behavior 
+While maternal behavior was not directly addressed in this study, maternal 
+behavior is an important element that should be considered in future research.  This is 
+due, in part, to the long held belief within the bucking bull community that maternal 
+influence contributes more to the overall performance of the offspring than the sire.  
+Because bucking appears to be a reactionary response rather than a learned behavior the 
+maternal influence on behavior could play a role in the reactionary responses.  This 
+could provide a more accurate assessment of the heritability of the behavior and assist in 
+the selection of sires and dams for breeding purposes.  
+7 
+ 
+Beckman et al. (2007) evaluated maternal influence on docility scores in 
+Limousin cattle and evaluated its influence on phenotypic variance and heritability. 
+Direct heritability estimates were 0.29 ± 0.02 to 0.38 ± 0.03.  The amount of phenotypic 
+variation due to maternal influence was found to be 8%.  While the authors concluded 
+that the overall applicability of selecting for maternal ability in Limousin cattle was not 
+warranted since it was a small contribution in overall behavior, it may still influence 
+bucking behavior in rodeo cattle.   
+ The most meaningful comparison to bucking bulls in terms of large animals 
+would be performance horses.  Race horses and hunter/jumper type horses are bred to 
+perform athletic events in a similar manner as bucking bulls.  There are numerous 
+advantages to utilizing equine performance studies as a basis for understanding bovine 
+performance.  Equine pedigrees have been studied for many centuries (Estes, 1952), and 
+the equine industry has developed several different performance measurements and 
+quantifications.  Due to the fact that horse racing in America has occurred since at least 
+the eighteenth century (Gorn  and Goldstein, 2004) the industry has grown large enough 
+to warrant sufficient research on performance.  
+One hypothesis previously mentioned among bucking bull producers is the 
+theory that the “hotter,” or more excitable the dam is, the better her offspring will 
+perform.  This temperament-performance relationship was studied in Thoroughbred 
+horses by Estes (1952).  Much like the bucking bull industry, the Thoroughbred industry 
+had long held the notion that “‘nervous mares,’ in general, are better broodmares.  That 
+is, they are more likely to produce high-class offspring than their more phlegmatic 
+8 
+ 
+pasture mates.”  The study was conducted using 50 high-spirited mares and 50 
+phlegmatic mares held under comparable environmental differences and bred to 
+comparable sires (as based on their average earnings index).  Comparisons were made 
+between the two groups of dams in addition to the offspring of the two groups of dams.  
+Estes (1952) concluded that the temperament of the dam did not affect the performance 
+of the offspring. 
+Another study, involving rats, was conducted to measure cross-fostering effects 
+of maternal behavior (Broadhurst, 1960).  The study involved two strains of rats that 
+were genetically different for reactivity, or nervousness: Maudsley Reactive (MR) and 
+Non-Reactive (MNR).  Those lines of rats were bred and the pups were cross-fostered 
+with different mothers after birth to identify whether maternal behavior could overcome 
+the genetic predisposition for reactivity.  The results showed that the maternal effects 
+were not great enough to completely mask the temperamental differences between the 
+two lines.  However, maternal effects can affect temperament even if they are not great 
+enough to completely change the temperament of a cross-fostered animal.  
+ 
+Coat Color and Temperament 
+Bucking bulls come in a wide variety of coat colors.  Varied colors exist more so 
+in these type of cattle than in typical cattle “breeds.”  This is due to generations of cattle 
+being bred to various breeds, thus creating bucking bulls that are an amalgamation of 
+many different breeds.  There are many reasons for this that have been mentioned by 
+breeders, including personal preference for unique color patterns, attempts to breed 
+9 
+ 
+“rank” cattle by using non-traditional breeds such as British White, Mexican fighting 
+bulls, Nellore and Longhorns and selection criteria that are based on behavior rather than 
+the desired uniformity that is a goal of the beef cattle industry.   
+Relationships between coat color and temperament have been found in several 
+species including cats, dogs, mink, rats, foxes, and fallow deer (e.g. Hemmer, 1990; 
+Keeler and Moore, 1961; Trut, 1999; Trapezov, 1997).  The relationship between coat 
+color and temperament was first described by Keeler and King, in 1942, in a study of the 
+coat color-temperament interaction in Norway rats (Keeler and King, 1942).  Five years 
+later Keeler expanded on his previous research further exploring the correlation between 
+coat color and temperament and concluded that there was, in fact, a relationship between 
+the two (Keeler, 1947).  
+More recently, Hemmer (1990) and Tozer et al. (2003) have examined coat color 
+and temperament.  Hemmer (1990) noted that it was easier to tame light colored fallow 
+deer than those with wild-type coloration.  In 2003, Tozer evaluated cows and bulls for 
+temperament.  T study contained 51 Angus bull calves at comparable ages and body 
+weights and analyzed temperament using the Flight Speed Test (Tozer et al., 2003).  The 
+Flight Speed Test is a test of the time it takes an animal to cover 1.7 m after leaving a 
+weight scale or stanchion (Burrow et al., 1988).  The 51 bulls were divided between 
+black and red bulls, having 28 and 23 bulls respectively.  Tozer et al. (2003) concluded 
+that red bulls exited faster than black bulls (1.43 seconds for red and 2.56 seconds for 
+black, respectively) and the results reinforced Hemmer’s hypothesis that “coat colour 
+and behaviour are connected via a common biochemical synthesis pathway the pigments 
+10 
+ 
+determining colour – the melanins and the catecholamine group of neurotransmitters 
+forming the basis of the information-processing system” (Hemmer, 1990).    
+It appears that coat color does not directly cause a difference in temperament, but 
+rather the physiological mechanisms that underlie coat color may be responsible for 
+temperament.  There are many hormones and neurotransmitters common in stress 
+response which is linked with pigment production.  For instance, dopamine, a 
+neurotransmitter, and the hormones adrenaline and noradrenalin have an identical 
+biochemical precursor to melanin pigments (Ferry and Zimmerman, 1964).  
+Furthermore, Burchill et al. (1986) found that dopamine directly influences the 
+production of pigment by binding to receptors in the pigment-producing cells.  
+Dopamine also indirectly influences pigment production in an inhibitory function.  By 
+inhibiting pituitary melanotropin, or melanocyte stimulating hormone (MSH), dopamine 
+stimulates pigment cells to produce pigment (Tilders and Smelik, 1978).  Consequently, 
+a change in coat color may be a byproduct of selection against reactiveness (Keeler, 
+1947).  
+ 
+Physiology of Stress 
+In all animals, genetic factors predispose animals to react to situations that arouse 
+fear ( Davis, 1992; Boissy and Bouissou, 1995); therefore, temperament is partially 
+determined by an individual animal’s fearfulness. There are some physical markers 
+commonly used in the cattle industry that are associated with certain behavioral traits.  
+Casual observations indicate that the most excitable, flighty cattle have a long, slender 
+11 
+ 
+body with fine bones (Grandin and Deesing, 1998).  Supporting that observation is a 
+study conducted by Lanier and Grandin (2002), in which the relationship between 
+temperament and cannon bone measurements indicated that cannon bone length might 
+help identify certain temperaments.  The study found steer cannon bone thickness and 
+width were related to the speed of exit from the squeeze chute.  Steers with thicker and 
+wider bones exited the chute at a walk while those that trotted or ran out of the chute had 
+thinner and narrower cannon bones.  Heifers with wider and thicker bones tended to be 
+less likely to balk at the head restraint.  Both steers and heifers with larger cannon bones 
+were calmer than those with smaller bones. 
+ 
+Laterality  
+Bucking bulls have distinct observable laterality preferences in terms of how they 
+exit the bucking chute.  The way the bulls leave the chutes is referred to as their 
+“delivery,” so they either have a left delivery or a right delivery for each event 
+performance.  This is an easily documented side-bias which may lead to a better 
+understanding of the neurological functions of the bulls in question and may have 
+implications for performance.  The delivery they exit from typically results in them 
+turning back, or beginning their spinning, in the same direction.  Most bucking bull 
+producers evaluate the bulls out of both deliveries when they are young in order to 
+identify which delivery the bull prefers. Once the bull has shown his preference he 
+generally is bucked using that delivery side in rodeo events. This delivery style is an 
+aspect of laterality in cattle that has not been reported before. 
+12 
+ 
+Laterality preference has been shown in almost all vertebrates including fish 
+(Bisazza et al., 2000), snakes (Roth, 2003), birds (Rogers, 1996), rodents (Neveu and 
+Moya, 1997) and other mammals and humans (Warren, 1980).  Studies have also shown 
+that even some invertebrates show left-right lateralization (Halpern et al., 2005).  In 
+vertebrates this can be explained by the cerebral hemispheric lateralization in the brain 
+leading to expressed side bias (Rogers and Andrews, 2002). The cerebral hemispheres 
+are the left and the right hemisphere. The hemispheres work together although each 
+serves a separate function.  In terms of emotionality, the left hemisphere, also referred to 
+as left brain, has been associated with positive emotional stimuli (Wittling and 
+Roschmann, 1993) whereas increased activity in the right hemisphere, or right brain, is 
+associated with more negative emotional stimuli (Bogen, 1985). Furthermore, Neveu and 
+Moya (1997) suggested that a heightened activity of the hypothalamic-pituitary-adrenal 
+axis plays a role in right brain stress response by increasing corticosterone levels.  In 
+addition to emotionality the left hemisphere is responsible for analytical thinking and 
+processing, logic, sequential and linear processing and pattern perception.   
+When a side preference is shown the processes are caused by the contralateral 
+hemisphere (Dharmaretnam and Rogers, 2005).  This is important to understand because 
+when a lateral preference is shown it can easily be determined which cerebral 
+hemisphere is active.  It can also assist animal handlers in training or working with the 
+animal through the understanding of the mindset of that animal.  For example, studies on 
+horse training have been conducted to evaluate learning behavior based on laterality and 
+hemispheric dominance (McGreevy and Thomson, 2006).  They concluded in one study 
+13 
+ 
+that selection or training may be the cause of the left-leg bias, in which a horse grazes 
+with one leg more forward than the other, which may reinforce the interhemispheric 
+transfer that occurs in higher mammals.  It is worth noting that this many not necessarily 
+be conclusive because of the interhemispheric transfer that occurs when the hemispheres 
+of the brain interact with each other to coordinate activity (Berne and Levy, 2008).  
+McGreevy and Thomson (2006)  
+ Physical laterality in cattle has not been well studied. In dairy cattle laterality for 
+stall lying tendencies (Arave and Walters, 1980) was shown.  Arave and Walters 
+reported that cows lied on their left side 64.7 + 1.1% of the time and heifers lied on their 
+left side 61.8 + 2.7% of the time.  This study actually showed laterality preference based 
+on an activity whereas most other studies involving cattle focus on behavioral laterality.  
+Another study evaluating laterality for lying found a 56% preference for the left side in 
+heifers (Wagnon and Rollins, 1972).   
+  Because horses have been more extensively studied for laterality, these studies 
+might provide a better comparison to bucking bulls than lying in dairy cattle.  Williams 
+and Norrist (2007) evaluated stride pattern in horses for three different traits: lead stride 
+pattern preference for trot-to-gallop transition, breaking from the starting gate and 
+evaluation of multiple observations from individual horses.  There were three different 
+breeds of horse involved in this study including Arabians, Quarter Horses and 
+Thoroughbreds.  The authors concluded that 90% of horses in this study had a right 
+laterality preference and 10% had a left laterality preference.  
+14 
+ 
+ McGreevy and Rogers (2005) studied 106 Thoroughbreds and compared the 
+laterality bias in the position of the forelimbs. An olfactory stimulus was then introduced 
+to test the nostril preference. The modality and nostril preferences were compared to 
+establish whether a brain sidedness expression of behavior occurred. The study found 
+that the two laterality preferences were not correlated and the authors suggested that 
+“lateralization of the equine brain occurs on at least two levels of neural organization—
+sensory and motor” (McGreevy and Rogers 2005). 
+ 
+Influence of the Flank Strap  
+ The flank strap is “soft rope that is loosely tied around the bull’s midsection in 
+the flank area and slipped onto the bull when it enters the alley to the chute. The slack is 
+taken out of it before the ride, but not tied too tight, and the strap is removed 
+immediately after the ride” (PBR, 2008). The purpose of the flank rope is to produce an 
+annoyance to the bull.  This results in the bull kicking out with their hind legs while 
+bucking in an effort to dislodge it.  This kicking action results in a performance that is 
+less erratic and provides more consistency for the rider (PBR, 2008).  Contrary to a 
+belief among many casual observers of bull riding, the flank strap is not attached to the 
+testicles of the bull as this would severely limit the range of motion a bull could achieve 
+due to the pain it would cause.   
+ While the role of the flank strap is a necessary part of the bull ride, it is highly 
+difficult to gauge its influence on the performance of the bull.   It is a fair argument that 
+the flank strap can help or hinder the performance of a bull.  A common adage in the 
+15 
+ 
+rodeo community is that if a flank strap is too loose the bull will not buck and if it is too 
+tight it cannot buck.  This is a self-limiting tool that prevents misuse.  Fortunately, bull 
+owners and stock contractors familiar with their stock know the degree of flanking that 
+produces the best performance from their bulls.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+16 
+ 
+OBJECTIVES 
+ 
+The overall goal of this study was to determine relationships between animal 
+aggressiveness, performance scores, coat color, delivery, and buckoff percentages.  The 
+objectives of the study were: 1) determine relationships between temperament and 
+performance, 2) investigate the relationship between coat color and temperament, 3) 
+explore the laterality of bulls during their performance and 4), to identify the genetic 
+influences of the bucking traits.  The goal is to be able to use this information in future 
+studies to further identify heritabilities of traits that affect performance of bucking bulls. 
+   
+ 
+ 
+ 
+. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+17 
+ 
+MATERIALS AND METHODS 
+ Animals 
+  A group of 294 bulls were viewed and videotaped at 11 events and producing a 
+total of 525 observations.  The events attended included the Professional Bull Riders, 
+Inc. (PBR) and Championship Bull Riders (CBR) sanctioned bull ridings.  These 
+organizations were selected because of the quality of bulls being used and the 
+accessibility of the records on the individual animals.  These bulls ranged in age from 3 
+years to 10 years.  Each rodeo event presented a random group of bulls to video, and 
+there was no selection use of animals for this project although some bulls ended up 
+competing in multiple events.  All animals were owned by individual contractors. Travel 
+times prior to events were unknown, and therefore were not considered in the analyses. 
+Additionally, the previous nutrition and management of the bulls were also unknown.  
+Video Collection 
+ The bulls were video recorded during their normal rodeo performance beginning 
+shortly before the bucking gate opened until a few seconds after the rider was bucked 
+off.  The video was obtained on a handheld Sanyo digital camcorder, and the files were 
+uploaded onto a computer for playback and analysis. The point of view for the 
+videotaping varied from event to event due to the inconsistency of the venue.  However, 
+most of the video was obtained directly across the arena from the bucking chutes.  The 
+video was viewed and information was obtained for the color of the bull, the delivery 
+direction and the temperament of the bull.  
+ 
+18 
+ 
+Rodeo Events Attended  
+There were five rodeo events that were attended in order to collect the video for 
+this study.  Some of the events were held on multiple days and each day was coded as an 
+individual event. Therefore, there were a total of 11 event days in which data collection 
+occurred corresponding to: 
+Championship Bull Riding (CBR) event in Dallas, TX March 11-12, 2006.  
+Professional Bull Rider (PBR) event in Liberty, TX June 19, 2006 
+Professional Bull Riding (PBR) event in Albuquerque, NM March 31 & April 1, 
+2006 
+Professional Bull Riders (PBR) event in Dallas, TX June 25, 2006 
+Professional Bull Riders World Final (PBRWF) event in Las Vegas, NV October 
+28-November 4, 2006 
+Aggression 
+Temperament was assessed based on whether or not bulls ‘hooked’ or attempted 
+to ‘hook’ the rider after the ride. The term hook refers to a bull trying to attack the rider 
+or other men in the arena with their horns.  This is a visible indication of temperament 
+that can be recorded and used for analysis.  Due to the large numbers of events and the 
+number of bulls used in this study, it was not feasible to evaluate flight speed or other 
+individual temperament assessments. There was a score of zero (0) for bulls that did not 
+show aggression and a score of one (1) for bulls that did show aggression by hooking or 
+attempting to hook the men in the arena. 
+ 
+19 
+ 
+Coat Color 
+ The same group of bulls that had been video recorded at the rodeo events was 
+assigned to color categories.  There are many color pattern combinations of bulls that 
+were not given individual color assignments due to the wide variety of colors presented 
+and the difficulty in analyzing so many variables.   The color groups were assigned 
+based on the primary color of the animals as follows: red, black, brown, white, yellow, 
+spotted, brindle and gray.   
+Buckoff   
+A rider gets off the bull at some point in each ride. It is considered a “buckoff” if 
+the rider gets off the bull before the 8-second buzzer is sounded.  This variable was 
+available for all of the events, or outs, for the 2006 rodeo season and the range of outs 
+per bull was 1 to 38 for 2006. 
+Career Buckoff 
+ This is the buckoff percentage of the bull from 2003 to 2008 recorded across all 
+events and reported by the officiating sponsor of the event. This allowed a larger sample 
+size of animals to be evaluated and a more comprehensive evaluation of the animals 
+from all events where there were data recorded.  
+Outs 
+An out is each time the bull comes out of the chute at a bull riding event.  The 
+number of times a bull competed and came out of the chute in 2006 ranged from 1-33 
+outs for the animals in this study. 
+ 
+20 
+ 
+Career Outs 
+ This represents the total outs a bull has had in his career from 2003-2008.  The 
+range of career outs per bull was 1 to 133. 
+Laterality 
+ Each bull was placed into the chute facing left or facing right. This was 
+considered the “delivery” of the bull.  Laterality was determined by the direction of the 
+delivery and was categorized as left or right.  The laterality of the bull was based on the 
+bulls and was used during the analysis of individual events, 2006 events, and the career 
+records of the bulls in the study to investigate brain-sidedness, evaluate the relationship 
+of laterality to aggression, score, color and buckoff percentage. 
+Animal Pedigree 
+Each animal’s pedigree was obtained from breeders when possible.  However, 
+additional pedigree information was obtained through computer software from the 
+American Bucking Bull Inc. (A.B.B.I.), the official registry of bucking bulls in the 
+United States.  This information is based only on the DNA registration information, and, 
+therefore known parents were not included in the database if they were not registered 
+with the A.B.B.I. (2008)  The bulls containing the missing pedigree information were 
+excluded from the datasets DS and DS1 and the sire contribution was not part of the 
+statistical analysis for DBG and DAB. 
+Animal Year of Birth 
+ The year of birth was obtained by a variety of methods.  The first choice was to 
+obtain the year of birth from the database from the A.B.B.I. (2008)  The registry does 
+21 
+ 
+not require year of birth on all animals if it is not reported.  The year of birth was then 
+searched for on the Professional Bull Riders website www.pbrnow.com.  The year of 
+birth was also researched through the websites of individual bull owners.   
+Score 
+This is the standard performance evaluation across events for this project.  A bull 
+is scored by four judges at each event with the highest and lowest scores dropped.  The 
+scores of the remaining judges are added together to obtain the final bull score.  The bull 
+is scored by each judge on a scale of 1 - 25 with 25 being the top score per judge, and 
+the final score is out of a total of 50 points.  The judges evaluated the performance of the 
+bull based on the following criteria: "speed, power, drop in the front end, kick in the 
+back end, direction change and body rolls. A body roll occurs when a bull is in the air 
+and kicks either his hind feet or all four feet to the side" (PBR, 2008).   
+ The more of these criteria the bull exhibits, the higher the bulls score will be.  
+Although scores were recorded at the events by the researcher, they were not used 
+directly for this study. This was due to the inconsistency of reporting the bull scores as 
+they contributed to the final score the rider received.  The scores that were used were 
+from a database online located at www.probullstats.com.  The purpose of this website is 
+to provide riders with bull statistics in order to help them prepare for events when they 
+know the bull they have drawn. The judges submit official scores to the officiating 
+organization which then submit the official scores to ProBullStats.  This gives 
+consistency to the scores and because they are the judges’ scores it gives a more accurate 
+representation of the bulls’ performance.  
+22 
+ 
+Average Score 
+This is the average bull score for the year 2006. The average mark reported on 
+www.probullstats.com lists the average mark as the mark one judge gives which has a 
+maximum value of 25 points. For standardization purposes that score was doubled to 
+keep all of the scores out of 50 possible points. 
+Career Average Score 
+This is the average score for the bull over his career from 2003 to 2008. The 
+career average of the scores was used in order to get a larger sample size of outs for the  
+bulls to determine the bulls’ consistency.  
+ Datasets 
+There were 525 total observations for this project consisting of 339 bulls, some 
+with multiple observations.  The 525 observations were listed as the dataset DAB.  This 
+dataset was further divided into two subgroups DS1, DS and DBG.  DS1 consisted of 
+106 observations of 69 bulls and was utilized to examine sire influence among full and 
+half-brothers.  The dataset DBG was designed for bulls that competed at multiple events 
+that were video tapped and contained 128 bulls.   DS only contained bulls (n = 149) that 
+had pedigree information available. This subgroup differed from DBG by not including 
+animals that were only represented at one event which DS did. 
+Statistical Analysis 
+Analysis of variance procedures were used (GLM and MIXED of SAS) to 
+determine the contributions of the variables to the performance of the bulls. The GLM 
+and MIXED procedures were used to analyze temperament, delivery, coat color, buckoff 
+23 
+ 
+percentage and contributions of the sire and dam.  GLM procedures were used to obtain 
+R-Square values for each model and to calculate simple means to be compared to the 
+least squares means from the MIXED procedure.  Pearson’s correlation coefficients were 
+used to determine the association between variables including the relationship between 
+temperament and delivery, temperament and coat color, temperament and buckoff 
+percent and coat color and buckoff percent.  The chi-square test was utilized to 
+determine relationships between pairs of categorical variables in the datasets. 
+ There were different statistical models used for each variable to allow for the 
+adequate representation of the data to be reflected in the results.  For instance, all models 
+contained color and year of birth because those effects were constant across datasets; 
+conversely the aggression score was only in statistical models that tested for the effects 
+of score for events attended.   For DAB and DBG the sire was excluded from the model 
+because a large number of bulls did not have a sire listed.  Conversely, for DS1 and DS 
+the sire was put into the model to examine the sire effects. 
+The models were also adjusted for the different variables being analyzed and 
+these adjustments were applicable across all datasets.  When “score” was being 
+analyzed, the model contained the variables temperament, delivery, event, color and year 
+of birth.  The analysis of “Average Score” involved all of the data for the bulls in the 
+2006 rodeo season and included the regression on buckoff percentage for 2006 and the 
+regression on the number of outs for 2006.  Similarly, “Career Average Score” used the 
+bulls’ career buckoff percentage and their career outs.  Both of these models required the 
+removal of the variables temperament, delivery and event because without having 
+24 
+ 
+attended those events, temperament and delivery was not known.  While delivery is 
+considered fairly consistent for a bull, this is not guaranteed for each event.  The data 
+show at least two bulls that have a different delivery over the course of the events that 
+were witnessed.  It would be inappropriate to include delivery except when it was 
+verified.  As previously mentioned, the delivery is typically based on the preference of 
+the bull.  The same principal applies to temperament.  The bull may end up having a 
+consistent temperament score or he may end up showing different behaviors at different 
+events. Without being able to verify a consistent temperament it could not be included in 
+some of the models.  
+ All of the datasets analyzed buckoff percent and career buckoff percent as well.  
+When running the levels of significance for all of the datasets, the only variables used in 
+these models were year of birth, color and outs, or career outs, respectively.  This fits 
+with the above justification for excluding certain variables from the models.  Buckoff 
+percent and career buckoff percent were also used in correlation analyses. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+25 
+ 
+RESULTS AND DISCUSSION 
+  
+The levels of significance (P-values) from analyses of variance for all of the 
+datasets as presented.  The first dataset, DAB is shown in Table 1.   When analyzing 
+score, the only significant factor was event (P = 0.02).  However, this may be explained 
+by different bulls end up competing at different events and therefore the quality of bulls 
+may be influencing the results.  This could be analyzed by tracking a group of 
+contemporary bulls competing in the same events and comparing the performance 
+variation between events.  The average score was influenced by buckoff percent (P = 
+0.01) with a regression coefficient of 0.1 ± 0.006 (Table 2), outs (P <.0001) with a 
+regression coefficient of 0.07 ± 0.012 (Table 2) and year of birth (P = 0.01).  The R-
+Square value for the model was 0.34, indicating that 68% of the variation was not 
+accounted for.   
+The career average score showed comparable findings to the average score as it 
+was influenced by career buckoff percentage (P = 0.01) with a regression coefficient of 
+0.03 ± 0.0006 (Table 2), career outs (P <.0001) with a regression of 0.07 ± 0.012 (Table 
+2), and year of birth (P = 0.001) respectively.  The R-square value for career average 
+score was 0.48 which indicates more variation is accounted for in this trial.   
+The 2006 buckoff percentage was influenced by the year of birth (P = 0.02) and 
+outs (P = 0.0003), however, the R-square value was only 0.11 which indicated that this 
+model did not adequately identify factors that influence the trait.   
+26 
+ 
+The career buckoff percentage analysis provided an interesting contrast to the 
+2006 buckoff percentage.  Similar to the buckoff percentage model, the career buckoff 
+percent was impacted (P <.0001) by career outs; conversely, in the buckoff percentage 
+analysis, the year of birth did not impact the buckoff percent (P = 0.22) whereas coat 
+color did (P = 0.02).  The year of birth significance may be due to the ability of bulls to 
+perform as they age.  The significance of coat color may not be identifiable at a single 
+event or even after a year of competing.  It may be significant long term either due to the 
+sire contributions, it may be indicative of family line differences or due to longevity of 
+the different bulls competing that was not tracked in this project.  The R-square value 
+was 0.14 and did not explain variation in the trait to much extent. 
+The next dataset, DS1 has its analyses represented in Table 3.  When score was 
+analyzed, there were no significant variables; however, the R-square value was 0.68 
+indicating that the model accounted for 68% of the differences in the score when sire 
+was included.  The average score showed that the only significant effect was outs (P 
+<.0001) with a regression coefficient of 0.03 ± 0.003 (Table 2).  
+27 
+ 
+Table 1 Levels of significance (P- values) from analyses of variance for DAB (n = 525) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+R-Square value from GLM, other values from MIXED analyses 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Variables 
+evaluated 
+Score 2006 
+Average  
+score 
+Career 
+average  
+score 
+2006 
+Buckoff 
+percent 
+Career buckoff 
+percent 
+Buckoff percent -- 0.01 -- -- -- 
+      
+Career buckoff 
+percent -- -- 0.01 -- -- 
+      
+Outs -- <.0001 -- 0.0003 -- 
+      
+Career outs -- -- <.0001 -- <.0001 
+    
+Coat color 0.39 0.48 0.13 0.29 0.02 
+      
+Aggression 0.52 -- -- -- -- 
+      
+Delivery 0.93 -- -- -- -- 
+      
+Event 0.02 -- -- -- -- 
+      
+Year of birth 0.13 0.01 0.001 0.02 0.22 
+      
+Residual 
+variance
+ 
+7.304 1.316 0.983 241.71 157.78 
+    
+R-Square
+a 
+0.14 0.34 0.48 0.11 0.14 
+28 
+ 
+Table 2  Regression coefficients (and standard errors) across datasets to evaluate  
+average score and career average score  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+This could prove useful information for performance management of the bulls.  The bull 
+owner could use this information when planning the event schedules and maximize 
+performance by managing the number of outs a bull has each year.  The career average 
+score showed that career outs (P <.0001), with a regression coefficient of 0.03 ± 0.006 
+(Table 2), and coat color (P = 0.05) were important factors.  The R-square value was 
+0.64.  The coat color may be significant because this dataset is examining full- and half-
+brothers which reinforces the theory that coat color may be influenced by the family 
+lines over and above what is attributable to sires.   None of the variables for buckoff 
+percentage were significant; however, the R-square value was 0.74.  The only significant 
+Independent 
+variables 
+DAB DS DBG DS1 
+ 
+Outs 0.01 0.07 0.04 0.03 
+± 0.005 0.01 0.011 0.006 
+ 
+Buckoff 
+percentage 0.07 0.010 0.02 0.01 
+± 0.005 0.006 0.005 0.010 
+ 
+ 
+Career outs 0.03 0.03 0.02 0.03 
+± 0.003 0.006 0.003 0.006 
+ 
+ 
+Career buckoff 0.01 0.07 0.02 0.01 
+± 0.005 0.006 0.005 0.011 
+29 
+ 
+variable in the career buckoff was color (P = 0.03).  Again, this may be due to the 
+relationship between coat color and family lines.  The R-square value for career buckoff 
+was 0.69.   It is unclear why there is a discrepancy between average buckoff percentage 
+and career buckoff percentage.  All three analyses produced much larger R-square values 
+when sire was included in the statistical models.  
+ The analyses for DBG (Table 4) produced statistics more similar to the results 
+from DAB than it was to DS1.  When analyzing score, the only influential effect was 
+event (P = 0.004).  For average score, outs (P = .0002), which had a regression 
+coefficient of 0.04 ± 0.011 (Table 2), year of birth (P = 0.0009) and 2006 buckoff 
+percentage (P = 0.0003) all impacted the average score.  However, the R-square value 
+was 0.35 so even though all of the traits were important factors in the average score, the 
+model does not account for 65% of the variance.  The R-square value increased when 
+career average score was analyzed to 0.54 and represents a larger amount of variation 
+that is explained in this model.  All of the variables in career average score were 
+significant with career buckoff percentage (P = 0.005), career outs (P <.0001), coat color 
+(P = 0.03) and year of birth (P <.0001) respectively.  This dataset included bulls that had 
+competed in at least two events, so repeatability across bulls may be influential more so 
+here than the dataset DAB.  When examining the buckoff percentages nearly all 
+variables were significant for both buckoff percentage and career buckoff percentage.   
+ 
+ 
+ 
+30 
+ 
+Table 3 Levels of significance (P- values) from analyses of variance for DS1 (n = 105) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+R-Square value from GLM, other values from MIXED analyses  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Variables 
+evaluated 
+Score 2006 
+Average  
+score 
+Career avg. 
+score 
+2006 
+Buckoff 
+percent 
+Career 
+buckoff 
+percent 
+2006 Buckoff 
+percent 
+ 
+-- 0.84 -- -- -- 
+Career buckoff 
+percent 
+ 
+-- -- 0.64 -- -- 
+2006 Outs -- <.0001 -- 0.83 -- 
+ 
+Career outs -- -- <.0001 -- 0.93 
+      
+Coat color 0.24 0.20 0.05 0.26 0.03 
+      
+Aggression 0.10 -- -- -- -- 
+      
+Delivery 0.54 -- -- -- -- 
+      
+Event 0.22 -- -- -- -- 
+      
+Year of birth 0.37 0.08 0.75 0.11 0.13 
+Residual variance
+ 
+4.89 1.05 1.54 115.97 113.67 
+    
+Sire variance 0.39 0.99 0.07 145.17 82.36 
+R-Square
+a 
+0.679 0.739 0.642 0.737 0.690 
+31 
+ 
+Table 4 Levels of significance (P- values) from analyses of variance for DBG (n = 313) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+R-Square value from GLM, other values from MIXED analyses  
+ 
+ 
+ 
+ 
+ 
+Variables 
+evaluated 
+Score 2006 
+Average  
+score 
+Career 
+average  
+score 
+2006 Buckoff 
+percentage 
+Career 
+buckoff 
+percentage 
+2006 Buckoff 
+percent 
+ 
+-- 0.0003 -- -- -- 
+Career buckoff 
+percent 
+ 
+-- -- 0.005 -- -- 
+ 
+ 
+ 
+2006 Outs 
+ 
+-- 0.0002 -- 0.93 -- 
+ 
+ 
+Career outs 
+ 
+-- -- <.0001 -- <.0001
+ 
+ 
+Coat color 
+ 
+0.15 0.04 0.03 0.04 0.003 
+ 
+ 
+Aggression 
+ 
+0.91 -- -- -- -- 
+ 
+ 
+Delivery 
+ 
+0.81 -- -- -- -- 
+ 
+ 
+Event 
+ 
+0.004 -- -- -- -- 
+ 
+ 
+Year of birth 
+ 
+0.27 0.0009 <.0001 0.0005 0.006 
+Residual 
+variance
+ 
+6.49 0.82 0.55 170.40 115.31 
+R-Square
+a 
+0.228 0.347 0.536 0.216 0.269 
+32 
+ 
+The dataset DS was analyzed (Table5) and the results closely resembled the 
+results for the dataset DAB (Table 1).  The variables tested in the score analysis were not 
+significant; however, there was a trend (P = .07) toward event effect. This is probably 
+explained, as mentioned above, by the differences of bulls or judges at different events.  
+The average score was influenced by year of birth (P = 0.02) and outs (P <.0001), and 
+had an R-square value of 0.34.  The effect of the year of birth on the average score could 
+be an age effect but it could also be due to popular bloodlines at that point in time.  The 
+career average score reinforced the results of the average score model described above as 
+the effects of outs (P <.0001), year of birth (P = 0.0009) and coat color (P= 0.04) were 
+influential.  The buckoff percentage, when analyzed, followed the trend of the previous 
+datasets and was impacted by outs (P = 0.03) and year of birth (P = 0.00); however the 
+R-square value (0.17) raises questions as to the validity of the model.  Career buckoff 
+percentage was influenced by career outs (P <.0001) and coat color (P = 0.05), and a 
+year of birth trend (P = 0.07). 
+ 
+33 
+ 
+Table 5 Level of significance (P- values) from analyses of variance for DS    (n = 243) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Variables 
+evaluated 
+Score 2006 
+average  
+Score 
+Career 
+avg.  
+Score 
+2006 
+Buckoff 
+percent 
+Career buckoff 
+percent 
+2006 Buckoff 
+percent 
+-- 0.11 -- -- -- 
+ 
+ 
+Career buckoff 
+percent 
+-- -- 0.22 -- -- 
+ 
+ 
+2006 Outs -- <.0001 -- 0.03 -- 
+ 
+ 
+Career outs -- -- <.0001 -- <.0001 
+ 
+ 
+Coat color 0.30 0.47 0.04 0.21 0.05 
+ 
+ 
+Aggression 0.99 -- -- -- -- 
+ 
+ 
+Delivery 0.90 -- -- -- -- 
+ 
+ 
+Event 0.07 -- -- -- -- 
+ 
+ 
+Year of birth 0.14 0.02 0.02 0.04 0.07 
+      
+Residual 
+variance 
+ 
+6.78 0.645 0.817 84.890 85.507 
+Sire variance 1.15 0.927 0.246 173.45 86.888 
+R-Square
+a 
+0.16 0.34 0.49 0.17 0.18 
+34 
+ 
+Table 6 Least squares means and standard errors for color across datasets 
+ 
+ 
+a
+R-square value from GLM analyses, other values from MIXED.  
+ 
+ 
+ 
+ 
+ 
+The least squares means are presented for color (Table 6), year of birth (Table 7), 
+temperament (Table 8) and delivery (Table 9) for information purposes.  Mean 
+separations were not performed.   It is important to consider the importance of even the 
+slightest increase or decrease in score.  One tenth of a point could mean the difference 
+between winning a $100,000 purse and taking second place for $20,000.  The same 
+stakes are on the line for the bull riders because the bulls’ score is half of the overall ride 
+score which determines how the rider places at the event. 
+ 
+ 
+ 
+ 
+ 
+ 
+Color DAB DBG DS DS1 
+Black 43.90 ± 0.46 43.96 ± 0.52 43.68 ± 0.22 43.28 ± 0.41 
+Brindle 42.70 ± 0.76 44.32 ± 0.97 43.92 ± 0.38 44.10 ± 0.86 
+Brown 44.15 ± 0.54 43.93 ± 0.72 43.94 ± 0.34 44.28 ± 0.53 
+Gray 43.42 ± 0.90 43.47 ± 1.14 43.56 ± 0.48 42.86 ± 0.72 
+Red 44.15 ± 0.54 44.60 ± 0.62 44.14 ± 0.26 44.15 ± 0.44 
+Spotted 43.18 ± 0.51 42.56 ± 0.58 43.69 ± 0.26 43.36 ± 0.43 
+White 43.95 ± 0.85 44.04 ± 1.04 44.11 ± 0.47 44.65 ± 0.90 
+Yellow 43.33 ± 0.85 44.06 ± 1.17 43.27 ± 0.43 43.42 ± 0.69 
+     
+35 
+ 
+ 
+Table 7 Least squares means and standard errors for year of birth across datasets 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 8 Least squares means and standard errors for temperament across datasets 
+ 
+ 
+Year of birth DAB DBG DS DS1 
+1996 44.31 ± 1.47 43.90 ± 1.47 43.73 ± 2.07 44.51 ± 2.09 
+1997 46.23 ± 1.76 45.16 ± 1.80 46.54 ± 1.84 46.34 ± 1.85 
+1998 43.48 ± 1.11 44.03 ± 1.28 43.09 ± 1.51 43.79 ± 1.58 
+1999 43.74 ± 0.55 44.63 ± 0.64 43.84 ± 0.61 43.46 ± 0.62 
+2000 42.80 ± 0.42 43.59 ± 0.51 43.09 ± 0.48 42.84 ± 0.50 
+2001 42.42 ± 0.35 42.96 ± 0.42 42.25 ± 0.41 42.11 ± 0.42 
+2002 42.59 ± 0.45 42.82 ± 0.62 42.52 ± 0.51 42.88 ± 0.59 
+2003 43.60 ± 0.83 43.85 ± 1.15 43.20 ± 0.83 43.68 ± 0.87 
+Temperament DAB DBG DS DS1 
+0 43.77 ± 0.40 43.84 ± 0.45 43.54 ± 0.47 43.25 ± 1.20 
+1 43.53 ± 0.43 43.89 ± 0.53 43.52 ± 0.51 42.16 ± 1.06 
+36 
+ 
+ 
+Table 9 Least squares means and standard errors for delivery across datasets 
+ 
+       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 10 provides the P-values from the chi-square tests for two-way factor 
+distributions across all of the datasets in this project.  In the dataset DAB relationships 
+were between color and delivery (P = 0.03), year of birth and delivery (P = 0.03) and 
+between year of birth and temperament (P = 0.06).  The relationship between color and 
+delivery may be due to the influence of sire and family lines and a possible heritable 
+relationship between sire and delivery.  The relationship between year of birth and 
+delivery may indicate a different relationship in older bulls relative to younger bulls.  
+The same rationale can be applied to the year of birth and temperament.  Possibly, the 
+older a bull gets the less aggressive he may become due to his acclimation to 
+performing. 
+ 
+ 
+ 
+ 
+ 
+ 
+Delivery DAB DS DS1 DBG 
+L 43.63 ± 0.38 43.92 ± 0.43 43.59 ± 0.46 42.36 ± 0.64 
+R 43.66 ± 0.44 43.81 ± 0.53 43.47 ± 0.51 43.02 ± 0.77 
+37 
+ 
+Table 10 P-values from chi-square test for 2-factor distributions across datasets 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+YOB = year of birth 
+ 
+ 
+ 
+The DS dataset did not show as much significance in the relationships among 
+traits as DAB. This may be due simply to the sample sizes between the two datasets or a 
+relationship between year of birth and temperament (P = 0.05) existed, as well as a 
+tendency for a relationship between color and delivery (P = 0.10).  The same tendencies 
+existed in the dataset DBG with a color and delivery relationship and a year of birth and 
+temperament relationship that are both P = 0.07.  In the dataset DS1, color and delivery 
+relationship (P = 0.002) was significant while there was a tendency for there to be a 
+relationship between year of birth and delivery (P = 0.10).   
+Across all datasets there was a relationship between color and delivery.   
+ Datasets 
+Variables Tested AB DS BG SI 
+Aggression x Color 0.96 0.79 0.44 0.50 
+ 
+ 
+Aggression x 
+Delivery 
+ 
+ 
+0.77 0.68 0.53 0.36 
+Color x Delivery 0.03 0.10 0.07 0.002 
+ 
+ 
+YOB
+a
+ x Delivery 0.03 0.19 0.04 0.10 
+ 
+ 
+YOB
+a
+ x Aggression 0.06 0.05 0.07 0.48 
+38 
+ 
+Three of the datasets showed a tendency for significance for year of birth and 
+temperament while three other datasets showed a tendency for significance for year of 
+birth and delivery. 
+ Table 11 represents the distribution across temperament and delivery 
+combinations and was designed to identify whether brain-sidedness could contribute to 
+bucking performance which could be useful in developing training methods for the bulls.  
+Sire influence was also analyzed to determine whether there could be adequate genetic 
+variation that could be exploited in breeding programs.  In the dataset DAB, the 
+relationship between temperament and delivery was not significant.  The frequency of 
+delivery preference was 62.2% of bulls with a left delivery and 37.8% right delivery.   
+There was a distinct manual laterality trait that follows the findings of Arave and 
+Walters (1980) in their lying preference study conducted with dairy cattle.  This may 
+show that a manual laterality preference in cattle spans across multiple behaviors.  The 
+chi-square test showed no difference in distribution of delivery across temperament (P = 
+0.77).  None of the other datasets (Table 12, Table 13, Table 14) showed different 
+distributions between temperament and delivery. 
+ 
+ 
+ 
+ 
+ 
+39 
+ 
+Table 11 Frequency table: aggression x delivery for DAB (n = 463) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ 
+a
+Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 12 Frequency table: aggression x delivery for DBG (n = 272) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Delivery  
+Aggression
+a 
+Left Right Total 
+0 182 113 295 
+Percent (%) 63.19 64.57 
+ 
+1 106 62 168 
+ 36.81 35.43 
+Total 288 175 463 
+ 62.20 37.80 100.00 
+chi-square P-value   0.77 
+ Delivery  
+Aggression
+a 
+Left Right Total 
+0 107 63 170 
+Percent (%) 61.14 64.95 62.50 
+ 
+ 
+1 68 34 102 
+ 38.86 35.05 37.50 
+Total 175 97 272 
+ 64.34 35.66 100.00 
+chi-square P-value  0.53 
+40 
+ 
+Table 13 Frequency table: aggression x delivery for DS (n = 213) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 14 Frequency table: delivery x aggression for DS1 (n = 87) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1
+ Delivery  
+Aggression
+a 
+   Left     Right Total 
+ 0 90 51 141 
+Percent (%) 65.22 68.00 66.20 
+    
+1 48 24 72 
+ 34.78 32.00 33.80 
+Total 138 75 213 
+ 64.79 35.21 100.00 
+chi-square P-value   0.68 
+ Delivery  
+Aggression
+a 
+Left Right Total 
+0 40 19 59 
+Percent (%) 67.80 67.86 67.82 
+   
+1 19 9 29 
+ 32.20 32.14 32.18 
+Total 59 28 87 
+ 67.05 31.82 100 
+chi-square P-value  0.36 
+41 
+ 
+ The chi-square analysis for color and delivery was also conducted on all datasets.  
+There was a tendency across all datasets for a relationship to exist.  For the DAB (Table 
+15) the P-value was 0.03 (Table 9).  This represents the largest dataset in the project.  
+Table 16 is from the dataset DS and had a P- value of 0.10 (Table 9).  Although it is not 
+statistically significant there is a very interesting trend.   The dataset DBG (Table 17) 
+also trended to significance (P = 0.07) Table 9.   However, the dataset DS1 (Table 18) 
+had a P-value of 0.00 (Table 10).  This could be due to the family lines and the genetic 
+influence of both color and possibly of delivery preference. 
+ Tables 19, 20, 21 and 22 represent the frequency tables for year of birth 
+and delivery for all of the datasets.  Three of the models, DAB, DBG and DS1 all 
+showed either impact for a relationship or a trend towards influence with chi-square test 
+P-values of 0.03, 0.04 and 0.10 respectively (Table 9).  Alternatively, in the dataset DS 
+the chi-square test had a P-value of 0.19. 
+ 
+  
+42 
+ 
+Table 15 Frequency table: color x delivery for DAB (n = 524) 
+ 
+ 
+ 
+ 
+ 
+ 
+ Delivery 
+Color Left Right Total 
+Black 129 59 189 
+Percent (%) 68.62 31.38 35.88 
+ 
+ 
+Brindle 11 19 30 
+ 
+36.67 63.33 5.73 
+ Brown 27 18 45 
+ 
+60.00 40.00 8.59 
+Gray 8 9 17 
+ 
+47.06 52.94 3.25 
+ Red 53 34 87 
+ 
+60.92 39.08 16.60 
+Spotted 77 37 114 
+ 
+67.54 32.46 21.78 
+White 12 8 20 
+ 
+60.00 40.00 3.82 
+Yellow 16 6 22 
+ 
+72.73 27.27 4.20 
+Total 333 191 524 
+ 
+63.55 36.45 100.00 
+chi-square P-value 
+  
+0.03 
+43 
+ 
+Table 16 Frequency table: color x delivery for DS (n = 244) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Delivery  
+Color Left Right Total 
+Black 61 23 84 
+Percent (%) 72.62 27.38 
+ 
+34.43 
+ 
+Brindle 7 8 15 
+ 
+46.67 53.33 6.15 
+Brown 13 6 19 
+ 
+68.42 31.58 7.79 
+Gray 5 5 10 
+ 
+50.00 50.00 4.10 
+Red 33 14 47 
+ 
+70.21 29.79 19.26 
+Spotted 25 25 50 
+ 
+50.00 50.00 20.50 
+White 6 3 9 
+ 
+66.67 33.33 3.69 
+Yellow 8 2 10 
+ 
+80.00 20.00 4.10 
+Total 158 86 244 
+ 64.75 35.25 100.00 
+chi-square P-value   0.10 
+44 
+ 
+Table 17 Frequency table: color x delivery for DBG (n = 314) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Delivery  
+Color Left Right Total 
+Black 88 30 118 
+Percent (%) 74.58 25.42 37.58 
+ 
+ 
+Brindle 7 8 15 
+ 
+46.67 53.33 4.78 
+Brown 19 14 33 
+ 
+57.58 42.42 10.51 
+Gray 3 5 8 
+ 
+37.50 62.50 2.51 
+Red 29 19 48 
+ 
+60.42 39.58 15.29 
+Spotted 47 26 73 
+ 
+64.38 35.62 23.25 
+White 7 3 10 
+ 
+70.00 30.00 3.19 
+Yellow 8 1 9 
+ 88.89 11.11 2.87 
+Total 208 106 314 
+ 66.24 33.76 100.00 
+chi-square P-value   0.07 
+45 
+ 
+Table 18 Frequency table: color x delivery for DS1  (n = 104) 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ Delivery  
+Color Left Right Total 
+Black 24 4 28 
+Percent (%) 85.71 14.29 
+ 
+26.67 
+ 
+Brindle 3 0 3 
+ 
+100.00 0 2.86 
+Brown 9 3 12 
+ 
+75.00 25.00 11.43 
+Gray 4 2 6 
+ 
+66.67 33.33 5.71 
+Red 13 8 21 
+ 
+61.90 38.10 20.00 
+Spotted 10 15 25 
+ 
+40.00 60.00 23.81 
+White 3 1 4 
+ 
+75.00 25.00 3.81 
+Yellow 5 0 5 
+ 100.00 0 4.76 
+Total 71 33 104 
+ 
+67.62 31.43 100.00 
+chi-square P-value   0.002 
+46 
+ 
+ 
+Table 19 Frequency table: year of birth x delivery for DAB (n = 298) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Delivery  
+Year of Birth Left Right Total 
+1996 4 0 4 
+Percent (%) 100.00 0.00 1.34 
+ 
+1997 
+1 2 3 
+ 
+33.33 66.67 1.01 
+1998 
+11 1 12 
+ 
+91.67 8.33 4.03 
+1999 
+31 7 38 
+ 
+81.58 18.42 12.75 
+2000 
+53 31 84 
+ 
+63.10 36.90 28.19 
+2001 
+50 35 85 
+ 
+58.82 41.18 28.52 
+2002 
+38 19 57 
+ 
+66.67 33.33 19.13 
+2003 
+7 8 15 
+ 
+46.67 53.33 5.03 
+Total 195 103 298 
+ 
+65.44 34.56 100 
+chi-square P-value 
+  
+0.03 
+47 
+ 
+ 
+Table 20 Frequency table: year of birth x delivery for DBG (n = 202) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Delivery  
+Year of Birth Left Right Total 
+1996 4 0 4 
+Percent (%) 100.00 0 
+1.98 
+ 
+1997 1 2 3 
+ 
+33.33 66.67 1.49 
+1998 8 0 8 
+ 
+100.00 0 3.96 
+1999 25 6 31 
+ 
+80.65 19.35 15.35 
+2000 44 23 67 
+ 
+65.67 34.33 33.17 
+2001 32 25 57 
+ 
+56.14 43.86 28.22 
+2002 19 7 26 
+ 73.08 26.92 
+12.87 
+ 
+2003 3 3 6 
+ 50.00 50.00 2.97 
+Total 59 29 88 
+ 67.05 32.95 100 
+chi-square  P-value   0.47 
+48 
+ 
+Table 21 Frequency table: year of birth x delivery for DS1 (n = 88) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Delivery  
+Year of Birth Left Right Total 
+ 
+1998 
+ 
+3 
+ 
+0 
+ 
+3 
+ 
+100.00 0 2.86 
+1999 
+15 3 18 
+ 
+83.33 16.67 17.14 
+2000 
+13 8 21 
+ 
+61.90 38.10 20.00 
+2001 
+33 14 47 
+ 
+70.21 29.79 44.76 
+2002 
+7 6 13 
+ 
+53.85 46.15 12.50 
+2003 
+0 2 2 
+ 
+0 100.00 1.90 
+Total 
+71 33 104 
+ 
+68.27 31.73 100.00 
+chi-square  P-value 
+  
+0.10 
+49 
+ 
+Table 22 Frequency table: year of birth x delivery for DS (n = 104) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Delivery  
+Year of Birth Left Right Total 
+1996 2 0 2 
+ 
+100.00 0 0.82 
+1997 1 2 3 
+ 
+33.33 66.67 1.23 
+1998 
+6 1 7 
+ 85.71 14.29 2.88 
+ 
+1999 26 7 33 
+ 
+78.79 21.21 13.58 
+2000 47 24 71 
+ 66.20 33.80 29.22 
+ 
+ 
+2001 45 27 72 
+ 
+62.50 37.50 29.63 
+2002 26 17 43 
+ 
+60.47 39.53 17.70 
+2003 5 7 12 
+ 41.67 58.33 4.94 
+Total 158 85 243 
+ 65.02 34.98 100.00 
+chi-square  P-value   0.19 
+50 
+ 
+The relationship between color and temperament did not contribute to the evidence 
+provided by Hemmer (1990) and Tozer et al. (2003) in establishing a relationship 
+between coat color and aggression.  In all datasets (Table 23, Table 24, Table 25 and 
+Table 26) the chi-square test was not significant.  It is possible that with a larger sample 
+size or more structured data set, a relationship, if it exists, could be established.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 23 Frequency table: aggression x color for DAB (n = 463) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Color 
+Aggression
+a 
+Black Brindle Brown Gray Red Spotted White Yellow Total 
+0 102 18 24 10 50 68 11 12 295 
+Percent (%) 22.03 3.89 5.18 2.16 10.80 14.69 2.38 2.59 63.71 
+ 
+1 59 9 17 4 28 34 8 9 168 
+ 12.74 1.94 3.67 0.86 6.05 7.34 1.73 1.94 36.29 
+ 
+Total 161 27 41 14 78 102 19 21 463 
+ 
+34.77 5.83 8.86 3.02 16.85 22.03 4.10 4.54 100 
+chi-square P-value 
+      
+0.96 
+51 
+ 
+Table 24 Frequency table: aggression x color for DS (n = 213) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ 
+Table 25 Frequency table: aggression x color for DBG (n = 272) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ Color 
+Aggression
+a 
+Black Brindle Brown Gray Red Spotted White Yellow Total 
+0 52 9 12 5 26 27 3 7 141 
+Percent (%) 24.41 4.23 5.63 2.35 12.21 12.68 1.41 3.29 66.20 
+           
+1 24 4 6 2 14 15 5 2 72 
+ 11.27 1.88 2.82 0.94 6.57 7.04 2.35 0.94 33.80 
+Total 76 13 18 7 40 42 8 9 213 
+ 
+35.68 6.10 8.45 3.29 18.78 19.72 3.76 4.23 100 
+chi-square P-values       0.44 
+ Color 
+Aggression
+a 
+Black Brindle Brown Gray Red Spotted White Yellow Total 
+0 60 8 16 3 31 41 4 7 170 
+Percent (%) 22.06 2.94 5.88 1.10 11.40 15.07 1.47 2.57 62.50 
+          
+1 42 6 12 3 12 21 5 1 102 
+ 15.44 2.21 4.41 1.10 4.41 7.72 1.84 0.37 37.50 
+Total 102 14 28 6 43 62 9 8 272 
+ 
+37.50 5.15 10.29 2.21 15.81 22.79 3.31 2.94 100 
+chi-square P-value       0.44 
+52 
+ 
+Table 26 Frequency table: aggression x color for DS1 (n = 88) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ 
+ 
+ 
+ 
+The next set of frequency tables represent year of birth and aggression (Table 27, Table 
+28, Table 29, Table 30) in these four respective datasets 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Color 
+Aggression
+a 
+Black Brindle Brown Gray Red Spotted White Yellow Total 
+0 18 1 6 3 14 12 1 4 59 
+Percent (%) 20.45 1.14 6.82 3.41 15.91 13.64 1.14 4.55 67.05 
+          
+1 8 2 5 1 3 7 2 1 29 
+ 9.09 2.27 5.68 1.14 3.41 7.95 2.27 1.14 32.95 
+Total 26 3 11 4 17 19 3 5 88 
+ 29.55 3.41 12.50 4.55 19.32 21.59 3.41 5.68 100 
+chi-square P-value       0.50 
+53 
+ 
+Table 27 Frequency table: year of birth x aggression for DAB (n = 271) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ 
+ 
+ Aggression
+a
+ 
+Year of Birth 0 1 Total 
+1996 1 3 4 
+Percent (%) 0.37 1.11 1.48 
+1997 2 1 3 
+ 
+0.74 0.37 1.11 
+1998 6 1 7 
+ 
+2.21 0.37 2.58 
+1999 25 11 36 
+ 
+9.23 4.06 13.28 
+2000 58 18 76 
+ 
+21.40 6.64 28.04 
+2001 44 36 80 
+ 
+16.24 13.28 29.52 
+2002 35 18 53 
+ 
+12.92 6.64 28.04 
+2003 6 6 12 
+ 
+2.21 2.21 4.43 
+Total 177 94 271 
+ 65.31 34.69 100 
+chi-square  P-value  
+ 
+0.06 
+54 
+ 
+ 
+Table 28 Frequency table: year of birth x aggression for dataset DBG (n = 180) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ Aggression
+a
+ 
+Year of Birth 0 1 Total 
+1996 1 3 4 
+Percent (%) 25.00 75.00 2.22 
+ 
+1997 2 1 3 
+ 
+66.67 33.33 1.67 
+1998 4 1 5 
+ 
+80.00 20.00 2.78 
+1999 20 8 28 
+ 
+71.43 28.57 15.56 
+2000 46 15 61 
+ 
+75.41 24.59 33.89 
+2001 24 26 50 
+ 
+48.00 52.00 27.78 
+2002 15 8 23 
+ 
+65.22 34.78 12.78 
+2003 4 2 6 
+ 
+66.67 33.33 3.33 
+Total 116 64 180 
+ 64.44 35.56 100.00 
+chi-square  P-value   0.07 
+55 
+ 
+ 
+Table 29 Frequency table: year of birth x aggression for dataset DS (n = 212) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ 
+ Aggression
+a
+ 
+Year of Birth 0 1 Total 
+1996 0 2 2 
+Percent (%) 0 100.00 0.94 
+ 
+1997 2 2 3 
+ 
+ 66.67 33.33 1.42 
+ 
+1998 4 0 4 
+ 
+100.00 0.00 1.89 
+1999 20 10 30 
+ 
+66.67 33.33 14.15 
+2000 48 14 62 
+ 
+77.42 22.58 29.25 
+2001 34 27 61 
+ 
+55.74 44.26 28.77 
+2002 27 11 38 
+ 
+71.05 28.95 17.92 
+2003 6 6 12 
+ 50.00 50.00 5.66 
+Total 141 71 212 
+ 66.51 33.49 100.00 
+chi-square  P-value   0.044 
+56 
+ 
+Table 30 Frequency table: year of birth x aggression for DSI (n = 88) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+a
+ Non-aggressive is denoted as 0 and aggressive is denoted as 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Aggression
+a
+ 
+Year of Birth 0 1 Total 
+1998 1 0 1 
+ 
+100.00 0 1.14 
+1999 11 7 18 
+ 
+61.11 38.89 20.45 
+2000 17 3 20 
+ 
+85.00 15.00 22.73 
+2001 22 14 36 
+ 
+61.11 38.89 40.91 
+2002 7 4 11 
+ 
+63.64 36.36 12.50 
+2003 1 1 2 
+ 50.00 50.00 2.27 
+Total 59 29 88 
+ 67.05 32.95 100.00
+chi-square P-value   047 
+57 
+ 
+Table 31 Pearson’s Correlation Coefficients involving buckoff and number of outs across all datasets  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+The Pearson’s Correlation Coefficients between buckoff (both for 2006 and 
+career average) and outs (and career outs) were calculated for all of the datasets in order 
+to explore whether there was any relationship between those variables.  The dataset 
+DAB (Table 31) showed that the relationship between buckoff and outs and career 
+buckoff and career outs was strongly associated (P<.0001) but they were not highly 
+related (correlation coefficients of 0.21 and 0.27, respectively).  The dataset DS showed 
+a relationship between buckoff percentage and outs (P = 0.10) but there was still not 
+enough of a relationship to be considered an effect.  There was a significant correlation 
+between career buckoff percent and career outs but they do not influence each other.  In 
+DBG the buckoff percentage and outs were not related in this data; however, the career 
+buckoff percent and the career outs was (P <.0001) and although there was a low 
+relationship between the two variables, this correlation was the highest of all of the 
+datasets with a value of 0.30.  The dataset DS1 was not significant. 
+ 
+Variables Evaluated DAB DS DBG DS1 
+Buckoff x Outs 0.21 0.10 0.08 0.07 
+P = <.0001 0.10 0.15 0.50 
+     
+Career Buckoff  x 
+Career Outs 
+0.27 0.22 0.30 0.06 
+P =  <.0001 0.002 <.0001 0.55 
+     
+58 
+ 
+GENERAL CONCLUSIONS AND IMPLICATIONS 
+ 
+ There are many other factors not listed above that may be contributing to the 
+performance of the bulls including the flank strap, travel time to the events, nutrition, 
+arena flooring, for example, that also contributes to the score and may also contribute to 
+the buckoff percentage of a bull.  This project did not address many of these other 
+contribution due to the difficulty of getting measurements and obtaining the information.  
+It would also require a series of trials in order to establish repeatability and to identify 
+ideal pressures of the flank strap.   
+Aggression 
+ When calculating temperament it became a question of how to accurately 
+represent temperament given the constraints at rodeo events.  To begin with, these bulls 
+were videotaped after traveling, sometimes a few miles and sometimes across the 
+country.  Different bulls at the same event could have completely inconsistent travel 
+experiences which could cause altered behavior.  Alternatively, bulls with more 
+experience appear to travel better, though further research on travel time and 
+performance should be undertaken, and therefore are expected to have more consistent 
+performances.  Additionally, it was not feasible to conduct normal temperament tests, 
+such as the Flight Speed Test, since the bulls were performing during the data collection.  
+Had flight speed scores been collected prior to bucking it could have negatively affected 
+the performance of the bull.  Conversely, had the bulls been scored after their 
+performance it could have been skewed by the event.  Therefore, the decision was made 
+59 
+ 
+to view temperament when they were performing to get a consistent reading across 
+multiple events.  
+Laterality 
+ The results were as expected based on previous studies conducted on laterality.  
+Further research should be conducted in order to more accurately determine whether 
+there is a stronger correlation between delivery and temperament.  The sample size and 
+the type of temperament scoring system used in this study may not have accurately 
+represented the relationships between brain-sidedness and performance.  The learning 
+ability may correlate to bucking ability or consistency which could prove important in 
+breeding selection and training methods.  This may be established by understanding if 
+the bull is left or right brained and therefore, training may be able to be adjusted to 
+learning ability.   
+Pedigree Information  
+The information that was available limited the ability of this study to fully  
+analyze the significance of the sires and dams.  The registry provided by the A.B.B.I. 
+(2008) was lacking in not only pedigree information, but also the accessibility of the 
+information.  This needs to be improved for future research to adequately represent the 
+animals being studied. 
+ There were observed characteristics such as year of birth and coat color that 
+contributed to the performance, or score, of the bucking bulls in this study.  The 
+aggressiveness of a bull did not appear to affect the score one way or another.  However,  
+60 
+ 
+the aggression appeared to have a relationship with the year of birth (age) of the bulls 
+according to the chi-square test.   This information may be useful to producers who 
+select sires and dams based on aggression believing the more aggressive bulls perform 
+better than less aggressive bulls.   
+ The number of outs a bull had, whether in a year or over a career, showed an 
+influence on the score.  This may be due to the fact that the better bulls end up 
+competing at different events and therefore have higher scores.  However, there may, in 
+fact, be a point of diminishing returns on not bucking a bull enough or bucking a bull too 
+much.  That was not evaluated in this project but future studies may prove this 
+possibility beneficial to producers and stock contractors in their overall bull 
+management.    
+ The buckoff percent was influential in the score but this may actually be a 
+byproduct of the score to begin with.  The judging criteria do not consider buckoff to be 
+actual criteria for the score, but rather, it may be the culmination of the criteria: spin, 
+direction change, speed, power and drop (PBR, 2008).  If a bull were to show power, 
+speed and direction change it would increase his score but also make it harder for the 
+rider to stay on, which is likely to result in a buckoff.  Therefore, bulls with higher 
+scores may tend to have more buckoffs because they are meeting the judging criteria and 
+making the ride more difficult for the bull rider.  
+ Delivery played an important role in the project.  There was no association 
+between delivery and temperament so the role of brain-sidedness was not established.  
+61 
+ 
+However, there were interesting relationships between delivery and coat color and 
+delivery and year of birth which should be further explored. 
+ When sires were added to the analyses it appeared that sire influenced many of 
+the traits associated with score as evidenced by the increased R-square values.  These 
+traits are likely heritable, which would prove useful in the establishment of breeding 
+values or EPDs.  The effect of pedigree may have been further established had the 
+pedigree information been available for use in the study.  Evidence appears to be 
+adequate to justify documenting pedigrees for bucking stock breeding animals.  
+However, further research should be conducted to identify the heritabilities of the traits 
+associated with bucking performance.  
+  
+.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+62 
+ 
+LITERATURE CITED 
+ 
+ A.B.B.I. 2008. The American Bucking Bull Inc.   
+http://www.americanbuckingbull.com/content.aspx?ID=1 Accessed April 10, 
+2008. 
+ 
+Arave, C. W. and J. L. Walters. 1980. Factors affecting lying behavior and stall 
+utilization of dairy cattle. Appl. Anim. Ethol. 6: 369-376. 
+ 
+Beckman, D. W., R. M. Enns, S. E. Speidel, B. W. Brigham and D. J. Garrick. 2007. 
+Maternal effects on docility in Limousin cattle. J. Anim. Sci. 85: 650-657. 
+ 
+Bisazza, A., C. Cantalupo, M. Capocchiano and G. Vallortiagara. 2000. Population 
+lateralization and social behavior: A study with 16 species of fish. Laterality 5: 
+269-284. 
+ 
+Bogen, J. E. 1999. The callosal syndromes. Pages 295-338 in: Handbook of Clinical and 
+Experimental Neuropsychology. G. Denes, L.Pizzamiglio ed. Psychology Press, 
+Hove, Sussex.  
+ 
+Boissy, A. and M.-F. Bouissou. 1995. Assessment of individual differences in 
+behavioural reactions of heifers exposed to various fear-eliciting situations. Appl. 
+Anim. Behav. Sci. 46: 17-31. 
+ 
+Broadhurst, P.  L. 1960. Analysis of maternal effects in the inheritance of behaviour. 
+Anim. Behav. 9: 129-141. 
+ 
+Buchenauer, D. 1999. Genetics of behaviour in cattle. in: The Genetics of Cattle. R. A. 
+Fries ed. CAB International, Wallingford, UK. 
+ 
+Burchill, S. A. and A. J. Thody, S. Ito. 1986. Melanocyte-stimulating hormone, 
+ tyrosinase activity and the regulation of eumelanogenesis and 
+ phaeomelanogenesis in the hair follicular melanocytes of the mouse.  
+ Soc. Endo. 109: 15-21. 
+ 
+Burrow, H. M., G. W. Seifert and N. J. Corbet. 1988. A new technique for measuring 
+temperament in cattle.  Proc. Aust. Soc. of Anim. Prod. 17: 154-157. 
+ 
+Burrow, H. M.and R. D. Dillon. 1997.  Relationships between temperament and growth 
+in a feedlot and commercial carcass traits of Bos indicus crossbreds.  Aus. J. 
+Exper. Ag.  37(4): 407-411 
+ 
+63 
+ 
+Coss, R. G. 1991.  Context and animal behavior: III.  The relationship between early 
+development and evolutionary persistence of ground squirrel antisnake behavior.  
+Ecol. Psych. 3: 277-315.  
+ 
+Davis, M. 1992. The role of the amygdala in fear and anxiety. Ann. Rev. Neurosci. 15: 
+353-375. 
+ 
+Dharmaretnam, M. and L. J. Rogers. 2005. Hemispheric specialisation and dual 
+processing in storngly versus weakly lateralised chicks. Behav. Brain Res. 162: 
+62-70. 
+ 
+Estes, B. W. 1952. A study of the relationship between temperament of thoroughbred 
+broodmares and performance of offspring. J. Genet. Psychol. 81: 273-288. 
+ 
+Fell, L. R., I. G. Colditz, K. H. Walker and D. L. Watson. 1999. Associations between 
+temperament, performance and immune function in cattle entering a commercial 
+feedlot.  Aus. J. Exper. Ag.  39(7): 795-802 
+ 
+Ferry, A. P. and L. E. Zimmerman. 1964. Black cornea: A complication of topical use of 
+epinephrine. Am. J. Ophthalmol. 58:205-10 
+ 
+Foote, R. H. 1999. Artificial insemination from its origins up to today.  Proc. of the  
+ Spallanzani Int. Symp., Reggio Emilia, Italy. pp 23–67. 
+ 
+Gorn, E. J. and W. J. Goldstein. 2004. A Brief History of American Sports. University of 
+Illinois Press, Chicago. 
+ 
+Grandin, T. 1993. Behavioral agitation during handling of cattle is persistent over time. 
+Appl. Anim. Behav. Sci. 36: 1-9. 
+ 
+Grandin, T. 1994. Solving livestock handling problems. Vet. Med. 89: 989-998. 
+ 
+Grandin, T. and M. J. Deesing. 1998. Genetics and behavior during handling, restraint, 
+and herding. Pages 113-144 in Genetics and the Behavior of Domestic Animals. 
+T. Grandin ed. Academic Press, San Diego, CA. 
+ 
+Grigione, M., A. Scoville, G. Scoville and K. Crooks. 2007.  Neotropical cats in 
+southeast Arizona and surrounding areas: Past and present status of jaguars, 
+ocelots and jaguarundis.  Mastozool. Neotrop. 14 (2): 189-199 
+ 
+Halpern, M. E., O. Gunturkun, W. D. Hopkins and L. J. Rogers. 2005. Lateralization of 
+the vertebrate brain: Taking the side of model systems. J. Neurosci. 25: 10351-
+10357. 
+ 
+64 
+ 
+Hemmer, T. 1990. Domestication.  The Decline of Environmental Appreciation. 
+Cambridge University Press. Cambridge, England. 
+ 
+Keeler, C. E. 1947. Coat colour, physique and temperament. J. Hered. 38: 271-279. 
+ 
+Keeler, C. E. and H. D. King. 1942. Multiple effects of coat color genes in the Norway 
+rat, with special reference to temperament and domestication. J. Comp. Psych. 
+34: 241. 
+ 
+Keeler, C. E. and L. Moore. 1961. Psychosomatic synthesis of behavior trends in the  
+taming of mink. Bull. Ga. Acad. Sci. 19:66-74. 
+ 
+Lanier, J. E. and T. Grandin. 2002. The relationship between Bos taurus feedlot cattle 
+temperament and cannon bone measurement. Pages 97-98 in Western Section 
+American Society of Animal Science. Ft. Collins, CO. 
+ 
+McGreevy, P.D. and L.J. Rogers. 2005. Motor and sensory laterality in Thoroughbred 
+horses, Appl. Anim. Behav. Sci. 4: 337–352. 
+ 
+McGreevy, P. D. and P. C. Thomson. 2006. Differences in motor laterality between 
+breeds of performance horse. Appl. Anim. Behav. Sci. 99: 183-190. 
+ 
+Neveu, P. H. and S. Moya. 1997. In the mouse, the corticoid stress response depends on 
+lateralisation. Brain Res. 749: 344-346. 
+ 
+PBR. 2008. Sport Information. http://www.pbrnow.com/about/sportinfo/  Accessed 
+August 15, 2008. 
+ 
+Rogers, L. J. 1996. Behavioral, structural and neurochemical asymmetries in the avian 
+brain: A model system for studying visual development and processing. 
+Neurosci. Biobehav. Rev. 20: 487-503. 
+ 
+Rogers, L. J. and R. J. Andrew. 2002b. The nature of lateralization in tetrapods. Pages 
+94-125 in Comparative vertebret lateralization. L. J. Rogers, R.J. Andrew ed. 
+Cambridge University Press, New York. 
+ 
+Roth, E. D. 2003. 'Handedness' in snakes? Lateralization of coiling behaviour in a 
+cottonmouth, Agkistrodon piscivorus leucostoma, population. Anim. Behav. 66: 
+337-341. 
+ 
+Russell, N. D., J. Rios, G. Erosa, M. D. Remmenga and D. E. Hawkins. 2000. Genetic 
+differentiation among geographically isolated populations of Criollo cattle and 
+their divergence from other Bos taurus breeds.  J. Anim. Sci. 78: 2314-2322  
+ 
+65 
+ 
+Schmutz S. M., J. M. Stookey, D. C. Winkelman-Sim, C. S. Waltz, Y. Plante and F. C. 
+Buchanan. 2001. A QTL study of cattle behavioral traits in embryo transfer 
+families. J. Hered. 92: 290-292. 
+ 
+Schutz, M. M. and E. A. Pajor. 2001. Genetic control of dairy cattle behavior. J. Dairy 
+Sci. 84(E.Suppl.): E31-E38. 
+ 
+Tilders, F. J. H. and P. G. Smelik. 1978. Effects of hypothalamic lesions and drugs 
+interfering with dopaminergic transmission on pituitary MSH content of rats. 
+Neuroendo. 25: 275-290. 
+ 
+Tozer, J., K. Maros, A. Szentleleki, R. Zandoki, E. Nikodemusz, F. Balazs, A. Bailo and 
+L. Alfoldi. 2003. Evaluation of temperament in cows of different age and bulls of 
+different colour variety. Czech. J. Anim. Sci. 48: 344-348. 
+ 
+Trapezov, O. V. 1997. Black crystal: A novel color mutant in the American mink 
+(Mustela vison Schreber). J. Hered. 88:164-166. 
+ 
+Trut, L. N, 1999. Early canid domestication: The farm fox experiment. Anim. Sci. 
+87:160-169. 
+ 
+Voisinet, B. D., T. Grandin, J. D. Tatum, S. F. O'Connor and J. J. Struthers. 1997. 
+Feedlot cattle with calm temperaments have higher average daily gains than 
+cattle with excitable temperaments. J. Anim. Sci. 75: 892-896. 
+ 
+Wagnon, K. A. and W. C. Rollins. 1972. Bovine laterality. J. Anim. Sci. 35: 486-488. 
+ 
+Warren, J. M. 1980. Handedness and laterality in humans and other animals. Phys. 
+Psych. 8: 351-359. 
+ 
+Williams, D. E. and B. J. Norrist. 2007. Laterality in stride pattern preferences in 
+racehorses. Anim. Behav. 74: 941-950. 
+ 
+Wittling, W. and R. Roschmann. 1993. Emotion-related hemisphere asymmetry: 
+Subjective emotional responses to laterally presented films. Cortex 29: 431-448. 
+ 
+ 
+ 
+66 
+ 
+VITA 
+ 
+ 
+Natasha Elizabeth Romero 
+ 
+ 
+ADDRESS:      c/o: Dr. Andy Herring  
+Department of Animal Science  
+Texas A&M University  
+TAMU 2471  
+College Station, TX 77840-2471  
+ 
+ 
+EDUCATION:  
+Graduate:      Texas A&M University 
+College Station, TX  
+Master of Science in Animal Science 
+December 2008 
+  
+Undergraduate:     Texas A&M University 
+      College Station, TX 
+      Bachelor of Science in Animal Science  
+December 2005 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
