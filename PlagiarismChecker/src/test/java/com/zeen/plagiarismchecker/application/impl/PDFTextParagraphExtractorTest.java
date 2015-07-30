@@ -9,15 +9,27 @@ import junit.framework.Assert;
 import org.junit.Test;
 
 public class PDFTextParagraphExtractorTest {
+
     @Test
-    public void extractTest() throws IOException {
-        String text = PDFTextExtractor.extract(new File("1003.pdf"));
-        Iterable<String> paragraphs = PDFTextParagraphExtractor.extract(text);
-        paragraphs.forEach(line -> {
-            System.out.println(line);
-            System.out.println();
+    public void extractFromPDFTextManualTest() throws IOException {
+        Lists.newArrayList(new File("testFiles/566.pdf"),
+                new File("testFiles/1003.pdf"), new File("testFiles/381.pdf"))
+                .forEach(
+                file -> {
+                    String text;
+                    try {
+                        text = PDFTextExtractor.extract(file);
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                    Iterable<String> paragraphs = PDFTextParagraphExtractor
+                            .extract(text);
+                    paragraphs.forEach(line -> {
+                        System.out.println(line);
+                        System.out.println();
+                    });
+                    Assert.assertNotNull(paragraphs);
         });
-        Assert.assertNotNull(paragraphs);
     }
 
     @Test
