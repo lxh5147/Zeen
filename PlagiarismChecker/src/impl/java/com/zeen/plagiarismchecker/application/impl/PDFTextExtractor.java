@@ -1,5 +1,7 @@
 package com.zeen.plagiarismchecker.application.impl;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,6 +16,7 @@ public class PDFTextExtractor {
     }
 
     public static String extract(File pdfFile) throws IOException {
+        checkNotNull(pdfFile, "pdfFile");
         PDFParser parser = new PDFParser(new FileInputStream(pdfFile));
         parser.parse();
         COSDocument cosDoc = parser.getDocument();
@@ -21,6 +24,10 @@ public class PDFTextExtractor {
         PDDocument pdDoc = new PDDocument(cosDoc);
         pdfStripper.setStartPage(1);
         pdfStripper.setEndPage(pdDoc.getNumberOfPages());
-        return pdfStripper.getText(pdDoc);
+        pdfStripper.setSortByPosition(true);
+        String pdfText = pdfStripper.getText(pdDoc);
+        pdDoc.close();
+        cosDoc.close();
+        return pdfText;
     }
 }

@@ -11,7 +11,6 @@ public class PDFTextExtractorTest {
     @Test
     public void extractTest() throws IOException {
         String text = PDFTextExtractor.extract(new File("1003.pdf"));
-        System.out.println(text);
         Assert.assertTrue(text
                 .startsWith("EVALUATION OF TRAITS ASSOCIATED WITH BUCKING BULL"));
         Assert.assertTrue(text.trim().endsWith("December 2005"));
