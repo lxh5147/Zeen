@@ -111,7 +111,6 @@ public class PlagiarismChecker {
                             List<ParagraphEntry> paragraphEntries = Lists
                                     .newArrayList();
                             for (int j = 0; j < fingerprintBuffer.length; ++j) {
-
                                 this.fingerprintRepositories
                                         .get(i)
                                         .getFingerprintEntries(

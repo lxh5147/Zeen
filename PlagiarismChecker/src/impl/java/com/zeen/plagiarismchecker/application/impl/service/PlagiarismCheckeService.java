@@ -164,7 +164,7 @@ public class PlagiarismCheckeService {
             });
         });
 
-        Map<ParagraphEntry, List<ContentAnalyzerType>> paragraphToContentAnalizersMap = Maps
+        Map<ParagraphEntry, Set<ContentAnalyzerType>> paragraphToContentAnalizersMap = Maps
                 .newHashMap();
 
         Map<Integer, Set<ParagraphEntry>> articleToParagraphsMap = Maps
@@ -186,11 +186,10 @@ public class PlagiarismCheckeService {
                                                     paragraphEntryList);
                                         }
                                         paragraphEntryList.add(paragraphEntry);
-                                        List<ContentAnalyzerType> contentAnalizers = paragraphToContentAnalizersMap
+                                        Set<ContentAnalyzerType> contentAnalizers = paragraphToContentAnalizersMap
                                                 .get(paragraphEntry);
                                         if (contentAnalizers == null) {
-                                            contentAnalizers = Lists
-                                                    .newArrayList();
+                                            contentAnalizers = Sets.newLinkedHashSet();                                                   
                                             paragraphToContentAnalizersMap.put(
                                                     paragraphEntry,
                                                     contentAnalizers);
@@ -217,8 +216,8 @@ public class PlagiarismCheckeService {
                                 results.add(new Result(article.getId(),
                                         paragraph.getId(), paragraph
                                                 .getContent(),
-                                        paragraphToContentAnalizersMap
-                                                .get(paragraphEntry)));
+                                       Lists.newArrayList( paragraphToContentAnalizersMap
+                                                .get(paragraphEntry))));
                             });
                 });
         LOGGER.info(String.format("Check done: results=%s", results));
