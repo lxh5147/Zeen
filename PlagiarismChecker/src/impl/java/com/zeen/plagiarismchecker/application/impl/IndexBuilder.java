@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -26,6 +27,9 @@ import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 import com.zeen.plagiarismchecker.impl.FingerprintRepositoryBuilderImpl;
 
 public class IndexBuilder {
+    private static final Logger LOGGER = Logger.getLogger(IndexBuilder.class
+            .getName());
+
     final ArticleRepository articleRepository;
     final List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList;
     final int capability;
@@ -61,6 +65,9 @@ public class IndexBuilder {
         List<Paragraph> paragraphList = Lists.newArrayList();
 
         for (Article article : this.articleRepository.getArticles()) {
+            LOGGER.info(String.format("Indexing article:id=%d",
+                    article.getId()));
+
             for (Paragraph paragraph : article.getParagraphs()) {
                 paragraphList.add(paragraph);
             }

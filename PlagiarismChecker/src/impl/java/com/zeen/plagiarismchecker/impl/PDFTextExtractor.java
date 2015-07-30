@@ -1,4 +1,4 @@
-package com.zeen.plagiarismchecker.application.impl;
+package com.zeen.plagiarismchecker.impl;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 

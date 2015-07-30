@@ -25,6 +25,29 @@ import com.zeen.plagiarismchecker.Paragraph;
 public class ArticleRepositoryImpl implements ArticleRepository,
         Iterable<Article> {
 
+    public static Iterator<Path> getFiles(Path folder) {
+        checkNotNull(folder, "folder");
+        List<Path> files = Lists.newArrayList();
+        try {
+            getFiles(files, folder);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return files.iterator();
+    }
+
+    private static void getFiles(List<Path> files, Path dir) throws IOException {
+        DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
+        for (Path path : stream) {
+            if (path.toFile().isFile()) {
+                files.add(path);
+            } else {
+                getFiles(files, path);
+            }
+        }
+
+    }
+
     class ArticleIterator implements Iterator<Article> {
         private Iterator<Path> folderIterator;
         private Iterator<Path> paths;
@@ -33,32 +56,10 @@ public class ArticleRepositoryImpl implements ArticleRepository,
             this.folderIterator = folders.iterator();
             if (this.folderIterator.hasNext()) {
                 Path folder = this.folderIterator.next();
-                this.paths = this.getFiles(folder);
+                this.paths = getFiles(folder);
             } else {
                 this.paths = null;
             }
-        }
-
-        private Iterator<Path> getFiles(Path folder) {
-            List<Path> files = Lists.newArrayList();
-            try {
-                this.getFiles(files, folder);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            return files.iterator();
-        }
-
-        private List<Path> getFiles(List<Path> files, Path dir)
-                throws IOException {
-            DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
-            for (Path path : stream) {
-                // suppose all files are put under the dir, no sub folders are
-                // allowed
-                assert path.toFile().isFile();
-                files.add(path);
-            }
-            return files;
         }
 
         @Override
@@ -73,7 +74,7 @@ public class ArticleRepositoryImpl implements ArticleRepository,
                 return false;
             }
             Path folder = this.folderIterator.next();
-            this.paths = this.getFiles(folder);
+            this.paths = getFiles(folder);
             return this.hasNext();
         }
 
@@ -86,7 +87,6 @@ public class ArticleRepositoryImpl implements ArticleRepository,
                 throw new RuntimeException(e);
             }
         }
-
     }
 
     // suppose one line one paragraph

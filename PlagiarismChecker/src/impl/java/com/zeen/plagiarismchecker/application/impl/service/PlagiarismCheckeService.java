@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.logging.Logger;
 import java.util.stream.IntStream;
 
 import javax.ws.rs.GET;
@@ -43,6 +44,9 @@ import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 @javax.ws.rs.Path("/")
 public class PlagiarismCheckeService {
 
+    private static final Logger LOGGER = Logger.getLogger(PlagiarismCheckeService.class
+            .getName());
+    
     public static class Result {
         private int articleId;
         private int paragraphId;
@@ -136,6 +140,9 @@ public class PlagiarismCheckeService {
     public Iterable<Result> check(
             @QueryParam("paragraph") String paragraphContent) {
         checkNotNull(paragraphContent, "paragraphContent");
+        
+        LOGGER.info(String.format("Checking:paragraphContent=%s", paragraphContent));
+        
         List<Iterable<Entry<ContentAnalyzerType, Iterable<ParagraphEntry>>>> checkResultsList = Lists
                 .newArrayList();
         for (int i = 0; i < Context.CHECKERS.size(); ++i) {
@@ -214,6 +221,7 @@ public class PlagiarismCheckeService {
                                                 .get(paragraphEntry)));
                             });
                 });
+        LOGGER.info(String.format("Check done: results=%s", results));
         return results;
     }
 

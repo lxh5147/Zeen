@@ -1,10 +1,15 @@
 package com.zeen.plagiarismchecker.application.impl.service;
 
+import java.util.logging.Logger;
+
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
 public class RESTServer {
+
+    private static final Logger LOGGER = Logger.getLogger(RESTServer.class
+            .getName());
 
     static boolean started = false;
 
@@ -18,6 +23,7 @@ public class RESTServer {
         Server jettyServer = new Server(8080);
         jettyServer.setHandler(context);
 
+
         ServletHolder jerseyServlet = context.addServlet(
                 org.glassfish.jersey.servlet.ServletContainer.class, "/*");
         jerseyServlet.setInitOrder(0);
@@ -29,7 +35,9 @@ public class RESTServer {
                 PlagiarismCheckeService.class.getCanonicalName());
 
         try {
+            LOGGER.info("Starting server in port 8080");
             jettyServer.start();
+            LOGGER.info("Started");
             started = true;
             jettyServer.join();
         } finally {

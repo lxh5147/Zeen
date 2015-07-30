@@ -1,10 +1,11 @@
-package com.zeen.plagiarismchecker.application.impl;
+package com.zeen.plagiarismchecker.impl;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.logging.Logger;
 
 import jersey.repackaged.com.google.common.collect.Lists;
 import junit.framework.Assert;
@@ -13,12 +14,18 @@ import org.junit.Test;
 
 public class PDFTextParagraphExtractorTest {
 
+    private static final Logger LOGGER = Logger
+            .getLogger(PDFTextParagraphExtractorTest.class.getName());
+
     @Test
     public void extractFromPDFManualTest() throws IOException {
         Lists.newArrayList(new File("testFiles/566.pdf"),
                 new File("testFiles/1003.pdf"), new File("testFiles/381.pdf"))
                 .forEach(
                         file -> {
+                            LOGGER.info(String
+                                    .format("=====================extract %s=====================",
+                                            file.getAbsolutePath()));
                             String text;
                             try {
                                 text = PDFTextExtractor.extract(file);
@@ -28,8 +35,8 @@ public class PDFTextParagraphExtractorTest {
                             Iterable<String> paragraphs = PDFTextParagraphExtractor
                                     .extract(text);
                             paragraphs.forEach(line -> {
-                                System.out.println(line);
-                                System.out.println();
+                                LOGGER.info(line);
+
                             });
                             Assert.assertNotNull(paragraphs);
                         });
@@ -41,6 +48,9 @@ public class PDFTextParagraphExtractorTest {
                 new File("testFiles/1003.txt"), new File("testFiles/381.txt"))
                 .forEach(
                         file -> {
+                            LOGGER.info(String
+                                    .format("=====================extract %s=====================",
+                                            file.getAbsolutePath()));
                             String text;
                             try {
                                 text = readTxtFile(file);
@@ -50,8 +60,7 @@ public class PDFTextParagraphExtractorTest {
                             Iterable<String> paragraphs = PDFTextParagraphExtractor
                                     .extract(text);
                             paragraphs.forEach(line -> {
-                                System.out.println(line);
-                                System.out.println();
+                                LOGGER.info(line);
                             });
                             Assert.assertNotNull(paragraphs);
                         });

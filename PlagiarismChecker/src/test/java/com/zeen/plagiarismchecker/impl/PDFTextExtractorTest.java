@@ -1,4 +1,4 @@
-package com.zeen.plagiarismchecker.application.impl;
+package com.zeen.plagiarismchecker.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,6 +6,8 @@ import java.io.IOException;
 import junit.framework.Assert;
 
 import org.junit.Test;
+
+import com.zeen.plagiarismchecker.impl.PDFTextExtractor;
 
 public class PDFTextExtractorTest {
     @Test
