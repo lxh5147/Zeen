@@ -30,4 +30,13 @@ public class PDFTextParagraphExtractorTest {
                 PDFTextParagraphExtractor.extract(text));
 
     }
+
+    @Test
+    public void extractCase2Test() {
+        String text = "Table 2 Regression coefficients (and standard errors) across datasets to evaluate average score and career average score ..........................  28";
+        Assert.assertTrue(Lists.newArrayList(
+                PDFTextParagraphExtractor.extract(text)).isEmpty());
+
+    }
+    //
 }
