@@ -70,4 +70,5 @@ public class ArticleRepositoryBuilderTest {
         });
         Paths.get(articleRepositoryFolder).toFile().delete();
     }
+   
 }

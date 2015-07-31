@@ -35,6 +35,7 @@ public class PlagiarismCheckerTest {
         List<ContentAnalyzerType> contentAnalizersList = Lists
                 .newArrayList(
                         ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.SegmentContentAnalizerWithSimpleSegmentSplitter,
                         ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
         IndexBuilderTest.setupIndex(indexRoot, contentAnalizersList);
         String[] args = { "--contentAnalyzers",
@@ -58,6 +59,7 @@ public class PlagiarismCheckerTest {
         List<ContentAnalyzerType> contentAnalizersList = Lists
                 .newArrayList(
                         ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.SegmentContentAnalizerWithSimpleSegmentSplitter,
                         ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
         IndexBuilderTest.setupIndex(indexRoot, contentAnalizersList);
         String[] args = { "--contentAnalyzers",
@@ -93,6 +95,28 @@ public class PlagiarismCheckerTest {
                 }
             }
         }
+        IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
+    }
+
+    @Test
+    public void checkWithPartialParagraphTest() throws IOException,
+            ParseException {
+        String indexRoot = "index";
+        List<ContentAnalyzerType> contentAnalizersList = Lists
+                .newArrayList(ContentAnalyzerType.SegmentContentAnalizerWithSimpleSegmentSplitter);
+        IndexBuilderTest.setupIndex(indexRoot, contentAnalizersList);
+        String[] args = { "--contentAnalyzers",
+                Joiner.on(',').join(contentAnalizersList), "--indexPath",
+                indexRoot };
+        // check partial paragraph
+        PlagiarismChecker plagiarismChecker = PlagiarismChecker
+                .getPlagiarismCheckerWithArgs(args);
+        Assert.assertTrue(!Lists
+                .newArrayList(
+                        Lists.newArrayList(
+                                plagiarismChecker
+                                        .check("In this work, we design a mapping from a paragraph to a paragraph vector, which is used to detect copy&past text."))
+                                .get(0).getValue()).isEmpty());
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
     }
 }

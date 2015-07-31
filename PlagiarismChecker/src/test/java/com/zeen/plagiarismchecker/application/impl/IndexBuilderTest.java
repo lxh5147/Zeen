@@ -3,6 +3,7 @@ package com.zeen.plagiarismchecker.application.impl;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 
 import junit.framework.Assert;
@@ -41,6 +42,7 @@ public class IndexBuilderTest {
         List<ContentAnalyzerType> contentAnalizersList = Lists
                 .newArrayList(
                         ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.SegmentContentAnalizerWithSimpleSegmentSplitter,
                         ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
 
         String[] args = { "--articleRepositoryFolders",
@@ -56,7 +58,7 @@ public class IndexBuilderTest {
         Assert.assertEquals(10000, indexBuilder.capability);
         Assert.assertEquals("ArticleRepositoryImpl{folders=[ref1, ref2]}",
                 indexBuilder.articleRepository.toString());
-        Assert.assertEquals(2,
+        Assert.assertEquals(contentAnalizersList.size(),
                 indexBuilder.fingerprintRepositoryInfoList.size());
 
         for (int i = 0; i < contentAnalizersList.size(); ++i) {
@@ -86,8 +88,16 @@ public class IndexBuilderTest {
     public static void setupIndex(String indexRoot,
             List<ContentAnalyzerType> contentAnalizersList) throws IOException,
             ParseException {
+        setupIndex(indexRoot, contentAnalizersList,
+                Arrays.asList(ArticleRepositoryTestUtil.FOLDERS));
+    }
+
+    public static void setupIndex(String indexRoot,
+            List<ContentAnalyzerType> contentAnalizersList,
+            List<String> articleRepositoryFolders) throws IOException,
+            ParseException {
         String[] args = { "--articleRepositoryFolders",
-                Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
+                Joiner.on(',').join(articleRepositoryFolders),
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPath",
                 indexRoot, "--capability", String.valueOf(10000),
@@ -102,6 +112,7 @@ public class IndexBuilderTest {
         List<ContentAnalyzerType> contentAnalizersList = Lists
                 .newArrayList(
                         ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.SegmentContentAnalizerWithSimpleSegmentSplitter,
                         ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
         String[] args = { "--articleRepositoryFolders",
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),

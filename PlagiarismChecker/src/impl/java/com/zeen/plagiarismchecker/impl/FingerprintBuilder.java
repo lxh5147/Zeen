@@ -29,7 +29,7 @@ public class FingerprintBuilder {
             for (CharSequence checkPoint : checkPointsList.get(i)) {
                 stringBuilder.append(checkPoint);
             }
-            fingerprints[i] = getFingerprint(checkPointsList.toString());
+            fingerprints[i] = getFingerprint(stringBuilder.toString());
         }
     }
 
