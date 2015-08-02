@@ -14,8 +14,9 @@ public class RESTServer {
             .getName());
 
     static boolean started = false;
-    private static final int DEFAULT_PORT_NUMBER = 8080;
-    private static final String PORT_NUMBER_ENV_VARIABLE_NAME = "PlagiarismCheckerServicePortNumber";
+    static final int DEFAULT_PORT_NUMBER = 8080;
+
+    public static final String PORT_NUMBER_ENV_VARIABLE_NAME = "PlagiarismCheckerServicePortNumber";
 
     static int getPortNumberSetting() {
         String property = System.getProperty(PORT_NUMBER_ENV_VARIABLE_NAME);
