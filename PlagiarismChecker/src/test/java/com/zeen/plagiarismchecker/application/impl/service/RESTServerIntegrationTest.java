@@ -46,7 +46,7 @@ public class RESTServerIntegrationTest {
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPaths",
                 indexRoot };
-        PlagiarismCheckeService.setupContext(args);
+        PlagiarismCheckerService.setupContext(args);
         ExecutorService executor = Executors.newFixedThreadPool(2);
 
         Runnable server = () -> {

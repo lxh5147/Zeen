@@ -42,9 +42,9 @@ import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 
 @javax.ws.rs.Path("/")
-public class PlagiarismCheckeService {
+public class PlagiarismCheckerService {
 
-    private static final Logger LOGGER = Logger.getLogger(PlagiarismCheckeService.class
+    private static final Logger LOGGER = Logger.getLogger(PlagiarismCheckerService.class
             .getName());
     
     public static class Result {

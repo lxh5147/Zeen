@@ -46,14 +46,14 @@ public class RESTServerTest {
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPaths",
                 indexRoot };
-        PlagiarismCheckeService.setupContext(args);
+        PlagiarismCheckerService.setupContext(args);
         Assert.assertEquals(
                 new ArticleRepositoryImpl(Lists.newArrayList(Lists
                         .newArrayList(ArticleRepositoryTestUtil.FOLDERS)
                         .stream().map(folder -> {
                             return Paths.get(folder);
-                        }).iterator())), PlagiarismCheckeService.Context.ARTICLE_REPOSITORY);
-        Assert.assertEquals(1, PlagiarismCheckeService.Context.CHECKERS.size());
+                        }).iterator())), PlagiarismCheckerService.Context.ARTICLE_REPOSITORY);
+        Assert.assertEquals(1, PlagiarismCheckerService.Context.CHECKERS.size());
         List<FingerprintRepositoryInfo> fingerprintRepositoryInfoList = Lists
                 .newArrayList();
         contentAnalizersList.forEach(item -> {
@@ -62,7 +62,7 @@ public class RESTServerTest {
         });
         Assert.assertEquals(
                 new PlagiarismChecker(fingerprintRepositoryInfoList),
-                PlagiarismCheckeService.Context.CHECKERS.get(0));
+                PlagiarismCheckerService.Context.CHECKERS.get(0));
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
     }
 
@@ -81,12 +81,12 @@ public class RESTServerTest {
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPaths",
                 indexRoot };
-        PlagiarismCheckeService.setupContext(args);
-        PlagiarismCheckeService plagiarismCheckeService = new PlagiarismCheckeService();
+        PlagiarismCheckerService.setupContext(args);
+        PlagiarismCheckerService plagiarismCheckeService = new PlagiarismCheckerService();
         for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
             for (int j = 0; j < ArticleRepositoryTestUtil.ARTICLES[i].length; ++j) {
                 Assert.assertEquals(
-                        Lists.newArrayList(new PlagiarismCheckeService.Result(i, j,
+                        Lists.newArrayList(new PlagiarismCheckerService.Result(i, j,
                                 ArticleRepositoryTestUtil.ARTICLES[i][j],
                                 contentAnalizersList)),
                         Lists.newArrayList(plagiarismCheckeService
