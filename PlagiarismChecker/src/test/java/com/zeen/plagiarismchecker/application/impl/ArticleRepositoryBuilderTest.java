@@ -24,7 +24,7 @@ public class ArticleRepositoryBuilderTest {
 
         String[] args = { "--pdfTextFileFolders", "testFiles",
                 "--articleRepositoryFolder", articleRepositoryFolder,
-                "--overwrite" };
+                "--overwrite", "--lowercase" };
 
         ArticleRepositoryBuilder builder = ArticleRepositoryBuilder
                 .getArticleRepositoryBuilderWithArgs(args);
@@ -41,7 +41,7 @@ public class ArticleRepositoryBuilderTest {
         final String articleRepositoryFolder = "articles";
         String[] args = { "--pdfTextFileFolders", "testFiles",
                 "--articleRepositoryFolder", articleRepositoryFolder,
-                "--overwrite" };
+                "--overwrite", "--lowercase" };
 
         ArticleRepositoryBuilder builder = ArticleRepositoryBuilder
                 .getArticleRepositoryBuilderWithArgs(args);
@@ -59,6 +59,16 @@ public class ArticleRepositoryBuilderTest {
                                         .getNameWithoutExtension(fileName);
                                 Article article = referenceRepository
                                         .getArticle(Integer.valueOf(fileId));
+                                // check all paragraph is lower cased
+                                Lists.newArrayList(article.getParagraphs())
+                                        .forEach(paragraph -> {
+                                                    Assert.assertEquals(
+                                                            paragraph
+                                                                    .getContent()
+                                                                    .toLowerCase(),
+                                                            paragraph
+                                                                    .getContent());
+                                        });
                                 Assert.assertNotNull(article);
                                 fileIds.add(fileId);
                             }

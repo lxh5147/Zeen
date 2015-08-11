@@ -35,14 +35,16 @@ public class ArticleRepositoryBuilder {
     final List<Path> pdfTextFileFolders;
     final Path articleRepositoryFolder;
     final boolean overwrite;
+    final boolean lowercase;
     private static final Logger LOGGER = Logger
             .getLogger(ArticleRepositoryBuilder.class.getName());
 
     private ArticleRepositoryBuilder(List<Path> pdfTextFileFolders,
-            Path articleRepositoryFolder, boolean overwrite) {
+            Path articleRepositoryFolder, boolean overwrite, boolean lowercase) {
         this.pdfTextFileFolders = pdfTextFileFolders;
         this.articleRepositoryFolder = articleRepositoryFolder;
         this.overwrite = overwrite;
+        this.lowercase = lowercase;
     }
 
     public void build() throws IOException {
@@ -98,7 +100,8 @@ public class ArticleRepositoryBuilder {
                                                 writeGzippedFile(
                                                         outputFile,
                                                         PDFTextParagraphExtractor
-                                                                .extract(readTxtFile(file)));
+                                                                .extract(readTxtFile(file)),
+                                                        this.lowercase);
                                             });
                         });
     }
@@ -122,12 +125,20 @@ public class ArticleRepositoryBuilder {
         }
     }
 
-    private static void writeGzippedFile(File file, Iterable<String> paragraphs) {
+    private static void writeGzippedFile(File file,
+            Iterable<String> paragraphs, boolean toLowerCase) {
         try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
                 new GZIPOutputStream(new FileOutputStream(file)), "UTF-8"))) {
-            for (String paragraph : paragraphs) {
-                writer.write(paragraph);
-                writer.newLine();
+            if (toLowerCase) {
+                for (String paragraph : paragraphs) {
+                    writer.write(paragraph.toLowerCase());
+                    writer.newLine();
+                }
+            } else {
+                for (String paragraph : paragraphs) {
+                    writer.write(paragraph);
+                    writer.newLine();
+                }
             }
         } catch (IOException e) {
             LOGGER.log(
@@ -161,7 +172,10 @@ public class ArticleRepositoryBuilder {
                                 .desc("path of article repository").build())
                 .addOption(
                         Option.builder("o").longOpt("overwrite")
-                                .desc("overwrite an existing article").build());
+                                .desc("overwrite an existing article").build())
+                .addOption(
+                        Option.builder("l").longOpt("lowercase")
+                                .desc("make text lowercase").build());
 
         CommandLine line = parser.parse(options, args);
         List<String> pdfTextFileFolders = Lists.newArrayList(Splitter.on(',')
@@ -188,9 +202,9 @@ public class ArticleRepositoryBuilder {
         }
 
         boolean overwrite = line.hasOption("overwrite");
-
+        boolean lowercase = line.hasOption("lowercase");
         return new ArticleRepositoryBuilder(folders, articleRepositoryFolder,
-                overwrite);
+                overwrite, lowercase);
     }
 
     public static void main(final String[] args) throws ParseException,

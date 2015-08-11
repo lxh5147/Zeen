@@ -77,7 +77,7 @@ task buildArticleRepository (dependsOn: 'classes', type: JavaExec) {
     classpath = sourceSets.impl.runtimeClasspath
   	if ( project.hasProperty("appArgs") ) {
         args Eval.me(appArgs)
-        //gradle buildArticleRepository -PappArgs="['--pdfTextFileFolders', 'pdfTextFileFolder1,pdfTextFileFolder2','--articleRepositoryFolder', 'articles','--overwrite']"
+        //gradle buildArticleRepository -PappArgs="['--pdfTextFileFolders', 'pdfTextFileFolder1,pdfTextFileFolder2','--articleRepositoryFolder', 'articles','--overwrite', '--lowercase']"
     }
 }
 
