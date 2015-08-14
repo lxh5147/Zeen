@@ -149,7 +149,6 @@ public class FingerprintRepositoryBuilderImplTest {
                             Lists.newArrayList(analizer.analyze(content)),
                             stringBuilder, fingerprintBuffer);
             Assert.assertEquals(
-
             Sets.newHashSet(FingerprintRepositoryImpl.newParagraphEntry(
                     referenceId, paragraphId)), Sets
                     .newHashSet(fingerprintRepository

@@ -113,14 +113,34 @@ public class FingerprintRepositoryBuilderImpl implements
                                 List<Iterable<CharSequence>> checkPointsList = Lists
                                         .newArrayList(this.analyzer
                                                 .analyze(content));
-                                FINGERPRINT_BUILDER.buildFingerprints(
-                                        checkPointsList, curStringBuilder,
-                                        curFingerprintBuffer);
-                                for (int k = 0; k < checkPointsList.size(); ++k) {
-                                    curValues.add(curFingerprintBuffer[k]);
-                                    curArticleEntries.add(paragraph
-                                            .getArticleId());
-                                    curParagraphEntries.add(paragraph.getId());
+
+                                int totalRound = (checkPointsList.size()
+                                        + ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER - 1)
+                                        / ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER;
+
+                                for (int k = 0; k < totalRound; ++k) {
+                                    int start = k
+                                            * ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER;
+                                    int end = start
+                                            + ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER;
+                                    if (end >= checkPointsList.size()) {
+                                        end = checkPointsList.size();
+                                    }
+                                    List<Iterable<CharSequence>> checkPointsListOfCurRound = checkPointsList
+                                            .subList(start, end);
+                                    FINGERPRINT_BUILDER.buildFingerprints(
+                                            checkPointsListOfCurRound,
+                                            curStringBuilder,
+                                            curFingerprintBuffer);
+
+                                    for (int l = 0; l < checkPointsListOfCurRound
+                                            .size(); ++l) {
+                                        curValues.add(curFingerprintBuffer[l]);
+                                        curArticleEntries.add(paragraph
+                                                .getArticleId());
+                                        curParagraphEntries.add(paragraph
+                                                .getId());
+                                    }
                                 }
                             }
                             valuesList.set(i, curValues);
