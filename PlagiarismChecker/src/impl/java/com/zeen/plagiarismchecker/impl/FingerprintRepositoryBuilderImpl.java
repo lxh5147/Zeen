@@ -49,7 +49,7 @@ public class FingerprintRepositoryBuilderImpl implements
 
         int totalRound = (checkPointsList.size()
                 + ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER - 1)
-                % ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER;
+                / ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER;
 
         for (int i = 0; i < totalRound; ++i) {
             int start = i
