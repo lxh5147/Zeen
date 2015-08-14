@@ -46,14 +46,31 @@ public class FingerprintRepositoryBuilderImpl implements
         String content = paragraph.getContent();
         List<Iterable<CharSequence>> checkPointsList = Lists
                 .newArrayList(this.analyzer.analyze(content));
-        FINGERPRINT_BUILDER.buildFingerprints(checkPointsList,
-                this.stringBuilder, this.fingerprintBuffer);
-        for (int i = 0; i < checkPointsList.size(); ++i) {
-            this.values[this.size] = this.fingerprintBuffer[i];
-            this.articleEntries[this.size] = paragraph.getArticleId();
-            this.paragraphEntries[this.size] = paragraph.getId();
-            ++this.size;
+
+        int totalRound = (checkPointsList.size()
+                + ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER - 1)
+                % ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER;
+
+        for (int i = 0; i < totalRound; ++i) {
+            int start = i
+                    * ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER;
+            int end = start
+                    + ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER;
+            if (end >= checkPointsList.size()) {
+                end = checkPointsList.size();
+            }
+            List<Iterable<CharSequence>> checkPointsListOfCurRound = checkPointsList
+                    .subList(start, end);
+            FINGERPRINT_BUILDER.buildFingerprints(checkPointsListOfCurRound,
+                    this.stringBuilder, this.fingerprintBuffer);
+            for (int j = 0; j < checkPointsListOfCurRound.size(); ++j) {
+                this.values[this.size] = this.fingerprintBuffer[j];
+                this.articleEntries[this.size] = paragraph.getArticleId();
+                this.paragraphEntries[this.size] = paragraph.getId();
+                ++this.size;
+            }
         }
+
     }
 
     @Override
