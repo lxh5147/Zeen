@@ -108,9 +108,11 @@ public class FingerprintRepositoryBuilderImplTest {
         }
     }
 
+    private static final int MAX_SENTENCE_PER_PARAGRAPH = ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER * 3 + 1;
+
     private String buildParagraphWithManySentences() {
         StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < ContentAnalyzer.MAX_LENGTH_OF_CHECKPOINTS_LIST_PER_ANALYZER * 3 + 1; ++i) {
+        for (int i = 0; i < MAX_SENTENCE_PER_PARAGRAPH; ++i) {
             builder.append(String.format("Sentence %d.", i));
         }
         return builder.toString();
@@ -119,8 +121,8 @@ public class FingerprintRepositoryBuilderImplTest {
     @Test
     public void buildWithManySentencesTest() {
         FingerprintRepositoryBuilderImpl builder = new FingerprintRepositoryBuilderImpl();
-        ContentAnalyzer analizer = new SimpleContentAnalyzer(
-                new SimpleTokenizer());
+        ContentAnalyzer analizer = ContentAnalyzerType.SegmentContentAnalizerWithSimpleSegmentSplitter
+                .getContentAnalyzer();
         int capability = 1024;
         builder.start(analizer, capability);
 
@@ -141,19 +143,22 @@ public class FingerprintRepositoryBuilderImplTest {
         Assert.assertNotNull(fingerprintRepository);
         paragraphId = 0;
         StringBuilder stringBuilder = new StringBuilder();
-        long[] fingerprintBuffer = new long[1];
+        long[] fingerprintBuffer = new long[MAX_SENTENCE_PER_PARAGRAPH];
 
         for (String content : paragraphContentList) {
             FingerprintRepositoryBuilderImpl.FINGERPRINT_BUILDER
                     .buildFingerprints(
                             Lists.newArrayList(analizer.analyze(content)),
                             stringBuilder, fingerprintBuffer);
-            Assert.assertEquals(
-            Sets.newHashSet(FingerprintRepositoryImpl.newParagraphEntry(
-                    referenceId, paragraphId)), Sets
-                    .newHashSet(fingerprintRepository
-                            .getFingerprintEntries(FingerprintRepositoryImpl
-                                    .newFingerprint(fingerprintBuffer[0]))));
+            for (int i = 0; i < Lists.newArrayList(analizer.analyze(content))
+                    .size(); ++i) {
+                Assert.assertEquals(
+                        Sets.newHashSet(FingerprintRepositoryImpl
+                                .newParagraphEntry(referenceId, paragraphId)),
+                        Sets.newHashSet(fingerprintRepository
+                                .getFingerprintEntries(FingerprintRepositoryImpl
+                                        .newFingerprint(fingerprintBuffer[i]))));
+            }
             paragraphId++;
         }
     }
