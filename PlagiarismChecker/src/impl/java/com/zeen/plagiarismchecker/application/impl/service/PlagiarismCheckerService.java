@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 import java.util.stream.IntStream;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -40,24 +41,79 @@ import com.zeen.plagiarismchecker.application.impl.FingerprintRepositoryInfo;
 import com.zeen.plagiarismchecker.application.impl.PlagiarismChecker;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
+import com.zeen.plagiarismchecker.impl.PDFTextParagraphExtractor;
 
 @javax.ws.rs.Path("/")
 public class PlagiarismCheckerService {
 
-    private static final Logger LOGGER = Logger.getLogger(PlagiarismCheckerService.class
-            .getName());
-    
-    public static class Result {
+    private static final Logger LOGGER = Logger
+            .getLogger(PlagiarismCheckerService.class.getName());
+
+    public static class ParagraphCheckResult {
+        private String paragraphContentToCheck;
+        private Iterable<CheckResult> checkResults;
+
+        public ParagraphCheckResult() {
+        }
+
+        public String getParagraphContentToCheck() {
+            return this.paragraphContentToCheck;
+        }
+
+        public Iterable<CheckResult> getCheckResults() {
+            return this.checkResults;
+        }
+
+        public void setParagraphContentToCheck(String paragraphContentToCheck) {
+            this.paragraphContentToCheck = paragraphContentToCheck;
+        }
+
+        public void setCheckResults(Iterable<CheckResult> checkResults) {
+            this.checkResults = checkResults;
+        }
+
+        @Override
+        public String toString() {
+            return MoreObjects
+                    .toStringHelper(this.getClass())
+                    .add("paragraphContentToCheck",
+                            this.paragraphContentToCheck)
+                    .add("checkResults", this.checkResults).toString();
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hashCode(this.paragraphContentToCheck,
+                    this.checkResults);
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null) {
+                return false;
+            }
+            if (getClass() != obj.getClass()) {
+                return false;
+            }
+            final ParagraphCheckResult other = (ParagraphCheckResult) obj;
+            return Objects.equal(this.getParagraphContentToCheck(),
+                    other.getParagraphContentToCheck())
+                    && Objects.equal(this.getCheckResults(),
+                            other.getCheckResults());
+        }
+    }
+
+    public static class CheckResult {
         private int articleId;
         private int paragraphId;
         private String paragraphContent;
         private List<ContentAnalyzerType> hittedContentAnalizerTypes;
 
         // to make it a bean
-        public Result() {
+        public CheckResult() {
         }
 
-        Result(int articleId, int paragraphId, String paragraphContent,
+        CheckResult(int articleId, int paragraphId, String paragraphContent,
                 List<ContentAnalyzerType> hittedContentAnalizerTypes) {
             this.articleId = articleId;
             this.paragraphId = paragraphId;
@@ -90,7 +146,7 @@ public class PlagiarismCheckerService {
             if (getClass() != obj.getClass()) {
                 return false;
             }
-            final Result other = (Result) obj;
+            final CheckResult other = (CheckResult) obj;
             return Objects.equal(this.getArticleId(), other.getArticleId())
                     && Objects.equal(this.getParagraphId(),
                             other.getParagraphId())
@@ -134,15 +190,58 @@ public class PlagiarismCheckerService {
         }
     }
 
+    @POST
+    @javax.ws.rs.Path("checkDocument")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Iterable<ParagraphCheckResult> checkDocument(
+            @QueryParam("document") String documentContent) {
+        checkNotNull(documentContent, "documentContent");
+        LOGGER.info(String.format("documentContent=%s", documentContent));
+        List<String> paragraphs = this.getParagraphs(documentContent);
+        List<ParagraphCheckResult> paragraphCheckResults = Lists
+                .newArrayListWithCapacity(paragraphs.size());
+        for (int i = 0; i < paragraphs.size(); ++i) {
+            paragraphCheckResults.add(null);
+        }
+        IntStream
+                .range(0, paragraphs.size())
+                .parallel()
+                .forEach(
+                        i -> {
+                            String paragraphContent = paragraphs.get(i);
+                            Iterable<CheckResult> checkResults = this
+                                    .checkParagraph(paragraphContent);
+                            ParagraphCheckResult paragraphCheckResult = new ParagraphCheckResult();
+                            paragraphCheckResult
+                                    .setParagraphContentToCheck(paragraphContent);
+                            paragraphCheckResult.setCheckResults(checkResults);
+                            paragraphCheckResults.set(i, paragraphCheckResult);
+                        });
+        LOGGER.info(String.format("Check done: results=%s",
+                paragraphCheckResults));
+        return paragraphCheckResults;
+    }
+
+    private List<String> getParagraphs(String docContent) {
+        return Lists
+                .newArrayList(PDFTextParagraphExtractor.extract(docContent));
+    }
+
     @GET
     @javax.ws.rs.Path("check")
     @Produces(MediaType.APPLICATION_JSON)
-    public Iterable<Result> check(
+    public Iterable<CheckResult> check(
             @QueryParam("paragraph") String paragraphContent) {
         checkNotNull(paragraphContent, "paragraphContent");
-        
-        LOGGER.info(String.format("Checking:paragraphContent=%s", paragraphContent));
-        
+        LOGGER.info(String.format("Checking:paragraphContent=%s",
+                paragraphContent));
+        Iterable<CheckResult> checkResults = this
+                .checkParagraph(paragraphContent);
+        LOGGER.info(String.format("Check done: results=%s", checkResults));
+        return checkResults;
+    }
+
+    private Iterable<CheckResult> checkParagraph(String paragraphContent) {
         List<Iterable<Entry<ContentAnalyzerType, Iterable<ParagraphEntry>>>> checkResultsList = Lists
                 .newArrayList();
         for (int i = 0; i < Context.CHECKERS.size(); ++i) {
@@ -189,7 +288,8 @@ public class PlagiarismCheckerService {
                                         Set<ContentAnalyzerType> contentAnalizers = paragraphToContentAnalizersMap
                                                 .get(paragraphEntry);
                                         if (contentAnalizers == null) {
-                                            contentAnalizers = Sets.newLinkedHashSet();                                                   
+                                            contentAnalizers = Sets
+                                                    .newLinkedHashSet();
                                             paragraphToContentAnalizersMap.put(
                                                     paragraphEntry,
                                                     contentAnalizers);
@@ -198,29 +298,32 @@ public class PlagiarismCheckerService {
                                     });
                 });
 
-        List<Result> results = Lists.newArrayList();
+        List<CheckResult> results = Lists.newArrayList();
 
-        articleToParagraphsMap.entrySet().forEach(
-                item -> {
-                    Article article = Context.ARTICLE_REPOSITORY
-                            .getArticle(item.getKey());
-                    assert article != null;
-                    List<Paragraph> paragraphs = Lists.newArrayList(article
-                            .getParagraphs());
-                    assert paragraphs != null;
-                    item.getValue().forEach(
-                            paragraphEntry -> {
-                                Paragraph paragraph = paragraphs
-                                        .get(paragraphEntry.getParagraphId());
-                                assert paragraph != null;
-                                results.add(new Result(article.getId(),
-                                        paragraph.getId(), paragraph
-                                                .getContent(),
-                                       Lists.newArrayList( paragraphToContentAnalizersMap
-                                                .get(paragraphEntry))));
-                            });
-                });
-        LOGGER.info(String.format("Check done: results=%s", results));
+        articleToParagraphsMap
+                .entrySet()
+                .forEach(
+                        item -> {
+                            Article article = Context.ARTICLE_REPOSITORY
+                                    .getArticle(item.getKey());
+                            assert article != null;
+                            List<Paragraph> paragraphs = Lists
+                                    .newArrayList(article.getParagraphs());
+                            assert paragraphs != null;
+                            item.getValue()
+                                    .forEach(
+                                            paragraphEntry -> {
+                                                Paragraph paragraph = paragraphs.get(paragraphEntry
+                                                        .getParagraphId());
+                                                assert paragraph != null;
+                                                results.add(new CheckResult(
+                                                        article.getId(),
+                                                        paragraph.getId(),
+                                                        paragraph.getContent(),
+                                                        Lists.newArrayList(paragraphToContentAnalizersMap
+                                                                .get(paragraphEntry))));
+                                            });
+                        });
         return results;
     }
 

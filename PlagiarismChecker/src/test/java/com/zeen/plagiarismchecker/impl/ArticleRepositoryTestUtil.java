@@ -15,12 +15,12 @@ public class ArticleRepositoryTestUtil {
 
     public static final String[][] ARTICLES = new String[][] {
             {
-                    "this work uses deep learning to represent a reference. we can summurize our contributions as follows.",
-                    "deep learning has attracted increasing interestes in recent studies on nlp. it has been widely applied to word embedding, language modeling." },
-            { "it is still not clear if and how deep learning can help to detect repeated text. In this work, we design a mapping from a paragraph to a paragraph vector, which is used to detect copy&past text." },
+                    "This work uses deep learning to represent a reference. we can summurize our contributions as follows.",
+                    "Deep learning has attracted increasing interestes in recent studies on nlp. it has been widely applied to word embedding, language modeling." },
+            { "It is still not clear if and how deep learning can help to detect repeated text. In this work, we design a mapping from a paragraph to a paragraph vector, which is used to detect copy&past text." },
             {
-                    "experimental results show our method outperforms the method based on bag of words.",
-                    "in future we will apply our method to other languages, such as chinese." } };
+                    "Experimental results show our method outperforms the method based on bag of words.",
+                    "In future we will apply our method to other languages, such as chinese." } };
 
     public static final String[] FOLDERS = { "ref1", "ref2" };
 
