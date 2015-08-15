@@ -1,8 +1,8 @@
 package com.zeen.plagiarismchecker.application.impl.service;
 
-import java.util.List;
-
 import static com.google.common.base.Preconditions.checkNotNull;
+
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -100,7 +100,7 @@ public class CheckResult {
     }
 
     @SuppressWarnings("unchecked")
-    public static List<CheckResult> getCheckResults(JSONArray jsonArray) {
+    static List<CheckResult> getCheckResults(JSONArray jsonArray) {
         checkNotNull(jsonArray, "jsonArray");
         List<CheckResult> results = Lists.newArrayList();
         jsonArray.forEach(jsonObject -> {

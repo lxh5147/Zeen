@@ -191,7 +191,7 @@ public class RESTServerIntegrationTest {
 
                     Assert.assertEquals(expected, Lists
                             .newArrayList(ParagraphCheckResult
-                                    .getParagraphCheckResult(response
+                                    .getParagraphCheckResults(response
                                             .getContentAsString())));
 
                     httpClient.stop();

@@ -74,7 +74,7 @@ public  class ParagraphCheckResult {
     };
     
     @SuppressWarnings("unchecked")
-    public static List<ParagraphCheckResult> getParagraphCheckResult(
+    public static List<ParagraphCheckResult> getParagraphCheckResults(
             final String jsonResponse) throws ParseException {
         checkNotNull(jsonResponse, "jsonResponse");        
         List<ParagraphCheckResult> results = Lists.newArrayList();      
