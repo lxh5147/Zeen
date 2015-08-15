@@ -16,7 +16,7 @@ import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.application.impl.FingerprintRepositoryInfo;
 import com.zeen.plagiarismchecker.application.impl.IndexBuilderTest;
 import com.zeen.plagiarismchecker.application.impl.PlagiarismChecker;
-import com.zeen.plagiarismchecker.application.impl.service.PlagiarismCheckerService.ParagraphCheckResult;
+
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryTestUtil;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
@@ -87,7 +87,7 @@ public class RESTServerTest {
         for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
             for (int j = 0; j < ArticleRepositoryTestUtil.ARTICLES[i].length; ++j) {
                 Assert.assertEquals(
-                        Lists.newArrayList(new PlagiarismCheckerService.CheckResult(
+                        Lists.newArrayList(new CheckResult(
                                 i, j, ArticleRepositoryTestUtil.ARTICLES[i][j],
                                 contentAnalizersList)),
                         Lists.newArrayList(plagiarismCheckeService
@@ -115,16 +115,14 @@ public class RESTServerTest {
         PlagiarismCheckerService.setupContext(args);
         PlagiarismCheckerService plagiarismCheckeService = new PlagiarismCheckerService();
         for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
-            final String documentContent = this
-                    .getDocumentContent(ArticleRepositoryTestUtil.ARTICLES[i]);
-
+            final String documentContent = getDocumentContent(ArticleRepositoryTestUtil.ARTICLES[i]);
             List<ParagraphCheckResult> expected = Lists.newArrayList();
             for (int j = 0; j < ArticleRepositoryTestUtil.ARTICLES[i].length; ++j) {
                 ParagraphCheckResult paragraphCheckResult = new ParagraphCheckResult();
                 paragraphCheckResult
                         .setParagraphContentToCheck(ArticleRepositoryTestUtil.ARTICLES[i][j]);
                 paragraphCheckResult.setCheckResults(Lists
-                        .newArrayList(new PlagiarismCheckerService.CheckResult(
+                        .newArrayList(new CheckResult(
                                 i, j, ArticleRepositoryTestUtil.ARTICLES[i][j],
                                 contentAnalizersList)));
                 expected.add(paragraphCheckResult);
@@ -138,7 +136,7 @@ public class RESTServerTest {
         IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
     }
 
-    private String getDocumentContent(String[] paragraphs) {
+    static String getDocumentContent(String[] paragraphs) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < paragraphs.length; ++i) {
             if (builder.length() > 0) {
