@@ -1,5 +1,8 @@
-apply plugin: "java"
-apply plugin: "maven"
+apply plugin: "application"
+mainClassName = "com.zeen.plagiarismchecker.application.impl.service.RESTServer"
+
+
+applicationDefaultJvmArgs = ["-Xmx8192m"]
 
 version = 1.0
 
@@ -85,6 +88,7 @@ task buildArticleRepository (dependsOn: 'classes', type: JavaExec) {
 
 task buildIndex (dependsOn: 'classes', type: JavaExec) {
     main = 'com.zeen.plagiarismchecker.application.impl.IndexBuilder'
+    allJvmArgs = ["-Xmx8192m"] 
     classpath = sourceSets.impl.runtimeClasspath
   	if ( project.hasProperty("appArgs") ) {
         args Eval.me(appArgs)
@@ -96,6 +100,7 @@ task buildIndex (dependsOn: 'classes', type: JavaExec) {
 task startService (dependsOn: 'classes', type: JavaExec) {	
     main = 'com.zeen.plagiarismchecker.application.impl.service.RESTServer'
     classpath = sourceSets.impl.runtimeClasspath
+    allJvmArgs = ["-Xmx8192m"] 
     println "classpath:${classpath}"
   	if ( project.hasProperty("appArgs") ) {
         args Eval.me(appArgs)     
