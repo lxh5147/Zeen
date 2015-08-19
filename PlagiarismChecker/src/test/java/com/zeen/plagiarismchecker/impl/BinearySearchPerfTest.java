@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class BinearySearchPerfTest {
-    private static final int SIZE = 10000000;
+    private static final int SIZE = 200000000;
     long[] values;
 
     @Before
