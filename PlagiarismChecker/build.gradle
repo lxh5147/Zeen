@@ -108,5 +108,9 @@ task startService (dependsOn: 'classes', type: JavaExec) {
     }
 }
 
+test {   
+    exclude 'com/zeen/plagiarismchecker/impl/*PerfTest*'   
+}
+
 
 
