@@ -12,7 +12,7 @@ import com.zeen.plagiarismchecker.impl.PDFTextExtractor;
 public class PDFTextExtractorTest {
     @Test
     public void extractTest() throws IOException {
-        String text = PDFTextExtractor.extract(new File("1003.pdf"));
+        String text = PDFTextExtractor.extract(new File("testFiles/1003.pdf"));
         Assert.assertTrue(text
                 .startsWith("EVALUATION OF TRAITS ASSOCIATED WITH BUCKING BULL"));
         Assert.assertTrue(text.trim().endsWith("December 2005"));

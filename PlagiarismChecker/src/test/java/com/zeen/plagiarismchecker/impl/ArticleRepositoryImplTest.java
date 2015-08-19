@@ -37,7 +37,7 @@ public class ArticleRepositoryImplTest {
         Assert.assertEquals(ArticleRepositoryTestUtil.ARTICLES.length,
                 references.size());
         for (int i = 0; i < references.size(); ++i) {
-            Article reference = references.get(i);
+            Article reference = referenceRepository.getArticle(i);
             Assert.assertEquals(i, reference.getId());
             List<String> paragraphs = Lists.newArrayList();
             reference.getParagraphs().forEach(paragraph -> {
