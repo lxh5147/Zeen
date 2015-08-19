@@ -53,7 +53,7 @@ public class OpenNLPTest {
     @Test
     public void sentenceDetectCaseTest() throws InvalidFormatException,
             IOException {
-        String paragraph = "Table 31 Pearson’s Correlation Coefficients involving buckoff and number of outs across all datasets 57 The sport of bull riding has become the fastest growing professional sporting event in the United States (PBR, 2008)";
+        String paragraph = "Table 31 Pearsons Correlation Coefficients involving buckoff and number of outs across all datasets 57 The sport of bull riding has become the fastest growing professional sporting event in the United States (PBR, 2008)";
         InputStream is = this.getClass().getResourceAsStream("/en-sent.bin");
         SentenceModel model = new SentenceModel(is);
         SentenceDetectorME sdetector = new SentenceDetectorME(model);
