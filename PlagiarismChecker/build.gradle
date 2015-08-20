@@ -1,7 +1,7 @@
 apply plugin: "application"
 mainClassName = "com.zeen.plagiarismchecker.application.impl.service.RESTServer"
 
-def maxJVMHeapSize = "4g"
+def maxJVMHeapSize = "12g"
 
 applicationDefaultJvmArgs = ["-Xmx${maxJVMHeapSize}"]
 
