@@ -18,7 +18,6 @@ import org.junit.Test;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.application.impl.IndexBuilderTest;
-
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryTestUtil;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 
@@ -31,6 +30,57 @@ public class RESTServerIntegrationTest {
     @After
     public void tearDown() {
         ArticleRepositoryTestUtil.tearDownArticleRepository();
+    }
+
+    @Test
+    public void sendHugeDataTest() throws Exception {
+        String indexRoot = "index";
+        final List<ContentAnalyzerType> contentAnalizersList = Lists
+                .newArrayList(
+                        ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
+        IndexBuilderTest.setupIndex(indexRoot, contentAnalizersList);
+
+        String[] args = { "--articleRepositoryFolders",
+                Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
+                "--contentAnalyzers",
+                Joiner.on(',').join(contentAnalizersList), "--indexPaths",
+                indexRoot };
+        PlagiarismCheckerService.setupContext(args);
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+
+        Runnable server = () -> {
+            try {
+                RESTServer.main(args);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        };
+        executor.execute(server);
+        while (!RESTServer.started) {
+            Thread.sleep(0);
+        }
+        StringBuilder documentContent = new StringBuilder();
+        for (int i = 0; i < 1024; ++i) {
+            documentContent.append("Put some test text here!");
+        }
+
+        HttpClient httpClient = new HttpClient();
+        httpClient.setRequestBufferSize(1024 * 64);
+        httpClient.start();
+
+        ContentResponse response = httpClient.newRequest("localhost", 8080)
+                .method(HttpMethod.POST).path("/checkDocument")
+                .timeout(10, TimeUnit.SECONDS)
+                .param("document", documentContent.toString()).send();
+
+        String responseText = response.getContentAsString();
+        Assert.assertNotNull(responseText);
+        Assert.assertNotNull(response != null);
+        Assert.assertEquals(200, response.getStatus());
+        executor.shutdown();
+        executor.awaitTermination(0, TimeUnit.MICROSECONDS);
+        IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
     }
 
     @Test
