@@ -1,6 +1,8 @@
 package com.zeen.plagiarismchecker.application.impl.service;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -8,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import junit.framework.Assert;
 
+import org.apache.commons.cli.ParseException;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.api.ContentResponse;
 import org.eclipse.jetty.http.HttpMethod;
@@ -17,7 +20,10 @@ import org.junit.Test;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
+import com.zeen.plagiarismchecker.Paragraph;
+import com.zeen.plagiarismchecker.application.impl.ArticleRepositoryBuilder;
 import com.zeen.plagiarismchecker.application.impl.IndexBuilderTest;
+import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryTestUtil;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 
@@ -30,6 +36,97 @@ public class RESTServerIntegrationTest {
     @After
     public void tearDown() {
         ArticleRepositoryTestUtil.tearDownArticleRepository();
+    }
+
+    private static void createArticleRepository(String articleRepositoryFolder)
+            throws IOException, ParseException {
+        String[] args = { "--pdfTextFileFolders", "testFiles",
+                "--articleRepositoryFolder", articleRepositoryFolder,
+                "--overwrite", "--lowercase" };
+
+        ArticleRepositoryBuilder builder = ArticleRepositoryBuilder
+                .getArticleRepositoryBuilderWithArgs(args);
+        builder.build();
+    }
+
+    private static void deleteArticleRepository(String articleRepositoryFolder) {
+        Paths.get(articleRepositoryFolder).toFile().delete();
+    }
+
+    @Test
+    public void checkPDFDocumentTest() throws Exception {
+        String articleRepositoryFolder = "articles";
+        createArticleRepository(articleRepositoryFolder);
+
+        List<String> articleRepositoryFolders = Lists
+                .newArrayList(articleRepositoryFolder);
+        String indexRoot = "index";
+        final List<ContentAnalyzerType> contentAnalizersList = Lists
+                .newArrayList(
+                        ContentAnalyzerType.SimpleContentAnalizerWithSimpleTokenizer,
+                        ContentAnalyzerType.BagOfWordsContentAnalizerWithOpenNLPTokenizer);
+        IndexBuilderTest.setupIndex(indexRoot, contentAnalizersList,
+                articleRepositoryFolders);
+
+        String[] args = { "--articleRepositoryFolders",
+                Joiner.on(',').join(articleRepositoryFolders),
+                "--contentAnalyzers",
+                Joiner.on(',').join(contentAnalizersList), "--indexPaths",
+                indexRoot };
+        PlagiarismCheckerService.setupContext(args);
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+
+        Runnable server = () -> {
+            try {
+                RESTServer.main(args);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        };
+        executor.execute(server);
+        while (!RESTServer.started) {
+            Thread.sleep(0);
+        }
+        // test with 381
+        int articleId = 381;
+        ArticleRepositoryImpl referenceRepository = new ArticleRepositoryImpl(
+                Lists.newArrayList(Paths.get(articleRepositoryFolder)));
+        List<Paragraph> paragraphs = Lists.newArrayList(referenceRepository
+                .getArticle(articleId).getParagraphs());
+
+        String documentContent = ArticleRepositoryBuilder.readTxtFile(new File(
+                "testFiles", String.valueOf(articleId) + ".txt"));
+        HttpClient httpClient = new HttpClient();
+        httpClient.setRequestBufferSize(1024 * 1024 * 5);
+        httpClient.start();
+
+        ContentResponse response = httpClient.newRequest("localhost", 8080)
+                .method(HttpMethod.POST).path("/checkDocument")
+                .timeout(10, TimeUnit.SECONDS)
+                .param("document", documentContent).send();
+
+        Assert.assertEquals(200, response.getStatus());
+        List<ParagraphCheckResult> checkResults = ParagraphCheckResult
+                .getParagraphCheckResults(response.getContentAsString());
+
+        Assert.assertEquals(paragraphs.size(), checkResults.size());
+        for (int i = 0; i < checkResults.size(); ++i) {
+            Assert.assertEquals(1, checkResults.get(i).getCheckResults().size());
+            Assert.assertEquals(articleId, checkResults.get(i)
+                    .getCheckResults().get(0).getArticleId());
+            Assert.assertEquals(i, checkResults.get(i).getCheckResults().get(0)
+                    .getParagraphId());
+            Assert.assertEquals(paragraphs.get(i).getContent(), checkResults
+                    .get(i).getParagraphContentToCheck());
+            Assert.assertEquals(contentAnalizersList, checkResults.get(i)
+                    .getCheckResults().get(0).getHittedContentAnalizerTypes());
+
+        }
+        executor.shutdown();
+        executor.awaitTermination(0, TimeUnit.MICROSECONDS);
+
+        IndexBuilderTest.deleteIndex(indexRoot, contentAnalizersList);
+        deleteArticleRepository(articleRepositoryFolder);
     }
 
     @Test
@@ -73,9 +170,6 @@ public class RESTServerIntegrationTest {
                 .method(HttpMethod.POST).path("/checkDocument")
                 .timeout(10, TimeUnit.SECONDS)
                 .param("document", documentContent.toString()).send();
-
-        String responseText = response.getContentAsString();
-        Assert.assertNotNull(responseText);
         Assert.assertNotNull(response != null);
         Assert.assertEquals(200, response.getStatus());
         executor.shutdown();

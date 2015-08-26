@@ -1,6 +1,7 @@
 package com.zeen.plagiarismchecker.application.impl;
 
 import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -106,7 +107,9 @@ public class ArticleRepositoryBuilder {
                         });
     }
 
-    private static String readTxtFile(File file) {
+    public static String readTxtFile(File file) {
+        checkNotNull(file, "file");
+
         try (BufferedReader in = new BufferedReader(new InputStreamReader(
                 new FileInputStream(file), "UTF8"))) {
 
@@ -149,7 +152,7 @@ public class ArticleRepositoryBuilder {
         }
     }
 
-    static ArticleRepositoryBuilder getArticleRepositoryBuilderWithArgs(
+    public static ArticleRepositoryBuilder getArticleRepositoryBuilderWithArgs(
             String[] args) throws ParseException, IOException {
 
         // -p --pdfTextFileFolders path1,path2,...pathn

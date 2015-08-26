@@ -47,9 +47,6 @@ public class PlagiarismCheckerService {
     private static final Logger LOGGER = Logger
             .getLogger(PlagiarismCheckerService.class.getName());
 
-    
-    
-
     @POST
     @javax.ws.rs.Path("checkDocument")
     @Produces(MediaType.APPLICATION_JSON)
@@ -83,8 +80,11 @@ public class PlagiarismCheckerService {
     }
 
     private List<String> getParagraphs(String docContent) {
-        return Lists
-                .newArrayList(PDFTextParagraphExtractor.extract(docContent));
+        List<String> paragraphs = Lists.newArrayList();
+        PDFTextParagraphExtractor.extract(docContent).forEach(paragraph -> {
+            paragraphs.add(paragraph.toLowerCase());
+        });
+        return paragraphs;
     }
 
     @GET
@@ -95,8 +95,7 @@ public class PlagiarismCheckerService {
         checkNotNull(paragraphContent, "paragraphContent");
         LOGGER.info(String.format("Checking:paragraphContent=%s",
                 paragraphContent));
-        List<CheckResult> checkResults = this
-                .checkParagraph(paragraphContent);
+        List<CheckResult> checkResults = this.checkParagraph(paragraphContent);
         LOGGER.info(String.format("Check done: results=%s", checkResults));
         return checkResults;
     }

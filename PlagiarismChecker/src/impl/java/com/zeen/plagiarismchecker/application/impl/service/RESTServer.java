@@ -19,8 +19,8 @@ public class RESTServer {
     static boolean started = false;
     static final int DEFAULT_PORT_NUMBER = 8080;
 
-    static final int DEFAULT_MAX_REQUEST_HEADER_SIZE = 1024 * 64;
-    static final int DEFAULT_MAX_RESPONSE_HEADER_SIZE = 1024 * 64;
+    static final int DEFAULT_MAX_REQUEST_HEADER_SIZE = 1024 * 1024 * 5;
+    static final int DEFAULT_MAX_RESPONSE_HEADER_SIZE = 1024 * 1024 * 5;
 
     public static final String PORT_NUMBER_ENV_VARIABLE_NAME = "PlagiarismCheckerServicePortNumber";
     public static final String MAX_REQUEST_HEADER_SIZE_ENV_VARIABLE_NAME = "PlagiarismCheckerServiceMaxRequestHeaderSize";
