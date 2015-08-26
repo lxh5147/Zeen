@@ -118,5 +118,8 @@ task perfTest( type: Test ) {
     maxHeapSize = maxJVMHeapSize
 }
 
+tasks.withType(JavaExec) {
+    jvmArgs "-Djava.util.logging.config.file=logging.properties"   
+}
 
 

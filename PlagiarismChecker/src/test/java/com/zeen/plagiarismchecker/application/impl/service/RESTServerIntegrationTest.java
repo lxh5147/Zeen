@@ -120,7 +120,6 @@ public class RESTServerIntegrationTest {
                     .get(i).getParagraphContentToCheck());
             Assert.assertEquals(contentAnalizersList, checkResults.get(i)
                     .getCheckResults().get(0).getHittedContentAnalizerTypes());
-
         }
         executor.shutdown();
         executor.awaitTermination(0, TimeUnit.MICROSECONDS);
