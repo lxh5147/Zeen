@@ -80,11 +80,17 @@ public class PlagiarismCheckerService {
     }
 
     private List<String> getParagraphs(String docContent) {
-        List<String> paragraphs = Lists.newArrayList();
-        PDFTextParagraphExtractor.extract(docContent).forEach(paragraph -> {
-            paragraphs.add(paragraph.toLowerCase());
-        });
-        return paragraphs;
+        if (Context.LOWERCASE) {
+            List<String> paragraphs = Lists.newArrayList();
+            PDFTextParagraphExtractor.extract(docContent).forEach(
+                    paragraph -> {
+                        paragraphs.add(paragraph.toLowerCase());
+                    });
+            return paragraphs;
+        } else {
+            return Lists.newArrayList(PDFTextParagraphExtractor
+                    .extract(docContent));
+        }
     }
 
     @GET
@@ -192,6 +198,7 @@ public class PlagiarismCheckerService {
         // -r --articleRepositoryFolders path1,path2,...pathn
         // -a --contentAnalizers name1,name2,...namen
         // -i --indexPath path
+        // -c --caseSensitive case sensitive match
 
         CommandLineParser parser = new DefaultParser();
         Options options = new Options();
@@ -211,6 +218,10 @@ public class PlagiarismCheckerService {
                                 .longOpt("contentAnalyzers")
                                 .desc("content analyzer names, separated by comma")
                                 .build())
+                .addOption(
+                        Option.builder("c").argName("boolean")
+                                .longOpt("caseSensitive")
+                                .desc("case sensitive match").build())
                 .addOption(
                         Option.builder("i")
                                 .argName("paths")
@@ -271,6 +282,7 @@ public class PlagiarismCheckerService {
         }
         Context.ARTICLE_REPOSITORY = new ArticleRepositoryImpl(folders);
         Context.CHECKERS = checkers;
+        Context.LOWERCASE = !line.hasOption("caseSensitive");
     }
 
     static class Context {
@@ -278,6 +290,7 @@ public class PlagiarismCheckerService {
         // support incremental index
         static List<PlagiarismChecker> CHECKERS;
         static ArticleRepository ARTICLE_REPOSITORY;
+        static boolean LOWERCASE;
     }
 
 }

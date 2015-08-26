@@ -102,7 +102,6 @@ public class RESTServer {
             connector.join();
         } finally {
             server.destroy();
-
         }
     }
 

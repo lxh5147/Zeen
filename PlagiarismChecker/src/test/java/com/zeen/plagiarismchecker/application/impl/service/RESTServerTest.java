@@ -16,7 +16,6 @@ import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.application.impl.FingerprintRepositoryInfo;
 import com.zeen.plagiarismchecker.application.impl.IndexBuilderTest;
 import com.zeen.plagiarismchecker.application.impl.PlagiarismChecker;
-
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryTestUtil;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
@@ -111,7 +110,7 @@ public class RESTServerTest {
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPaths",
-                indexRoot };
+                indexRoot, "--caseSensitive" };
         PlagiarismCheckerService.setupContext(args);
         PlagiarismCheckerService plagiarismCheckeService = new PlagiarismCheckerService();
         for (int i = 0; i < ArticleRepositoryTestUtil.ARTICLES.length; ++i) {
