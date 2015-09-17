@@ -33,7 +33,6 @@ dependencies {
     implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-tokenize-models', version: '1.5'
     implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-sent-models', version: '1.5'
     implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-postag-models', version: '1.5'
-    implRuntime group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.7'    
     //implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-chunk-models', version: '1.5'
     //implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-parse-models', version: '1.5'
    	implCompile 'commons-cli:commons-cli:1.3'

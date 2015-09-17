@@ -6,8 +6,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import java.util.Collections;
 import java.util.List;
 
-import jersey.repackaged.com.google.common.collect.Lists;
-
+import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.ContentAnalyzer;
 
 //This content analyzer generates segments, and then generates a check point list for each segment

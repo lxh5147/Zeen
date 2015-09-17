@@ -7,10 +7,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.logging.Logger;
 
-import jersey.repackaged.com.google.common.collect.Lists;
 import junit.framework.Assert;
 
 import org.junit.Test;
+
+import com.google.common.collect.Lists;
 
 public class PDFTextParagraphExtractorTest {
 

@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
 
-import jersey.repackaged.com.google.common.collect.Lists;
 import junit.framework.Assert;
 
 import org.apache.commons.cli.ParseException;
 import org.junit.Test;
 
+import com.google.common.collect.Lists;
 import com.google.common.io.Files;
 import com.zeen.plagiarismchecker.Article;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;

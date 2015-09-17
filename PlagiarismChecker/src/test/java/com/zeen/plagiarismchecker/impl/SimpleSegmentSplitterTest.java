@@ -1,9 +1,10 @@
 package com.zeen.plagiarismchecker.impl;
 
-import jersey.repackaged.com.google.common.collect.Lists;
 import junit.framework.Assert;
 
 import org.junit.Test;
+
+import com.google.common.collect.Lists;
 
 public class SimpleSegmentSplitterTest {
 
