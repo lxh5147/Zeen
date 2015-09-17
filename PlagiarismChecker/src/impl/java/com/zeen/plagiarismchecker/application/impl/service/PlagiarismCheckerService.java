@@ -14,12 +14,6 @@ import java.util.Set;
 import java.util.logging.Logger;
 import java.util.stream.IntStream;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
@@ -41,17 +35,12 @@ import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 import com.zeen.plagiarismchecker.impl.PDFTextParagraphExtractor;
 
-@javax.ws.rs.Path("/")
 public class PlagiarismCheckerService {
 
     private static final Logger LOGGER = Logger
             .getLogger(PlagiarismCheckerService.class.getName());
 
-    @POST
-    @javax.ws.rs.Path("checkDocument")
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<ParagraphCheckResult> checkDocument(
-            @QueryParam("document") String documentContent) {
+    public List<ParagraphCheckResult> checkDocument(String documentContent) {
         checkNotNull(documentContent, "documentContent");
         LOGGER.info(String.format("documentContent=%s", documentContent));
         List<String> paragraphs = this.getParagraphs(documentContent);
@@ -93,11 +82,7 @@ public class PlagiarismCheckerService {
         }
     }
 
-    @GET
-    @javax.ws.rs.Path("check")
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<CheckResult> check(
-            @QueryParam("paragraph") String paragraphContent) {
+    public List<CheckResult> check(String paragraphContent) {
         checkNotNull(paragraphContent, "paragraphContent");
         LOGGER.info(String.format("Checking:paragraphContent=%s",
                 paragraphContent));
@@ -192,7 +177,8 @@ public class PlagiarismCheckerService {
         return results;
     }
 
-    static void setupContext(String[] args) throws ParseException, IOException {
+    public static void setupContext(String[] args) throws ParseException,
+            IOException {
         // refer to https://commons.apache.org/proper/commons-cli/usage.html to
         // build CLI
         // -r --articleRepositoryFolders path1,path2,...pathn

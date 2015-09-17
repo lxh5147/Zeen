@@ -20,7 +20,7 @@ import com.zeen.plagiarismchecker.impl.ArticleRepositoryImpl;
 import com.zeen.plagiarismchecker.impl.ArticleRepositoryTestUtil;
 import com.zeen.plagiarismchecker.impl.ContentAnalyzerType;
 
-public class RESTServerTest {
+public class PlagiarismCheckerServiceTest {
     @Before
     public void setup() throws IOException {
         ArticleRepositoryTestUtil.setupArticleRepository();

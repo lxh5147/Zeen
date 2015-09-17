@@ -1,5 +1,5 @@
 apply plugin: "application"
-mainClassName = "com.zeen.plagiarismchecker.application.impl.service.RESTServer"
+mainClassName = "com.zeen.plagiarismchecker.application.impl.IndexBuilder"
 
 def maxJVMHeapSize = "12g"
 
@@ -38,13 +38,7 @@ dependencies {
     //implRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-parse-models', version: '1.5'
    	implCompile 'commons-cli:commons-cli:1.3'
 	implCompile 'org.apache.pdfbox:pdfbox:1.8.10'
-	implCompile 'com.googlecode.json-simple:json-simple:1.1'
-	
-    implCompile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.7'
-    implCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.7'
-    implCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.7'
-   	implCompile 'org.eclipse.jetty:jetty-server:9.3.1.v20150714'
-	implCompile 'org.eclipse.jetty:jetty-servlet:9.3.1.v20150714'
+    
 	
     
     testCompile 'junit:junit:4.9'
@@ -52,20 +46,12 @@ dependencies {
     testCompile group: 'com.google.guava', name: 'guava', version: '18.0'
     testCompile group: 'org.apache.opennlp', name: 'opennlp-tools', version: '1.6.0'
     testCompile 'commons-cli:commons-cli:1.3'
-    testCompile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.7'
-    testCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.7'
-    testCompile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.7'  
-    testCompile 'org.eclipse.jetty:jetty-server:9.3.1.v20150714'
-    testCompile 'org.eclipse.jetty:jetty-servlet:9.3.1.v20150714'
-	testCompile 'org.eclipse.jetty:jetty-client:9.3.1.v20150714'
-    testCompile 'com.googlecode.json-simple:json-simple:1.1'
     
     testCompile 'org.apache.pdfbox:pdfbox:1.8.10'
     testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-tokenize-models', version: '1.5'
     testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-sent-models', version: '1.5'
     testRuntime group: 'edu.washington.cs.knowitall', name: 'opennlp-postag-models', version: '1.5'
-    testRuntime group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.7'
-
+ 
     testCompile sourceSets.api.output
     testCompile sourceSets.impl.output
 
@@ -95,17 +81,6 @@ task buildIndex (dependsOn: 'classes', type: JavaExec) {
         args Eval.me(appArgs)
         //gradle buildIndex -PappArgs="['--articleRepositoryFolders', 'articles','--contentAnalyzers','SimpleContentAnalizerWithSimpleTokenizer,BagOfWordsContentAnalizerWithOpenNLPTokenizer,SegmentContentAnalizerWithSimpleSegmentSplitter','--indexPath','indexes','--capability','100000','--batchSize','1000','--parallelism','2']"
         
-    }
-}
-
-task startService (dependsOn: 'classes', type: JavaExec) {	
-    main = 'com.zeen.plagiarismchecker.application.impl.service.RESTServer'
-    classpath = sourceSets.impl.runtimeClasspath
-    maxHeapSize = maxJVMHeapSize
-    println "classpath:${classpath}"
-  	if ( project.hasProperty("appArgs") ) {
-        args Eval.me(appArgs)     
-        //gradle startService -PappArgs="['--articleRepositoryFolders', 'articles','--contentAnalyzers','SimpleContentAnalizerWithSimpleTokenizer,BagOfWordsContentAnalizerWithOpenNLPTokenizer,SegmentContentAnalizerWithSimpleSegmentSplitter','--indexPaths','indexes']"
     }
 }
 

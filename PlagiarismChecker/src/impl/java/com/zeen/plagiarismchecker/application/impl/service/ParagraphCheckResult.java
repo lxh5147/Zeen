@@ -1,17 +1,9 @@
 package com.zeen.plagiarismchecker.application.impl.service;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-
 import java.util.List;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
-import com.google.common.collect.Lists;
+
 
 public  class ParagraphCheckResult {
     private String paragraphContentToCheck;
@@ -64,44 +56,6 @@ public  class ParagraphCheckResult {
                 other.getParagraphContentToCheck())
                 && Objects.equal(this.getCheckResults(),
                         other.getCheckResults());
-    }
-    
-    private static final ThreadLocal<JSONParser> JSON_PARSER = new ThreadLocal<JSONParser>() {
-        @Override
-        protected JSONParser initialValue() {
-            return new JSONParser();
-        }
-    };
-    
-    @SuppressWarnings("unchecked")
-    public static List<ParagraphCheckResult> getParagraphCheckResults(
-            final String jsonResponse) throws ParseException {
-        checkNotNull(jsonResponse, "jsonResponse");        
-        List<ParagraphCheckResult> results = Lists.newArrayList();      
-        JSONArray jsonArray = (JSONArray) JSON_PARSER.get().parse(jsonResponse);
-        jsonArray.forEach(jsonObject -> {
-            results.add(getParagraphCheckResult((JSONObject) jsonObject));
-        });
-        return results;
-    }
-
-    private static ParagraphCheckResult getParagraphCheckResult(JSONObject jsonObject) {
-        ParagraphCheckResult paragraphCheckResult = new ParagraphCheckResult();
-        paragraphCheckResult.setParagraphContentToCheck((String) jsonObject
-                .get("paragraphContentToCheck"));
-        paragraphCheckResult
-                .setCheckResults(getCheckResults((JSONArray) jsonObject
-                        .get("checkResults")));
-        return paragraphCheckResult;
-    }
-    
-    @SuppressWarnings("unchecked")
-    private static List<CheckResult> getCheckResults(JSONArray jsonArray) {
-        List<CheckResult> results = Lists.newArrayList();
-        jsonArray.forEach(jsonObject -> {
-            results.add(CheckResult.getCheckResult((JSONObject) jsonObject));
-        });
-        return results;
     }
 }
 
