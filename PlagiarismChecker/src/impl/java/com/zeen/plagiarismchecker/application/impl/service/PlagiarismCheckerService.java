@@ -195,9 +195,9 @@ public class PlagiarismCheckerService {
     static void setupContext(String[] args) throws ParseException, IOException {
         // refer to https://commons.apache.org/proper/commons-cli/usage.html to
         // build CLI
-        // -r --articleRepositoryFolders path1,path2,...pathn
+        // -r --articleRepositoryFolders path1,path2,...,pathn
         // -a --contentAnalizers name1,name2,...namen
-        // -i --indexPath path
+        // -i --indexPaths path1,path2,...,pathn
         // -c --caseSensitive case sensitive match
 
         CommandLineParser parser = new DefaultParser();
