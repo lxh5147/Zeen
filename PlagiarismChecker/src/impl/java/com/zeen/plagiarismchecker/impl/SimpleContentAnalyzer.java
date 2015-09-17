@@ -4,8 +4,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.List;
 
-import jersey.repackaged.com.google.common.collect.Lists;
-
+import com.google.common.collect.Lists;
 import com.zeen.plagiarismchecker.ContentAnalyzer;
 
 public class SimpleContentAnalyzer implements ContentAnalyzer {

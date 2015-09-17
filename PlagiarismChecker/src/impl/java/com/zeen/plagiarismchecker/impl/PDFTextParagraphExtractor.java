@@ -6,10 +6,9 @@ import java.text.NumberFormat;
 import java.text.ParsePosition;
 import java.util.List;
 
-import jersey.repackaged.com.google.common.collect.Lists;
-
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Splitter;
+import com.google.common.collect.Lists;
 
 public class PDFTextParagraphExtractor {
     private static final Splitter TOKEN_SPLITTER = Splitter
